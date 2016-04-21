@@ -12,6 +12,15 @@ A front-end framework that uses NPM and PostCSS.
 
 ### PostCSS
 
+Clone includes the following processors by default:
+* postcss-import
+* postcss-mixins
+* postcss-nested
+* autoprefixer
+* postcss-simple-vars
+* postcss-color-function
+* cssnano
+
 #### Compiling PostCSS
 
 1. `cd clone/assets`
@@ -50,6 +59,14 @@ To create a full width item, you can use the `.full`, `.small/med/lg-1of1`, or `
 7. Profit.
 
 ### Editing Vendor Dependencies
+
+Clone includes the following dependencies by default:
+* Font Awesome
+* Ionicons
+* jQuery
+* Match Media
+* Modernizr
+* Normalize
 
 1. Open `bower.json`
 2. Add your Bower Package to the `dependencies` list.

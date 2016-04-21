@@ -21,6 +21,9 @@
 /* Grid */
 @import 'layout/grid.css';
 
+/* Inline Layout */
+/*@import 'layout/inline.css';*/
+
 /* Header */
 @import 'layout/header.css';
 

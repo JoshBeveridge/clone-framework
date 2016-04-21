@@ -1,0 +1,52 @@
+/* =============================================================================
+
+    INLINE CSS
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+.inline-layout {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    dt {
+        display: none;
+    }
+
+    dd {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.justify {
+        text-align: justify;
+        font-size: 1px;
+        font-size: 0;
+
+        dd {
+            font-size: 1rem;
+        }
+
+        dl {
+            text-align: left;
+
+            &.justify {
+                text-align: justify;
+            }
+
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+
+    }
+
+}
