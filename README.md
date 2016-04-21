@@ -66,7 +66,7 @@ Clone includes the following dependencies by default:
 * jQuery
 * Match Media
 * Modernizr
-Normalize
+* Normalize
 
 #### Adding/Removing Dependencies
 
