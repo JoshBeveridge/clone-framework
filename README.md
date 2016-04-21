@@ -65,7 +65,7 @@ Clone includes the following dependencies by default:
 * Ionicons
 * jQuery
 * Match Media
-* Modernizr
+* Modernizr 
 * Normalize
 
 1. Open `bower.json`
