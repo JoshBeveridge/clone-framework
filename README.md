@@ -2,8 +2,6 @@
 
 A front-end framework that uses NPM and PostCSS.
 
-<hr>
-
 ### Getting Started
 
 1. Clone Clone.
@@ -19,6 +17,27 @@ A front-end framework that uses NPM and PostCSS.
 1. `cd clone/assets`
 2. `npm run watch`
 3. CSS away!
+
+#### Using the Grid
+Clone incudes a responsive flexbox-based grid system to help with your layout stuggles.
+
+The structure works as follows:
+```
+<div class="flex-grid">
+    <div class="box small-1of2 med-1of3 lg-1of5">
+        <!-- Content -->
+    </div>
+</div>
+```
+
+The `.flex-grid` class is required on the grid itself, while grid items are required to have the `.box` class. `.small-XofX`, `.med-XofX`, and `.lg-XofX` are used to address column width based on viewports:
+* small refers to mobile devices
+* medium refers to portrait tablet devices
+* large refers to landscape tablet devices
+
+The `XofX` portion of the class can span up to 12 columns (e.g. 1of2, 3of12).
+
+To create a full width item, you can use the `.full`, `.small/med/lg-1of1`, or `.small/med/lg-full` classes.
 
 #### Editing PostCSS Processors
 
