@@ -65,8 +65,10 @@ Clone includes the following dependencies by default:
 * Ionicons
 * jQuery
 * Match Media
-* Modernizr 
-* Normalize
+* Modernizr
+Normalize
+
+#### Adding/Removing Dependencies
 
 1. Open `bower.json`
 2. Add your Bower Package to the `dependencies` list.
