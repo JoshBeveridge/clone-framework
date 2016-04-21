@@ -28,7 +28,7 @@ Clone includes the following processors by default:
 3. CSS away!
 
 #### Using the Grid
-Clone incudes a responsive flexbox-based grid system to help with your layout stuggles.
+Clone includes a responsive flexbox-based grid system to help with your layout stuggles.
 
 The structure works as follows:
 ```
