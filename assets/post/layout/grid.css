@@ -1,0 +1,219 @@
+/* =============================================================================
+
+    GRID CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.top {
+        align-items: flex-start;
+    }
+
+    &.middle {
+        align-items: center;
+    }
+
+    &.bottom {
+        align-items: flex-end;
+    }
+
+}
+
+.box {
+    flex: 0 0 100%;
+
+    &.top {
+        align-items: flex-start;
+    }
+
+    &.middle {
+        align-items: center;
+    }
+
+    &.bottom {
+        align-items: flex-end;
+    }
+
+    &.fit {
+        flex: 1;
+    }
+
+    /* Small Boxes: Portrait & Landscape Mobile Devices ===================== */
+
+    /* 2 Column */
+    &.small-1of2 {
+        flex: 0 0 50%
+    }
+
+    /* 3 Column */
+    &.small-1of3 {
+        flex: 0 0 33.3333%
+    }
+
+    &.small-2of3 {
+        flex: 0 0 66.6666%
+    }
+
+    /* Medium Boxes: Portrait Tablet Devices ================================ */
+
+    @media $(p-tablet) {
+
+        /* 2 Column */
+        &.med-1of2 {
+            flex: 0 0 50%
+        }
+
+        /* 3 Column */
+        &.med-1of3 {
+            flex: 0 0 33.3333%
+        }
+
+        &.med-2of3 {
+            flex: 0 0 66.6666%
+        }
+
+        /* 4 Column */
+        &.med-1of4 {
+            flex: 0 0 25%
+        }
+
+        &.med-2of4 {
+            flex: 0 0 50%
+        }
+
+        &.med-3of4 {
+            flex: 0 0 75%
+        }
+
+        /* 5 Column */
+        &.med-1of5 {
+            flex: 0 0 20%
+        }
+
+        &.med-2of5 {
+            flex: 0 0 40%
+        }
+
+        &.med-3of5 {
+            flex: 0 0 60%
+        }
+
+        &.med-4of5 {
+            flex: 0 0 80%
+        }
+
+    }
+
+    /* Large Boxes: Landscape Tablet Devices ================================ */
+
+    @media $(l-tablet) {
+
+        /* 2 Column */
+        &.lg-1of2 {
+            flex: 0 0 50%
+        }
+
+        /* 3 Column */
+        &.lg-1of3 {
+            flex: 0 0 33.3333%
+        }
+
+        &.lg-2of3 {
+            flex: 0 0 66.6666%
+        }
+
+        /* 4 Column */
+        &.lg-1of4 {
+            flex: 0 0 25%
+        }
+
+        &.lg-2of4 {
+            flex: 0 0 50%
+        }
+
+        &.lg-3of4 {
+            flex: 0 0 75%
+        }
+
+        /* 5 Column */
+        &.lg-1of5 {
+            flex: 0 0 20%
+        }
+
+        &.lg-2of5 {
+            flex: 0 0 40%
+        }
+
+        &.lg-3of5 {
+            flex: 0 0 60%
+        }
+
+        &.lg-4of5 {
+            flex: 0 0 80%
+        }
+
+        /* 6 Column */
+        &.lg-1of6 {
+            flex: 0 0 16.6666%
+        }
+
+        &.lg-2of6 {
+            flex: 0 0 33.3333%
+        }
+
+        &.lg-3of6 {
+            flex: 0 0 50%
+        }
+
+        &.lg-4of6 {
+            flex: 0 0 66.6666%
+        }
+
+        &.lg-5of6 {
+            flex: 0 0 83.3333%
+        }
+
+        /* 10 Column */
+        &.lg-1of10 {
+            flex: 0 0 10%
+        }
+
+        &.lg-2of10 {
+            flex: 0 0 20%
+        }
+
+        &.lg-3of10 {
+            flex: 0 0 30%
+        }
+
+        &.lg-4of10 {
+            flex: 0 0 40%
+        }
+
+        &.lg-5of10 {
+            flex: 0 0 50%
+        }
+
+        &.lg-6of10 {
+            flex: 0 0 60%
+        }
+
+        &.lg-7of10 {
+            flex: 0 0 70%
+        }
+
+        &.lg-8of10 {
+            flex: 0 0 80%
+        }
+
+        &.lg-9of10 {
+            flex: 0 0 90%
+        }
+
+    }
+
+}

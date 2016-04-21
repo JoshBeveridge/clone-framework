@@ -1,0 +1,9 @@
+/* =============================================================================
+
+    LANDING HERO CSS
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+.landing-hero {
+    border-bottom: 1px solid $black;
+}

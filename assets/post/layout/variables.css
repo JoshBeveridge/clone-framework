@@ -1,0 +1,246 @@
+/* =============================================================================
+
+    APP LAYOUT CSS
+    Property of Norex
+    Authored by Justin Bellefontaine
+
+============================================================================= */
+
+/* App Layout Variables ===================================================== */
+
+  /* App Layout Widths ====================================================== */
+  /* Use viewport units ===================================================== */
+
+    /* Sidebar */
+    $app-sidebar-width-xl-desktop: 10vw;
+    $app-sidebar-width-desktop: 15vw;
+    $app-sidebar-width-tablet: 10vw;
+    $app-sidebar-width-mobile: 100%;
+      
+      /* Background Color */
+      $app-sidebar-background: #fff;
+
+    /* Main */
+    $app-main-width-xl-desktop: 75vw;
+    $app-main-width-desktop: 65vw;
+    $app-main-width-tablet: 75vw;
+    $app-main-width-mobile: 100%;
+      
+      /* Background Color */
+      $app-main-background: #fff;
+
+    /* Secondary */
+    $app-secondary-width-xl-desktop: 15vw;
+    $app-secondary-width-desktop: 20vw;
+    $app-secondary-width-tablet: 15vw;
+    $app-secondary-width-mobile: 100%;
+      
+      /* Background Color */
+      $app-secondary-background: #fff;
+
+  /* App Layout Paddings ==================================================== */
+
+    $app-pane-primary-padding-desktop: calc(1.5vw * 5);
+    $app-pane-primary-padding-tablet: calc(2vw * 5);
+    $app-pane-primary-padding-mobile: calc(8.5vw);
+
+    $app-pane-sidebar-padding-desktop: 1.5vw;
+    $app-pane-sidebar-padding-tablet: 2vw;
+    $app-pane-sidebar-padding-mobile: 8.5vw;
+
+/* App Layout =============================================================== */
+.app-layout {
+  overflow-x: hidden;
+}
+
+/* Menu Toggle ============================================================== */
+
+  /* Default state ============================================================ */
+  .app-layout {
+
+    .app-pane.sidebar {
+      transform: translateX(-100%);
+
+      @media screen and (min-width: 70em) {
+        transform: translateX(0);
+      }
+
+    }
+
+    @media screen and (max-width: 70em) {
+
+      .app-pane.sidebar {
+        width: 50%;
+      }
+
+    }
+
+  }
+
+  /* On click of the menu toggle ============================================== */
+  .app-layout.active {
+
+    .app-pane.sidebar {
+      transform: translateX(0);
+
+      @media screen and (min-width: 70em) {
+        transform: translateX(-100%);
+      }
+
+    }
+
+    .app-pane.primary,
+    .style-block-header {
+      transition: all 0.3s ease 0s;
+
+      @media screen and (min-width: 70em) {
+        width: 100%;
+        left: 0;
+      }
+      
+    }
+
+    @media screen and (max-width: 70em) {
+
+      .app-pane.primary,
+      .style-block-header {
+        transform: translateX(50%);
+      }
+
+    }
+
+  }
+
+/* Base Panes =============================================================== */
+.app-pane {
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+
+  @media screen and (min-width: 40em) {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+  }
+
+}
+
+.app-pane.sidebar {
+  left: 0;
+  z-index: 3;
+  height: 100vh;
+  background: $app-sidebar-background;
+  width: $app-sidebar-width-mobile;
+  position: fixed;
+  transition: all 0.3s ease 0s;
+
+  /*@media screen and (min-width: 40em) {
+    width: $app-sidebar-width-tablet;
+  }*/
+
+  @media screen and (min-width: 70em) {
+    width: $app-sidebar-width-desktop;
+  }
+
+  @media screen and (min-width: 90em) {
+    width: $app-sidebar-width-xl-desktop;
+  }
+
+}
+
+.app-pane.primary {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  background: $app-main-background;
+  width: $app-main-width-mobile;
+
+  /*@media screen and (min-width: 40em) {
+    width: calc($app-main-width-tablet + $app-secondary-width-tablet);
+    left: $app-sidebar-width-tablet;
+  }*/
+
+  @media screen and (min-width: 70em) {
+    width: calc($app-main-width-desktop + $app-secondary-width-desktop);
+    left: $app-sidebar-width-desktop;
+  }
+
+  @media screen and (min-width: 90em) {
+    width: calc($app-main-width-xl-desktop + $app-secondary-width-xl-desktop);
+    left: $app-sidebar-width-xl-desktop;
+  }
+
+}
+
+body.with-sidebar {
+  
+  .app-pane.primary {
+    width: $app-main-width-mobile;
+
+    @media screen and (min-width: 40em) {
+      width: $app-main-width-tablet;
+    }
+
+    @media screen and (min-width: 70em) {
+      width: $app-main-width-desktop;
+    }
+
+    @media screen and (min-width: 90em) {
+      width: $app-main-width-xl-desktop;
+    }
+
+  }
+
+}
+
+.app-pane.secondary {
+  right: 0;
+  z-index: 1;
+  background: $app-secondary-background;
+  width: $app-secondary-width-mobile;
+
+  @media screen and (min-width: 40em) {
+    width: $app-secondary-width-tablet;
+  }
+
+  @media screen and (min-width: 70em) {
+    width: $app-secondary-width-desktop;
+  }
+
+  @media screen and (min-width: 90em) {
+    width: $app-secondary-width-xl-desktop;
+  }
+
+}
+
+.sidebar-content-wrapper {
+  padding: $app-pane-sidebar-padding-mobile;
+
+  @media screen and (min-width: 40em) {
+    padding: $app-pane-sidebar-padding-tablet;
+  }
+
+  @media screen and (min-width: 90em) {
+    padding: $app-pane-sidebar-padding-desktop;
+  }
+
+}
+
+.app-primary-content {
+  padding: $app-pane-primary-padding-mobile;
+  width: 100%;
+  float: left;
+
+  @media screen and (min-width: 40em) {
+    padding: $app-pane-primary-padding-tablet;
+  }
+
+  @media screen and (min-width: 90em) {
+    padding: $app-pane-primary-padding-desktop;
+  }
+
+}
+
+.app-content-section {
+  padding: 3rem 0;
+}

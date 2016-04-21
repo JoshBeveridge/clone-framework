@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache
+wp-config.local.php
+wp-local.php
+npm-debug.log
+
+assets/vendor
+assets/node_modules
+assets/bower_components

@@ -1,0 +1,30 @@
+{
+  "name": "CloneFramework",
+  "version": "0.1.0",
+  "homepage": "https://gitlab.com/norex/app_clone",
+  "authors": [
+    "Josh Beveridge <me@joshbeveridge.com>"
+  ],
+  "description": "A PostCSS Front-End clone used to init new projects.",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "latest",
+    "normalize.css": "latest",
+    "matchMedia": "latest",
+    "modernizr": "latest",
+    "jQuery": "latest",
+    "ionicons": "latest"
+  }
+}

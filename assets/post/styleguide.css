@@ -1,0 +1,193 @@
+/* =============================================================================
+
+    STYLEGUIDE LAYOUT CSS
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Imports ================================================================== */
+
+/* Palette */
+@import 'spec/palette.css';
+
+/* Settings */
+@import 'spec/settings.css';
+
+/* Typography */
+@import 'spec/typography.css';
+
+/* App Layout =============================================================== */
+@import 'layout/variables.css';
+
+/* App Header =============================================================== */
+.style-block-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	width: $app-main-width-mobile;
+	transition: all 0.3s ease 0s;
+
+  @media screen and (min-width: 70em) {
+    width: calc($app-main-width-desktop + $app-secondary-width-desktop);
+    left: $app-sidebar-width-desktop;
+  }
+
+  @media screen and (min-width: 90em) {
+    width: calc($app-main-width-xl-desktop + $app-secondary-width-xl-desktop);
+    left: $app-sidebar-width-xl-desktop;
+  }
+
+	p {
+		margin: 0;
+		padding: 1rem;
+		font-family: sans-serif;
+		font-size: 0.75rem;
+	}
+
+}
+
+.menu-toggle {
+	padding: 1rem;
+	display: block;
+}
+
+/* App Panes ================================================================ */
+.app-primary-content {
+	padding-top: 0;
+	padding-bottom: 0;
+	z-index: 1;
+}
+
+.app-pane.sidebar {
+	box-shadow: inset -1px 0 0 0 rgba(0,0,0,0.1);
+}
+
+/* App Navigation =========================================================== */
+.app-nav {
+	margin-top: 1rem;
+
+	dt {
+		display: none;
+	}
+
+	dd {
+		width: 100%;
+		font-size: 0.7rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: #333;
+		display: block;
+		padding: 0.5rem 0;
+	}
+
+}
+
+/* Style Blocks ============================================================= */
+.style-block {
+	border-bottom: 1px solid #dfdfdf;
+
+	.style-block-module:last-of-type {
+		padding-bottom: 0;
+	}
+
+}
+
+.style-block-title {
+	margin: 0;
+	padding: 0;
+}
+
+.style-block-subtitle {
+	margin: 0 0 2rem;
+	padding: 0;
+	color: #444;
+	font-weight: normal;
+	display: inline-block;
+	border-bottom: 1px solid #222;
+}
+
+.style-block-module-title {
+	font-size: 0.6rem;
+	color: #666;
+	margin: 0 0 0.75rem;
+	padding: 0;
+	font-weight: normal;
+}
+
+.style-block-module {
+	padding: 2rem 0 1rem;
+}
+
+.table-wrapper {
+
+	@media screen and (max-width: 70em) {
+		max-width: 100%;
+		overflow: auto;
+
+		table {
+			min-width: 200%;
+		}
+
+	}
+
+}
+
+/* Typography =============================================================== */
+
+/* Colors */
+$magenta: #ed1556;
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $magenta;
+}
+
+/* Color Blocks ============================================================= */
+
+.color-block {
+	width: 100%;
+	height: 100px;
+	background: #000;
+	border-bottom: 10px solid #fff;
+	position: relative;
+
+	@media screen and (min-width: 40em) {
+		width: 200px;
+		height: 200px;
+	}
+
+}
+
+.color-block-codes {
+	background: #fff;
+	padding: 0.5rem;
+	color: #222;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 2;
+
+	span {
+		display: block;
+	}
+
+}
+
+.color-block-hex {
+	font-size: 0.75rem;
+}
+
+.color-block-rgb {
+	font-size: 0.6rem;
+	margin-top: 0.25rem;
+}

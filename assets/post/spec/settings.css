@@ -1,0 +1,148 @@
+/* =============================================================================
+
+    SETTINGS CSS
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Media Variables ========================================================== */
+$portrait: screen and (orientation: portrait);
+/*$(portrait) {}*/
+
+$landscape: screen and (orientation: landscape);
+/*$(landscape) {}*/
+
+$p-phone: screen and (min-width: 320px);
+/*$(p-phone) {}*/
+
+$l-phone: screen and (min-width: 480px);
+/*$(l-phone) {}*/
+
+$p-tablet: screen and (min-width: 48em);
+/*$(p-tablet) {}*/
+
+$l-tablet: screen and (min-width: 64em);
+/*$(l-tablet) {}*/
+
+$desktop: screen and (min-width: 64.01em);
+/*$(desktop) {}*/
+
+$cinema: screen and (min-width: 100em);
+/*$(cinema) {}*/
+
+/* Sections ================================================================= */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+section {
+    display: block;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.page-container {
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 95%;
+
+    @media $(desktop) {
+        max-width: 60rem;
+    }
+
+    @media #(cinema) {
+        max-width: 70rem;
+    }
+
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 40rem;
+    width: 95%;
+
+    @media #(cinema) {
+        max-width: 50rem;
+    }
+
+}
+
+/* Elements ================================================================= */
+img,
+iframe {
+    max-width: 100%;
+}
+
+/* Icon Spacing ============================================================= */
+[class*="ion-"]:before,
+[class*="fa-"]:before {
+    margin-right: 0.3rem;
+}
+
+/* Error Page =============================================================== */
+.error-type {
+    color: $red !important;
+    font-size: 6rem !important;
+    font-weight: 100 !important;
+    margin: 0 !important;
+}
+
+.error-desc {
+    margin: 0 0 2rem !important;
+}
+
+/* Helper Classes =========================================================== */
+.full-wide {
+    width: 100% !important;
+}
+
+.alignleft,
+.alignright {
+    padding: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+}
+
+.alignleft {
+    margin: 0 0 1rem 0;
+
+    @media $(p-tablet) {
+        float: left;
+        margin: 0 2rem 1rem 0;
+    }
+
+}
+
+.alignright {
+    margin: 0 0 1rem 0;
+
+    @media $(p-tablet) {
+        float: right;
+        margin: 0 0 1rem 2rem;
+    }
+
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
