@@ -27,11 +27,12 @@
     "scripts": {
         "fontawesome": "cp bower_components/fontawesome/css/font-awesome.min.css vendor/ && cp -r bower_components/fontawesome/fonts/* fonts",
         "ionicons": "cp bower_components/ionicons/css/ionicons.min.css vendor/ && cp bower_components/ionicons/fonts/* fonts",
-        "jQuery": "cd bower_components/jQuery/ && npm run build && cd ../../ && cp bower_components/jQuery/dist/jquery.min.js vendor/",
+        "jquery": "cp bower_components/jquery/dist/jquery.min.js vendor/",
         "matchMedia": "cp bower_components/matchMedia/matchMedia.js vendor/",
         "modernizr": "cd bower_components/modernizr/ && npm install && ./bin/modernizr -c lib/config-all.json && cd ../../ && cp bower_components/modernizr/modernizr.js vendor/",
         "normalize": "cp bower_components/normalize.css/normalize.css vendor/",
-        "clone": "bower install && rm -rf vendor && mkdir vendor && rm -rf fonts && mkdir fonts && npm run fontawesome && npm run ionicons && npm run jQuery && npm run matchMedia && npm run modernizr && npm run normalize",
+        "slick": "cp bower_components/slick-carousel/slick/slick.css vendor/ && cp bower_components/slick-carousel/slick/slick.js vendor/ && cp bower_components/slick-carousel/slick/slick-theme.css vendor/",
+        "clone": "bower install && rm -rf vendor && mkdir vendor && rm -rf fonts && mkdir fonts && npm run fontawesome && npm run ionicons && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick",
         "post": "postcss -u postcss-import -u postcss-mixins -u postcss-nested -u autoprefixer -u postcss-simple-vars -u postcss-color-function -u cssnano --local-plugins -c options.js -d css post/*.css",
         "watch": "npm-watch"
     }

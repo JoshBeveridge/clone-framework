@@ -24,7 +24,8 @@
     "normalize.css": "latest",
     "matchMedia": "latest",
     "modernizr": "latest",
-    "jQuery": "latest",
-    "ionicons": "latest"
+    "jquery": "latest",
+    "ionicons": "latest",
+    "slick-carousel": "latest"
   }
 }
