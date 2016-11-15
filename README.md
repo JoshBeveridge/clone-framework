@@ -85,7 +85,7 @@ Clone includes the following dependencies by default:
 
 ###### Fall 2016 Update by Justin Bellefontaine
 
-* A fix for the Typekit font pop has been added. The `<html` tag is set to `opacity:0` by default then changed to `opacity:1` when webfonts have been loaded in completely. Please note that this only functions if Typekit fonts are included on the page. If you are not using Typekit, remove `opacity:0` from the `<html>` tag in `index.html`.
+* A fix for the Typekit font pop has been added. The `<html>` tag is set to `opacity:0` by default then changed to `opacity:1` when webfonts have been loaded in completely. Please note that this only functions if Typekit fonts are included on the page. If you are not using Typekit, remove `opacity:0` from the `<html>` tag in `index.html`.
 * `style.css` has been fully reorganized and indented for better readability and searchability.
 * All images included via a Wordpress WYSIWYG are now given a wrapper with a class of `wp-image__wrapper`. The image itself is also classed as `wp-image`. If this is not required, or needs to be edited, it can be found at line 59 of `app.js`.
 * Gravity Forms styles and presets have been added. This includes basic field styling, custom checkboxes and radio buttons, validation, and even the jQuery UI Datepicker plug-in. Form styles are modular and can be disabled or enabled via `style.css` or `/post/spec/forms/forms-base.css` (see `@imports`). Additionally, form presets such as field border, color, and fonts are manageable globally in `/post/spec/forms/forms-variables.css`.
