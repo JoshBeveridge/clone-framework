@@ -92,7 +92,6 @@ Clone includes the following dependencies by default:
 * A fix for incorrect SVG dimensions in IE11 has been implemented.
 * The "outdated browser" note now appears in Internet Explorer 9 and below (previously 8 and below) and has been assigned default styles which pins it to the top of the page for high visibility.
 * New helper classes have been added to allow for easy padding changes on any given element (`flush-top`, `flush-bottom` and `flush`). This is especially useful for successive sections.
-* Full grayscale color variables have been added to `/post/spec/palette.css` (e.g. `gray-shade-9` or `grey-shade-9`).
 * The flexbox grid has been updated to support `xl` classes.
 * The flexbox grid has been adapted to Internet Explorer 11 using `max-width`.
 * Ionicons are now included by default.
