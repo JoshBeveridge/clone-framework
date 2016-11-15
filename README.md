@@ -80,3 +80,21 @@ Clone includes the following dependencies by default:
 8. Profit.
 
 **Please note that Clone uses `latest` in `bower.json` to pull down the most recent version of all default dependencies. If you need a specific version, replace `latest` with the correct version number before running `npm run clone`.**
+
+## Changelog
+
+###### Fall 2016 Update by Justin Bellefontaine
+
+* A fix for the Typekit font pop has been added. The `<html` tag is set to `opacity:0` by default then changed to `opacity:1` when webfonts have been loaded in completely. Please note that this only functions if Typekit fonts are included on the page. If you are not using Typekit, remove `opacity:0` from the `<html>` tag in `index.html`.
+* `style.css` has been fully reorganized and indented for better readability and searchability.
+* All images included via a Wordpress WYSIWYG are now given a wrapper with a class of `wp-image__wrapper`. The image itself is also classed as `wp-image`. If this is not required, or needs to be edited, it can be found at line 59 of `app.js`.
+* Gravity Forms styles and presets have been added. This includes basic field styling, custom checkboxes and radio buttons, validation, and even the jQuery UI Datepicker plug-in. Form styles are modular and can be disabled or enabled via `style.css` or `/post/spec/forms/forms-base.css` (see `@imports`). Additionally, form presets such as field border, color, and fonts are manageable globally in `/post/spec/forms/forms-variables.css`.
+* A fix for incorrect SVG dimensions in IE11 has been implemented.
+* The "outdated browser" note now appears in Internet Explorer 9 and below (previously 8 and below) and has been assigned default styles which pins it to the top of the page for high visibility.
+* New helper classes have been added to allow for easy padding changes on any given element (`flush-top`, `flush-bottom` and `flush`). This is especially useful for successive sections.
+* Full grayscale color variables have been added to `/post/spec/palette.css` (e.g. `gray-shade-9` or `grey-shade-9`).
+* The flexbox grid has been updated to support `xl` classes.
+* The flexbox grid has been adapted to Internet Explorer 11 using `max-width`.
+* Ionicons are now included by default.
+* Favicon inclusion code has been removed from `index.html`. This is always changing, so as such it should not be included as a default.
+* Minor spacing, commenting and indentation fixes in most Post and HTML files.

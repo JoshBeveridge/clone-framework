@@ -1,36 +1,43 @@
 /* =============================================================================
 
-    STYLE CSS
+    PRIMARY CSS
+    Property of Norex
     Authored by Josh Beveridge and Justin Bellefontaine
 
 ============================================================================= */
 
-/* Setting Imports ========================================================== */
+/* SPEC ===================================================================== */
 
-/* Palette */
-@import 'spec/palette.css';
+    /* Spec: Palette ======================================================== */
+    @import 'spec/palette.css';
 
-/* Settings */
-@import 'spec/settings.css';
+    /* Spec: Settings ======================================================= */
+    @import 'spec/settings.css';
 
-/* Typography */
-@import 'spec/typography.css';
+    /* Spec: Typography ===================================================== */
+    @import 'spec/typography.css';
 
-/* Sitewide Imports ========================================================= */
+    /* Spec: Forms ========================================================== */
+    @import 'spec/forms/forms-base.css';
 
-/* Grid */
-@import 'layout/grid.css';
+    /* Spec: Spec > Plugins: UI Datepicker ================================== */
+    /*@import 'spec/plugins/uidatepicker.css';*/
 
-/* Inline Layout */
-/*@import 'layout/inline.css';*/
+/* LAYOUT =================================================================== */
 
-/* Header */
-@import 'layout/header.css';
+    /* Layout: Grid ========================================================= */
+    @import 'layout/grid.css';
 
-/* Footer */
-@import 'layout/footer.css';
+    /* Layout: Grid (IE11) ================================================== */
+    @import 'layout/grid-ie11.css';
 
-/* Page Imports ============================================================= */
+    /* Layout: Header ======================================================= */
+    @import 'layout/header.css';
 
-/* Landing Hero */
-@import 'blocks/landing-hero.css';
+    /* Layout: Footer ======================================================= */
+    @import 'layout/footer.css';
+
+/* BLOCKS =================================================================== */
+
+    /* Blocks: Hero (Slick Carousel) ======================================== */
+    @import 'blocks/landing-hero.css';

@@ -1,0 +1,308 @@
+/* =============================================================================
+
+    FORMS CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+@import "forms-variables.css";
+@import "forms-validation.css";
+@import "forms-choices.css";
+
+/* Textareas ================================================================ */
+textarea {
+    width: 100%;
+    min-height: 250px;
+}
+
+/* File Inputs ============================================================== */
+input[type="file"] {
+    font-weight: normal;
+    font-size: 0.75rem;
+}
+
+/* Disabled states for inputs =============================================== */
+input:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease 0s;
+
+    + label {
+        opacity: 0.6;
+        cursor: default;
+        transition: all 0.2s ease 0s;
+        -webkit-user-select: none;
+    }
+
+}
+
+/* Gravity Forms ============================================================ */
+
+/* Complex (2 col.) ========================================================= */
+.ginput_complex {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    input,
+    select,
+    textarea {
+
+        + label {
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            margin-top: 0.2rem;
+            font-size: 0.7rem;
+            color: $gray-50;
+            line-height: 1;
+        }
+
+    }
+
+    .address_country {
+        margin-top: 1rem;
+    }
+
+    /* Each Item */
+    span {
+        display: block;
+        flex: 0 0 100%;
+        padding: 0 0 0.5rem;
+
+        @media $(l-tablet) {
+            flex: 0 0 49%;
+        }
+
+    }
+
+}
+
+/* Field Labels ============================================================= */
+.gform_fields > li > label {
+    font-family: $label-font;
+    font-size: $label-font-size;
+    color: $label-color;
+    font-weight: $label-font-weight;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Fields =================================================================== */
+.gform_fields {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    > li {
+        margin: $field-spacing 0;
+
+        &.field_sublabel_below {
+
+        }
+
+    }
+
+    /* Field Types */
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea {
+        border: $field-border;
+        font-family: $field-font;
+        font-weight: $field-font-weight;
+        font-size: $field-font-size;
+        padding: $field-padding;
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+
+        @media $(l-tablet) {
+            font-size: calc($field-font-size / 1.25);
+        }
+
+        &:focus {
+            border-color: $field-focus-color !important;
+        }
+
+    }
+
+    select {
+        border: $field-border;
+        font-family: $field-font;
+        font-weight: $field-font-weight;
+        font-size: $field-font-size;
+        padding: 0.5rem 2rem 0.5rem 0.75rem;
+        box-shadow: none;
+        width: 100%;
+        border-radius: 0;
+        color: $black;
+        background-color: white;
+        /* Arrow */
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: %23444444'></polygon></svg>");
+        background-size: 9px 6px;
+        background-position: right -1.5rem center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        outline: none !important;
+        position: relative;
+
+        @media $(l-tablet) {
+            font-size: calc($field-font-size / 1.25);
+        }
+
+    }
+
+}
+
+/* Hovers */
+.no-touchevents {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea {
+
+        &:hover {
+            border-color: $field-hover-color;
+        }
+
+    }
+
+    select:hover {
+        background-color: color(lime tint(95%));
+    }
+
+}
+
+/* Buttons ================================================================== */
+.gform_button.button {
+    border: none;
+    background: $black;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    line-height: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 5px 0 0 color(lime shade(20%));
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+/* Hovers */
+.no-touchevents {
+
+    .gform_button.button:hover {
+
+    }
+
+}
+
+/* Form Title =============================================================== */
+.gform_title {
+    font-size: 1rem;
+}
+
+/* Empty Labels ============================================================= */
+.gfield_label:empty {
+    display: none;
+}
+
+/* Form Section Title ======================================================= */
+.gsection_title {
+    color: $black;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.9rem;
+    position: relative;
+    padding: 0 0 0.25rem;
+    margin: 0;
+    border-bottom: 2px solid $black;
+}
+
+/* Footer =================================================================== */
+.gform_footer {
+    margin: 1rem 0 0;
+}
+
+/* Captcha ================================================================== */
+.g-recaptcha {
+    overflow: visible;
+    text-align: center;
+
+    > div {
+        display: inline-block;
+    }
+
+}
+
+/* Confirmation ============================================================= */
+.gform_confirmation_message {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $white;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: normal;
+    display: inline-block;
+}
+
+/* Form Grids =============================================================== */
+[class*="form-grid"] .gform_fields {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+    /* Two Column =========================================================== */
+    .form-grid--two-col {
+
+        .gform_fields {
+
+            > li {
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                @media $(l-tablet) {
+                    flex: 0 0 48%;
+                    max-width: 48%;
+                }
+
+            }
+
+        }
+
+    }

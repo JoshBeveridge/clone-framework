@@ -92,8 +92,8 @@ table {
     /* Body Font */
     p,
     blockquote, {
-        /*color: $black;*/
-        /*margin: 1rem 0;*/
+        color: $black;
+        margin: 1rem 0;
     }
 
     p {
@@ -138,28 +138,7 @@ table {
 
 }
 
-/* Forms ==================================================================== */
-textarea {
-    width: 100%;
-    min-height: 250px;
-}
-
-.checkbox-radio-list > dd {
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-@media screen and (min-width: 70em) {
-
-    .checkbox-radio-list > dd {
-        width: auto;
-        margin: 0;
-        padding-right: 1rem;
-    }
-
-}
-
-/* Social Icons ============================================================= */
+/* Social Icons ========================================================== */
 
 /*
 
@@ -255,92 +234,4 @@ $social-icons-large-font-size: 30px;
 
     }
 
-}
-
-/* Gravity Forms ============================================================ */
-.gform_fields {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    > li {
-        margin: 1.5rem 0;
-
-        > label {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            font-size: 0.5rem;
-            letter-spacing: 5px;
-        }
-
-    }
-
-}
-
-/* Double input layout */
-.ginput_complex > span {
-    display: inline-block;
-    width: 100%;
-    margin: 0.5rem 0;
-
-    @media $(l-tablet) {
-        width: 48%;
-
-        &:nth-child(2n) {
-            margin-left: 2%;
-        }
-
-    }
-
-}
-
-/* Gravity Form Errors */
-.gfield_error {
-
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="week"],
-    input[type="email"],
-    input[type="number"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="time"],
-    input[type="url"],
-    textarea,
-    select {
-        border-color: $red;
-    }
-
-    .validation_message {
-        background: $red;
-        padding: 0.5rem 0.75rem;
-        color: #fff;
-        font-size: .6rem;
-        font-weight: 700;
-        display: inline-block;
-    }
-
-}
-
-.validation_error {
-    color: $red;
-    font-weight: 700;
-    margin-top: 1rem;
-}
-
-/* Spacing for checkboxes and radios */
-.gfield_checkbox > li,
-.gfield_radio > li {
-    margin: 0.25rem 0;
 }

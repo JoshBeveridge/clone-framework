@@ -1,0 +1,52 @@
+/* =============================================================================
+
+    FORMS: ERRORS CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Gravity Form Errors ====================================================== */
+.gfield_error {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+        border-color: $field-color-error;
+        font-family: $field-font-error;
+    }
+
+    /* In-context Error Message */
+    .validation_message {
+        background: $red;
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 0.25rem 0.5rem;
+        color: #fff;
+        font-size: .75rem;
+        font-weight: normal;
+        display: inline-block;
+        text-align: left;
+    }
+
+}
+
+    /* Primary Error Message ================================================ */
+    .validation_error {
+        color: $red;
+        font-weight: normal;
+        margin-top: 1rem;
+        line-height: 1.25;
+        font-family: Helvetica, Arial, sans-serif;
+    }

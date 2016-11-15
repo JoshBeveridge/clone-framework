@@ -1,0 +1,27 @@
+/* =============================================================================
+
+    FORMS: VARIABLES CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Labels */
+$label-font: Helvetica, Arial, sans-serif;
+$label-font-size: 0.85rem;
+$label-color: $black;
+$label-font-weight: 600;
+
+/* Fields */
+$field-spacing: 0.75rem;
+$field-border: 2px solid $gray-80;
+$field-font: Helvetica, Arial, sans-serif;
+$field-font-size: 1rem;
+$field-font-weight: normal;
+$field-padding: 0.5rem;
+$field-hover-color: $gray-60;
+$field-focus-color: lime;
+
+/* Errors */
+$field-color-error: $red;
+$field-font-error: Helvetica, Arial, sans-serif;

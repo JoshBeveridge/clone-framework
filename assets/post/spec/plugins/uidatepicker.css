@@ -1,0 +1,130 @@
+/* =============================================================================
+
+    PLUGIN: JQUERY UI DATEPICKER CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Datepicker =============================================================== */
+.ginput_container_date {
+    position: relative;
+}
+
+.ui-datepicker-trigger {
+    right: 1rem;
+    top: 50%;
+    position: absolute;
+    transform: translate3d(0,-50%,0);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.ui-datepicker-calendar {
+
+    tbody {
+        background: white;
+    }
+
+    th {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    tr:nth-child(even) {
+        background: ##f5f5f5;
+    }
+
+    td {
+        padding: 0;
+        font-size: 0.65rem;
+
+        > a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            text-align: center;
+            color: $black;
+        }
+
+    }
+
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    font-size: 0.65rem;
+    padding: 0.2rem;
+    display: inline-block;
+    background: $black;
+    color: white;
+    cursor: pointer;
+}
+
+.ui-datepicker-title {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.ui-datepicker-prev {
+    float: left;
+}
+
+.ui-datepicker-next {
+    float: right;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+    border: 1px solid $gray-80;
+    border-bottom: none;
+    font-family: $field-font;
+    font-weight: $field-font-weight;
+    font-size: 0.65rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+    color: $black;
+    background-color: white;
+    /* Arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: %23444444'></polygon></svg>");
+    background-size: 9px 6px;
+    background-position: right -1.5rem center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none !important;
+    position: relative;
+    width: 50%;
+
+    @media $(l-tablet) {
+        font-size: calc($field-font-size / 1.25);
+    }
+
+}
+
+.ui-datepicker-year {
+    border-left: none;
+}
+
+.no-touchevents {
+
+    .ui-datepicker-calendar td > a:hover {
+        background: $black;
+        color: white;
+    }
+
+    .ui-datepicker-prev:hover,
+    .ui-datepicker-next:hover {
+        background: blue;
+    }
+
+    .ui-datepicker-trigger:hover {
+        opacity: 1;
+    }
+
+}

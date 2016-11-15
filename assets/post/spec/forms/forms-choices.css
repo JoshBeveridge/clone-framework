@@ -1,0 +1,184 @@
+/* =============================================================================
+
+    FORMS: CHECKBOXES/RADIOS CSS
+    Property of Norex
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+
+/* Checkboxes and Radios Spacing ============================================ */
+.gfield_checkbox > li {
+    margin: 0.25rem 0;
+}
+
+/* Both Radios and Checkboxes =============================================== */
+.gfield_checkbox,
+.gfield_radio {
+    display: flex;
+
+    > li {
+
+        label {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            padding: 0 0 0 0.5rem;
+            font-size: calc($label-font-size / 1.1);
+            color: $black;
+            position: relative;
+            display: inline-block;
+        }
+
+    }
+
+}
+
+/* Checkboxes Only ========================================================== */
+.gfield_checkbox {
+    flex-flow: row wrap;
+
+    > li {
+        flex: 0 0 100%;
+        padding-left: 25px;
+
+        @media $(p-tablet) {
+            flex: 0 0 50%;
+        }
+
+        @media $(p-tablet) {
+            flex: 0 0 33.3%;
+        }
+
+        label {
+
+            &:before {
+                display: block;
+                content: "\f122";
+                color: $white;
+                font-size: 0.9rem;
+                text-align: center;
+                line-height: 20px;
+                font-family: "Ionicons";
+                border: 2px solid $gray-80;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 100%;
+                top: 50%;
+                z-index: 2;
+                transform: translate3d(0,-50%,0);
+            }
+
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+
+            &:checked + label:before {
+                background: $black;
+                border-color: $black;
+            }
+
+        }
+
+    }
+
+}
+
+    /* Checkbox Hover ======================================================= */
+    .no-touchevents {
+
+        .gfield_checkbox > li label:hover {
+            cursor: pointer;
+
+            &:before {
+                background: color($black a(10%));
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+/* Radios Only ============================================================== */
+.gfield_radio {
+    flex-flow: row wrap;
+
+    > li {
+        padding: 0.275rem 0;
+        flex: 0 0 100%;
+
+        @media $(p-tablet) {
+            padding: 0;
+        }
+
+        @media $(l-tablet) {
+            flex: 0 0 33.3%;
+        }
+
+        label {
+            width: 100%;
+            padding: 0;
+
+            &:before {
+                display: inline-block;
+                margin: 0 0.5rem 0 0;
+                content: "";
+                border: 2px solid $gray-80;
+                width: 1rem;
+                height: 1rem;
+                vertical-align: middle;
+                border-radius: 100%;
+            }
+
+            @media $(l-tablet) {
+                padding: .5rem 0;
+            }
+
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+
+            &:checked + label {
+
+                &:before {
+                    box-shadow: inset 0 0 0 5px $white;
+                    background: $black;
+                }
+
+            }
+
+        }
+
+        &:last-of-type {
+
+            label:before {
+                border-width: 2px;
+            }
+
+        }
+
+    }
+
+}
+
+    /* Radio Hover ========================================================== */
+    .no-touchevents {
+
+        .gfield_radio > li label:hover {
+            cursor: pointer;
+
+            &:before {
+                background: color($black a(10%));
+                cursor: pointer;
+            }
+
+        }
+
+    }
