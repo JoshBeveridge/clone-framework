@@ -4,8 +4,6 @@ wp-config.local.php
 wp-local.php
 npm-debug.log
 
-assets/css/style.css
-assets/css/styleguide.css
 assets/vendor
 assets/node_modules
 assets/bower_components

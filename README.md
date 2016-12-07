@@ -102,7 +102,6 @@ Clone includes the following dependencies by default:
 
 * Removed "Content Typography" from `typography.css`.
 * Fixed a bug where the CSS import was looking for the wrong file.
-* Added `assets/css/style.css` and `assets/css/styleguide.css` to `.gitignore` - this is to prevent merge conflicts in rendered CSS files.
 * Disabled the margin value on Ionicons and Font Awesome icons by default.
 * Moved the `section` CSS into the "Section" area in `settings.css`.
 * Disabled the Typekit Font Pop fix by default.
