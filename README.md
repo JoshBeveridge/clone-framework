@@ -108,3 +108,6 @@ Clone includes the following dependencies by default:
 * Disabled the Typekit Font Pop fix by default.
 * Removed the `opacity: 0;` on `html` by default.
 * Re-added `.page-container` and `.content-container` classes to `settings.css`.
+
+###### December 2016 (2) Update by Josh Beveridge
+* Changes `assets/css/*` to specify typical CSS files in `.gitignore`.
