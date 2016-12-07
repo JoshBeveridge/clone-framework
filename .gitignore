@@ -4,6 +4,7 @@ wp-config.local.php
 wp-local.php
 npm-debug.log
 
+assets/css/*
 assets/vendor
 assets/node_modules
 assets/bower_components

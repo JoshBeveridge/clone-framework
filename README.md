@@ -97,3 +97,14 @@ Clone includes the following dependencies by default:
 * Ionicons are now included by default.
 * Favicon inclusion code has been removed from `index.html`. This is always changing, so as such it should not be included as a default.
 * Minor spacing, commenting and indentation fixes in most Post and HTML files.
+
+###### December 2016 Update by Josh Beveridge
+
+* Removed "Content Typography" from `typography.css`.
+* Fixed a bug where the CSS import was looking for the wrong file.
+* Added `assets/css/*` to `.gitignore` - this is to prevent merge conflicts in rendered CSS files.
+* Disabled the margin value on Ionicons and Font Awesome icons by default.
+* Moved the `section` CSS into the "Section" area in `settings.css`.
+* Disabled the Typekit Font Pop fix by default.
+* Removed the `opacity: 0;` on `html` by default.
+* Re-added `.page-container` and `.content-container` classes to `settings.css`.

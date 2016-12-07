@@ -45,26 +45,52 @@ body {
     margin: 0;
 }
 
-/* Typekit Font Pop Fix ===================================================== */
-html {
-    opacity: 0;
-    transition: opacity 300ms ease 0ms;
-
-    /* Fade in the document when webfonts are loaded */
-    /* NOTE: This only works if Typekit is included and initialized */
-    &.wf-active {
-        opacity: 1 !important;
-        transition: opacity 300ms ease 0ms;
-    }
-
-}
-
 section {
     display: block;
     margin: 0;
     position: relative;
     width: 100%;
 }
+
+.page-container {
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 95%;
+
+    @media $(desktop) {
+        max-width: 60rem;
+    }
+
+    @media $(cinema) {
+        max-width: 70rem;
+    }
+
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 40rem;
+    width: 95%;
+
+    @media $(cinema) {
+        max-width: 60rem;
+    }
+
+}
+
+/* Typekit Font Pop Fix ===================================================== */
+/*html {
+    opacity: 0;
+    transition: opacity 300ms ease 0ms;*/
+
+    /* Fade in the document when webfonts are loaded */
+    /* NOTE: This only works if Typekit is included and initialized */
+    /*&.wf-active {
+        opacity: 1 !important;
+        transition: opacity 300ms ease 0ms;
+    }*/
+
+/*}*/
 
 /* Elements ================================================================= */
 img,
@@ -158,10 +184,10 @@ iframe {
 }
 
 /* Icon Spacing ========================================================== */
-[class*="ion-"]:before,
+/*[class*="ion-"]:before,
 [class*="fa-"]:before {
     margin-right: 0.3rem;
-}
+}*/
 
 /* Error Page ============================================================ */
 .error-type {
