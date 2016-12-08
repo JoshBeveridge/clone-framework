@@ -1,0 +1,223 @@
+/* =============================================================================
+
+    TOUCH NAVIGATION (TAB BAR) CSS
+    Authored by Josh Beveridge and Justin Bellefontaine
+
+============================================================================= */
+.no-touchevents {
+
+    .touch-navigation--tab-bar {
+        display: none;
+    }
+
+}
+
+.touch-navigation--tab-bar {
+    background: white;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 500;
+
+    @media $(l-tablet) {
+        border-top: none;
+        border-bottom: 1px solid black;
+        bottom: auto;
+        top: 0;
+    }
+
+}
+
+/* Tab Wrapper ============================================================== */
+.touch-navigation__tab-wrapper {
+
+}
+
+.touch-navigation__tab {
+    appearance: none;
+    align-items: center;
+    background: none;
+    border-left: 1px solid black;
+    margin: 0;
+    padding: 0;
+
+    @media $(p-tablet) {
+        order: 2;
+    }
+
+    &[class*="small-"]&[class*="med-"]&[class*="lg-"] {
+        display: flex;
+    }
+
+    &[class*="med-"]&[class*="lg-"]&:not([class*="small-"]) {
+        display: none;
+
+        @media $(p-tablet) {
+            display: flex;
+        }
+
+    }
+
+    &[class*="lg-"]&:not([class*="med-"])&:not([class*="small-"]) {
+        display: none;
+
+        @media $(l-tablet) {
+            display: flex;
+        }
+
+    }
+
+    &:first-child {
+        border-left: none;
+    }
+
+    >span {
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 1rem .3rem;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+/* Home */
+.touch-navigation__home-link {
+
+    @media $(p-tablet) {
+        order: 0;
+    }
+
+}
+
+/* More */
+.touch-navigation__more-link {
+
+    @media $(p-tablet) {
+        order: 5;
+    }
+
+    @media $(l-tablet) {
+        order: 7;
+    }
+
+}
+
+/* Search */
+.touch-navigation__search-link {
+
+    @media $(p-tablet) {
+        order: 1;
+    }
+
+}
+
+/* Sub Navigation Panes ===================================================== */
+[class*="touch-navigation__subnav"] {
+    background: white;
+    height: 100vh;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: opacity .3s ease, transform 0s linear .3s;
+    width: 100vw;
+
+    @media $(l-tablet) {
+        top: auto;
+        bottom: 100%;
+    }
+
+    &.active {
+        opacity: 1;
+        transform: translate(0, -100%);
+        transition: opacity .3s ease;
+
+        @media $(l-tablet) {
+            transform: translate(0, 100%);
+        }
+
+    }
+
+}
+
+.touch-navigation__back-link {
+    background: white;
+    border-bottom: 1px solid black;
+    display: block;
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
+
+    i {
+        margin: 0 .5rem 0 0;
+    }
+
+}
+
+.touch-navigation__sub-item {
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    position: relative;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+
+/* Item Variables - For Sub Link and Sub Trigger */
+$sub-font-family: sans;
+$sub-font-size: 1rem;
+$sub-line-height: 1rem;
+$sub-padding: 2rem;
+
+.touch-navigation__sub-link {
+    background: white;
+    display: block;
+    font-family: $sub-font-family;
+    font-size: $sub-font-size;
+    line-height: $sub-line-height;
+    padding: $sub-padding;
+    text-align: left;
+    width: 100%;
+}
+
+.touch-navigation__sub-trigger {
+    font-family: $sub-font-family;
+    font-size: $sub-font-size;
+    line-height: $sub-line-height;
+    padding: $sub-padding;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* More Pane ================================================================ */
+.touch-navigation__subnav--more {
+
+    .small-only {
+
+        @media $(p-tablet) {
+            display: none;
+        }
+
+    }
+
+    .med-below {
+
+        @media $(l-tablet) {
+            display: none;
+        }
+
+    }
+
+}
+
+/* Search Pane ============================================================== */
+.touch-navigation__subnav--search {
+
+}

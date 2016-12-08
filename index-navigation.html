@@ -48,9 +48,117 @@
             <p class="dated-browser-note">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Touch Navigation ============================================== -->
+        <!-- Touch Navigation (Tab Bar) ==================================== -->
+        <div class="touch-navigation--tab-bar">
 
-        <!-- Pointer Navigation ============================================ -->
+            <!-- Note that button and anchor elements are interchangeable in terms of style. Buttons should be used to open submenus, while anchors should be used to link out to another page. -->
+
+            <div class="touch-navigation__tab-wrapper flex-grid">
+
+                <!-- These sizing classes can be changed to reflect the total number of menu items in the navigation. By default they grow from 4, to 6, to 8. In the CSS, we've targeted the "small-", "med-", and "lg-" pieces of the class, so you shouldn't need to change anything there. The "More" button always falls on the end of the tab bar to allow for excess links. -->
+
+                <a class="touch-navigation__tab touch-navigation__home-link box small-1of4 med-1of6 lg-1of8" href="/" title="Site Landing Page">
+                    <!-- Without Logo -->
+                    <span>Home</span>
+                    <!-- With Logo -->
+                    <!-- <img src="assets/img/logo_mobile.png" alt="Site Logo"> -->
+                </a>
+                <a class="touch-navigation__tab box small-1of4 med-1of6 lg-1of8" href="#" title="Link Title">
+                    <span>Sample Link</span>
+                </a>
+                <a class="touch-navigation__tab box small-1of4 med-1of6 lg-1of8" href="#" title="Link Title">
+                    <span>Sample Link</span>
+                </a>
+                <button class="touch-navigation__tab touch-navigation__more-link box small-1of4 med-1of6 lg-1of8" data-link-handler="more">
+                    <span>More...</span>
+                </button>
+                <a class="touch-navigation__tab box med-1of6 lg-1of8" href="#" title="Link Title">
+                    <span>Sample Link</span>
+                </a>
+                <!-- The search button includes its own unique class (touch-navigation__search-link) and subnav, found below. -->
+                <button class="touch-navigation__tab touch-navigation__search-link box med-1of6 lg-1of8" data-link-handler="search">
+                    <span>Search</span>
+                </button>
+                <a class="touch-navigation__tab box lg-1of8" href="#" title="Link Title">
+                    <span>Sample Link</span>
+                </a>
+                <a class="touch-navigation__tab box lg-1of8" href="#" title="Link Title">
+                    <span>Sample Link</span>
+                </a>
+            </div>
+
+            <!-- Below is a special submenu for housing "More" items. "small-only" items will appear in the "More" menu only on phones, "med-below" items will appear in the "More" menu on phones & portrait tablets. If you do not give the item a class, it will always show. -->
+
+            <div class="touch-navigation__subnav touch-navigation__subnav--more" data-link-target="more">
+                <button class="touch-navigation__back-link" data-link-handler="more">
+                    <span><i class="ionicons ion-chevron-left"></i>Back</span>
+                </button>
+                <div class="touch-navigation__sub-item small-only">
+                    <button class="touch-navigation__sub-link" data-link-handler="search">Search</button>
+                </div>
+                <div class="touch-navigation__sub-item small-only">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger" data-link-handler="sample"><i class="ionicons ion-plus"></i></button>
+                </div>
+                <div class="touch-navigation__sub-item med-below">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                </div>
+                <div class="touch-navigation__sub-item med-below">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                </div>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                </div>
+            </div>
+
+            <!-- Below is the standard template for submenus; the links that exist within each item link to their respective page, while the associated button only exits if that item has children. The button should then open the respective submenu. -->
+
+            <div class="touch-navigation__subnav" data-link-target="sample">
+                <button class="touch-navigation__back-link" data-link-handler="sample">
+                    <span><i class="ionicons ion-chevron-left"></i>Back</span>
+                </button>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger"><i class="ionicons ion-plus"></i></button>
+                </div>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger"><i class="ionicons ion-plus"></i></button>
+                </div>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger"><i class="ionicons ion-plus"></i></button>
+                </div>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger"><i class="ionicons ion-plus"></i></button>
+                </div>
+                <div class="touch-navigation__sub-item">
+                    <a class="touch-navigation__sub-link" href="#" title="Link Title">Sample Link</a>
+                    <button class="touch-navigation__sub-trigger"><i class="ionicons ion-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Below is a special submenu for housing the search input. -->
+
+            <div class="touch-navigation__subnav--search" data-link-target="search">
+                <button class="touch-navigation__back-link" data-link-handler="search">
+                    <span><i class="ionicons ion-chevron-left"></i>Back</span>
+                </button>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <input class="touch-navigation__search-input" type="text" placeholder="Enter your Search Term..." />
+                <button class="touch-navigation__search-submit-link">
+                    <span>Search</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Touch Navigation (Drawer) ===================================== -->
+
+        <!-- Pointer Navigation (Topbar) =================================== -->
+
+        <!-- Pointer Navigation (Sidebar) ================================== -->
 
         <!-- Read Me ======================================================= -->
         <section class="content-container">
