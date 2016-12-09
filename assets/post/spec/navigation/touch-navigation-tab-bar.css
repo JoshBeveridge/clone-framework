@@ -91,6 +91,13 @@
         order: 0;
     }
 
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: .3rem;
+    }
+
 }
 
 /* More */
@@ -120,6 +127,7 @@
     background: white;
     height: 100vh;
     opacity: 0;
+    overflow: auto;
     position: absolute;
     top: 100%;
     left: 0;
