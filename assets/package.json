@@ -32,8 +32,9 @@
         "modernizr": "cd bower_components/modernizr/ && npm install && node ./bin/modernizr -c ../../modernizr-config.json && cd ../../ && cp bower_components/modernizr/modernizr.js vendor/",
         "normalize": "cp bower_components/normalize.css/normalize.css vendor/",
         "slick": "cp bower_components/slick-carousel/slick/slick.css vendor/ && cp bower_components/slick-carousel/slick/slick.js vendor/ && cp bower_components/slick-carousel/slick/slick-theme.css vendor/",
-        "clone": "bower install && rm -rf vendor && mkdir vendor && rm -rf fonts && mkdir fonts && npm run fontawesome && npm run ionicons && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick",
-        "post": "postcss -u postcss-import -u postcss-mixins -u postcss-nested -u autoprefixer -u postcss-simple-vars -u postcss-color-function -u cssnano --local-plugins -c options.js -d css post/*.css",
+        "clone": "bower install && brew install terminal-notifier && rm -rf vendor && mkdir vendor && rm -rf fonts && mkdir fonts && npm run fontawesome && npm run ionicons && npm run jquery && npm run matchMedia && npm run modernizr && npm run normalize && npm run slick",
+        "notify": "node notify.js",
+        "post": "postcss post/*.css -d css -u postcss-import postcss-mixins postcss-nested autoprefixer postcss-simple-vars postcss-color-function cssnano -c postcss.config.js && npm run notify",
         "watch": "npm-watch"
     }
 }
