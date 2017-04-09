@@ -1,9 +1,10 @@
 {
-  "name": "CloneFramework",
-  "version": "0.1.0",
-  "homepage": "https://gitlab.com/norex/app_clone",
+  "name": "Clone",
+  "version": "0.2.0",
+  "homepage": "https://github.com/joshdrink/clone",
   "authors": [
-    "Josh Beveridge <me@joshbeveridge.com>"
+    "Josh Beveridge <imjoshdrink@gmail.com>",
+    "Justin Bellefontaine <jbvalo@gmail.com>"
   ],
   "description": "A PostCSS Front-End clone used to init new projects.",
   "moduleType": [
