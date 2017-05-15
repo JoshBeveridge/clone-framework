@@ -107,3 +107,10 @@ Clone includes the following dependencies by default:
 * Disabled the Typekit Font Pop fix by default.
 * Removed the `opacity: 0;` on `html` by default.
 * Re-added `.page-container` and `.content-container` classes to `settings.css`.
+
+###### Spring 2017 Update by Josh Beveridge
+
+* Updated PostCSS-CLI to 3.0.
+* Added cross-system notifications for completed PostCSS compilation.
+* Added folder specific `.gitignore` to `assets`.
+* Removed default favicons.
