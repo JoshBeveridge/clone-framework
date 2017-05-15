@@ -52,7 +52,7 @@ To create a full width item, you can use the `.full`, `.small/med/lg-1of1`, or `
 
 1. Open `package.json`
 2. Add your NPM Package to the `devDependencies` list.
-3. Add your NPM Package to the `post` script using `-u packageName`. **Verify the order of your packages to avoid complications. Most packages should be included after `postcss-nested` and before `cssnano`.**
+3. Add your NPM Package to `postcss.config.js`. **Verify the order of your packages to avoid complications. Most packages should be included after `postcss-nested` and before `cssnano`.**
 4. `cd clone/assets`
 5. `npm install`
 6. `npm run watch`
@@ -83,6 +83,23 @@ Clone includes the following dependencies by default:
 
 ## Changelog
 
+###### Spring 2017 Update by Josh Beveridge
+
+* Updated PostCSS-CLI to 3.0.
+* Added cross-system notifications for completed PostCSS compilation.
+* Added folder specific `.gitignore` to `assets`.
+* Removed default favicons.
+
+###### December 2016 Update by Josh Beveridge
+
+* Removed "Content Typography" from `typography.css`.
+* Fixed a bug where the CSS import was looking for the wrong file.
+* Disabled the margin value on Ionicons and Font Awesome icons by default.
+* Moved the `section` CSS into the "Section" area in `settings.css`.
+* Disabled the Typekit Font Pop fix by default.
+* Removed the `opacity: 0;` on `html` by default.
+* Re-added `.page-container` and `.content-container` classes to `settings.css`.
+
 ###### Fall 2016 Update by Justin Bellefontaine
 
 * A fix for the Typekit font pop has been added. The `<html>` tag is set to `opacity:0` by default then changed to `opacity:1` when webfonts have been loaded in completely. Please note that this only functions if Typekit fonts are included on the page. If you are not using Typekit, remove `opacity:0` from the `<html>` tag in `index.html`.
@@ -97,20 +114,3 @@ Clone includes the following dependencies by default:
 * Ionicons are now included by default.
 * Favicon inclusion code has been removed from `index.html`. This is always changing, so as such it should not be included as a default.
 * Minor spacing, commenting and indentation fixes in most Post and HTML files.
-
-###### December 2016 Update by Josh Beveridge
-
-* Removed "Content Typography" from `typography.css`.
-* Fixed a bug where the CSS import was looking for the wrong file.
-* Disabled the margin value on Ionicons and Font Awesome icons by default.
-* Moved the `section` CSS into the "Section" area in `settings.css`.
-* Disabled the Typekit Font Pop fix by default.
-* Removed the `opacity: 0;` on `html` by default.
-* Re-added `.page-container` and `.content-container` classes to `settings.css`.
-
-###### Spring 2017 Update by Josh Beveridge
-
-* Updated PostCSS-CLI to 3.0.
-* Added cross-system notifications for completed PostCSS compilation.
-* Added folder specific `.gitignore` to `assets`.
-* Removed default favicons.
