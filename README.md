@@ -88,6 +88,9 @@ Clone includes the following dependencies by default:
 * Refactored `post` folder to prepare Clone for packaging.
 * `post` now contains the folders `core` (for core clone styles), `plugins` (for plugin specific styles), `spec` (for project specifications), and `components` (for project sections/components).
 * Refactored `app.js` into a separate `core.js` file in preparation for packaging.
+* `post/components/content-area.css` has been added to help speed up WYSIWYG styling.
+* A font scale (1.414) has been added to `post/spec/typography.css`.
+* Padding variables have been added based on a `padding-unit` variable in `post/core/settings.css`.
 
 ###### Spring 2017 Update by Josh Beveridge
 

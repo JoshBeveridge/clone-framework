@@ -10,4 +10,124 @@
 
 section.content-area {
 
+    .content-container >*:first-child {
+        margin-top: 0;
+    }
+
+    .content-container >*:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5 {
+
+    }
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+
+    h4 {
+
+    }
+
+    h5 {
+
+    }
+
+    /* Paragraphs, Anchors, Blockquotes */
+    p {
+
+    }
+
+    a {
+
+    }
+
+    blockquote {
+
+    }
+
+    blockquote p {
+
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    /* Lists */
+    ul {
+
+
+        li {
+
+        }
+
+    }
+
+    ol {
+
+
+        li {
+
+        }
+
+    }
+
+    /* Tables */
+    table {
+        border-collapse: collapse;
+        overflow: auto;
+        width: 100%;
+
+        thead {
+
+            tr {
+
+
+                td {
+
+                }
+
+            }
+
+        }
+
+        tbody {
+
+            tr {
+
+                td {
+
+                }
+
+                &:nth-child(even) {
+                    background: rgba(240, 240, 240, 1);
+                }
+
+            }
+
+        }
+
+    }
+
+    /* Rules */
+    hr {
+        
+    }
+
 }

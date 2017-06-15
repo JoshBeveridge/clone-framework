@@ -20,58 +20,60 @@ body {
     font-size: 100%;
 }
 
+/* 1.414 Scale */
+$font-scale-h1: calc(1rem*3.998);
+$font-scale-h2: calc(1rem*2.827);
+$font-scale-h3: calc(1rem*1.999);
+$font-scale-h4: calc(1rem*1.414);
+$font-scale-regular: 1rem;
+$font-scale-small: calc(1rem*0.707);
+
 /* Sitewide Typography ====================================================== */
 ::selection {
     background: $black;
     color: $white;
 }
 
-/* Buttons */
-.button,
-.button:focus,
-.button:active,
-.button:link,
-.button:visited,
-input[type='submit'] {
+[class*="heading--"] {
 
 }
 
-button {
+.heading--01 {
+
+}
+
+.heading--02 {
+
+}
+
+.heading--03 {
+
+}
+
+.heading--04 {
+
+}
+
+.heading--05 {
+
+}
+
+/* Buttons ================================================================== */
+[class*="button--"] {
+    appearance: none;
     border: none;
     box-shadow: none;
     outline: none;
 }
 
-/* Inputs */
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
+.no-touchevents {
 
-input {
-    background: none;
-    border: none;
-    box-shadow: none;
-}
+    [class*="button--"]:hover {
 
-dl {
-    margin: 0;
-    padding: 0;
-
-    dt {
-        display: none;
-    }
-
-    dd {
-        margin: 0;
-        padding: 0;
     }
 
 }
 
-/* Tables */
-table {
-    width: 100%;
+[class*="button--"][class*="--small"] {
+
 }
