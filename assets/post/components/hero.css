@@ -18,7 +18,7 @@ $hero-height: 85vh;
 
 .hero {
   width: 100%;
-  min-height: $hero-height;
+  /*min-height: $hero-height;*/
   position: relative;
   z-index: 1;
   margin: 0;

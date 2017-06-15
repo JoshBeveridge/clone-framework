@@ -21,12 +21,15 @@ body {
 }
 
 /* 1.414 Scale */
-$font-scale-h1: calc(1rem*3.998);
-$font-scale-h2: calc(1rem*2.827);
-$font-scale-h3: calc(1rem*1.999);
-$font-scale-h4: calc(1rem*1.414);
+
+$font-scale: 1.414;
+
+$font-scale-h1: calc(1rem*($font-scale*($font-scale*($font-scale*($font-scale)))));
+$font-scale-h2: calc(1rem*($font-scale*($font-scale*($font-scale))));
+$font-scale-h3: calc(1rem*($font-scale*($font-scale)));
+$font-scale-h4: calc(1rem*($font-scale));
 $font-scale-regular: 1rem;
-$font-scale-small: calc(1rem*0.707);
+$font-scale-small: calc(1rem*($font-scale/2));
 
 /* Sitewide Typography ====================================================== */
 ::selection {
@@ -39,23 +42,23 @@ $font-scale-small: calc(1rem*0.707);
 }
 
 .heading--01 {
-
+    font-size: $font-scale-h1;
 }
 
 .heading--02 {
-
+    font-size: $font-scale-h2;
 }
 
 .heading--03 {
-
+    font-size: $font-scale-h3;
 }
 
 .heading--04 {
-
+    font-size: $font-scale-h4;
 }
 
 .heading--05 {
-
+    font-size: $font-scale-regular;
 }
 
 /* Buttons ================================================================== */
