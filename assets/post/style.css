@@ -1,43 +1,75 @@
 /* =============================================================================
 
     PRIMARY CSS
-    Property of Norex
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
 
 ============================================================================= */
 
+/* CORE ===================================================================== */
+
+    /* These files are for Clone"s foundation - the grid, settings, etc. */
+
+    /* Clone"s Flexbox Grid */
+    @import "core/grid.css";
+
+    /* Flexbox Grid IE11 Fallback */
+    @import "core/grid-ie11.css";
+
+    /* Clone"s Settings */
+    @import "core/settings.css";
+
+    /* These files include other layout options. */
+
+    /* Inline Layout */
+    /*@import "core/inline.css";*/
+
+/* PLUGINS ================================================================== */
+
+    /* These files are specific to plugins used to make certain UI elements faster to style. */
+
+    /* Wordpress */
+    @import "plugins/wordpress.css";
+
+    /* UI Datepicker */
+    @import "plugins/uidatepicker.css";
+
 /* SPEC ===================================================================== */
 
-    /* Spec: Palette ======================================================== */
-    @import 'spec/palette.css';
+    /* These files include sitewide styles such as palette, general typography, forms, etc. */
 
-    /* Spec: Settings ======================================================= */
-    @import 'spec/settings.css';
+    /* Site Palette */
+    @import "spec/palette.css";
 
-    /* Spec: Typography ===================================================== */
-    @import 'spec/typography.css';
+    /* Site Typography */
+    @import "spec/typography.css";
 
-    /* Spec: Forms ========================================================== */
-    @import 'spec/forms/forms-base.css';
+    /* Site Options */
+    @import "spec/options.css";
 
-    /* Spec: Spec > Plugins: UI Datepicker ================================== */
-    /*@import 'spec/plugins/uidatepicker.css';*/
+    /* Site Form Styles */
+    /*@import "spec/forms/forms-base.css";*/
 
-/* LAYOUT =================================================================== */
+/* COMPONENTS =============================================================== */
 
-    /* Layout: Grid ========================================================= */
-    @import 'layout/grid.css';
+    /* These files are for your website"s unique section elements. */
 
-    /* Layout: Grid (IE11) ================================================== */
-    @import 'layout/grid-ie11.css';
+    /* Navigation (Full) */
+    @import "components/navigation-full.css";
 
-    /* Layout: Header ======================================================= */
-    @import 'layout/header.css';
+    /* Navigation (Condensed) */
+    @import "components/navigation-condensed.css";
 
-    /* Layout: Footer ======================================================= */
-    @import 'layout/footer.css';
+    /* Hero */
+    @import "components/hero.css";
 
-/* BLOCKS =================================================================== */
+    /* (Subpage) Header */
+    @import "components/header.css";
 
-    /* Blocks: Hero (Slick Carousel) ======================================== */
-    @import 'blocks/landing-hero.css';
+    /* WYSIWYG Content Area */
+    @import "components/content-area.css";
+
+    /* Footer */
+    @import "components/footer.css";

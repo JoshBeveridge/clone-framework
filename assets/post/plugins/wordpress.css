@@ -1,0 +1,54 @@
+/* =============================================================================
+
+    PLUGIN: WORDPRESS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Wordpress WYSIWYG Images ================================================= */
+[class*="wp-image"] {
+    height: auto !important;
+}
+
+[class*="wp-image"].alignnone {
+
+    @media $(l-tablet) {
+
+    }
+
+}
+
+.wp-image__wrapper {
+    margin: 2rem 0;
+}
+
+/* Wordpress WYSIWYG Classes ================================================ */
+.alignleft,
+.alignright {
+    padding: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+}
+
+.alignleft {
+    margin: 0 0 1rem 0;
+
+    @media $(p-tablet) {
+        float: left;
+        margin: 0 2rem 1rem 0;
+    }
+
+}
+
+.alignright {
+    margin: 0 0 1rem 0;
+
+    @media $(p-tablet) {
+        float: right;
+        margin: 0 0 1rem 2rem;
+    }
+
+}

@@ -1,8 +1,10 @@
 // =============================================================================
 
-    // STYLE GUIDE JS
-    // Property of Norex
-    // Authored by Josh Beveridge and Justin Bellefontaine
+    // STYLEGUIDE JS
+
+    // Authored by:
+        // - Josh Beveridge
+        // - Justin Bellefontaine
 
 // =============================================================================
 

@@ -1,23 +1,26 @@
 /* =============================================================================
 
     STYLEGUIDE LAYOUT CSS
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
 
 ============================================================================= */
 
 /* Imports ================================================================== */
 
-/* Palette */
-@import 'spec/palette.css';
-
 /* Settings */
-@import 'spec/settings.css';
+@import "core/settings.css";
+
+/* Palette */
+@import "spec/palette.css";
 
 /* Typography */
-@import 'spec/typography.css';
+@import "spec/typography.css";
 
 /* App Layout =============================================================== */
-@import 'layout/variables.css';
+@import "core/styleguide-layout.css";
 
 /* App Header =============================================================== */
 .style-block-header {

@@ -1,9 +1,17 @@
 /* =============================================================================
 
     INLINE CSS
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+================================================================================
+
+    *** This file is not to be edited on a per project basis. ***
 
 ============================================================================= */
+
 .inline-layout {
     line-height: 1;
     margin: 0;

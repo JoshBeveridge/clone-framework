@@ -83,6 +83,12 @@ Clone includes the following dependencies by default:
 
 ## Changelog
 
+###### Summer 2017 Update by Josh Beveridge
+
+* Refactored `post` folder to prepare Clone for packaging.
+* `post` now contains the folders `core` (for core clone styles), `plugins` (for plugin specific styles), `spec` (for project specifications), and `components` (for project sections/components).
+* Refactored `app.js` into a separate `core.js` file in preparation for packaging.
+
 ###### Spring 2017 Update by Josh Beveridge
 
 * Updated PostCSS-CLI to 3.0.

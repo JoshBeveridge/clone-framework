@@ -1,8 +1,9 @@
 /* =============================================================================
 
-    APP LAYOUT CSS
-    Property of Norex
-    Authored by Justin Bellefontaine
+    STYLEGUIDE LAYOUT CSS
+
+    Authored by:
+        - Justin Bellefontaine
 
 ============================================================================= */
 
@@ -16,7 +17,7 @@
     $app-sidebar-width-desktop: 15vw;
     $app-sidebar-width-tablet: 10vw;
     $app-sidebar-width-mobile: 100%;
-      
+
       /* Background Color */
       $app-sidebar-background: #fff;
 
@@ -25,7 +26,7 @@
     $app-main-width-desktop: 65vw;
     $app-main-width-tablet: 75vw;
     $app-main-width-mobile: 100%;
-      
+
       /* Background Color */
       $app-main-background: #fff;
 
@@ -34,7 +35,7 @@
     $app-secondary-width-desktop: 20vw;
     $app-secondary-width-tablet: 15vw;
     $app-secondary-width-mobile: 100%;
-      
+
       /* Background Color */
       $app-secondary-background: #fff;
 
@@ -97,7 +98,7 @@
         width: 100%;
         left: 0;
       }
-      
+
     }
 
     @media screen and (max-width: 70em) {
@@ -173,7 +174,7 @@
 }
 
 body.with-sidebar {
-  
+
   .app-pane.primary {
     width: $app-main-width-mobile;
 

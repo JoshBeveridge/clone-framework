@@ -1,7 +1,10 @@
 /* =============================================================================
 
     TYPOGRAPHY CSS
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
 
 ============================================================================= */
 
@@ -71,102 +74,4 @@ dl {
 /* Tables */
 table {
     width: 100%;
-}
-
-/* Social Icons ========================================================== */
-
-/*
-
-    <!-- SAMPLE LAYOUT -->
-
-    <dl class="inline-layout social-icons medium">
-        <dd><a href class="ion-social-facebook"></a></dd>
-        <dd><a href class="ion-social-twitter"></a></dd>
-        <dd><a href class="ion-social-linkedin"></a></dd>
-    </dl>
-
-*/
-
-/* Social Icon Variables */
-
-$social-icons-small-size: 40px;
-$social-icons-medium-size: 50px;
-$social-icons-large-size: 60px;
-
-$social-icons-small-font-size: 21px;
-$social-icons-medium-font-size: 24px;
-$social-icons-large-font-size: 30px;
-
-.social-icons {
-
-    > dd {
-        padding: 0 0.25rem;
-    }
-
-    a {
-        border-radius: 100%;
-        text-align: center;
-        position: relative;
-        padding: 50% 0;
-
-        &:before {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%,-50%,0);
-            margin: 0;
-        }
-
-        /* Facebook */
-        &[class*="facebook"] {
-            background: $facebook-brand;
-        }
-
-        /* LinkedIn */
-        &[class*="linkedin"] {
-            background: $linkedin-brand;
-        }
-
-        /* Twitter */
-        &[class*="twitter"] {
-            background: $twitter-brand;
-        }
-
-        /* LinkedIn */
-        &[class*="googleplus"] {
-            background: $gplus-brand;
-        }
-
-    }
-
-    /* Small Size */
-    &.small {
-
-        a {
-            font-size: $social-icons-small-font-size;
-            width: $social-icons-small-size;
-        }
-
-    }
-
-    /* Medium Size */
-    &.medium {
-
-        a {
-            font-size: $social-icons-medium-font-size;
-            width: $social-icons-medium-size;
-        }
-
-    }
-
-    /* Large Size */
-    &.large {
-
-        a {
-            font-size: $social-icons-large-font-size;
-            width: $social-icons-large-size;
-        }
-
-    }
-
 }

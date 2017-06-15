@@ -1,7 +1,14 @@
 /* =============================================================================
 
     SETTINGS CSS
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
+
+================================================================================
+
+    *** This file is not to be edited on a per project basis. ***
 
 ============================================================================= */
 
@@ -78,94 +85,15 @@ section {
 
 }
 
-/* Typekit Font Pop Fix ===================================================== */
-/*html {
-    opacity: 0;
-    transition: opacity 300ms ease 0ms;*/
-
-    /* Fade in the document when webfonts are loaded */
-    /* NOTE: This only works if Typekit is included and initialized */
-    /*&.wf-active {
-        opacity: 1 !important;
-        transition: opacity 300ms ease 0ms;
-    }*/
-
-/*}*/
-
 /* Elements ================================================================= */
 img,
 iframe {
     max-width: 100%;
 }
 
-/* Custom WP Image Styles =================================================== */
-[class*="wp-image"] {
-    height: auto !important;
-}
-
-[class*="wp-image"].alignnone {
-
-    @media $(l-tablet) {
-
-    }
-
-}
-
-.wp-image__wrapper {
-    margin: 2rem 0;
-}
-
 /* SVG Dimension Fix for IE ================================================= */
 [src*=".svg"] {
     max-height: 100%;
-}
-
-/* Inline Layout ============================================================ */
-.inline-layout {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-
-    dt {
-        display: none;
-    }
-
-    dd {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    &.justify {
-        text-align: justify;
-        font-size: 1px;
-        font-size: 0;
-
-        dd {
-            font-size: 1rem;
-        }
-
-        dl {
-            text-align: left;
-
-            &.justify {
-                text-align: justify;
-            }
-
-        }
-
-        &:after {
-            content: '';
-            display: inline-block;
-            width: 100%;
-            height: 0;
-            font-size: 0;
-            line-height: 0;
-        }
-
-    }
-
 }
 
 /* Outdated Browser Note ==================================================== */
@@ -183,12 +111,6 @@ iframe {
     display: block;
 }
 
-/* Icon Spacing ========================================================== */
-/*[class*="ion-"]:before,
-[class*="fa-"]:before {
-    margin-right: 0.3rem;
-}*/
-
 /* Error Page ============================================================ */
 .error-type {
     color: $red !important;
@@ -204,33 +126,6 @@ iframe {
 /* Helper Classes ======================================================== */
 .full-wide {
     width: 100% !important;
-}
-
-.alignleft,
-.alignright {
-    padding: 0.5rem;
-    background: #fff;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-}
-
-.alignleft {
-    margin: 0 0 1rem 0;
-
-    @media $(p-tablet) {
-        float: left;
-        margin: 0 2rem 1rem 0;
-    }
-
-}
-
-.alignright {
-    margin: 0 0 1rem 0;
-
-    @media $(p-tablet) {
-        float: right;
-        margin: 0 0 1rem 2rem;
-    }
-
 }
 
 .hide-overflow {

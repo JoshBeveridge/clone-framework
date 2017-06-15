@@ -1,12 +1,13 @@
 /* =============================================================================
 
     PLUGIN: JQUERY UI DATEPICKER CSS
-    Property of Norex
-    Authored by Josh Beveridge and Justin Bellefontaine
+
+    Authored by:
+        - Josh Beveridge
+        - Justin Bellefontaine
 
 ============================================================================= */
 
-/* Datepicker =============================================================== */
 .ginput_container_date {
     position: relative;
 }
