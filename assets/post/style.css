@@ -12,14 +12,14 @@
 
     /* These files are for Clone"s foundation - the grid, settings, etc. */
 
+    /* Clone"s Settings */
+    @import "core/settings.css";
+
     /* Clone"s Flexbox Grid */
     @import "core/grid.css";
 
     /* Flexbox Grid IE11 Fallback */
     @import "core/grid-ie11.css";
-
-    /* Clone"s Settings */
-    @import "core/settings.css";
 
     /* These files include other layout options. */
 

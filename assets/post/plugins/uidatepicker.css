@@ -80,8 +80,8 @@
 .ui-datepicker-year {
     border: 1px solid $gray-80;
     border-bottom: none;
-    font-family: $field-font;
-    font-weight: $field-font-weight;
+    /*font-family: $field-font;*/
+    /*font-weight: $field-font-weight;*/
     font-size: 0.65rem;
     padding: 0.5rem 2rem 0.5rem 0.75rem;
     box-shadow: none;
@@ -103,7 +103,7 @@
     width: 50%;
 
     @media $(l-tablet) {
-        font-size: calc($field-font-size / 1.25);
+        /*font-size: calc($field-font-size / 1.25);*/
     }
 
 }
