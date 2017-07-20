@@ -9,7 +9,6 @@
     This file's purpose is to provide you with a standard set of options that you can toggle on and off for any given project.
 
     - Typekit Fade In
-    - Icon Spacing
     - Social Icons
 
 ============================================================================= */
@@ -27,13 +26,6 @@
             transition: opacity 300ms ease 0ms;
         }
 
-    }*/
-
-/* Icon Spacing ============================================================= */
-
-    /*[class*="ion-"]:before,
-    [class*="fa-"]:before {
-        margin-right: 0.3rem;
     }*/
 
 /* Social Icons ========================================================== */
