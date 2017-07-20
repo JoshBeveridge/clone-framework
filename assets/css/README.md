@@ -1,3 +1,3 @@
-Looking for `style.css` or `styleguide.css`?
+Looking for `style.css`?
 
 Try running `npm run watch`!

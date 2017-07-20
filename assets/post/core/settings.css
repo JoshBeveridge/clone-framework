@@ -40,6 +40,8 @@ $cinema: screen and (min-width: 100em);
 $cinema-xl: screen and (min-width: 110em);
 /*$(cinema-xl) {}*/
 
+$menu-media-query: $(l-tablet);
+
 /* Padding Units ============================================================ */
 $padding-unit: 1rem;
 

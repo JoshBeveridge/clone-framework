@@ -4,6 +4,7 @@ A front-end framework that uses NPM and PostCSS.
 
 ### Getting Started
 
+Clone uses [Yarn](https://yarnpkg.com/en/) to manage dependencies. If you haven't already, install Yarn globally by running `brew install yarn` in your Terminal. The `npm run clone` command will not work without Yarn.
 1. Clone Clone.
 2. `cd clone/assets`
 3. `npm install`
@@ -61,27 +62,41 @@ To create a full width item, you can use the `.full`, `.small/med/lg-1of1`, or `
 ### Editing Vendor Dependencies
 
 Clone includes the following dependencies by default:
-* Font Awesome
-* Ionicons
-* jQuery
-* Match Media
-* Modernizr
-* Normalize
+* jquery
+* match-media
+* modernizr
+* normalize.css
+* slick-carousel
 
 #### Adding/Removing Dependencies
 
-1. Open `bower.json`
-2. Add your Bower Package to the `dependencies` list.
+1. `cd assets`
+2. Run `yarn add [package-name]`. Package names can be located via search [here](https://yarnpkg.com/en/).
 3. Open `package.json`
-4. Inside `scripts`, write a script that installs your Bower Package, and copies out the resulting asset into vendor. Finally, add your new script to the `clone` script. See `package.json` for examples.
+4. Inside `scripts`, write a script that installs your Yarn package, and copies out the resulting asset into vendor. Finally, add your new script to the `clone` script. See `package.json` for examples.
 5. `cd clone/assets`
 6. `npm run clone`
 7. Include your `assets/vendor/file_name.ext` resource in your HTML.
 8. Profit.
 
-**Please note that Clone uses `latest` in `bower.json` to pull down the most recent version of all default dependencies. If you need a specific version, replace `latest` with the correct version number before running `npm run clone`.**
+**Please note that Clone uses the latest version available of any given dependency in `package.json`. If you need a specific version, replace the version number with the desired version before running `npm run clone`.**
 
 ## Changelog
+
+###### Summer 2017 Update by Justin Bellefontaine (Late July)
+
+* Migrated dependency management to [Yarn](https://yarnpkg.com/en/). Removed Bower (deprecated).
+* Removed `styleguide` system in favour of the upcoming [Atomic](http://bradfrost.com/blog/post/atomic-web-design/) design pattern system (coming soon).
+* Removed FontAwesome and Ionicons as dependencies.
+* Removed `bower_components` from `.gitignore`
+* Removed `data-link-handler` system from `core.js` in favour of custom click handlers.
+* Removed `inline.css` from layout options.
+* Commented out `plugins` Post files by default in `style.css` (Wordpress and UI Datepicker).
+* Removed icon spacing from `options.css` as FontAwesome and Ionicons are no longer included as dependencies.
+* Added `menu-media-query` to `settings.css`, adding the ability to define where the "condensed" menu triggers.
+* Removed trailing / closing end slashes for `<link>` tags in `index.html`
+* Updated `README.md` to reflect revised workflow (Yarn).
+* Cleaned up punctuation and spacing in multiple files.
 
 ###### Summer 2017 Update by Josh Beveridge
 

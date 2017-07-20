@@ -12,8 +12,6 @@
 
     $(document).ready(function() {
 
-        var $root = $('html, body');
-
         // Main Menu Trigger ===================================================
         // $('.main-menu-toggle').on('click',function(e){
         //     $('body').toggleClass('hide-overflow');
