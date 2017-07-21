@@ -108,7 +108,7 @@ Example:
 6. `npm run watch`
 7. Profit.
 
-### Editing Vendor Dependencies
+#### Editing Vendor Dependencies
 
 Clone includes the following dependencies by default:
 * jquery
