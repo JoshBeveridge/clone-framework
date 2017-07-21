@@ -28,6 +28,8 @@ Clone includes the following processors by default:
 2. `npm run watch`
 3. CSS away!
 
+### Features and Helpers
+
 #### Using the Grid
 Clone includes a responsive flexbox-based grid system to help with your layout struggles.
 
@@ -62,11 +64,11 @@ The following classes are available:
 
 Applying any one of these classes to a containing element in your code will provide you with an auto-centered container for your content. This is especially handy for applying consistent line lengths throughout your project. Each container has a `max-width` set in pixels in `core/settings.css`. You can update these freely and the relevant mixins contained in `core/mixins.css` will update automatically. The max-width properties are as follows:
 ```
-.container-xsmall (max-width: 800px) or 50em
-.container-small (max-width: 1000px) or 62.5em
-.container-medium (max-width: 1140px) or 71.25em
-.container-large (max-width: 1440px) or 90em
-.container-xl (max-width: 1600px) or 100em
+.container-xsmall (max-width: 800px) or (50em)
+.container-small (max-width: 1000px) or (62.5em)
+.container-medium (max-width: 1140px) or (71.25em)
+.container-large (max-width: 1440px) or (90em)
+.container-xl (max-width: 1600px) or (100em)
 ```
 
 These can also be edited on a per-project basis. By default, each element with a container class applied will have a width of 85% of the parent element. This provides a generic buffer area on each side of the container regardless of viewport. As the viewport size increases, the width of the container will decrease by pre-determined percentages in `core/mixins.css`. Again, this is fully editable for your specific project.
@@ -93,6 +95,8 @@ Example:
     </div>
 </section>
 ```
+
+### Dependency Management
 
 #### Editing PostCSS Processors
 
@@ -131,7 +135,7 @@ Clone includes the following dependencies by default:
 ###### Summer 2017 Update by Justin Bellefontaine (Part 2)
 
 * Added `mixins.css` to `core`
-* Added a `container` classing system to control widths and line lengths of content containers [(see Container System)](clone#using-the-container-system-mixin).
+* Added a `container` classing system to control widths and line lengths of content containers [(see Container System)](#using-the-container-system-mixin).
 * Added a `section-padding` system to control modular page section whitespace uniformly (top and bottom) based on `$padding-unit`
 * Removed `.error-type` and `.error-desc` from `settings.css`. Error pages should have their own custom Post includes on a per project basis.
 * Removed the comment in `settings.css` stating that the file should not be edited on a per project basis. Global settings update frequently between projects and should be extensible.
