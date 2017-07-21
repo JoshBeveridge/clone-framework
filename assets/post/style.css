@@ -12,13 +12,16 @@
 
     /* These files are for Clone's foundation - the grid, settings, etc. */
 
+    /* Clone's Mixins */
+    @import "core/mixins.css";
+
     /* Clone's Settings */
     @import "core/settings.css";
 
     /* Clone's Flexbox Grid */
     @import "core/grid.css";
 
-    /* Flexbox Grid: IE11 Fallback */
+    /* Clone's Flexbox Grid: IE11 Fallback */
     @import "core/grid-ie11.css";
 
 /* PLUGINS ================================================================== */

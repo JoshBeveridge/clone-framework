@@ -8,8 +8,6 @@
 
 ================================================================================
 
-    *** This file is not to be edited on a per project basis. ***
-
 ============================================================================= */
 
 /* Media Variables ========================================================== */
@@ -40,6 +38,7 @@ $cinema: screen and (min-width: 100em);
 $cinema-xl: screen and (min-width: 110em);
 /*$(cinema-xl) {}*/
 
+/* Menu Media Query */
 $menu-media-query: $(l-tablet);
 
 /* Padding Units ============================================================ */
@@ -50,6 +49,12 @@ $padding-regular: $padding-unit;
 $padding-medium: calc($padding-unit*4);
 $padding-large: calc($padding-unit*6);
 $padding-xlarge: calc($padding-unit*8);
+
+/* Max Page Widths (Container System) ======================================= */
+$page-width-small: 1000px;
+$page-width-medium: 1140px;
+$page-width-large: 1440px;
+$page-width-xl: 1600px;
 
 /* Standards ================================================================ */
 * {
@@ -110,6 +115,33 @@ section {
 
 }
 
+/* Containers =============================================================== */
+
+/* XL */
+.container-xl {
+    @mixin container-xl;
+}
+
+/* Large */
+.container-large {
+    @mixin container-large;
+}
+
+/* Medium */
+.container-medium {
+    @mixin container-medium;
+}
+
+/* Small */
+.container-small {
+    @mixin container-small;
+}
+
+/* Section Padding ========================================================== */
+.page-section {
+    @mixin section-padding;
+}
+
 /* Elements ================================================================= */
 img,
 iframe {
@@ -134,18 +166,6 @@ iframe {
     z-index: 9999;
     text-align: center;
     display: block;
-}
-
-/* Error Page ============================================================ */
-.error-type {
-    color: red !important;
-    font-size: 6rem !important;
-    font-weight: 100 !important;
-    margin: 0 !important;
-}
-
-.error-desc {
-    margin: 0 0 2rem !important;
 }
 
 /* Helper Classes ======================================================== */

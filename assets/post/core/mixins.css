@@ -1,0 +1,76 @@
+/* =============================================================================
+
+    MIXINS CSS
+
+    Authored by:
+    - Josh Beveridge
+    - Justin Bellefontaine
+
+============================================================================= */
+
+/* Containers =============================================================== */
+
+@define-mixin container-small {
+    margin: 0 auto;
+    max-width: $page-width-small;
+    width: 85%;
+
+    @media $(p-tablet) {
+        width: 70%;
+    }
+
+    @media $(cinema-xl) {
+        width: 50%;
+    }
+
+}
+
+@define-mixin container-medium {
+    margin: 0 auto;
+    max-width: $page-width-medium;
+    width: 85%;
+
+    @media $(p-tablet) {
+        width: 80%;
+    }
+
+    @media $(l-tablet) {
+        width: 60%;
+    }
+
+}
+
+@define-mixin container-large {
+    margin: 0 auto;
+    max-width: $page-width-large;
+    width: 85%;
+
+    @media $(p-tablet) {
+        width: 80%;
+    }
+
+    @media $(cinema-xl) {
+        width: 70%;
+    }
+
+}
+
+@define-mixin container-xl {
+    margin: 0 auto;
+    max-width: $page-width-xl;
+    width: 85%;
+}
+
+/* Section Padding ========================================================== */
+@define-mixin section-padding {
+    padding: calc($padding-unit/2) 0;
+
+    @media $(p-tablet) {
+        padding: calc($padding-unit*1.5) 0;
+    }
+
+    @media $(l-tablet) {
+        padding: calc($padding-unit*3) 0;
+    }
+
+}

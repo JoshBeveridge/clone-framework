@@ -29,8 +29,6 @@
 .alignleft,
 .alignright {
     padding: 0.5rem;
-    background: #fff;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
 }
 
 .alignleft {
@@ -51,4 +49,9 @@
         margin: 0 0 1rem 2rem;
     }
 
+}
+
+.aligncenter {
+	display: inline-block;
+    margin: 0 auto;
 }
