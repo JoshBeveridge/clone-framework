@@ -17,24 +17,31 @@ $portrait: screen and (orientation: portrait);
 $landscape: screen and (orientation: landscape);
 /*$(landscape) {}*/
 
-$p-phone: screen and (min-width: 320px);
+/* Phone (Portrait): 320px */
+$p-phone: screen and (min-width: 20em);
 /*$(p-phone) {}*/
 
-$l-phone: screen and (min-width: 480px);
+/* Phone (Landscape): 480px */
+$l-phone: screen and (min-width: 30em);
 /*$(l-phone) {}*/
 
+/* Tablet (Portrait): 768px */
 $p-tablet: screen and (min-width: 48em);
 /*$(p-tablet) {}*/
 
+/* Tablet (Landscape): 1024px */
 $l-tablet: screen and (min-width: 64em);
 /*$(l-tablet) {}*/
 
+/* Desktop: Just over 1024px */
 $desktop: screen and (min-width: 64.01em);
 /*$(desktop) {}*/
 
+/* Cinema: 1600px */
 $cinema: screen and (min-width: 100em);
 /*$(cinema) {}*/
 
+/* Cinema XL: 1760px */
 $cinema-xl: screen and (min-width: 110em);
 /*$(cinema-xl) {}*/
 
@@ -51,10 +58,11 @@ $padding-large: calc($padding-unit*6);
 $padding-xlarge: calc($padding-unit*8);
 
 /* Max Page Widths (Container System) ======================================= */
-$page-width-small: 1000px;
-$page-width-medium: 1140px;
-$page-width-large: 1440px;
-$page-width-xl: 1600px;
+$page-width-xsmall: 50em;    /* 800px */
+$page-width-small: 62.5em;   /* 1000px */
+$page-width-medium: 71.25em; /* 1140px */
+$page-width-large: 90em;     /* 1440px */
+$page-width-xl: 100em;       /* 1600px */
 
 /* Standards ================================================================ */
 * {
@@ -73,46 +81,6 @@ section {
     margin: 0;
     position: relative;
     width: 100%;
-}
-
-.page-container {
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-
-    @media $(p-tablet) {
-        padding: 0 4rem;
-    }
-
-    @media screen and (min-width: 60rem) {
-        max-width: 50rem;
-        padding: 0;
-    }
-
-    @media $(desktop) {
-        max-width: 60rem;
-    }
-
-    @media $(cinema) {
-        max-width: 70rem;
-    }
-
-}
-
-.content-container {
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-
-    @media $(p-tablet) {
-        padding: 0 4rem;
-    }
-
-    @media screen and (min-width: 55rem) {
-        max-width: 45rem;
-        padding: 0;
-    }
-
 }
 
 /* Containers =============================================================== */
