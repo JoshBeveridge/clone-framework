@@ -11,18 +11,6 @@
         cursor: pointer;
         position: relative;
 
-        .accordion-title-wrapper {
-
-            span {
-
-                &:nth-child(2) {
-                    margin-top: calc(#{$margin} / 2);
-                }
-
-            }
-
-        }
-
         [class*="accordion-icon--"] {
             font-size: $font-scale--h4;
             position: absolute;
@@ -51,32 +39,34 @@
 
     }
 
-    &:first-of-type {
-        border-top: 1px solid $gray;
-    }
+    // States ------------------------------------------------------------------
 
-    &.active {
+        &:first-of-type {
+            border-top: 1px solid $gray;
+        }
 
-        .accordion-trigger {
+        &.active {
 
-            [class*="accordion-icon--"] {
+            .accordion-trigger {
 
-                &[class*="add"] {
-                    display: none;
-                }
+                [class*="accordion-icon--"] {
 
-                &[class*="remove"] {
-                    display: block;
+                    &[class*="add"] {
+                        display: none;
+                    }
+
+                    &[class*="remove"] {
+                        display: block;
+                    }
+
                 }
 
             }
 
-        }
+            .accordion-content {
+                display: block;
+            }
 
-        .accordion-content {
-            display: block;
         }
-
-    }
 
 }

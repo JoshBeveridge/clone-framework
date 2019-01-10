@@ -14,10 +14,9 @@
     @import "core/media";
     @import "core/typography";
     @import "core/system";
-
     @import "core/utilities";
 
-// Flexbox Grid ================================================================
+// Grids =======================================================================
 
     // Include these files to incorporate a flexbox based grid system with IE 11 support.
     // This grid uses a 12 column .flex-grid wrapper with children that must contain the .box class.
@@ -52,6 +51,8 @@
     @import "core/flexbox-grid";
     @import "core/flexbox-grid-ie";
 
+// Menus =======================================================================
+
 // Components ==================================================================
 
     // Accordions
@@ -68,29 +69,31 @@
 
     // Cards
 
+    // Carousels
+
     // Iframes
 
     // Inputs
 
+        // Checkboxes
+
+        // Dates
+
+        // Numbers
+
+        // Passwords
+
+        // Radio Inputs
+
+        // Dropdowns (Select Elements)
+
         // Text
 
-        // Number
+        // Textareas
 
-        // Select
+        // URLs
 
-        // Radio
-
-        // Checkbox
-
-        // Date
-
-        // Password
-
-        // Textarea
-
-        // URL
-
-    // Skip Link
+    // Back-to-top Links
 
     // Tags
 
