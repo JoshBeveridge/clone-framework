@@ -48,4 +48,6 @@ $c5: black !default;
 $c5--light: lighten($c5, 10%) !default;
 $c5--dark: darken($c5, 10%) !default;
 
-$border: $grey--dark !default;
+$alert--information: $c1 !default;
+$alert--warning: #d3811d !default;
+$alert--error: $c3 !default;

@@ -10,23 +10,13 @@
     .container--copy {
         margin: 0 auto;
         max-width: 39rem;
-        width: 95%;
-
-        @media #{$tablet-portrait} {
-            width: 90%;
-        }
-
+        width: 90%;
     }
 
     .container--layout {
         margin: 0 auto;
         max-width: 80rem;
-        width: 95%;
-
-        @media #{$tablet-portrait} {
-            width: 90%;
-        }
-
+        width: 90%;
     }
 
 // The Grid ====================================================================

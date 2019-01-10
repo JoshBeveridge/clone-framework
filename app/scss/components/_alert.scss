@@ -1,63 +1,31 @@
-// Alerts ======================================================================
+// =============================================================================
 
-    // Errors & Alerts
+    // Clone
+    // Alerts
 
-        .error,
-        .alert {
-            border-radius: 5px;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            position: relative;
+// =============================================================================
 
-            @media #{$tablet-portrait} {
-                padding: 1.5rem 1.5rem 1.5rem 6rem;
-            }
+.alert {
+    position: relative;
 
-            span {
-                font-weight: 600;
-                line-height: 1.5;
-            }
+    // Types -------------------------------------------------------------------
 
-            img {
-                display: none;
-                position: absolute;
-                top: 50%;
-                left: 3rem;
-                transform: translate(-50%, -50%);
-                width: 1.5rem;
-
-                @media #{$tablet-portrait} {
-                    display: block;
-                }
-
-            }
-
-            &:first-child {
-                margin-top: 0;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
+        &--information {
+            background: rgba($alert--information, .2);
+            border: 1px solid darken($alert--information, 10%);
+            color: darken($alert--information, 10%);
         }
 
-        .error {
-            background: transparentize($crimson, .8);
-            border: 1px solid $crimson;
-
-            span {
-                color: $crimson;
-            }
-
+        &--warning {
+            background: rgba($alert--warning, .2);
+            border: 1px solid darken($alert--warning, 10%);
+            color: darken($alert--warning, 10%);
         }
 
-        .alert {
-            background: transparentize($plum, .8);
-            border: 1px solid $plum;
-
-            span {
-                color: $plum;
-            }
-
+        &--error {
+            background: rgba($alert--error, .2);
+            border: 1px solid darken($alert--error, 10%);
+            color: darken($alert--error, 10%);
         }
+
+}
