@@ -1,0 +1,263 @@
+// =============================================================================
+
+    // Clone
+    // Typography
+
+// =============================================================================
+
+// Fonts =======================================================================
+
+    * {
+        font-family: $font--sans;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+
+        &.script {
+            font-family: $font--script;
+        }
+
+    }
+
+    ::selection {
+        background: $black;
+        color: $white;
+    }
+
+// Font Scale ==================================================================
+
+    html,
+    body {
+        font-size: 110%;
+
+        @media #{$tablet-portrait} {
+            font-size: 120%;
+        }
+
+    }
+
+    $font-scale--regular: 1rem;
+
+    $font-scale--h1: calc(1rem*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}*(#{$font-scale})))));
+    $font-scale--h2: calc(1rem*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}))));
+    $font-scale--h3: calc(1rem*(#{$font-scale}*(#{$font-scale})));
+    $font-scale--h4: calc(1rem*(#{$font-scale}));
+    $font-scale--h5: $font-scale--regular;
+    $font-scale--small: calc(1rem/(#{$font-scale}));
+
+// Headings ====================================================================
+
+    h1,
+    .heading--01 {
+        font-size: $font-scale--h1;
+
+        img {
+            width: $font-scale--h2;
+        }
+
+    }
+
+    h2,
+    .heading--01 {
+        font-size: $font-scale--h2;
+
+        img {
+            width: $font-scale--h3;
+        }
+
+    }
+
+    h3,
+    .heading--03 {
+        font-size: $font-scale--h3;
+
+        img {
+            width: $font-scale--h4;
+        }
+
+    }
+
+    h4,
+    .heading--04 {
+        font-size: $font-scale--h4;
+    }
+
+    h5,
+    .heading--05 {
+        font-size: $font-scale--h5;
+    }
+
+    [class*="heading--"] {
+        display: block;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: $black;
+
+        // &.plum {
+        //     color: $plum;
+        // }
+
+        // &.wine {
+        //     color: $wine;
+        // }
+
+        // &.crimson {
+        //     color: $crimson;
+        // }
+
+        // &.white {
+        //     color: $white;
+        // }
+
+        // &.bold {
+        //     font-weight: 800;
+        // }
+
+    }
+
+// Copy & Misc =================================================================
+
+    // p {
+    //     color: $slate;
+    //     line-height: 1.5;
+
+    //     &.plum {
+    //         color: $plum;
+    //     }
+
+    //     &.wine {
+    //         color: $wine;
+    //     }
+
+    //     &.crimson {
+    //         color: $crimson;
+    //     }
+
+    //     &.white {
+    //         color: $white;
+    //     }
+
+    //     &.bold {
+    //         font-weight: 800;
+    //     }
+
+    // }
+
+    // span {
+    //     font-size: inherit;
+    //     font-weight: inherit;
+
+    //     &.plum {
+    //         color: $plum;
+    //     }
+
+    //     &.wine {
+    //         color: $wine;
+    //     }
+
+    //     &.crimson {
+    //         color: $crimson;
+    //     }
+
+    //     &.white {
+    //         color: $white;
+    //     }
+
+    //     &.bold {
+    //         font-weight: 800;
+    //     }
+
+    //     &.block {
+    //         display: block;
+    //     }
+
+    // }
+
+    // a {
+    //     color: inherit;
+    //     font-family: inherit;
+    //     font-size: inherit;
+    //     font-weight: inherit;
+    //     text-decoration: underline;
+
+    //     &.plum {
+    //         color: $plum;
+    //     }
+
+    //     &.wine {
+    //         color: $wine;
+    //     }
+
+    //     &.crimson {
+    //         color: $crimson;
+    //     }
+
+    //     &.white {
+    //         color: $white;
+    //     }
+
+    //     &.bold {
+    //         font-weight: 800;
+    //     }
+
+    // }
+
+    // pre {
+    //     background: $slate;
+    //     border-radius: 5px;
+    //     color: $white;
+    //     font-family: $font--mono;
+    //     font-size: $font-scale--small;
+    //     line-height: 1.2;
+    //     overflow: auto;
+
+    //     &::selection {
+    //         background: $white;
+    //         color: $slate;
+    //     }
+
+    //     code {
+    //         font-family: $font--mono;
+    //         font-size: $font-scale--small;
+    //         padding: 1.5rem !important;
+
+    //         * {
+    //             font-family: $font--mono;
+    //             font-size: $font-scale--small;
+    //         }
+
+    //     }
+
+    // }
+
+    // i {
+
+    //     &.plum {
+    //         color: $plum;
+    //     }
+
+    //     &.wine {
+    //         color: $wine;
+    //     }
+
+    //     &.crimson {
+    //         color: $crimson;
+    //     }
+
+    //     &.white {
+    //         color: $white;
+    //     }
+
+    //     &.bold {
+    //         font-weight: 800;
+    //     }
+
+    // }
+
+    // hr {
+    //     background: $gray;
+    //     border: none;
+    //     height: 1px;
+    //     width: 100%;
+    // }

@@ -1,0 +1,105 @@
+// =============================================================================
+
+    // Clone
+    // Accordions
+
+// =============================================================================
+
+.accordion {
+    background: $gray-light;
+    border-bottom: 1px solid $gray;
+
+    .accordion-trigger {
+        cursor: pointer;
+        padding-right: $padding;
+        position: relative;
+
+        @media #{$tablet-portrait} {
+            padding-right: $padding-large;
+        }
+
+        .accordion-title-wrapper {
+            padding-top: $padding;
+            padding-right: calc(#{$padding}*2);
+            padding-bottom: $padding;
+            padding-left: $padding;
+
+            @media #{$tablet-portrait} {
+                padding-top: $padding-large;
+                padding-right: calc(#{$padding-large}*2);
+                padding-bottom: $padding-large;
+                padding-left: $padding-large;
+            }
+
+            span {
+
+                &:nth-child(2) {
+                    margin-top: calc(#{$margin} / 2);
+
+                    @media #{$tablet-portrait} {
+                        padding-top: calc(#{$margin-large} / 2);
+                    }
+
+                }
+
+            }
+
+        }
+
+        [class*="accordion-icon--"] {
+            font-size: $font-scale--h4;
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translate(0, -50%);
+
+            &[class*="add"] {
+                display: block;
+            }
+
+            &[class*="remove"] {
+                display: none;
+            }
+
+        }
+
+    }
+
+    .accordion-content {
+        display: none;
+
+        form {
+            padding-bottom: 0;
+        }
+
+    }
+
+    &:first-of-type {
+        border-top: 1px solid $gray;
+    }
+
+    &.active {
+
+        .accordion-trigger {
+
+            [class*="accordion-icon--"] {
+
+                &[class*="add"] {
+                    display: none;
+                }
+
+                &[class*="remove"] {
+                    display: block;
+                }
+
+            }
+
+        }
+
+        .accordion-content {
+            display: block;
+        }
+
+    }
+
+}

@@ -1,0 +1,200 @@
+// =============================================================================
+
+    // Clone
+    // Utility Classes
+
+// =============================================================================
+
+// Table of Contents ===========================================================
+
+    // Backgrounds
+    // Borders
+    // Fonts
+        // Colour
+        // Headings
+        // Styles
+    // Margins
+        // Half Margins
+        // Regular Margins
+        // Double Margins
+        // Triple Margins
+    // Padding
+        // Half Padding
+        // Regular Padding
+        // Double Padding
+        // Triple Padding
+
+// =============================================================================
+
+// Backgrounds =================================================================
+
+    .background-white {background: $white;}
+
+    .background-grey--light {background: $grey--light;}
+    .background-grey {background: $grey;}
+    .background-grey--dark {background: $grey--dark;}
+
+    .background-black {background: $black;}
+
+    .background-c1--light {background: $c1--light;}
+    .background-c1 {background: $c1;}
+    .background-c1--dark {background: $c1--dark;}
+
+    .background-c2--light {background: $c2--light;}
+    .background-c2 {background: $c2;}
+    .background-c2--dark {background: $c2--dark;}
+
+    .background-c3--light {background: $c3--light;}
+    .background-c3 {background: $c3;}
+    .background-c3--dark {background: $c3--dark;}
+
+    .background-c4--light {background: $c4--light;}
+    .background-c4 {background: $c4;}
+    .background-c4--dark {background: $c4--dark;}
+
+    .background-c5--light {background: $c5--light;}
+    .background-c5 {background: $c5;}
+    .background-c5--dark {background: $c5--dark;}
+
+// Borders =====================================================================
+
+    .border {border: 1px solid $border;}
+    .border-top {border-top: 1px solid $border;}
+    .border-right {border-right: 1px solid $border;}
+    .border-bottom {border-bottom: 1px solid $border;}
+    .border-left {border-left: 1px solid $border;}
+
+    .rounded {border-radius: 5px;}
+
+    .shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
+
+// Fonts =======================================================================
+
+    .font-sans {font-family: $font--sans;}
+    .font-serif {font-family: $font--serif;}
+    .font-script {font-family: $font--script;}
+    .font-monospace {font-family: $font--monospace;}
+
+    // Font Colour -------------------------------------------------------------
+
+        .font-colour-white {color: $white;}
+
+        .font-colour-gray--light {color: $grey--light;}
+        .font-colour-gray {color: $grey;}
+        .font-colour-gray--dark {color: $grey--dark;}
+
+        .font-colour-black {color: $black;}
+
+        .font-colour-c1--light {color: $c1--light;}
+        .font-colour-c1 {color: $c1;}
+        .font-colour-c1--dark {color: $c1--dark;}
+
+        .font-colour-c2--light {color: $c2--light;}
+        .font-colour-c2 {color: $c2;}
+        .font-colour-c2--dark {color: $c2--dark;}
+
+        .font-colour-c3--light {color: $c3--light;}
+        .font-colour-c3 {color: $c3;}
+        .font-colour-c3--dark {color: $c3--dark;}
+
+        .font-colour-c4--light {color: $c4--light;}
+        .font-colour-c4 {color: $c4;}
+        .font-colour-c4--dark {color: $c4--dark;}
+
+        .font-colour-c5--light {color: $c5--light;}
+        .font-colour-c5 {color: $c5;}
+        .font-colour-c5--dark {color: $c5--dark;}
+
+    // Headings ----------------------------------------------------------------
+
+        .heading--01 {font-size: $font-scale--h1;}
+        .heading--02 {font-size: $font-scale--h2;}
+        .heading--03 {font-size: $font-scale--h3;}
+        .heading--04 {font-size: $font-scale--h4;}
+        .heading--05 {font-size: $font-scale--h5;}
+
+    // Styles ------------------------------------------------------------------
+
+        .italic {font-style: italic;}
+
+        .font-weight--light {font-weight: 200;}
+        .font-weight--regular {font-weight: 400;}
+        .font-weight--semibold {font-weight: 600;}
+        .font-weight--bold {font-weight: 700;}
+        .font-weight--extrabold {font-weight: 800;}
+
+// Margins =====================================================================
+
+    .margin--half {margin: calc($margin / 2);}
+    .margin-top--half {margin-top: calc($margin / 2);}
+    .margin-right--half {margin-right: calc($margin / 2);}
+    .margin-bottom--half {margin-bottom: calc($margin / 2);}
+    .margin-left--half {margin-left: calc($margin / 2);}
+
+    .margin {margin: $margin;}
+    .margin-top {margin-top: $margin;}
+    .margin-right {margin-right: $margin;}
+    .margin-bottom {margin-bottom: $margin;}
+    .margin-left {margin-left: $margin;}
+
+    .margin--double {margin: calc($margin * 2);}
+    .margin-top--double {margin-top: calc($margin * 2);}
+    .margin-right--double {margin-right: calc($margin * 2);}
+    .margin-bottom--double {margin-bottom: calc($margin * 2);}
+    .margin-left--double {margin-left: calc($margin * 2);}
+
+    .margin--triple {margin: calc($margin * 3);}
+    .margin-top--triple {margin-top: calc($margin * 3);}
+    .margin-right--triple {margin-right: calc($margin * 3);}
+    .margin-bottom--triple {margin-bottom: calc($margin * 3);}
+    .margin-left--triple {margin-left: calc($margin * 3);}
+
+// Padding =====================================================================
+
+    // Half Padding ------------------------------------------------------------
+
+        .padding--half {padding: calc(($padding / 2) / 2);}
+        .padding-top--half {padding-top: calc(($padding / 2) / 2);}
+        .padding-right--half {padding-right: calc(($padding / 2) / 2);}
+        .padding-bottom--half {padding-bottom: calc(($padding / 2) / 2);}
+        .padding-left--half {padding-left: calc(($padding / 2) / 2);}
+
+        @media #{$tablet-portrait} {
+            .padding--half {padding: calc($padding / 2);}
+            .padding-top--half {padding-top: calc($padding / 2);}
+            .padding-right--half {padding-right: calc($padding / 2);}
+            .padding-bottom--half {padding-bottom: calc($padding / 2);}
+            .padding-left--half {padding-left: calc($padding / 2);}
+        }
+
+        @media #{$desktop-large} {
+            .padding--half {padding: calc(($padding * 1.5) / 2);}
+            .padding-top--half {padding-top: calc(($padding * 1.5) / 2);}
+            .padding-right--half {padding-right: calc(($padding * 1.5) / 2);}
+            .padding-bottom--half {padding-bottom: calc(($padding * 1.5) / 2);}
+            .padding-left--half {padding-left: calc(($padding * 1.5) / 2);}
+        }
+
+    // Regular Padding ---------------------------------------------------------
+
+        .padding {padding: $padding;}
+        .padding-top {padding-top: $padding;}
+        .padding-right {padding-right: $padding;}
+        .padding-bottom {padding-bottom: $padding;}
+        .padding-left {padding-left: $padding;}
+
+    // Double Padding ----------------------------------------------------------
+
+        .padding--double {padding: calc($padding * 2);}
+        .padding-top--double {padding-top: calc($padding * 2);}
+        .padding-right--double {padding-right: calc($padding * 2);}
+        .padding-bottom--double {padding-bottom: calc($padding * 2);}
+        .padding-left--double {padding-left: calc($padding * 2);}
+
+    // Triple Padding ----------------------------------------------------------
+
+        .padding--triple {padding: calc($padding * 3);}
+        .padding-top--triple {padding-top: calc($padding * 3);}
+        .padding-right--triple {padding-right: calc($padding * 3);}
+        .padding-bottom--triple {padding-bottom: calc($padding * 3);}
+        .padding-left--triple {padding-left: calc($padding * 3);}
