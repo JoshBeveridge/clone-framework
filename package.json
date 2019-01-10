@@ -1,0 +1,31 @@
+{
+  "name": "Clone",
+  "version": "2.0.0",
+  "description": "A lightweight, themeable design system.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshdrink/clone.git"
+  },
+  "author": "Josh Beveridge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshdrink/clone/issues"
+  },
+  "homepage": "https://github.com/joshdrink/clone#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.6",
+    "run-sequence": "^2.2.1"
+  }
+}
