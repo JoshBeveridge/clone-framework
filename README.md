@@ -15,7 +15,7 @@ Clone is built in a way that allows you to theme the aesthetic of the system wit
 
 Clone uses [Gulp](https://gulpjs.com/) to manage dependencies. If you haven't already, install Gulp globally by running `npm install gulp-cli -g` and `npm install gulp -D` in your terminal.
 
-Theming Clone requires that your project be running [Sass](https://sass-lang.com/).
+Theming Clone requires that your project be running [Sass](https://sass-lang.com/) and [Autoprefixer](https://github.com/postcss/autoprefixer).
 
 1. From inside your project, run `npm install clone-design`
 2. Create a `.scss` file inside of your Sass directory that has the following:

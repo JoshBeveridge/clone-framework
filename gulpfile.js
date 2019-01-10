@@ -8,56 +8,66 @@
 
 // =============================================================================
 
+"use strict";
+
 // Requirements ================================================================
 
-    var gulp = require('gulp');
-    var sass = require('gulp-sass');
-    var browserSync = require('browser-sync').create();
-    var useref = require('gulp-useref');
-    var uglify = require('gulp-uglify');
-    var gulpIf = require('gulp-if');
-    var autoprefixer = require('gulp-autoprefixer');
-    var cssnano = require('gulp-cssnano');
-    var del = require('del');
-    var runSequence = require('run-sequence');
-    var twig = require('gulp-twig');
+    const gulp = require('gulp');
+    const sass = require('gulp-sass');
+    const browsersync = require('browser-sync').create();
+    const useref = require('gulp-useref');
+    const uglify = require('gulp-uglify');
+    const gulpIf = require('gulp-if');
+    const autoprefixer = require('gulp-autoprefixer');
+    const cssnano = require('gulp-cssnano');
+    const del = require('del');
+    const runSequence = require('run-sequence');
+    const twig = require('gulp-twig');
 
 // Tasks =======================================================================
 
     // Browser Sync
 
-        gulp.task('browserSync', function() {
-            browserSync.init({
+        function browserSync(done) {
+            browsersync.init({
                 server: {
                     baseDir: 'cache'
                 },
-            })
-        })
+            });
+            done();
+        }
+
+    // BrowserSync Reload
+
+        function browserSyncReload(done) {
+            browsersync.reload();
+            done();
+        }
 
     // Twig
 
-        gulp.task('twig', function() {
+        function template() {
             return gulp.src('app/twig/*.html')
             .pipe(twig())
             .pipe(gulp.dest('cache'))
-            .pipe(browserSync.reload({
+            .pipe(browsersync.reload({
                 stream: true
             }))
-        });
+        }
 
     // JavaScript
 
-        gulp.task('js', function() {
+        function js() {
             return gulp.src('app/js/*.js')
             .pipe(gulp.dest('cache/js'))
-            .pipe(browserSync.reload({
+            .pipe(browsersync.reload({
                 stream: true
             }))
-        });
+        }
 
     // Sass
 
-        gulp.task('sass', function(){
+        function compileCSS() {
             return gulp.src('app/scss/**/*.scss')
             .pipe(sass())
             .pipe(autoprefixer({
@@ -65,43 +75,45 @@
                 cascade: false
             }))
             .pipe(gulp.dest('cache/css'))
-            .pipe(browserSync.reload({
+            .pipe(browsersync.reload({
                 stream: true
             }))
-        });
-
-    // Watch
-
-        gulp.task('watch', gulp.series(['browserSync', 'sass', 'twig', 'js'], function (){
-            gulp.watch('app/scss/**/*.scss', gulp.parallel(['sass']));
-            gulp.watch('app/twig/**/*.html', gulp.parallel(['twig']));
-            gulp.watch('app/js/**/*.js', gulp.parallel(['js']));
-        }));
+        }
 
     // Minification
 
-        gulp.task('useref', function(){
+        function distribute() {
             return gulp.src('cache/*.html')
             .pipe(useref())
             .pipe(gulpIf('*.js', uglify()))
             .pipe(gulpIf('*.css', cssnano()))
             .pipe(gulp.dest('dist'))
-        });
+        }
 
     // Dist Removal
 
-        gulp.task('clean:dist', function() {
+        function cleanDist() {
             return del.sync('dist');
-        });
+        }
+
+    // Watch
+
+        function watchFiles() {
+            gulp.watch('app/scss/**/*.scss', gulp.series(compileCSS, distribute));
+            gulp.watch('app/twig/**/*.html', gulp.series(template, distribute));
+            gulp.watch('app/js/**/*.js', gulp.series(js, distribute));
+        }
 
     // Build
 
-        gulp.task('build', gulp.series(['clean:dist', 'twig', 'js', 'sass', 'useref'], function (callback) {
-            callback
-        }));
+        const build = gulp.series(cleanDist, template, js, compileCSS, distribute);
 
     // Dev
 
-        gulp.task('default', gulp.series(['twig', 'js', 'sass', 'browserSync', 'watch'], function (callback) {
-            callback
-        }));
+        const watch = gulp.parallel(browserSync, watchFiles);
+
+    // Export
+
+        exports.build = build;
+        exports.watch = watch;
+        exports.default = watch;

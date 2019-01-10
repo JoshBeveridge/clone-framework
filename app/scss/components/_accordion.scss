@@ -6,40 +6,17 @@
 // =============================================================================
 
 .accordion {
-    background: $gray-light;
-    border-bottom: 1px solid $gray;
 
     .accordion-trigger {
         cursor: pointer;
-        padding-right: $padding;
         position: relative;
 
-        @media #{$tablet-portrait} {
-            padding-right: $padding-large;
-        }
-
         .accordion-title-wrapper {
-            padding-top: $padding;
-            padding-right: calc(#{$padding}*2);
-            padding-bottom: $padding;
-            padding-left: $padding;
-
-            @media #{$tablet-portrait} {
-                padding-top: $padding-large;
-                padding-right: calc(#{$padding-large}*2);
-                padding-bottom: $padding-large;
-                padding-left: $padding-large;
-            }
 
             span {
 
                 &:nth-child(2) {
                     margin-top: calc(#{$margin} / 2);
-
-                    @media #{$tablet-portrait} {
-                        padding-top: calc(#{$margin-large} / 2);
-                    }
-
                 }
 
             }

@@ -41,9 +41,7 @@
             href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/atom-one-dark.min.css">
         <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
 
-        <!--build:css css/system.min.css-->
-        <link rel="stylesheet" href="css/clone.css">
-        <!--endbuild-->
+        <link rel="stylesheet" href="css/system.min.css">
 
         <script>hljs.initHighlightingOnLoad();</script>
 
@@ -53,13 +51,36 @@
 
         <div class="container--layout padding-top--double padding-bottom--double">
 
-            {% include "components/accordion.html" %}
+            <div class="accordion border-bottom background-white">
+    <div
+        aria-expanded="false"
+        class="accordion-trigger padding-right"
+        tabindex="0">
+        <div class="accordion-title-wrapper padding-top padding-right--double padding-bottom padding-left">
+            <span class="heading--04 font-weight--bold">Accordion Title</span>
+            <span class="heading--05 font-colour--c1 margin-top--half">Optional Accordion Subtitle</span>
+        </div>
+        <i class="accordion-icon--add font-colour--black material-icons">
+            add_circle
+        </i>
+        <i class="accordion-icon--remove font-colour--black material-icons">
+            remove_circle
+        </i>
+    </div>
+    <div
+        aria-hidden="true"
+        class="accordion-content padding-right padding-left">
+        <div class="padding-bottom">
+            <!-- Content Goes Here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et.</p>
+        </div>
+    </div>
+</div>
+
 
         </div>
 
-        <!--build:js js/app.min.js-->
-        <script src="js/clone.js"></script>
-        <!--endbuild-->
+        <script src="js/app.min.js"></script>
 
     </body>
 

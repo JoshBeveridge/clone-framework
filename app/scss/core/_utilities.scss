@@ -9,6 +9,7 @@
 
     // Backgrounds
     // Borders
+    // Containers
     // Fonts
         // Colour
         // Headings
@@ -68,6 +69,12 @@
 
     .shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
 
+// Containers ==================================================================
+
+    .container--copy {max-width: 40rem;}
+
+    .container--layout {max-width: 80rem;}
+
 // Fonts =======================================================================
 
     .font-sans {font-family: $font--sans;}
@@ -125,76 +132,76 @@
 
 // Margins =====================================================================
 
-    .margin--half {margin: calc($margin / 2);}
-    .margin-top--half {margin-top: calc($margin / 2);}
-    .margin-right--half {margin-right: calc($margin / 2);}
-    .margin-bottom--half {margin-bottom: calc($margin / 2);}
-    .margin-left--half {margin-left: calc($margin / 2);}
+    .margin--half {margin: calc(#{$margin} / 2);}
+    .margin-top--half {margin-top: calc(#{$margin} / 2);}
+    .margin-right--half {margin-right: calc(#{$margin} / 2);}
+    .margin-bottom--half {margin-bottom: calc(#{$margin} / 2);}
+    .margin-left--half {margin-left: calc(#{$margin} / 2);}
 
-    .margin {margin: $margin;}
-    .margin-top {margin-top: $margin;}
-    .margin-right {margin-right: $margin;}
-    .margin-bottom {margin-bottom: $margin;}
-    .margin-left {margin-left: $margin;}
+    .margin {margin: #{$margin};}
+    .margin-top {margin-top: #{$margin};}
+    .margin-right {margin-right: #{$margin};}
+    .margin-bottom {margin-bottom: #{$margin};}
+    .margin-left {margin-left: #{$margin};}
 
-    .margin--double {margin: calc($margin * 2);}
-    .margin-top--double {margin-top: calc($margin * 2);}
-    .margin-right--double {margin-right: calc($margin * 2);}
-    .margin-bottom--double {margin-bottom: calc($margin * 2);}
-    .margin-left--double {margin-left: calc($margin * 2);}
+    .margin--double {margin: calc(#{$margin} * 2);}
+    .margin-top--double {margin-top: calc(#{$margin} * 2);}
+    .margin-right--double {margin-right: calc(#{$margin} * 2);}
+    .margin-bottom--double {margin-bottom: calc(#{$margin} * 2);}
+    .margin-left--double {margin-left: calc(#{$margin} * 2);}
 
-    .margin--triple {margin: calc($margin * 3);}
-    .margin-top--triple {margin-top: calc($margin * 3);}
-    .margin-right--triple {margin-right: calc($margin * 3);}
-    .margin-bottom--triple {margin-bottom: calc($margin * 3);}
-    .margin-left--triple {margin-left: calc($margin * 3);}
+    .margin--triple {margin: calc(#{$margin} * 3);}
+    .margin-top--triple {margin-top: calc(#{$margin} * 3);}
+    .margin-right--triple {margin-right: calc(#{$margin} * 3);}
+    .margin-bottom--triple {margin-bottom: calc(#{$margin} * 3);}
+    .margin-left--triple {margin-left: calc(#{$margin} * 3);}
 
 // Padding =====================================================================
 
     // Half Padding ------------------------------------------------------------
 
-        .padding--half {padding: calc(($padding / 2) / 2);}
-        .padding-top--half {padding-top: calc(($padding / 2) / 2);}
-        .padding-right--half {padding-right: calc(($padding / 2) / 2);}
-        .padding-bottom--half {padding-bottom: calc(($padding / 2) / 2);}
-        .padding-left--half {padding-left: calc(($padding / 2) / 2);}
+        .padding--half {padding: calc((#{$padding} / 2) / 2);}
+        .padding-top--half {padding-top: calc((#{$padding} / 2) / 2);}
+        .padding-right--half {padding-right: calc((#{$padding} / 2) / 2);}
+        .padding-bottom--half {padding-bottom: calc((#{$padding} / 2) / 2);}
+        .padding-left--half {padding-left: calc((#{$padding} / 2) / 2);}
 
         @media #{$tablet-portrait} {
-            .padding--half {padding: calc($padding / 2);}
-            .padding-top--half {padding-top: calc($padding / 2);}
-            .padding-right--half {padding-right: calc($padding / 2);}
-            .padding-bottom--half {padding-bottom: calc($padding / 2);}
-            .padding-left--half {padding-left: calc($padding / 2);}
+            .padding--half {padding: calc(#{$padding} / 2);}
+            .padding-top--half {padding-top: calc(#{$padding} / 2);}
+            .padding-right--half {padding-right: calc(#{$padding} / 2);}
+            .padding-bottom--half {padding-bottom: calc(#{$padding} / 2);}
+            .padding-left--half {padding-left: calc(#{$padding} / 2);}
         }
 
         @media #{$desktop-large} {
-            .padding--half {padding: calc(($padding * 1.5) / 2);}
-            .padding-top--half {padding-top: calc(($padding * 1.5) / 2);}
-            .padding-right--half {padding-right: calc(($padding * 1.5) / 2);}
-            .padding-bottom--half {padding-bottom: calc(($padding * 1.5) / 2);}
-            .padding-left--half {padding-left: calc(($padding * 1.5) / 2);}
+            .padding--half {padding: calc((#{$padding} * 1.5) / 2);}
+            .padding-top--half {padding-top: calc((#{$padding} * 1.5) / 2);}
+            .padding-right--half {padding-right: calc((#{$padding} * 1.5) / 2);}
+            .padding-bottom--half {padding-bottom: calc((#{$padding} * 1.5) / 2);}
+            .padding-left--half {padding-left: calc((#{$padding} * 1.5) / 2);}
         }
 
     // Regular Padding ---------------------------------------------------------
 
-        .padding {padding: $padding;}
-        .padding-top {padding-top: $padding;}
-        .padding-right {padding-right: $padding;}
-        .padding-bottom {padding-bottom: $padding;}
-        .padding-left {padding-left: $padding;}
+        .padding {padding: #{$padding};}
+        .padding-top {padding-top: #{$padding};}
+        .padding-right {padding-right: #{$padding};}
+        .padding-bottom {padding-bottom: #{$padding};}
+        .padding-left {padding-left: #{$padding};}
 
     // Double Padding ----------------------------------------------------------
 
-        .padding--double {padding: calc($padding * 2);}
-        .padding-top--double {padding-top: calc($padding * 2);}
-        .padding-right--double {padding-right: calc($padding * 2);}
-        .padding-bottom--double {padding-bottom: calc($padding * 2);}
-        .padding-left--double {padding-left: calc($padding * 2);}
+        .padding--double {padding: calc(#{$padding} * 2);}
+        .padding-top--double {padding-top: calc(#{$padding} * 2);}
+        .padding-right--double {padding-right: calc(#{$padding} * 2);}
+        .padding-bottom--double {padding-bottom: calc(#{$padding} * 2);}
+        .padding-left--double {padding-left: calc(#{$padding} * 2);}
 
     // Triple Padding ----------------------------------------------------------
 
-        .padding--triple {padding: calc($padding * 3);}
-        .padding-top--triple {padding-top: calc($padding * 3);}
-        .padding-right--triple {padding-right: calc($padding * 3);}
-        .padding-bottom--triple {padding-bottom: calc($padding * 3);}
-        .padding-left--triple {padding-left: calc($padding * 3);}
+        .padding--triple {padding: calc(#{$padding} * 3);}
+        .padding-top--triple {padding-top: calc(#{$padding} * 3);}
+        .padding-right--triple {padding-right: calc(#{$padding} * 3);}
+        .padding-bottom--triple {padding-bottom: calc(#{$padding} * 3);}
+        .padding-left--triple {padding-left: calc(#{$padding} * 3);}
