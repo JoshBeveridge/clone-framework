@@ -72,11 +72,11 @@
 
     // Watch
 
-        gulp.task('watch', ['browserSync', 'sass', 'twig', 'js'], function (){
-            gulp.watch('app/scss/**/*.scss', ['sass']); 
-            gulp.watch('app/twig/**/*.html', ['twig']);
-            gulp.watch('app/js/**/*.js', ['js']);
-        });
+        gulp.task('watch', gulp.series(['browserSync', 'sass', 'twig', 'js'], function (){
+            gulp.watch('app/scss/**/*.scss', gulp.parallel(['sass']));
+            gulp.watch('app/twig/**/*.html', gulp.parallel(['twig']));
+            gulp.watch('app/js/**/*.js', gulp.parallel(['js']));
+        }));
 
     // Minification
 
@@ -96,12 +96,12 @@
 
     // Build
 
-        gulp.task('build', function (callback) {
-            runSequence('clean:dist', 'twig', 'js', 'sass', 'useref', callback)
-        });
+        gulp.task('build', gulp.series(['clean:dist', 'twig', 'js', 'sass', 'useref'], function (callback) {
+            callback
+        }));
 
     // Dev
 
-        gulp.task('default', function (callback) {
-            runSequence(['twig', 'js', 'sass', 'browserSync', 'watch'], callback)
-        });
+        gulp.task('default', gulp.series(['twig', 'js', 'sass', 'browserSync', 'watch'], function (callback) {
+            callback
+        }));
