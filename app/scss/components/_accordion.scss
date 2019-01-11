@@ -15,7 +15,7 @@
             font-size: $font-scale--h4;
             position: absolute;
             top: 50%;
-            right: 1.5rem;
+            right: 2rem;
             transform: translate(0, -50%);
 
             &[class*="add"] {
@@ -43,6 +43,10 @@
 
         &:first-of-type {
             border-top: 1px solid $gray;
+        }
+
+        &:nth-child(odd) {
+            background: rgba($grey, .2);
         }
 
         &.active {

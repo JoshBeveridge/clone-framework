@@ -51,12 +51,16 @@
 
     <body>
 
+        <a id="pageTop"></a>
+
         <div class="container--layout padding-top--double padding-bottom--double">
 
             <div class="padding-bottom--double">
 
                 <h3 class="margin-bottom">Accordions</h3>
 
+                {% include "components/accordion.html" %}
+                {% include "components/accordion.html" %}
                 {% include "components/accordion.html" %}
 
             </div>
@@ -81,9 +85,17 @@
 
             <div class="padding-bottom--double">
 
+                <h3 class="margin-bottom">Back-to-top Links</h3>
+
+                {% include "components/back-to-top-link.html" %}
+
+            </div>
+
+            <div class="padding-bottom--double">
+
                 <h3 class="margin-bottom">Blockquotes</h3>
 
-                {% include "components/carousel.html" %}
+                {% include "components/blockquote.html" %}
 
             </div>
 
@@ -91,7 +103,7 @@
 
                 <h3 class="margin-bottom">Breadcrumbs</h3>
 
-                {% include "components/carousel.html" %}
+                {% include "components/breadcrumbs.html" %}
 
             </div>
 
@@ -99,7 +111,29 @@
 
                 <h3 class="margin-bottom">Buttons</h3>
 
-                {% include "components/carousel.html" %}
+                <h4 class="font-colour-c2 margin-bottom--half">Solid</h4>
+
+                <div class="padding-bottom">
+
+                    {# {% include "components/carousel.html" %} #}
+
+                </div>
+
+                <h4 class="font-colour-c2 margin-bottom--half">Outline</h4>
+
+                <div class="">
+
+                    {# {% include "components/carousel.html" %} #}
+
+                </div>
+
+            </div>
+
+            <div class="padding-bottom--double">
+
+                <h3 class="margin-bottom">Button Groups</h3>
+
+                {# {% include "components/carousel.html" %} #}
 
             </div>
 
@@ -107,7 +141,13 @@
 
                 <h3 class="margin-bottom">Cards</h3>
 
-                {% include "components/carousel.html" %}
+                <h4 class="font-colour-c2 margin-bottom--half">Feature Cards</h4>
+
+                <div class="padding-bottom">
+
+                    {# {% include "components/carousel-image.html" %} #}
+
+                </div>
 
             </div>
 
@@ -115,7 +155,21 @@
 
                 <h3 class="margin-bottom">Carousels</h3>
 
-                {% include "components/carousel.html" %}
+                <h4 class="font-colour-c2 margin-bottom--half">Image Carousel</h4>
+
+                <div class="padding-bottom">
+
+                    {% include "components/carousel-image.html" %}
+
+                </div>
+
+                <h4 class="font-colour-c2 margin-bottom--half">Content Carousel</h4>
+
+                <div class="">
+
+                    {% include "components/carousel-content.html" %}
+
+                </div>
 
             </div>
 
@@ -123,7 +177,21 @@
 
                 <h3 class="margin-bottom">iframes</h3>
 
-                {% include "components/carousel.html" %}
+                <h4 class="font-colour-c2 margin-bottom--half">Videos</h4>
+
+                <div class="padding-bottom">
+
+                    {# {% include "components/carousel-image.html" %} #}
+
+                </div>
+
+                <h4 class="font-colour-c2 margin-bottom--half">Maps</h4>
+
+                <div class="">
+
+                    {# {% include "components/carousel-image.html" %} #}
+
+                </div>
 
             </div>
 
@@ -131,77 +199,75 @@
 
                 <h3 class="margin-bottom">Inputs</h3>
 
-                <p class="margin-bottom">Below you will find all forms of inputs available to Clone.</p>
-
                 <h4 class="font-colour-c2 margin-bottom--half">Checkboxes</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Dates</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Numbers</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Passwords</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Radio Inputs</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Dropdowns (Select Elements)</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Text</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
                 <h4 class="font-colour-c2 margin-bottom--half">Textareas</h4>
 
-                <div class="padding-bottom--half">
+                <div class="padding-bottom">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
-                <h4 class="font-colour-c2">URLs</h4>
+                <h4 class="font-colour-c2 margin-bottom--half">URLs</h4>
 
-                <div class="padding-bottom--half">
+                <div class="">
 
-                    {% include "components/carousel.html" %}
+                    {# {% include "components/carousel.html" %} #}
 
                 </div>
 
@@ -209,9 +275,9 @@
 
             <div class="padding-bottom--double">
 
-                <h3 class="margin-bottom">Back-to-top Links</h3>
+                <h3 class="margin-bottom">Pullquotes</h3>
 
-                {% include "components/carousel.html" %}
+                {% include "components/pullquote.html" %}
 
             </div>
 
@@ -219,7 +285,7 @@
 
                 <h3 class="margin-bottom">Tags</h3>
 
-                {% include "components/carousel.html" %}
+                {# {% include "components/carousel.html" %} #}
 
             </div>
 

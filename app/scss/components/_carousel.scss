@@ -5,6 +5,55 @@
 
 // =============================================================================
 
-.carousel {
+[class*="carousel--"] {
+
+    .carousel-frame {
+        list-style: none;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+
+        .carousel-item {
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-100%, 0);
+            transition: transform 1s ease;
+            width: 100%;
+
+            // States ----------------------------------------------------------
+
+                &.next {
+                    transform: translate(100%, 0) !important;
+                    transition: transform 1s ease;
+                }
+
+                &.current {
+                    transform: translate(0, 0) !important;
+                    transition: transform 1s ease;
+                }
+
+                &.previous {
+                    transform: translate(-100%, 0) !important;
+                    transition: transform 1s ease;
+                }
+
+        }
+
+    }
+
+    // Types -------------------------------------------------------------------
+
+        [class*="image"] {
+
+        }
+
+        [class*="content"] {
+
+        }
 
 }

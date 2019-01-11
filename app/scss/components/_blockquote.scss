@@ -1,0 +1,17 @@
+// =============================================================================
+
+    // Clone
+    // Blockquotes
+
+// =============================================================================
+
+.blockquote {
+    background: rgba($blockquote-colour, .2);
+    border-left: .25rem solid darken($blockquote-colour, 10%);
+
+    .blockquote-author {
+        color: darken($blockquote-colour, 10%);
+        text-align: right;
+    }
+
+}

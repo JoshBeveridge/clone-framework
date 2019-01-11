@@ -5,24 +5,34 @@
 
 // =============================================================================
 
-.alert {
-    position: relative;
+[class*="alert--"] {
+
+    .alert-title {
+        display: block;
+
+        i {
+            margin-top: -.25rem;
+            margin-right: .5rem;
+            vertical-align: middle;
+        }
+
+    }
 
     // Types -------------------------------------------------------------------
 
-        &--information {
+        &[class*="information"] {
             background: rgba($alert--information, .2);
             border: 1px solid darken($alert--information, 10%);
             color: darken($alert--information, 10%);
         }
 
-        &--warning {
+        &[class*="warning"] {
             background: rgba($alert--warning, .2);
             border: 1px solid darken($alert--warning, 10%);
             color: darken($alert--warning, 10%);
         }
 
-        &--error {
+        &[class*="error"] {
             background: rgba($alert--error, .2);
             border: 1px solid darken($alert--error, 10%);
             color: darken($alert--error, 10%);

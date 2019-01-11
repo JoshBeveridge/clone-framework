@@ -1,0 +1,47 @@
+// =============================================================================
+
+    // Clone
+    // Breadcrumbs
+
+// =============================================================================
+
+.breadcrumbs {
+
+    ol {
+        list-style: none;
+
+        .breadcrumb {
+            display: inline-block;
+            line-height: calc(#{$line-height} * 1.5);
+
+            .breadcrumb-link {
+
+                // States ------------------------------------------------------
+
+                    &.active {
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+
+            }
+
+            i {
+                margin-top: -.25rem;
+                vertical-align: middle;
+            }
+
+            // States ----------------------------------------------------------
+
+                &:last-child {
+
+                    i {
+                        display: none;
+                    }
+
+                }
+
+        }
+
+    }
+
+}
