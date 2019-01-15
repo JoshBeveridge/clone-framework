@@ -66,102 +66,145 @@
 
         // Carousel Controls ===================================================
 
-            // function carouselNext(trigger) {
+            function carouselTrigger() {
 
-            //     var slides = $(trigger).siblings(".carousel-frame").find(".carousel-item");
-            //     var previous = $(trigger).siblings(".carousel-frame").find(".previous");
-            //     var current = $(trigger).siblings(".carousel-frame").find(".current");
-            //     var next = $(trigger).siblings(".carousel-frame").find(".next");
+                $("[class*='carousel--']").each(function() {
 
-            //     if (previous.next().length == 0) {
+                    var slider = this,
+                        sliderItems = this.querySelector(".carousel-wrapper"),
+                        prev = this.querySelector('.carousel-control.prev'),
+                        next = this.querySelector('.carousel-control.next');
 
-            //         firstNode = slides.eq(0).clone().removeClass("previous current next");
+                    function slide(wrapper, items, prev, next) {
 
-            //         $(trigger).siblings(".carousel-frame").append(firstNode);
+                        var posX1 = 0,
+                            posX2 = 0,
+                            posInitial,
+                            posFinal,
+                            threshold = 100,
+                            slides = items.getElementsByClassName('carousel-item'),
+                            slidesLength = slides.length,
+                            firstSlide = slides[0],
+                            lastSlide = slides[slidesLength - 1],
+                            cloneFirst = firstSlide.cloneNode(true),
+                            cloneLast = lastSlide.cloneNode(true),
+                            index = 0,
+                            allowShift = true;
+                            slideSize = $(slider).width();
 
-            //         previous.removeClass("previous").next().addClass("previous");
+                        // Clone first and last slide
 
-            //     }
-            //     else {
-            //         previous.removeClass("previous").next().addClass("previous");
-            //     }
+                            items.appendChild(cloneFirst);
+                            items.insertBefore(cloneLast, firstSlide);
+                            wrapper.classList.add('loaded');
 
-            //     current.removeClass("current").next().addClass("current");
+                            // $(wrapper).css("width", slideSize);
+                            $(wrapper).find(".carousel-item").css("width", slideSize);
+                            $(wrapper).find(".carousel-wrapper").css("left", slideSize * (-1) );
+                            $(wrapper).find(".carousel-wrapper").css("width", slideSize * $(wrapper).find(".carousel-item").length);
 
-            //     next.removeClass("next").next().addClass("next");
+                        // Mouse events
+                        items.onmousedown = dragStart;
 
-            //     slides.eq(0).remove();
+                        // Touch events
+                        items.addEventListener('touchstart', dragStart);
+                        items.addEventListener('touchend', dragEnd);
+                        items.addEventListener('touchmove', dragAction);
 
-            // }
+                        // Click events
+                        prev.addEventListener('click', function () { shiftSlide(-1) });
+                        next.addEventListener('click', function () { shiftSlide(1) });
 
-            // $(document).on("click", ".carousel-control.next", function (e) {
+                        // Transition events
+                        items.addEventListener('transitionend', checkIndex);
 
-            //     carouselNext(this);
+                        function dragStart(e) {
+                            e = e || window.event;
+                            e.preventDefault();
+                            posInitial = items.offsetLeft;
 
-            // });
+                            if (e.type == 'touchstart') {
+                                posX1 = e.touches[0].clientX;
+                            } else {
+                                posX1 = e.clientX;
+                                document.onmouseup = dragEnd;
+                                document.onmousemove = dragAction;
+                            }
+                        }
 
-            // $(document).on("keyup", ".carousel-control.next", function (e) {
+                        function dragAction(e) {
+                            e = e || window.event;
 
-            //     if (e.which == 13) {
-            //         carouselNext(this);
-            //     }
+                            if (e.type == 'touchmove') {
+                                posX2 = posX1 - e.touches[0].clientX;
+                                posX1 = e.touches[0].clientX;
+                            } else {
+                                posX2 = posX1 - e.clientX;
+                                posX1 = e.clientX;
+                            }
+                            items.style.left = (items.offsetLeft - posX2) + "px";
+                        }
 
-            // });
+                        function dragEnd(e) {
+                            posFinal = items.offsetLeft;
+                            if (posFinal - posInitial < -threshold) {
+                                shiftSlide(1, 'drag');
+                            } else if (posFinal - posInitial > threshold) {
+                                shiftSlide(-1, 'drag');
+                            } else {
+                                items.style.left = (posInitial) + "px";
+                            }
 
-            // function carouselPrev(trigger) {
+                            document.onmouseup = null;
+                            document.onmousemove = null;
+                        }
 
-            //     if ($(trigger).siblings(".carousel-frame").find(".current").length == 0) {
-            //         var slides = $(trigger).siblings(".carousel-frame").find(".carousel-item");
-            //         slides.eq(-2).addClass("previous");
-            //         slides.eq(-1).addClass("current");
-            //         slides.eq(0).addClass("next");
-            //     }
-            //     else {
+                        function shiftSlide(dir, action) {
+                            items.classList.add('shifting');
 
-            //         var slides = $(trigger).siblings(".carousel-frame").find(".carousel-item");
-            //         var previous = $(trigger).siblings(".carousel-frame").find(".previous");
-            //         var current = $(trigger).siblings(".carousel-frame").find(".current");
-            //         var next = $(trigger).siblings(".carousel-frame").find(".next");
+                            if (allowShift) {
+                                if (!action) { posInitial = items.offsetLeft; }
 
-            //         if (previous.prev().length == 0) {
-            //             previous.removeClass("previous");
-            //             slides.eq(-1).addClass("previous");
-            //         }
-            //         else {
-            //             previous.removeClass("previous").prev().addClass("previous");
-            //         }
-            //         if (current.prev().length == 0) {
-            //             current.removeClass("current");
-            //             slides.eq(-1).addClass("current");
-            //         }
-            //         else {
-            //             current.removeClass("current").prev().addClass("current");
-            //         }
-            //         if (next.prev().length == 0) {
-            //             next.removeClass("next");
-            //             slides.eq(-1).addClass("next");
-            //         }
-            //         else {
-            //             next.removeClass("next").prev().addClass("next");
-            //         }
+                                if (dir == 1) {
+                                    items.style.left = (posInitial - slideSize) + "px";
+                                    index++;
+                                } else if (dir == -1) {
+                                    items.style.left = (posInitial + slideSize) + "px";
+                                    index--;
+                                }
+                            };
 
-            //     }
+                            allowShift = false;
+                        }
 
-            // }
+                        function checkIndex() {
+                            items.classList.remove('shifting');
 
-            // $(document).on("click", ".carousel-control.prev", function (e) {
+                            if (index == -1) {
+                                items.style.left = -(slidesLength * slideSize) + "px";
+                                index = slidesLength - 1;
+                            }
 
-            //     carouselPrev(this);
+                            if (index == slidesLength) {
+                                items.style.left = -(1 * slideSize) + "px";
+                                index = 0;
+                            }
 
-            // });
+                            allowShift = true;
+                        }
+                    }
 
-            // $(document).on("keyup", ".carousel-control.prev", function (e) {
+                    slide(slider, sliderItems, prev, next);
 
-            //     if (e.which == 13) {
-            //         carouselPrev(this);
-            //     }
+                });
 
-            // });
+            };
+
+            carouselTrigger();
+
+            $(window).resize(function () {
+                carouselTrigger();
+            });
 
     });
 
