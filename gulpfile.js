@@ -50,9 +50,6 @@
             return gulp.src('app/twig/*.html')
             .pipe(twig())
             .pipe(gulp.dest('cache'))
-            .pipe(browsersync.reload({
-                stream: true
-            }))
         }
 
     // JavaScript
@@ -60,9 +57,6 @@
         function js() {
             return gulp.src('app/js/*.js')
             .pipe(gulp.dest('cache/js'))
-            .pipe(browsersync.reload({
-                stream: true
-            }))
         }
 
     // Sass
@@ -75,9 +69,13 @@
                 cascade: false
             }))
             .pipe(gulp.dest('cache/css'))
-            .pipe(browsersync.reload({
-                stream: true
-            }))
+        }
+
+    // Slick
+
+        function moveSlick() {
+            return gulp.src('node_modules/slick-carousel/slick/slick.min.js')
+            .pipe(gulp.dest('cache/js'))
         }
 
     // Minification
@@ -88,6 +86,9 @@
             .pipe(gulpIf('*.js', uglify()))
             .pipe(gulpIf('*.css', cssnano()))
             .pipe(gulp.dest('dist'))
+            .pipe(browsersync.reload({
+                stream: true
+            }))
         }
 
     // Dist Removal
@@ -101,12 +102,12 @@
         function watchFiles() {
             gulp.watch('app/scss/**/*.scss', gulp.series(compileCSS, distribute));
             gulp.watch('app/twig/**/*.html', gulp.series(template, distribute));
-            gulp.watch('app/js/**/*.js', gulp.series(js, distribute));
+            gulp.watch('app/js/**/*.js', gulp.series(js, moveSlick, distribute));
         }
 
     // Build
 
-        const build = gulp.series(cleanDist, template, js, compileCSS, distribute);
+        const build = gulp.series(cleanDist, template, js, moveSlick, compileCSS, distribute);
 
     // Dev
 

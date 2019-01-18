@@ -6,80 +6,138 @@
 // =============================================================================
 
 [class*="carousel--"] {
-    height: 100%;
-    position: relative;
+    margin: 0 0 3rem 0;
 
-    .carousel-frame {
-        list-style: none;
-        overflow: hidden;
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        width: 100%;
-        z-index: 5;
+    .slick-list {
+        border-radius: 5px;
 
-        .carousel-wrapper {
+        .slick-track {
             display: flex;
-            height: 100%;
-            list-style: none;
-            position: absolute;
-            top: 0;
 
-            .carousel-item {
-                background-position: center;
-                background-size: cover;
-                cursor: pointer;
-                height: 100%;
-                position: relative;
-                transition: all 1s;
+            .slick-slide {
+                display: flex;
+                height: auto;
             }
-
-            // States ----------------------------------------------------------
-
-                &.shifting {
-                    transition: left .2s ease-out;
-                }
 
         }
 
     }
 
-    .carousel-control {
-        background: rgba($black, .75);
-        border: 0;
+    .slick-arrow {
+        background: rgba($black, .5);
+        border: none;
+        cursor: pointer;
+        display: none !important;
+        font-size: $font-scale--h3;
         height: 100%;
         position: absolute;
         top: 0;
+        transition: all .2s ease;
         width: 5vw;
-        z-index: 10;
+        z-index: 5;
+
+        @media #{$tablet-landscape} {
+            display: block !important;
+        }
 
         i {
             color: $white;
+            font-size: inherit;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
+        // States --------------------------------------------------------------
+
+            &:hover,
+            &:focus {
+                background: rgba($black, .8);
+                transition: all .2s ease;
+            }
+
         // Types ---------------------------------------------------------------
 
-            &.prev {
+            &.slick-prev {
+                border-radius: 5px 0 0 5px;
                 left: 0;
             }
 
-            &.next {
+            &.slick-next {
+                border-radius: 0 5px 5px 0;
                 right: 0;
             }
 
     }
 
-    // Types -------------------------------------------------------------------
+    .slick-dots {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translate(-50%, 100%);
 
-        [class*="image"] {
+        li {
+            background: $c1;
+            border-radius: 100%;
+            display: inline-block;
+            margin: 0 .5rem;
+            transition: all .2s ease;
+
+            button {
+                background: none;
+                border: 0;
+                color: $white;
+                cursor: pointer;
+                height: 2rem;
+                width: 2rem;
+            }
+
+        // States ----------------------------------------------------------
+
+            &.slick-active,
+            &:hover,
+            &:focus {
+                background: $c2;
+                transition: all .2s ease;
+            }
 
         }
 
-        [class*="content"] {
+    }
+
+    // Types -------------------------------------------------------------------
+
+        &[class*="image"] {
+
+            .carousel-item {
+                background-position: center;
+                background-size: cover;
+                height: 0;
+                padding-bottom: 7.0315%;
+            }
+
+        }
+
+        &[class*="content"] {
+
+            .carousel-item {
+                background-position: center;
+                background-size: cover;
+
+                .carousel-content {
+                    margin: 10vw;
+
+                    @media #{$tablet-landscape} {
+                        margin: 4rem 10vw;
+                    }
+
+                }
+
+            }
 
         }
 

@@ -1,0 +1,344 @@
+// =============================================================================
+
+    // Clone
+    // Inputs: General
+
+// =============================================================================
+
+form {
+
+    // Fieldsets
+
+        .flex-grid+.flex-grid {
+            padding-top: 1rem;
+        }
+
+        .flex-grid+fieldset,
+        fieldset+fieldset,
+        fieldset+.flex-grid {
+            padding-top: 2rem;
+        }
+
+        fieldset {
+            appearance: none;
+            border: none;
+
+            legend {
+                color: $c1;
+                font-weight: 800;
+            }
+
+        }
+
+    // Copy
+
+        .copy {
+            padding-bottom: 1.5rem !important;
+        }
+
+    // Inputs
+
+        .input {
+            padding-bottom: 0 !important;
+            position: relative;
+
+            label {
+                display: block;
+                font-size: $font-scale--small;
+                margin-bottom: .5rem;
+                padding-right: 4rem;
+            }
+
+            .required-label {
+                color: $alert--error;
+                display: none;
+                font-size: $font-scale--small;
+                position: absolute;
+                top: .5rem;
+                right: .5rem;
+
+                @media #{$tablet-landscape} {
+                    top: 1rem;
+                    right: 1rem;
+                }
+
+            }
+
+            .input-wrapper {
+                position: relative;
+
+                input {
+                    border: 1px solid $gray;
+                    border-radius: 5px;
+                    display: block;
+                    outline: none;
+                    margin-bottom: 1.5rem;
+                    padding: 1rem 1.5rem;
+                    width: 100%;
+
+                    &:focus {
+                        border: 1px solid $c1;
+                    }
+
+                    &[type="date"] {
+                        padding: calc(1rem - 1.5px) calc(1.5rem - 1.5px);
+                    }
+
+                }
+
+                textarea {
+                    border: 1px solid $gray;
+                    border-radius: 5px;
+                    display: block;
+                    outline: none;
+                    margin-bottom: 1.5rem;
+                    max-width: 100%;
+                    min-height: 10rem;
+                    min-width: 100%;
+                    padding: 1rem 1.5rem;
+                    width: 100%;
+
+                    &:focus {
+                        border: 1px solid $c1;
+                    }
+
+                }
+
+                .select {
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        right: 1rem;
+                        pointer-events: none;
+                        transform: translate(0, -50%);
+                    }
+
+                    select {
+                        appearance: none;
+                        border: 1px solid $gray;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        display: block;
+                        outline: none;
+                        margin-bottom: 1.4rem;
+                        padding: calc(1rem + 3.5px) calc(1.5rem + 3.5px);
+                        width: 100%;
+
+                        &:focus {
+                            border: 1px solid $c1;
+                        }
+
+                    }
+
+                }
+
+                .password {
+                    position: relative;
+
+                    button {
+                        appearance: none;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        right: 1rem;
+                        transform: translate(0, -50%);
+
+                        .view-toggle {
+                            display: block;
+                        }
+
+                        .hide-toggle {
+                            display: none;
+                        }
+
+                    }
+
+                    // States --------------------------------------------------
+
+                        &.visible {
+
+                            .view-toggle {
+                                display: none;
+                            }
+
+                            .hide-toggle {
+                                display: block;
+                            }
+
+                        }
+
+                }
+
+                .checkbox-group {
+                    margin-top: .5rem;
+                    margin-bottom: 1.5rem;
+
+                    label {
+                        margin: 0 !important;
+                        padding-top: .5rem !important;
+                        padding-bottom: .5rem !important;
+
+                        input {
+                            display: inline-block;
+                            margin: 0;
+                            width: auto;
+                        }
+
+                        span {
+                            display: inline-block;
+                            font-size: $font-scale--regular;
+                            margin: 0 0 0 .5rem;
+                        }
+
+                    }
+
+                }
+
+                .radio-group {
+                    margin-bottom: 1.5rem;
+
+                    label {
+                        cursor: pointer;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        position: relative;
+
+                        input {
+                            position: absolute;
+                            left: -1000vh;
+
+                            &:focus + span {
+                                // border-color: $palette--blue;
+                            }
+
+                            &:checked + span {
+                                background: $c1;
+                                color: $white;
+                                font-weight: 800;
+                            }
+
+                        }
+
+                        span {
+                            align-items: center;
+                            background: $white;
+                            border-top: none;
+                            border-right: 1px solid $gray;
+                            border-bottom: 1px solid $gray;
+                            border-left: 1px solid $gray;
+                            display: flex;
+                            font-size: $font-scale--regular;
+                            height: 100%;
+                            justify-content: center;
+                            padding: 1rem 1.5rem;
+                            pointer-events: none;
+                            text-align: center;
+                            word-wrap: break-word;
+
+                            @media #{$tablet-portrait} {
+                                border-top: 1px solid $gray;
+                                border-right: 1px solid $gray;
+                                border-bottom: 1px solid $gray;
+                                border-left: none;
+                            }
+
+                            @media #{$desktop-small} {
+                                word-wrap: normal;
+                            }
+
+                        }
+
+                        &:first-of-type {
+
+                            span {
+                                border-top: 1px solid $gray;
+                                border-radius: 5px 5px 0 0;
+
+                                @media #{$tablet-portrait} {
+                                    border-left: 1px solid $gray;
+                                    border-radius: 5px 0 0 5px;
+                                }
+
+                            }
+
+                        }
+
+                        &:last-of-type {
+
+                            span {
+                                border-radius: 0 0 5px 5px;
+
+                                @media #{$tablet-portrait} {
+                                    border-radius: 0 5px 5px 0;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .error-copy {
+                    color: $alert--error;
+                    display: none;
+                    font-size: $font-scale--small;
+                    position: absolute;
+                    top: calc(100% + .5rem);
+                    left: 0;
+                }
+
+            }
+
+            &.required {
+
+                .required-label {
+                    display: block;
+                }
+
+            }
+
+            &.invalid {
+
+                input,
+                textarea {
+                    border: 1px solid $alert--error;
+                }
+
+                .error-copy {
+                    display: block;
+                }
+
+            }
+
+        }
+
+    // Actions
+
+        .actions {
+
+            .box {
+                text-align: center;
+
+                @media #{$phone-landscape} {
+                    text-align: left;
+                }
+
+                &:last-child {
+
+                    @media #{$phone-landscape} {
+                        text-align: right;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

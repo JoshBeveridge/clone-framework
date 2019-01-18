@@ -174,34 +174,13 @@
 
     // }
 
-    // a {
-    //     color: inherit;
-    //     font-family: inherit;
-    //     font-size: inherit;
-    //     font-weight: inherit;
-    //     text-decoration: underline;
-
-    //     &.plum {
-    //         color: $plum;
-    //     }
-
-    //     &.wine {
-    //         color: $wine;
-    //     }
-
-    //     &.crimson {
-    //         color: $crimson;
-    //     }
-
-    //     &.white {
-    //         color: $white;
-    //     }
-
-    //     &.bold {
-    //         font-weight: 800;
-    //     }
-
-    // }
+    a {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-decoration: underline;
+    }
 
     // pre {
     //     background: $slate;

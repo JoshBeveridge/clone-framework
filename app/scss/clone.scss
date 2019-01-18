@@ -5,6 +5,10 @@
 
 // =============================================================================
 
+// Slick Carousel by Ken Wheeler ===============================================
+
+    @import "../../node_modules/slick-carousel/slick/slick.scss";
+
 // User Variables ==============================================================
 
     @import "core/defaults";
@@ -89,7 +93,11 @@
 
     // Iframes
 
+        @import "components/iframe";
+
     // Inputs
+
+        @import "components/input-general";
 
         // Checkboxes
 
@@ -104,6 +112,8 @@
         // Dropdowns (Select Elements)
 
         // Text
+
+            @import "components/input-text";
 
         // Textareas
 
