@@ -112,9 +112,7 @@
 
                         var focusableItems = $(dialogue).find(":focusable");
                         var firstInput = focusableItems.first();
-                        console.log(firstInput);
                         var lastInput = focusableItems.last();
-                        console.log(lastInput);
 
                         if (dialogue.find("form").length == 0) {
                             lastInput.focus();

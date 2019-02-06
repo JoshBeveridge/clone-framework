@@ -77,6 +77,16 @@
             flex: 1;
         }
 
+        &.flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        &.flex-right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
         // Base Boxes ==============================================================
 
             // 1 Column
