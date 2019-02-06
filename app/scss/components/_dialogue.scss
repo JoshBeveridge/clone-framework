@@ -1,0 +1,93 @@
+// =============================================================================
+
+    // Clone
+    // Dialogues
+
+// =============================================================================
+
+.dialogue-overlay {
+    background: rgba(0, 0, 0, .9);
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100vw, 0);
+    transition: transform 0s linear .4s, opacity .2s ease .2s;
+    width: 100vw;
+    z-index: 1000;
+
+    // States ------------------------------------------------------------------
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+            transition: transform 0s linear, opacity .2s ease;
+        }
+
+}
+
+.dialogue-scroll-wrapper {
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    transform: translate(-100vw, 0);
+    transition: transform 0s linear .2s, opacity .2s ease;
+    width: 100vw;
+    z-index: 2000;
+
+    .dialogue {
+        margin: 0 auto;
+        width: 90vw;
+
+        @media #{$tablet-landscape} {
+            width: 75vw;
+        }
+
+        @media #{$desktop-medium} {
+            width: 50vw;
+        }
+
+        .dialogue-title {
+            position: relative;
+
+            .dialogue-close-trigger {
+                position: absolute;
+                top: $padding;
+                right: $padding;
+            }
+
+        }
+
+        .dialogue-body {
+
+        }
+
+    }
+
+    // States ------------------------------------------------------------------
+
+        &.active {
+
+            &.contained {
+                height: auto;
+                opacity: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: transform 0s linear, opacity .2s ease .2s;
+            }
+
+            &.overflowing {
+                height: 100vh;
+                opacity: 1;
+                overflow: auto;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                transition: transform 0s linear, opacity .2s ease .2s;
+            }
+
+        }
+
+}

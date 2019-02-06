@@ -1,5 +1,5 @@
 {
-  "name": "Clone",
+  "name": "clone-framework",
   "version": "2.0.0",
   "description": "A lightweight, themeable design system.",
   "main": "app/index.js",

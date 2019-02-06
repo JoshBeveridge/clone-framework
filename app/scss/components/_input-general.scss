@@ -123,7 +123,7 @@ form {
                         display: block;
                         outline: none;
                         margin-bottom: 1.4rem;
-                        padding: calc(1rem + 3.5px) calc(1.5rem + 3.5px);
+                        padding: 1rem 3rem 1rem 1.5rem;
                         width: 100%;
 
                         &:focus {
@@ -136,6 +136,10 @@ form {
 
                 .password {
                     position: relative;
+
+                    input {
+                        padding: 1rem 3rem 1rem 1.5rem;
+                    }
 
                     button {
                         appearance: none;
@@ -306,7 +310,8 @@ form {
             &.invalid {
 
                 input,
-                textarea {
+                textarea,
+                .input-wrapper select {
                     border: 1px solid $alert--error;
                 }
 

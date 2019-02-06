@@ -8,8 +8,12 @@
 .accordion {
 
     .accordion-trigger {
+        background: none;
+        border: none;
         cursor: pointer;
         position: relative;
+        text-align: left;
+        width: 100%;
 
         [class*="accordion-icon--"] {
             font-size: $font-scale--h4;
