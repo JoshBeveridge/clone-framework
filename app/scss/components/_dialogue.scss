@@ -52,9 +52,22 @@
             position: relative;
 
             .dialogue-close-trigger {
+                background: none;
+                border: none;
+                cursor: pointer;
+                outline: none;
                 position: absolute;
                 top: $padding;
                 right: $padding;
+                transition: color .3s ease;
+
+                // States ------------------------------------------------------
+
+                    &:hover {
+                        color: $stop;
+                        transition: color .3s ease;
+                    }
+
             }
 
         }

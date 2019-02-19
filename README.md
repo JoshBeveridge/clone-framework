@@ -2,6 +2,8 @@
 
 A lightweight, themeable design system.
 
+Produced at [Talent Cloud](https://talent.canada.ca/).
+
 ### Getting Started
 
 
@@ -32,9 +34,14 @@ Clone uses [Gulp](https://gulpjs.com/) to manage dependencies. If you haven't al
 
 // Custom Variables ============================================================
 
-    // All available custom variables can be found at https://github.com/
+    // All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
 
 // Include Clone ===============================================================
 
     @import "../node_modules/clone-design/app/scss/clone";
 ```
+
+### Dependency Checklist
+
+[] jQuery
+[] Slick Carousel

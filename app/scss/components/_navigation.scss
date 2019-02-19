@@ -1,0 +1,63 @@
+// =============================================================================
+
+    // Clone
+    // Navigation
+
+// =============================================================================
+
+[data-mobile-navigation-trigger] {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    z-index: 1500;
+
+    @media #{$tablet-landscape} {
+        display: none;
+        pointer-events: none;
+    }
+
+}
+
+[class*="navigation--"] {
+    height: 100vh;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    bottom: -100vh;
+    transform: translate(0, 0);
+    width: 100vw;
+    z-index: 1000;
+
+    >ul {
+        list-style: none;
+        padding: 4rem;
+        position: relative;
+        width: 100%;
+
+        .subnavigation {
+            height: 100vh;
+            overflow: auto;
+            position: absolute;
+            top: 0;
+            left: 100vw;
+            transform: translate(0, 0);
+            width: 100vw;
+
+            // States ----------------------------------------------------------
+
+                &.active {
+                    transform: translate(-100%, 0);
+                }
+
+        }
+
+    }
+
+    // States ------------------------------------------------------------------
+
+        &.active {
+            transform: translate(0, -100%);
+        }
+
+}

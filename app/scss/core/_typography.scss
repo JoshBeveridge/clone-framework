@@ -47,7 +47,6 @@
 
 // Headings ====================================================================
 
-    h1,
     .heading--01 {
         font-size: $font-scale--h1;
 
@@ -57,7 +56,6 @@
 
     }
 
-    h2,
     .heading--01 {
         font-size: $font-scale--h2;
 
@@ -67,7 +65,6 @@
 
     }
 
-    h3,
     .heading--03 {
         font-size: $font-scale--h3;
 
@@ -77,12 +74,10 @@
 
     }
 
-    h4,
     .heading--04 {
         font-size: $font-scale--h4;
     }
 
-    h5,
     .heading--05 {
         font-size: $font-scale--h5;
     }
@@ -91,88 +86,7 @@
         display: block;
     }
 
-    h1, h2, h3, h4, h5 {
-        color: $black;
-
-        // &.plum {
-        //     color: $plum;
-        // }
-
-        // &.wine {
-        //     color: $wine;
-        // }
-
-        // &.crimson {
-        //     color: $crimson;
-        // }
-
-        // &.white {
-        //     color: $white;
-        // }
-
-        // &.bold {
-        //     font-weight: 800;
-        // }
-
-    }
-
 // Copy & Misc =================================================================
-
-    // p {
-    //     color: $slate;
-    //     line-height: 1.5;
-
-    //     &.plum {
-    //         color: $plum;
-    //     }
-
-    //     &.wine {
-    //         color: $wine;
-    //     }
-
-    //     &.crimson {
-    //         color: $crimson;
-    //     }
-
-    //     &.white {
-    //         color: $white;
-    //     }
-
-    //     &.bold {
-    //         font-weight: 800;
-    //     }
-
-    // }
-
-    // span {
-    //     font-size: inherit;
-    //     font-weight: inherit;
-
-    //     &.plum {
-    //         color: $plum;
-    //     }
-
-    //     &.wine {
-    //         color: $wine;
-    //     }
-
-    //     &.crimson {
-    //         color: $crimson;
-    //     }
-
-    //     &.white {
-    //         color: $white;
-    //     }
-
-    //     &.bold {
-    //         font-weight: 800;
-    //     }
-
-    //     &.block {
-    //         display: block;
-    //     }
-
-    // }
 
     a {
         color: inherit;
@@ -181,62 +95,3 @@
         font-weight: inherit;
         text-decoration: underline;
     }
-
-    // pre {
-    //     background: $slate;
-    //     border-radius: 5px;
-    //     color: $white;
-    //     font-family: $font--mono;
-    //     font-size: $font-scale--small;
-    //     line-height: 1.2;
-    //     overflow: auto;
-
-    //     &::selection {
-    //         background: $white;
-    //         color: $slate;
-    //     }
-
-    //     code {
-    //         font-family: $font--mono;
-    //         font-size: $font-scale--small;
-    //         padding: 1.5rem !important;
-
-    //         * {
-    //             font-family: $font--mono;
-    //             font-size: $font-scale--small;
-    //         }
-
-    //     }
-
-    // }
-
-    // i {
-
-    //     &.plum {
-    //         color: $plum;
-    //     }
-
-    //     &.wine {
-    //         color: $wine;
-    //     }
-
-    //     &.crimson {
-    //         color: $crimson;
-    //     }
-
-    //     &.white {
-    //         color: $white;
-    //     }
-
-    //     &.bold {
-    //         font-weight: 800;
-    //     }
-
-    // }
-
-    // hr {
-    //     background: $gray;
-    //     border: none;
-    //     height: 1px;
-    //     width: 100%;
-    // }

@@ -55,6 +55,28 @@
 
         }
 
+        &.gutter--horizontal {
+            margin-right: -.5rem;
+            margin-left: -.5rem;
+
+            @media #{$tablet-landscape} {
+                margin-right: -1rem;
+                margin-left: -1rem;
+            }
+
+            >.box {
+                padding-right: .5rem;
+                padding-left: .5rem;
+
+                @media #{$tablet-landscape} {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+
+            }
+
+        }
+
     }
 
     .box {

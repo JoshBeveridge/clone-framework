@@ -20,6 +20,10 @@ $padding: 2rem !default;
 $white: #FFFFFF !default;
 $black: #333333 !default;
 
+$go: green !default;
+$slow: orange !default;
+$stop: red !default;
+
 $grey: gray !default;
 $grey--light: lighten($grey, 10%) !default;
 $grey--dark: darken($grey, 10%) !default;
@@ -40,17 +44,19 @@ $c3: #C90035 !default;
 $c3--light: lighten($c3, 10%) !default;
 $c3--dark: darken($c3, 10%) !default;
 
-$c4: black !default;
+$c4: blue !default;
 $c4--light: lighten($c4, 10%) !default;
 $c4--dark: darken($c4, 10%) !default;
 
-$c5: black !default;
+$c5: purple !default;
 $c5--light: lighten($c5, 10%) !default;
 $c5--dark: darken($c5, 10%) !default;
 
-$alert--information: $c1 !default;
-$alert--warning: #d3811d !default;
-$alert--error: $c3 !default;
+$focus-colour: teal !default;
+
+$alert--information: $go !default;
+$alert--warning: $slow !default;
+$alert--error: $stop !default;
 
 $blockquote-colour: $c1 !default;
 

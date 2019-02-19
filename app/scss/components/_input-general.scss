@@ -104,6 +104,24 @@ form {
 
                 }
 
+                .input-with-button {
+
+                    input {
+                        border-radius: 5px 0 0 5px;
+                        border-right: none;
+                    }
+
+                    button {
+                        // border: 1px solid $gray;
+                        border-radius: 0 5px 5px 0;
+                        display: block;
+                        outline: none;
+                        margin-bottom: 1.5rem;
+                        padding: 1rem 1.5rem;
+                    }
+
+                }
+
                 .select {
                     position: relative;
 
@@ -178,13 +196,16 @@ form {
                 }
 
                 .checkbox-group {
+                    border: 1px solid $gray;
+                    border-radius: 5px;
                     margin-top: .5rem;
                     margin-bottom: 1.5rem;
+                    padding: 1rem 1.5rem;
 
                     label {
                         margin: 0 !important;
-                        padding-top: .5rem !important;
-                        padding-bottom: .5rem !important;
+                        padding-top: .25rem !important;
+                        padding-bottom: .25rem !important;
 
                         input {
                             display: inline-block;
@@ -203,90 +224,118 @@ form {
                 }
 
                 .radio-group {
+                    border: 1px solid $gray;
+                    border-radius: 5px;
+                    margin-top: .5rem;
                     margin-bottom: 1.5rem;
+                    padding: 1rem 1.5rem;
 
                     label {
-                        cursor: pointer;
                         margin: 0 !important;
-                        padding: 0 !important;
-                        position: relative;
+                        padding-top: .25rem !important;
+                        padding-bottom: .25rem !important;
 
                         input {
-                            position: absolute;
-                            left: -1000vh;
-
-                            &:focus + span {
-                                // border-color: $palette--blue;
-                            }
-
-                            &:checked + span {
-                                background: $c1;
-                                color: $white;
-                                font-weight: 800;
-                            }
-
+                            display: inline-block;
+                            margin: 0;
+                            width: auto;
                         }
 
                         span {
-                            align-items: center;
-                            background: $white;
-                            border-top: none;
-                            border-right: 1px solid $gray;
-                            border-bottom: 1px solid $gray;
-                            border-left: 1px solid $gray;
-                            display: flex;
+                            display: inline-block;
                             font-size: $font-scale--regular;
-                            height: 100%;
-                            justify-content: center;
-                            padding: 1rem 1.5rem;
-                            pointer-events: none;
-                            text-align: center;
-                            word-wrap: break-word;
-
-                            @media #{$tablet-portrait} {
-                                border-top: 1px solid $gray;
-                                border-right: 1px solid $gray;
-                                border-bottom: 1px solid $gray;
-                                border-left: none;
-                            }
-
-                            @media #{$desktop-small} {
-                                word-wrap: normal;
-                            }
-
-                        }
-
-                        &:first-of-type {
-
-                            span {
-                                border-top: 1px solid $gray;
-                                border-radius: 5px 5px 0 0;
-
-                                @media #{$tablet-portrait} {
-                                    border-left: 1px solid $gray;
-                                    border-radius: 5px 0 0 5px;
-                                }
-
-                            }
-
-                        }
-
-                        &:last-of-type {
-
-                            span {
-                                border-radius: 0 0 5px 5px;
-
-                                @media #{$tablet-portrait} {
-                                    border-radius: 0 5px 5px 0;
-                                }
-
-                            }
-
+                            margin: 0 0 0 .5rem;
                         }
 
                     }
 
                 }
+
+                // .radio-group {
+                //     margin-bottom: 1.5rem;
+
+                //     label {
+                //         cursor: pointer;
+                //         margin: 0 !important;
+                //         padding: 0 !important;
+                //         position: relative;
+
+                //         input {
+                //             position: absolute;
+                //             left: -1000vh;
+
+                //             &:focus + span {
+                //                 // border-color: $palette--blue;
+                //             }
+
+                //             &:checked + span {
+                //                 background: $c1;
+                //                 color: $white;
+                //                 font-weight: 800;
+                //             }
+
+                //         }
+
+                //         span {
+                //             align-items: center;
+                //             background: $white;
+                //             border-top: none;
+                //             border-right: 1px solid $gray;
+                //             border-bottom: 1px solid $gray;
+                //             border-left: 1px solid $gray;
+                //             display: flex;
+                //             font-size: $font-scale--regular;
+                //             height: 100%;
+                //             justify-content: center;
+                //             padding: 1rem 1.5rem;
+                //             pointer-events: none;
+                //             text-align: center;
+                //             word-wrap: break-word;
+
+                //             @media #{$tablet-portrait} {
+                //                 border-top: 1px solid $gray;
+                //                 border-right: 1px solid $gray;
+                //                 border-bottom: 1px solid $gray;
+                //                 border-left: none;
+                //             }
+
+                //             @media #{$desktop-small} {
+                //                 word-wrap: normal;
+                //             }
+
+                //         }
+
+                //         &:first-of-type {
+
+                //             span {
+                //                 border-top: 1px solid $gray;
+                //                 border-radius: 5px 5px 0 0;
+
+                //                 @media #{$tablet-portrait} {
+                //                     border-left: 1px solid $gray;
+                //                     border-radius: 5px 0 0 5px;
+                //                 }
+
+                //             }
+
+                //         }
+
+                //         &:last-of-type {
+
+                //             span {
+                //                 border-radius: 0 0 5px 5px;
+
+                //                 @media #{$tablet-portrait} {
+                //                     border-radius: 0 5px 5px 0;
+                //                 }
+
+                //             }
+
+                //         }
+
+                //     }
+
+                // }
 
                 .error-copy {
                     color: $alert--error;

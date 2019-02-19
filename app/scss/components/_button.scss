@@ -1,0 +1,202 @@
+// =============================================================================
+
+    // Clone
+    // Buttons
+
+// =============================================================================
+
+a[class*="button--"] {
+    display: inline-block;
+    max-width: 100%;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+
+[class*="button--"] {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: .6rem 2rem .7rem;
+    text-align: center;
+    transition: all .2s ease;
+
+    i {
+        margin: -.2rem .25rem 0 -.5rem;
+        vertical-align: middle;
+    }
+
+    // Variations --------------------------------------------------------------
+
+        &.solid {
+            background: $c1;
+            border: 1px solid $c1;
+            color: contrasting-color($c1, $white, $black);
+
+            // Colours ---------------------------------------------------------
+
+                &[class*="c1"] {
+                    background: $c1;
+                    border-color: $c1;
+                    color: contrasting-color($c1, $white, $black);
+                }
+
+                &[class*="c2"] {
+                    background: $c2;
+                    border-color: $c2;
+                    color: contrasting-color($c2, $white, $black);
+                }
+
+                &[class*="c3"] {
+                    background: $c3;
+                    border-color: $c3;
+                    color: contrasting-color($c3, $white, $black);
+                }
+
+                &[class*="c4"] {
+                    background: $c4;
+                    border-color: $c4;
+                    color: contrasting-color($c4, $white, $black);
+                }
+
+                &[class*="c5"] {
+                    background: $c5;
+                    border-color: $c5;
+                    color: contrasting-color($c5, $white, $black);
+                }
+
+                &[class*="go"] {
+                    background: $go;
+                    border-color: $go;
+                    color: contrasting-color($go, $white, $black);
+                }
+
+                &[class*="slow"] {
+                    background: $slow;
+                    border-color: $slow;
+                    color: contrasting-color($slow, $white, $black);
+                }
+
+                &[class*="stop"] {
+                    background: $stop;
+                    border-color: $stop;
+                    color: contrasting-color($stop, $white, $black);
+                }
+
+            // States ----------------------------------------------------------
+
+                &:hover {
+                    background: rgba($focus-colour, .2);
+                    border-color: $focus-colour;
+                    color: $focus-colour;
+                    transition: all .2s ease;
+                }
+
+                &:focus {
+                    box-shadow: -3px -3px 0 $focus-colour, 3px -3px 0 $focus-colour, 3px 3px 0 $focus-colour, -3px 3px 0 $focus-colour;
+                }
+
+        }
+
+        &.outline {
+            background: none;
+            border: 1px solid $c1;
+            color: $c1;
+
+            // Colours ---------------------------------------------------------
+
+                &[class*="c1"] {
+                    background: none;
+                    border: 1px solid $c1;
+                    color: $c1;
+                }
+
+                &[class*="c2"] {
+                    background: none;
+                    border: 1px solid $c2;
+                    color: $c2;
+                }
+
+                &[class*="c3"] {
+                    background: none;
+                    border: 1px solid $c3;
+                    color: $c3;
+                }
+
+                &[class*="c4"] {
+                    background: none;
+                    border: 1px solid $c4;
+                    color: $c4;
+                }
+
+                &[class*="c5"] {
+                    background: none;
+                    border: 1px solid $c5;
+                    color: $c5;
+                }
+
+                &[class*="go"] {
+                    background: none;
+                    border: 1px solid $go;
+                    color: $go;
+                }
+
+                &[class*="slow"] {
+                    background: none;
+                    border: 1px solid $slow;
+                    color: $slow;
+                }
+
+                &[class*="stop"] {
+                    background: none;
+                    border: 1px solid $stop;
+                    color: $stop;
+                }
+
+            // States ----------------------------------------------------------
+
+                &:hover {
+                    background: rgba($focus-colour, .2);
+                    border-color: $focus-colour;
+                    color: $focus-colour;
+                    transition: all .2s ease;
+                }
+
+                &:focus {
+                    box-shadow: -3px -3px 0 $focus-colour, 3px -3px 0 $focus-colour, 3px 3px 0 $focus-colour, -3px 3px 0 $focus-colour;
+                }
+
+        }
+
+        &.rounded {
+            border-radius: 5px;
+        }
+
+        &.pill {
+            border-radius: 20rem;
+        }
+
+        &.square {
+            border-radius: 0;
+        }
+
+    // States ------------------------------------------------------------------
+
+        &:disabled {
+
+            &.solid {
+                background: lighten($grey, 30%);
+                border-color: lighten($grey, 30%);
+                color: $grey;
+                pointer-events: none;
+            }
+
+            &.outline {
+                background: none;
+                border-color: $grey;
+                color: $grey;
+                pointer-events: none;
+            }
+
+        }
+
+}

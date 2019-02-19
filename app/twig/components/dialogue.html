@@ -1,10 +1,14 @@
-<button
-    class=""
-    data-dialogue-action="open"
-    data-dialogue-id="example-dialogue-01"
-    type="button">
-    Open dialogue 01
-</button>
+<div class="center">
+
+    <button
+        class="button--c1 solid rounded"
+        data-dialogue-action="open"
+        data-dialogue-id="example-dialogue-01"
+        type="button">
+        Open a Dialogue
+    </button>
+
+</div>
 
 <div class="dialogue-overlay"></div>
 
@@ -20,9 +24,11 @@
 
         <div class="dialogue-title padding border-bottom">
 
-            <h5 id="example-dialogue-01-title">dialogue Title</h5>
+            <h5
+                class="heading--04"
+                id="example-dialogue-01-title">Dialogue Title</h5>
 
-            <span class="margin-top--half">Optional Subtitle</span>
+            <span class="heading--05 margin-top--half">Optional Dialogue Subtitle</span>
 
             <button
                 class="dialogue-close-trigger"
@@ -48,22 +54,26 @@
         </div>
 
         <div class="actions padding">
+
             <div class="flex-grid gutter">
                 <div class="box pp-1of2">
                     <button
+                        class="button--slow outline rounded"
                         data-dialogue-action="close"
                         data-dialogue-id="example-dialogue-01">
                         Cancel
                     </button>
                 </div>
-                <div class="box pp-1of2 flex-center">
+                <div class="box pp-1of2 flex-right">
                     <button
+                        class="button--go solid rounded"
                         data-dialogue-action="close"
                         data-dialogue-id="example-dialogue-01">
                         Okay
                     </button>
                 </div>
             </div>
+
         </div>
 
     </div>
