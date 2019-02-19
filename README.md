@@ -6,7 +6,6 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ### Getting Started
 
-
 #### CDN
 
 Coming Soon
@@ -34,12 +33,28 @@ Clone uses [Gulp](https://gulpjs.com/) to manage dependencies. If you haven't al
 
 // Custom Variables ============================================================
 
-    // All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
+    // All available custom variables can be found [here](https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss)
 
 // Include Clone ===============================================================
 
     @import "../node_modules/clone-design/app/scss/clone";
 ```
+
+### Namespacing
+
+Clone uses a `clone__` namespace for all of its classes and variables to avoid interfering with other libraries or the styling of your own unique elements. Classes are intended to be explicit and are contructed in the following manner:
+
+`.namespace__block-name--optional-modifier`
+
+A practical example of this nomenclature with 2 modifiers in use:
+
+`.clone__background--grey--transparent`
+
+- namespace: clone
+- block: background
+- modifiers: grey, transparent
+
+You can find a list of default variables [here](https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss).
 
 ### Dependency Checklist
 

@@ -8,20 +8,15 @@
 // Fonts =======================================================================
 
     * {
-        font-family: $font--sans;
+        font-family: $clone__font--sans;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1;
-
-        &.script {
-            font-family: $font--script;
-        }
-
     }
 
     ::selection {
-        background: $black;
-        color: $white;
+        background: $clone__black;
+        color: $clone__white;
     }
 
 // Font Scale ==================================================================
@@ -30,59 +25,24 @@
     body {
         font-size: 110%;
 
-        @media #{$tablet-portrait} {
+        @media #{$clone__tablet-portrait} {
             font-size: 120%;
         }
 
     }
 
-    $font-scale--regular: 1rem;
+    $clone__font-scale--regular: 1rem;
 
-    $font-scale--h1: calc(1rem*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}*(#{$font-scale})))));
-    $font-scale--h2: calc(1rem*(#{$font-scale}*(#{$font-scale}*(#{$font-scale}))));
-    $font-scale--h3: calc(1rem*(#{$font-scale}*(#{$font-scale})));
-    $font-scale--h4: calc(1rem*(#{$font-scale}));
-    $font-scale--h5: $font-scale--regular;
-    $font-scale--small: calc(1rem/(#{$font-scale}));
+    $clone__font-scale--h1: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale})))));
+    $clone__font-scale--h2: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale}))));
+    $clone__font-scale--h3: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale})));
+    $clone__font-scale--h4: calc(1rem*(#{$clone__font-scale}));
+    $clone__font-scale--h5: $clone__font-scale--regular;
+    $clone__font-scale--small: calc(1rem/(#{$clone__font-scale}));
 
 // Headings ====================================================================
 
-    .heading--01 {
-        font-size: $font-scale--h1;
-
-        img {
-            width: $font-scale--h2;
-        }
-
-    }
-
-    .heading--01 {
-        font-size: $font-scale--h2;
-
-        img {
-            width: $font-scale--h3;
-        }
-
-    }
-
-    .heading--03 {
-        font-size: $font-scale--h3;
-
-        img {
-            width: $font-scale--h4;
-        }
-
-    }
-
-    .heading--04 {
-        font-size: $font-scale--h4;
-    }
-
-    .heading--05 {
-        font-size: $font-scale--h5;
-    }
-
-    [class*="heading--"] {
+    [class*="clone__heading--"] {
         display: block;
     }
 

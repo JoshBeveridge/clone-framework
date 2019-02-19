@@ -29,7 +29,7 @@
 
 // a11y ========================================================================
 
-    .invisible {
+    .clone__invisible {
         height: 1px;
         overflow: hidden;
         position: absolute;
@@ -40,210 +40,210 @@
 
 // Backgrounds =================================================================
 
-    .background-white {background: $white;}
-    .background-white--transparent {background: rgba($white, .2);}
+    .clone__background--white {background: $clone__white;}
+    .clone__background--white--transparent {background: rgba($clone__white, .2);}
 
-    .background-grey--light {background: $grey--light;}
-    .background-grey {background: $grey;}
-    .background-grey--dark {background: $grey--dark;}
-    .background-grey--transparent {background: rgba($grey, .2);}
+    .clone__background--grey--light {background: $clone__grey--light;}
+    .clone__background--grey {background: $clone__grey;}
+    .clone__background--grey--dark {background: $clone__grey--dark;}
+    .clone__background--grey--transparent {background: rgba($clone__grey, .2);}
 
-    .background-black {background: $black;}
-    .background-black--transparent {background: rgba($black, .2);}
+    .clone__background--black {background: $clone__black;}
+    .clone__background--black--transparent {background: rgba($clone__black, .2);}
 
-    .background-c1--light {background: $c1--light;}
-    .background-c1 {background: $c1;}
-    .background-c1--dark {background: $c1--dark;}
-    .background-c1--transparent {background: rgba($c1, .2);}
+    .clone__background--c1--light {background: $clone__c1--light;}
+    .clone__background--c1 {background: $clone__c1;}
+    .clone__background--c1--dark {background: $clone__c1--dark;}
+    .clone__background--c1--transparent {background: rgba($clone__c1, .2);}
 
-    .background-c2--light {background: $c2--light;}
-    .background-c2 {background: $c2;}
-    .background-c2--dark {background: $c2--dark;}
-    .background-c2--transparent {background: rgba($c2, .2);}
+    .clone__background--c2--light {background: $clone__c2--light;}
+    .clone__background--c2 {background: $clone__c2;}
+    .clone__background--c2--dark {background: $clone__c2--dark;}
+    .clone__background--c2--transparent {background: rgba($clone__c2, .2);}
 
-    .background-c3--light {background: $c3--light;}
-    .background-c3 {background: $c3;}
-    .background-c3--dark {background: $c3--dark;}
-    .background-c3--transparent {background: rgba($c3, .2);}
+    .clone__background--c3--light {background: $clone__c3--light;}
+    .clone__background--c3 {background: $clone__c3;}
+    .clone__background--c3--dark {background: $clone__c3--dark;}
+    .clone__background--c3--transparent {background: rgba($clone__c3, .2);}
 
-    .background-c4--light {background: $c4--light;}
-    .background-c4 {background: $c4;}
-    .background-c4--dark {background: $c4--dark;}
-    .background-c4--transparent {background: rgba($c4, .2);}
+    .clone__background--c4--light {background: $clone__c4--light;}
+    .clone__background--c4 {background: $clone__c4;}
+    .clone__background--c4--dark {background: $clone__c4--dark;}
+    .clone__background--c4--transparent {background: rgba($clone__c4, .2);}
 
-    .background-c5--light {background: $c5--light;}
-    .background-c5 {background: $c5;}
-    .background-c5--dark {background: $c5--dark;}
-    .background-c5--transparent {background: rgba($c5, .2);}
+    .clone__background--c5--light {background: $clone__c5--light;}
+    .clone__background--c5 {background: $clone__c5;}
+    .clone__background--c5--dark {background: $clone__c5--dark;}
+    .clone__background--c5--transparent {background: rgba($clone__c5, .2);}
 
 // Borders =====================================================================
 
-    .border {
-        border: 1px solid $black;
-        &--white {border: 1px solid $white;}
-        &--grey {border: 1px solid $grey--dark;}
-        &--black {border: 1px solid $black;}
-        &--c1 {border: 1px solid $c1--dark;}
-        &--c2 {border: 1px solid $c2--dark;}
-        &--c3 {border: 1px solid $c3--dark;}
-        &--c4 {border: 1px solid $c4--dark;}
-        &--c5 {border: 1px solid $c5--dark;}
+    .clone__border {
+        border: 1px solid $clone__black;
+        &--white {border: 1px solid $clone__white;}
+        &--grey {border: 1px solid $clone__grey--dark;}
+        &--black {border: 1px solid $clone__black;}
+        &--c1 {border: 1px solid $clone__c1--dark;}
+        &--c2 {border: 1px solid $clone__c2--dark;}
+        &--c3 {border: 1px solid $clone__c3--dark;}
+        &--c4 {border: 1px solid $clone__c4--dark;}
+        &--c5 {border: 1px solid $clone__c5--dark;}
     }
-    .border-top {
-        border-top: 1px solid $black;
-        &--white {border: 1px solid $white;}
-        &--grey {border: 1px solid $grey--dark;}
-        &--black {border: 1px solid $black;}
-        &--c1 {border-top: 1px solid $c1--dark;}
-        &--c2 {border-top: 1px solid $c2--dark;}
-        &--c3 {border-top: 1px solid $c3--dark;}
-        &--c4 {border-top: 1px solid $c4--dark;}
-        &--c5 {border-top: 1px solid $c5--dark;}
+    .clone__border--top {
+        border-top: 1px solid $clone__black;
+        &--white {border: 1px solid $clone__white;}
+        &--grey {border: 1px solid $clone__grey--dark;}
+        &--black {border: 1px solid $clone__black;}
+        &--c1 {border-top: 1px solid $clone__c1--dark;}
+        &--c2 {border-top: 1px solid $clone__c2--dark;}
+        &--c3 {border-top: 1px solid $clone__c3--dark;}
+        &--c4 {border-top: 1px solid $clone__c4--dark;}
+        &--c5 {border-top: 1px solid $clone__c5--dark;}
     }
-    .border-right {
-        border-right: 1px solid $black;
-        &--white {border: 1px solid $white;}
-        &--grey {border: 1px solid $grey--dark;}
-        &--black {border: 1px solid $black;}
-        &--c1 {border-right: 1px solid $c1--dark;}
-        &--c2 {border-right: 1px solid $c2--dark;}
-        &--c3 {border-right: 1px solid $c3--dark;}
-        &--c4 {border-right: 1px solid $c4--dark;}
-        &--c5 {border-right: 1px solid $c5--dark;}
+    .clone__border--right {
+        border-right: 1px solid $clone__black;
+        &--white {border: 1px solid $clone__white;}
+        &--grey {border: 1px solid $clone__grey--dark;}
+        &--black {border: 1px solid $clone__black;}
+        &--c1 {border-right: 1px solid $clone__c1--dark;}
+        &--c2 {border-right: 1px solid $clone__c2--dark;}
+        &--c3 {border-right: 1px solid $clone__c3--dark;}
+        &--c4 {border-right: 1px solid $clone__c4--dark;}
+        &--c5 {border-right: 1px solid $clone__c5--dark;}
     }
-    .border-bottom {
-        border-bottom: 1px solid $black;
-        &--white {border: 1px solid $white;}
-        &--grey {border: 1px solid $grey--dark;}
-        &--black {border: 1px solid $black;}
-        &--c1 {border-bottom: 1px solid $c1--dark;}
-        &--c2 {border-bottom: 1px solid $c2--dark;}
-        &--c3 {border-bottom: 1px solid $c3--dark;}
-        &--c4 {border-bottom: 1px solid $c4--dark;}
-        &--c5 {border-bottom: 1px solid $c5--dark;}
+    .clone__border--bottom {
+        border-bottom: 1px solid $clone__black;
+        &--white {border: 1px solid $clone__white;}
+        &--grey {border: 1px solid $clone__grey--dark;}
+        &--black {border: 1px solid $clone__black;}
+        &--c1 {border-bottom: 1px solid $clone__c1--dark;}
+        &--c2 {border-bottom: 1px solid $clone__c2--dark;}
+        &--c3 {border-bottom: 1px solid $clone__c3--dark;}
+        &--c4 {border-bottom: 1px solid $clone__c4--dark;}
+        &--c5 {border-bottom: 1px solid $clone__c5--dark;}
     }
-    .border-left {
-        border-left: 1px solid $black;
-        &--white {border: 1px solid $white;}
-        &--grey {border: 1px solid $grey--dark;}
-        &--black {border: 1px solid $black;}
-        &--c1 {border-left: 1px solid $c1--dark;}
-        &--c2 {border-left: 1px solid $c2--dark;}
-        &--c3 {border-left: 1px solid $c3--dark;}
-        &--c4 {border-left: 1px solid $c4--dark;}
-        &--c5 {border-left: 1px solid $c5--dark;}
+    .clone__border--left {
+        border-left: 1px solid $clone__black;
+        &--white {border: 1px solid $clone__white;}
+        &--grey {border: 1px solid $clone__grey--dark;}
+        &--black {border: 1px solid $clone__black;}
+        &--c1 {border-left: 1px solid $clone__c1--dark;}
+        &--c2 {border-left: 1px solid $clone__c2--dark;}
+        &--c3 {border-left: 1px solid $clone__c3--dark;}
+        &--c4 {border-left: 1px solid $clone__c4--dark;}
+        &--c5 {border-left: 1px solid $clone__c5--dark;}
     }
 
-    .rounded {border-radius: 5px;overflow: hidden;}
+    .clone__rounded {border-radius: 5px; overflow: hidden;}
 
-    .shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
+    .clone__shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
 
 // Containers ==================================================================
 
-    .container--copy {max-width: 40rem;}
-    .container--layout {max-width: 80rem;}
+    .clone__container--copy {max-width: 40rem;}
+    .clone__container--layout {max-width: 80rem;}
 
 // Fonts =======================================================================
 
-    .font-sans {font-family: $font--sans;}
-    .font-serif {font-family: $font--serif;}
-    .font-script {font-family: $font--script;}
-    .font-monospace {font-family: $font--monospace;}
+    .clone__font--sans {font-family: $clone__font--sans;}
+    .clone__font--serif {font-family: $clone__font--serif;}
+    .clone__font--script {font-family: $clone__font--script;}
+    .clone__font--monospace {font-family: $clone__font--monospace;}
 
     // Font Colour -------------------------------------------------------------
 
-        .font-colour--white {color: $white;}
+        .clone__font-colour---white {color: $clone__white;}
 
-        .font-colour-gray--light {color: $grey--light;}
-        .font-colour-gray {color: $grey;}
-        .font-colour-gray--dark {color: $grey--dark;}
+        .clone__font-colour--gray--light {color: $clone__grey--light;}
+        .clone__font-colour--gray {color: $clone__grey;}
+        .clone__font-colour--gray--dark {color: $clone__grey--dark;}
 
-        .font-colour-black {color: $black;}
+        .clone__font-colour--black {color: $clone__black;}
 
-        .font-colour-c1--light {color: $c1--light;}
-        .font-colour-c1 {color: $c1;}
-        .font-colour-c1--dark {color: $c1--dark;}
+        .clone__font-colour--c1--light {color: $clone__c1--light;}
+        .clone__font-colour--c1 {color: $clone__c1;}
+        .clone__font-colour--c1--dark {color: $clone__c1--dark;}
 
-        .font-colour-c2--light {color: $c2--light;}
-        .font-colour-c2 {color: $c2;}
-        .font-colour-c2--dark {color: $c2--dark;}
+        .clone__font-colour--c2--light {color: $clone__c2--light;}
+        .clone__font-colour--c2 {color: $clone__c2;}
+        .clone__font-colour--c2--dark {color: $clone__c2--dark;}
 
-        .font-colour-c3--light {color: $c3--light;}
-        .font-colour-c3 {color: $c3;}
-        .font-colour-c3--dark {color: $c3--dark;}
+        .clone__font-colour--c3--light {color: $clone__c3--light;}
+        .clone__font-colour--c3 {color: $clone__c3;}
+        .clone__font-colour--c3--dark {color: $clone__c3--dark;}
 
-        .font-colour-c4--light {color: $c4--light;}
-        .font-colour-c4 {color: $c4;}
-        .font-colour-c4--dark {color: $c4--dark;}
+        .clone__font-colour--c4--light {color: $clone__c4--light;}
+        .clone__font-colour--c4 {color: $clone__c4;}
+        .clone__font-colour--c4--dark {color: $clone__c4--dark;}
 
-        .font-colour-c5--light {color: $c5--light;}
-        .font-colour-c5 {color: $c5;}
-        .font-colour-c5--dark {color: $c5--dark;}
+        .clone__font-colour--c5--light {color: $clone__c5--light;}
+        .clone__font-colour--c5 {color: $clone__c5;}
+        .clone__font-colour--c5--dark {color: $clone__c5--dark;}
 
     // Headings ----------------------------------------------------------------
 
-        .heading--01 {font-size: $font-scale--h1;}
-        .heading--02 {font-size: $font-scale--h2;}
-        .heading--03 {font-size: $font-scale--h3;}
-        .heading--04 {font-size: $font-scale--h4;}
-        .heading--05 {font-size: $font-scale--h5;}
+        .clone__heading--01 {font-size: $clone__font-scale--h1;}
+        .clone__heading--02 {font-size: $clone__font-scale--h2;}
+        .clone__heading--03 {font-size: $clone__font-scale--h3;}
+        .clone__heading--04 {font-size: $clone__font-scale--h4;}
+        .clone__heading--05 {font-size: $clone__font-scale--h5;}
 
     // Styles ------------------------------------------------------------------
 
-        .italic {font-style: italic;}
+        .clone__italic {font-style: italic;}
 
-        .centre,
-        .center {text-align: center;}
+        .clone__centre,
+        .clone__center {text-align: center;}
 
-        .font-weight--light {font-weight: 200;}
-        .font-weight--regular {font-weight: 400;}
-        .font-weight--semibold {font-weight: 600;}
-        .font-weight--bold {font-weight: 700;}
-        .font-weight--extrabold {font-weight: 800;}
+        .clone__font-weight--light {font-weight: 200;}
+        .clone__font-weight--regular {font-weight: 400;}
+        .clone__font-weight--semibold {font-weight: 600;}
+        .clone__font-weight--bold {font-weight: 700;}
+        .clone__font-weight--extrabold {font-weight: 800;}
 
 // Functions ===================================================================
 
-    @function sqrt ($r) {
-        $x0: 1;
-        $x1: $x0;
+    @function sqrt ($clone__r) {
+        $clone__x0: 1;
+        $clone__x1: $clone__x0;
 
-        @for $i from 1 through 10 {
-            $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
-            $x0: $x1;
+        @for $clone__i from 1 through 10 {
+            $clone__x1: $clone__x0 - ($clone__x0 * $clone__x0 - abs($clone__r)) / (2 * $clone__x0);
+            $clone__x0: $clone__x1;
         }
 
-        @return $x1;
+        @return $clone__x1;
     }
 
-    $red-magic-number: 241;
-    $green-magic-number: 691;
-    $blue-magic-number: 68;
-    $brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+    $clone__red-magic-number: 241;
+    $clone__green-magic-number: 691;
+    $clone__blue-magic-number: 68;
+    $clone__brightness-divisor: $clone__red-magic-number + $clone__green-magic-number + $clone__blue-magic-number;
 
-    @function brightness($color) {
+    @function brightness($clone__color) {
         // Extract color components
-        $red-component: red($color);
-        $green-component: green($color);
-        $blue-component: blue($color);
+        $clone__red-component: red($clone__color);
+        $clone__green-component: green($clone__color);
+        $clone__blue-component: blue($clone__color);
 
         // Calculate a brightness value in 3d color space between 0 and 255
-        $number: sqrt((($red-component * $red-component * $red-magic-number) + ($green-component * $green-component * $green-magic-number) + ($blue-component * $blue-component * $blue-magic-number)) / $brightness-divisor);
+        $clone__number: sqrt((($clone__red-component * $clone__red-component * $clone__red-magic-number) + ($clone__green-component * $clone__green-component * $clone__green-magic-number) + ($clone__blue-component * $clone__blue-component * $clone__blue-magic-number)) / $clone__brightness-divisor);
 
         // Convert to percentage and return
-        @return 100% * $number / 255;
+        @return 100% * $clone__number / 255;
     }
 
-    @function contrasting-color($color, $light, $dark) {
-        @if brightness($color) < 65% {
-            @return $light;
+    @function contrasting-color($clone__color, $clone__light, $clone__dark) {
+        @if brightness($clone__color) < 65% {
+            @return $clone__light;
         } @else {
-            @return $dark;
+            @return $clone__dark;
         }
     }
 
 // Margins =====================================================================
 
-    [class*="margin"] {
+    [class*="clone__margin"] {
         display: block;
     }
 
@@ -251,125 +251,125 @@
 
         // Small Screens
 
-            .margin--half {margin: calc((#{$margin} / 2) / 2);}
-            .margin-top--half {margin-top: calc((#{$margin} / 2) / 2);}
-            .margin-right--half {margin-right: calc((#{$margin} / 2) / 2);}
-            .margin-bottom--half {margin-bottom: calc((#{$margin} / 2) / 2);}
-            .margin-left--half {margin-left: calc((#{$margin} / 2) / 2);}
+            .clone__margin--half {margin: calc((#{$clone__margin} / 2) / 2);}
+            .clone__margin--top--half {margin-top: calc((#{$clone__margin} / 2) / 2);}
+            .clone__margin--right--half {margin-right: calc((#{$clone__margin} / 2) / 2);}
+            .clone__margin--bottom--half {margin-bottom: calc((#{$clone__margin} / 2) / 2);}
+            .clone__margin--left--half {margin-left: calc((#{$clone__margin} / 2) / 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .margin--half {margin: calc(#{$margin} / 2);}
-                .margin-top--half {margin-top: calc(#{$margin} / 2);}
-                .margin-right--half {margin-right: calc(#{$margin} / 2);}
-                .margin-bottom--half {margin-bottom: calc(#{$margin} / 2);}
-                .margin-left--half {margin-left: calc(#{$margin} / 2);}
+            @media #{$clone__tablet-portrait} {
+                .clone__margin--half {margin: calc(#{$clone__margin} / 2);}
+                .clone__margin--top--half {margin-top: calc(#{$clone__margin} / 2);}
+                .clone__margin--right--half {margin-right: calc(#{$clone__margin} / 2);}
+                .clone__margin--bottom--half {margin-bottom: calc(#{$clone__margin} / 2);}
+                .clone__margin--left--half {margin-left: calc(#{$clone__margin} / 2);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .margin--half {margin: calc((#{$margin} * 1.5) / 2);}
-                .margin-top--half {margin-top: calc((#{$margin} * 1.5) / 2);}
-                .margin-right--half {margin-right: calc((#{$margin} * 1.5) / 2);}
-                .margin-bottom--half {margin-bottom: calc((#{$margin} * 1.5) / 2);}
-                .margin-left--half {margin-left: calc((#{$margin} * 1.5) / 2);}
+            @media #{$clone__desktop-large} {
+                .clone__margin--half {margin: calc((#{$clone__margin} * 1.5) / 2);}
+                .clone__margin--top--half {margin-top: calc((#{$clone__margin} * 1.5) / 2);}
+                .clone__margin--right--half {margin-right: calc((#{$clone__margin} * 1.5) / 2);}
+                .clone__margin--bottom--half {margin-bottom: calc((#{$clone__margin} * 1.5) / 2);}
+                .clone__margin--left--half {margin-left: calc((#{$clone__margin} * 1.5) / 2);}
             }
 
     // Regular Margins ---------------------------------------------------------
 
         // Small Screens
 
-            .margin {margin: calc(#{$margin} / 2);}
-            .margin-top {margin-top: calc(#{$margin} / 2);}
-            .margin-right {margin-right: calc(#{$margin} / 2);}
-            .margin-bottom {margin-bottom: calc(#{$margin} / 2);}
-            .margin-left {margin-left: calc(#{$margin} / 2);}
+            .clone__margin {margin: calc(#{$clone__margin} / 2);}
+            .clone__margin--top {margin-top: calc(#{$clone__margin} / 2);}
+            .clone__margin--right {margin-right: calc(#{$clone__margin} / 2);}
+            .clone__margin--bottom {margin-bottom: calc(#{$clone__margin} / 2);}
+            .clone__margin--left {margin-left: calc(#{$clone__margin} / 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .margin {margin: $margin;}
-                .margin-top {margin-top: $margin;}
-                .margin-right {margin-right: $margin;}
-                .margin-bottom {margin-bottom: $margin;}
-                .margin-left {margin-left: $margin;}
+            @media #{$clone__tablet-portrait} {
+                .clone__margin {margin: $clone__margin;}
+                .clone__margin--top {margin-top: $clone__margin;}
+                .clone__margin--right {margin-right: $clone__margin;}
+                .clone__margin--bottom {margin-bottom: $clone__margin;}
+                .clone__margin--left {margin-left: $clone__margin;}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .margin {margin: calc(#{$margin} * 1.5);}
-                .margin-top {margin-top: calc(#{$margin} * 1.5);}
-                .margin-right {margin-right: calc(#{$margin} * 1.5);}
-                .margin-bottom {margin-bottom: calc(#{$margin} * 1.5);}
-                .margin-left {margin-left: calc(#{$margin} * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__margin {margin: calc(#{$clone__margin} * 1.5);}
+                .clone__margin--top {margin-top: calc(#{$clone__margin} * 1.5);}
+                .clone__margin--right {margin-right: calc(#{$clone__margin} * 1.5);}
+                .clone__margin--bottom {margin-bottom: calc(#{$clone__margin} * 1.5);}
+                .clone__margin--left {margin-left: calc(#{$clone__margin} * 1.5);}
             }
 
     // Double Margins ----------------------------------------------------------
 
         // Small Screens
 
-            .margin--double {margin: $margin;}
-            .margin-top--double {margin-top: $margin;}
-            .margin-right--double {margin-right: $margin;}
-            .margin-bottom--double {margin-bottom: $margin;}
-            .margin-left--double {margin-left: $margin;}
+            .clone__margin--double {margin: $clone__margin;}
+            .clone__margin--top--double {margin-top: $clone__margin;}
+            .clone__margin--right--double {margin-right: $clone__margin;}
+            .clone__margin--bottom--double {margin-bottom: $clone__margin;}
+            .clone__margin--left--double {margin-left: $clone__margin;}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .margin--double {margin: calc(#{$margin} * 2);}
-                .margin-top--double {margin-top: calc(#{$margin} * 2);}
-                .margin-right--double {margin-right: calc(#{$margin} * 2);}
-                .margin-bottom--double {margin-bottom: calc(#{$margin} * 2);}
-                .margin-left--double {margin-left: calc(#{$margin} * 2);}
+            @media #{$clone__tablet-portrait} {
+                .clone__margin--double {margin: calc(#{$clone__margin} * 2);}
+                .clone__margin--top--double {margin-top: calc(#{$clone__margin} * 2);}
+                .clone__margin--right--double {margin-right: calc(#{$clone__margin} * 2);}
+                .clone__margin--bottom--double {margin-bottom: calc(#{$clone__margin} * 2);}
+                .clone__margin--left--double {margin-left: calc(#{$clone__margin} * 2);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .margin--double {margin: calc((#{$margin} * 2) * 1.5);}
-                .margin-top--double {margin-top: calc((#{$margin} * 2) * 1.5);}
-                .margin-right--double {margin-right: calc((#{$margin} * 2) * 1.5);}
-                .margin-bottom--double {margin-bottom: calc((#{$margin} * 2) * 1.5);}
-                .margin-left--double {margin-left: calc((#{$margin} * 2) * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__margin--double {margin: calc((#{$clone__margin} * 2) * 1.5);}
+                .clone__margin--top--double {margin-top: calc((#{$clone__margin} * 2) * 1.5);}
+                .clone__margin--right--double {margin-right: calc((#{$clone__margin} * 2) * 1.5);}
+                .clone__margin--bottom--double {margin-bottom: calc((#{$clone__margin} * 2) * 1.5);}
+                .clone__margin--left--double {margin-left: calc((#{$clone__margin} * 2) * 1.5);}
             }
 
     // Triple Margins ----------------------------------------------------------
 
         // Small Screens
 
-            .margin--triple {margin: calc(#{$margin} * 2);}
-            .margin-top--triple {margin-top: calc(#{$margin} * 2);}
-            .margin-right--triple {margin-right: calc(#{$margin} * 2);}
-            .margin-bottom--triple {margin-bottom: calc(#{$margin} * 2);}
-            .margin-left--triple {margin-left: calc(#{$margin} * 2);}
+            .clone__margin--triple {margin: calc(#{$clone__margin} * 2);}
+            .clone__margin--top--triple {margin-top: calc(#{$clone__margin} * 2);}
+            .clone__margin--right--triple {margin-right: calc(#{$clone__margin} * 2);}
+            .clone__margin--bottom--triple {margin-bottom: calc(#{$clone__margin} * 2);}
+            .clone__margin--left--triple {margin-left: calc(#{$clone__margin} * 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .margin--triple {margin: calc(#{$margin} * 3);}
-                .margin-top--triple {margin-top: calc(#{$margin} * 3);}
-                .margin-right--triple {margin-right: calc(#{$margin} * 3);}
-                .margin-bottom--triple {margin-bottom: calc(#{$margin} * 3);}
-                .margin-left--triple {margin-left: calc(#{$margin} * 3);}
+            @media #{$clone__tablet-portrait} {
+                .clone__margin--triple {margin: calc(#{$clone__margin} * 3);}
+                .clone__margin--top--triple {margin-top: calc(#{$clone__margin} * 3);}
+                .clone__margin--right--triple {margin-right: calc(#{$clone__margin} * 3);}
+                .clone__margin--bottom--triple {margin-bottom: calc(#{$clone__margin} * 3);}
+                .clone__margin--left--triple {margin-left: calc(#{$clone__margin} * 3);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .margin--triple {margin: calc((#{$margin} * 3) * 1.5);}
-                .margin-top--triple {margin-top: calc((#{$margin} * 3) * 1.5);}
-                .margin-right--triple {margin-right: calc((#{$margin} * 3) * 1.5);}
-                .margin-bottom--triple {margin-bottom: calc((#{$margin} * 3) * 1.5);}
-                .margin-left--triple {margin-left: calc((#{$margin} * 3) * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__margin--triple {margin: calc((#{$clone__margin} * 3) * 1.5);}
+                .clone__margin--top--triple {margin-top: calc((#{$clone__margin} * 3) * 1.5);}
+                .clone__margin--right--triple {margin-right: calc((#{$clone__margin} * 3) * 1.5);}
+                .clone__margin--bottom--triple {margin-bottom: calc((#{$clone__margin} * 3) * 1.5);}
+                .clone__margin--left--triple {margin-left: calc((#{$clone__margin} * 3) * 1.5);}
             }
 
 // Padding =====================================================================
 
-    [class*="padding"] {
+    [class*="clone__padding"] {
         display: block;
     }
 
@@ -377,118 +377,118 @@
 
         // Small Screens
 
-            .padding--half {padding: calc((#{$padding} / 2) / 2);}
-            .padding-top--half {padding-top: calc((#{$padding} / 2) / 2);}
-            .padding-right--half {padding-right: calc((#{$padding} / 2) / 2);}
-            .padding-bottom--half {padding-bottom: calc((#{$padding} / 2) / 2);}
-            .padding-left--half {padding-left: calc((#{$padding} / 2) / 2);}
+            .clone__padding--half {padding: calc((#{$clone__padding} / 2) / 2);}
+            .clone__padding--top--half {padding-top: calc((#{$clone__padding} / 2) / 2);}
+            .clone__padding--right--half {padding-right: calc((#{$clone__padding} / 2) / 2);}
+            .clone__padding--bottom--half {padding-bottom: calc((#{$clone__padding} / 2) / 2);}
+            .clone__padding--left--half {padding-left: calc((#{$clone__padding} / 2) / 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .padding--half {padding: calc(#{$padding} / 2);}
-                .padding-top--half {padding-top: calc(#{$padding} / 2);}
-                .padding-right--half {padding-right: calc(#{$padding} / 2);}
-                .padding-bottom--half {padding-bottom: calc(#{$padding} / 2);}
-                .padding-left--half {padding-left: calc(#{$padding} / 2);}
+            @media #{$clone__tablet-portrait} {
+                .clone__padding--half {padding: calc(#{$clone__padding} / 2);}
+                .clone__padding--top--half {padding-top: calc(#{$clone__padding} / 2);}
+                .clone__padding--right--half {padding-right: calc(#{$clone__padding} / 2);}
+                .clone__padding--bottom--half {padding-bottom: calc(#{$clone__padding} / 2);}
+                .clone__padding--left--half {padding-left: calc(#{$clone__padding} / 2);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .padding--half {padding: calc((#{$padding} * 1.5) / 2);}
-                .padding-top--half {padding-top: calc((#{$padding} * 1.5) / 2);}
-                .padding-right--half {padding-right: calc((#{$padding} * 1.5) / 2);}
-                .padding-bottom--half {padding-bottom: calc((#{$padding} * 1.5) / 2);}
-                .padding-left--half {padding-left: calc((#{$padding} * 1.5) / 2);}
+            @media #{$clone__desktop-large} {
+                .clone__padding--half {padding: calc((#{$clone__padding} * 1.5) / 2);}
+                .clone__padding--top--half {padding-top: calc((#{$clone__padding} * 1.5) / 2);}
+                .clone__padding--right--half {padding-right: calc((#{$clone__padding} * 1.5) / 2);}
+                .clone__padding--bottom--half {padding-bottom: calc((#{$clone__padding} * 1.5) / 2);}
+                .clone__padding--left--half {padding-left: calc((#{$clone__padding} * 1.5) / 2);}
             }
 
     // Regular Padding ---------------------------------------------------------
 
         // Small Screens
 
-            .padding {padding: calc(#{$padding} / 2);}
-            .padding-top {padding-top: calc(#{$padding} / 2);}
-            .padding-right {padding-right: calc(#{$padding} / 2);}
-            .padding-bottom {padding-bottom: calc(#{$padding} / 2);}
-            .padding-left {padding-left: calc(#{$padding} / 2);}
+            .clone__padding {padding: calc(#{$clone__padding} / 2);}
+            .clone__padding--top {padding-top: calc(#{$clone__padding} / 2);}
+            .clone__padding--right {padding-right: calc(#{$clone__padding} / 2);}
+            .clone__padding--bottom {padding-bottom: calc(#{$clone__padding} / 2);}
+            .clone__padding--left {padding-left: calc(#{$clone__padding} / 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .padding {padding: $padding;}
-                .padding-top {padding-top: $padding;}
-                .padding-right {padding-right: $padding;}
-                .padding-bottom {padding-bottom: $padding;}
-                .padding-left {padding-left: $padding;}
+            @media #{$clone__tablet-portrait} {
+                .clone__padding {padding: $clone__padding;}
+                .clone__padding--top {padding-top: $clone__padding;}
+                .clone__padding--right {padding-right: $clone__padding;}
+                .clone__padding--bottom {padding-bottom: $clone__padding;}
+                .clone__padding--left {padding-left: $clone__padding;}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .padding {padding: calc(#{$padding} * 1.5);}
-                .padding-top {padding-top: calc(#{$padding} * 1.5);}
-                .padding-right {padding-right: calc(#{$padding} * 1.5);}
-                .padding-bottom {padding-bottom: calc(#{$padding} * 1.5);}
-                .padding-left {padding-left: calc(#{$padding} * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__padding {padding: calc(#{$clone__padding} * 1.5);}
+                .clone__padding--top {padding-top: calc(#{$clone__padding} * 1.5);}
+                .clone__padding--right {padding-right: calc(#{$clone__padding} * 1.5);}
+                .clone__padding--bottom {padding-bottom: calc(#{$clone__padding} * 1.5);}
+                .clone__padding--left {padding-left: calc(#{$clone__padding} * 1.5);}
             }
 
     // Double Padding ----------------------------------------------------------
 
         // Small Screens
 
-            .padding--double {padding: $padding;}
-            .padding-top--double {padding-top: $padding;}
-            .padding-right--double {padding-right: $padding;}
-            .padding-bottom--double {padding-bottom: $padding;}
-            .padding-left--double {padding-left: $padding;}
+            .clone__padding--double {padding: $clone__padding;}
+            .clone__padding--top--double {padding-top: $clone__padding;}
+            .clone__padding--right--double {padding-right: $clone__padding;}
+            .clone__padding--bottom--double {padding-bottom: $clone__padding;}
+            .clone__padding--left--double {padding-left: $clone__padding;}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .padding--double {padding: calc(#{$padding} * 2);}
-                .padding-top--double {padding-top: calc(#{$padding} * 2);}
-                .padding-right--double {padding-right: calc(#{$padding} * 2);}
-                .padding-bottom--double {padding-bottom: calc(#{$padding} * 2);}
-                .padding-left--double {padding-left: calc(#{$padding} * 2);}
+            @media #{$clone__tablet-portrait} {
+                .clone__padding--double {padding: calc(#{$clone__padding} * 2);}
+                .clone__padding--top--double {padding-top: calc(#{$clone__padding} * 2);}
+                .clone__padding--right--double {padding-right: calc(#{$clone__padding} * 2);}
+                .clone__padding--bottom--double {padding-bottom: calc(#{$clone__padding} * 2);}
+                .clone__padding--left--double {padding-left: calc(#{$clone__padding} * 2);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .padding--double {padding: calc((#{$padding} * 2) * 1.5);}
-                .padding-top--double {padding-top: calc((#{$padding} * 2) * 1.5);}
-                .padding-right--double {padding-right: calc((#{$padding} * 2) * 1.5);}
-                .padding-bottom--double {padding-bottom: calc((#{$padding} * 2) * 1.5);}
-                .padding-left--double {padding-left: calc((#{$padding} * 2) * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__padding--double {padding: calc((#{$clone__padding} * 2) * 1.5);}
+                .clone__padding--top--double {padding-top: calc((#{$clone__padding} * 2) * 1.5);}
+                .clone__padding--right--double {padding-right: calc((#{$clone__padding} * 2) * 1.5);}
+                .clone__padding--bottom--double {padding-bottom: calc((#{$clone__padding} * 2) * 1.5);}
+                .clone__padding--left--double {padding-left: calc((#{$clone__padding} * 2) * 1.5);}
             }
 
     // Triple Padding ----------------------------------------------------------
 
         // Small Screens
 
-            .padding--triple {padding: calc(#{$padding} * 2);}
-            .padding-top--triple {padding-top: calc(#{$padding} * 2);}
-            .padding-right--triple {padding-right: calc(#{$padding} * 2);}
-            .padding-bottom--triple {padding-bottom: calc(#{$padding} * 2);}
-            .padding-left--triple {padding-left: calc(#{$padding} * 2);}
+            .clone__padding--triple {padding: calc(#{$clone__padding} * 2);}
+            .clone__padding--top--triple {padding-top: calc(#{$clone__padding} * 2);}
+            .clone__padding--right--triple {padding-right: calc(#{$clone__padding} * 2);}
+            .clone__padding--bottom--triple {padding-bottom: calc(#{$clone__padding} * 2);}
+            .clone__padding--left--triple {padding-left: calc(#{$clone__padding} * 2);}
 
         // Medium Screens
 
-            @media #{$tablet-portrait} {
-                .padding--triple {padding: calc(#{$padding} * 3);}
-                .padding-top--triple {padding-top: calc(#{$padding} * 3);}
-                .padding-right--triple {padding-right: calc(#{$padding} * 3);}
-                .padding-bottom--triple {padding-bottom: calc(#{$padding} * 3);}
-                .padding-left--triple {padding-left: calc(#{$padding} * 3);}
+            @media #{$clone__tablet-portrait} {
+                .clone__padding--triple {padding: calc(#{$clone__padding} * 3);}
+                .clone__padding--top--triple {padding-top: calc(#{$clone__padding} * 3);}
+                .clone__padding--right--triple {padding-right: calc(#{$clone__padding} * 3);}
+                .clone__padding--bottom--triple {padding-bottom: calc(#{$clone__padding} * 3);}
+                .clone__padding--left--triple {padding-left: calc(#{$clone__padding} * 3);}
             }
 
         // Large Screens
 
-            @media #{$desktop-large} {
-                .padding--triple {padding: calc((#{$padding} * 3) * 1.5);}
-                .padding-top--triple {padding-top: calc((#{$padding} * 3) * 1.5);}
-                .padding-right--triple {padding-right: calc((#{$padding} * 3) * 1.5);}
-                .padding-bottom--triple {padding-bottom: calc((#{$padding} * 3) * 1.5);}
-                .padding-left--triple {padding-left: calc((#{$padding} * 3) * 1.5);}
+            @media #{$clone__desktop-large} {
+                .clone__padding--triple {padding: calc((#{$clone__padding} * 3) * 1.5);}
+                .clone__padding--top--triple {padding-top: calc((#{$clone__padding} * 3) * 1.5);}
+                .clone__padding--right--triple {padding-right: calc((#{$clone__padding} * 3) * 1.5);}
+                .clone__padding--bottom--triple {padding-bottom: calc((#{$clone__padding} * 3) * 1.5);}
+                .clone__padding--left--triple {padding-left: calc((#{$clone__padding} * 3) * 1.5);}
             }
