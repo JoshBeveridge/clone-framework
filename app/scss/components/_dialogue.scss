@@ -5,7 +5,7 @@
 
 // =============================================================================
 
-.dialogue-overlay {
+.clone__dialogue-overlay {
     background: rgba(0, 0, 0, .9);
     height: 100vh;
     opacity: 0;
@@ -27,7 +27,7 @@
 
 }
 
-.dialogue-scroll-wrapper {
+.clone__dialogue-scroll-wrapper {
     height: 100vh;
     opacity: 0;
     position: fixed;
@@ -36,35 +36,35 @@
     width: 100vw;
     z-index: 2000;
 
-    .dialogue {
+    .clone__dialogue {
         margin: 0 auto;
         width: 90vw;
 
-        @media #{$tablet-landscape} {
+        @media #{$clone__tablet-landscape} {
             width: 75vw;
         }
 
-        @media #{$desktop-medium} {
+        @media #{$clone__desktop-medium} {
             width: 50vw;
         }
 
-        .dialogue-title {
+        .clone__dialogue-title {
             position: relative;
 
-            .dialogue-close-trigger {
+            .clone__dialogue-close-trigger {
                 background: none;
                 border: none;
                 cursor: pointer;
                 outline: none;
                 position: absolute;
-                top: $padding;
-                right: $padding;
+                top: $clone__padding;
+                right: $clone__padding;
                 transition: color .3s ease;
 
                 // States ------------------------------------------------------
 
                     &:hover {
-                        color: $stop;
+                        color: $clone__stop;
                         transition: color .3s ease;
                     }
 
@@ -72,7 +72,7 @@
 
         }
 
-        .dialogue-body {
+        .clone__dialogue-body {
 
         }
 

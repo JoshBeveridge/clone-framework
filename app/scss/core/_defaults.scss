@@ -25,39 +25,39 @@ $clone__slow: orange !default;
 $clone__stop: red !default;
 
 $clone__grey: gray !default;
-$clone__grey--light: lighten($grey, 10%) !default;
-$clone__grey--dark: darken($grey, 10%) !default;
+$clone__grey--light: lighten($clone__grey, 10%) !default;
+$clone__grey--dark: darken($clone__grey, 10%) !default;
 
-$clone__gray: $grey;
-$clone__gray--light: $grey--light;
-$clone__gray--dark: $grey--dark;
+$clone__gray: $clone__grey;
+$clone__gray--light: $clone__grey--light;
+$clone__gray--dark: $clone__grey--dark;
 
 $clone__c1: #5B1647 !default;
-$clone__c1--light: lighten($c1, 10%) !default;
-$clone__c1--dark: darken($c1, 10%) !default;
+$clone__c1--light: lighten($clone__c1, 10%) !default;
+$clone__c1--dark: darken($clone__c1, 10%) !default;
 
 $clone__c2: #96043E !default;
-$clone__c2--light: lighten($c2, 10%) !default;
-$clone__c2--dark: darken($c2, 10%) !default;
+$clone__c2--light: lighten($clone__c2, 10%) !default;
+$clone__c2--dark: darken($clone__c2, 10%) !default;
 
 $clone__c3: #C90035 !default;
-$clone__c3--light: lighten($c3, 10%) !default;
-$clone__c3--dark: darken($c3, 10%) !default;
+$clone__c3--light: lighten($clone__c3, 10%) !default;
+$clone__c3--dark: darken($clone__c3, 10%) !default;
 
 $clone__c4: blue !default;
-$clone__c4--light: lighten($c4, 10%) !default;
-$clone__c4--dark: darken($c4, 10%) !default;
+$clone__c4--light: lighten($clone__c4, 10%) !default;
+$clone__c4--dark: darken($clone__c4, 10%) !default;
 
 $clone__c5: purple !default;
-$clone__c5--light: lighten($c5, 10%) !default;
-$clone__c5--dark: darken($c5, 10%) !default;
+$clone__c5--light: lighten($clone__c5, 10%) !default;
+$clone__c5--dark: darken($clone__c5, 10%) !default;
 
 $clone__focus-colour: teal !default;
 
-$clone__alert--information: $go !default;
-$clone__alert--warning: $slow !default;
-$clone__alert--error: $stop !default;
+$clone__alert--information: $clone__go !default;
+$clone__alert--warning: $clone__slow !default;
+$clone__alert--error: $clone__stop !default;
 
-$clone__blockquote-colour: $c1 !default;
+$clone__blockquote-colour: $clone__c1 !default;
 
-$clone__pullquote-colour: $c2 !default;
+$clone__pullquote-colour: $clone__c2 !default;

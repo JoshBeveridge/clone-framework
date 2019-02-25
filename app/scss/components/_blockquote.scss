@@ -5,12 +5,12 @@
 
 // =============================================================================
 
-.blockquote {
-    background: rgba($blockquote-colour, .2);
-    border-left: .25rem solid darken($blockquote-colour, 10%);
+.clone__blockquote {
+    background: rgba($clone__blockquote-colour, .2);
+    border-left: .25rem solid darken($clone__blockquote-colour, 10%);
 
-    .blockquote-author {
-        color: darken($blockquote-colour, 10%);
+    .clone__blockquote-author {
+        color: darken($clone__blockquote-colour, 10%);
         text-align: right;
     }
 

@@ -36,26 +36,26 @@
             // Accordion Handlers ==============================================
 
                 function accordionTrigger(trigger) {
-                    if ($(trigger).parent(".accordion").hasClass("active")) {
+                    if ($(trigger).parent("[data-clone-accordion='object']").hasClass("active")) {
                         $(trigger).attr("aria-expanded", "false");
-                        $(trigger).parent(".accordion").removeClass("active");
-                        $(trigger).parent(".accordion").find(".accordion-content").attr("aria-hidden", "true");
+                        $(trigger).parent("[data-clone-accordion='object']").removeClass("active");
+                        $(trigger).parent("[data-clone-accordion='object']").find("[data-clone-accordion='content']").attr("aria-hidden", "true");
                     }
                     else {
                         $(trigger).attr("aria-expanded", "true");
-                        $(trigger).parent(".accordion").addClass("active");
-                        $(trigger).parent(".accordion").find(".accordion-content").attr("aria-hidden", "false");
+                        $(trigger).parent("[data-clone-accordion='object']").addClass("active");
+                        $(trigger).parent("[data-clone-accordion='object']").find("[data-clone-accordion='content']").attr("aria-hidden", "false");
                     }
                 }
 
-                $(document).on("click", ".accordion-trigger", function (e) {
+                $(document).on("click", "[data-clone-accordion='trigger']", function (e) {
                     e.preventDefault();
                     accordionTrigger(this);
                 });
 
             // Carousel Controls ===============================================
 
-                $("[class*='carousel--']").slick({
+                $("[data-clone-carousel]").slick({
                     nextArrow: '<button class="slick-next" title="View the next slide." type="button"><i class="material-icons">arrow_forward_ios</i></button>',
                     prevArrow: '<button class="slick-prev" title="View the previous slide." type="button"><i class="material-icons">arrow_back_ios</i></button>',
                     lazyLoad: "progressive"
@@ -89,22 +89,21 @@
                 function dialogueTrigger(trigger) {
 
                     var dialogueID = $(trigger).attr("data-dialogue-id");
-                    var dialogue = $(".dialogue-scroll-wrapper[data-dialogue-id='" + dialogueID +"']");
+                    var dialogue = $(".clone__dialogue-scroll-wrapper[data-dialogue-id='" + dialogueID +"']");
 
                     if($(dialogue).hasClass("active")) {
                         $("body").css("overflow", "visible");
-                        $(".dialogue-overlay").removeClass("active");
+                        $(".clone__dialogue-overlay").removeClass("active");
                         $(dialogue).removeClass("active contained overflowing");
                         $(dialogue).attr("aria-hidden", "true");
-                        $(".dialogue-ancestor").focus();
+                        $(".clone__dialogue-ancestor").focus();
                     }
                     else {
 
-                        $("*").removeClass("dialogue-ancestor");
-                        $(trigger).addClass("dialogue-ancestor");
-                        console.log($(".dialogue-ancestor"));
+                        $("*").removeClass("clone__dialogue-ancestor");
+                        $(trigger).addClass("clone__dialogue-ancestor");
                         $("body").css("overflow", "hidden");
-                        $(".dialogue-overlay").addClass("active");
+                        $(".clone__dialogue-overlay").addClass("active");
                         $(dialogue).addClass("active");
                         $(dialogue).attr("aria-hidden", "false");
 
@@ -134,7 +133,7 @@
 
                     if (dialogue != null) {
 
-                        var dialogueHeight = $(dialogue).find(".dialogue").height();
+                        var dialogueHeight = $(dialogue).find(".clone__dialogue").height();
 
                         if (dialogueHeight > viewportHeight) {
                             $(dialogue).removeClass("overflowing container").addClass("overflowing");
@@ -145,9 +144,9 @@
 
                     }
                     else {
-                        $(".dialogue-scroll-wrapper").each(function() {
+                        $(".clone__dialogue-scroll-wrapper").each(function() {
 
-                            var dialogueHeight = $(this).find(".dialogue").height();
+                            var dialogueHeight = $(this).find(".clone__dialogue").height();
                             console.log(dialogueHeight);
 
                             if (dialogueHeight > viewportHeight) {
@@ -205,8 +204,8 @@
 
                                 if ((e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){
 
-                                    $(".dialogue-overlay").removeClass("active");
-                                    $(".dialogue-scroll-wrapper").removeClass("active contained overflowing");
+                                    $(".clone__dialogue-overlay").removeClass("active");
+                                    $(".clone__dialogue-scroll-wrapper").removeClass("active contained overflowing");
                                     $("body").css("overflow", "visible");
 
                                     if (e.stopPropagation) {

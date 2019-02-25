@@ -5,16 +5,16 @@
 
 // =============================================================================
 
-.breadcrumbs {
+.clone__breadcrumbs {
 
     ol {
         list-style: none;
 
-        .breadcrumb {
+        .clone__breadcrumb {
             display: inline-block;
-            line-height: calc(#{$line-height} * 1.5);
+            line-height: calc(#{$clone__line-height} * 1.5);
 
-            .breadcrumb-link {
+            .clone__breadcrumb-link {
 
                 // States ------------------------------------------------------
 

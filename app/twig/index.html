@@ -53,14 +53,20 @@
 
         <a id="pageTop"></a>
 
-        <div class="container--layout padding-top--double padding-bottom--double">
+        <div
+            data-clone-container="layout"
+            data-clone-padding="top(double) bottom(double)">
 
             <a id="content"></a>
 
             <!-- Accordions ================================================ -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">Accordions</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Accordions
+                </h3>
 
                 {% include "components/accordion.html" %}
                 {% include "components/accordion.html" %}
@@ -69,15 +75,19 @@
             </div>
 
             <!-- Alerts ==================================================== -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">Alerts</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Alerts
+                </h3>
 
-                <div class="margin-bottom">
+                <div data-clone-margin="bottom">
                     {% include "components/alert-information.html" %}
                 </div>
 
-                <div class="margin-bottom">
+                <div data-clone-margin="bottom">
                     {% include "components/alert-warning.html" %}
                 </div>
 
@@ -88,70 +98,91 @@
             </div>
 
             <!-- Back-to-Top Links ========================================= -->
-            <div class="padding-bottom--double">
-                <h3 class="heading--03 margin-bottom">Back-to-top Links</h3>
+            <div data-clone-padding="bottom(double)">
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Back-to-top Links
+                </h3>
                 {% include "components/back-to-top-link.html" %}
             </div>
 
             <!-- Blockquotes =============================================== -->
-            <div class="padding-bottom--double">
-                <h3 class="heading--03 margin-bottom">Blockquotes</h3>
+            <div data-clone-padding="bottom(double)">
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Blockquotes
+                </h3>
                 {% include "components/blockquote.html" %}
             </div>
 
             <!-- Breadcrumbs =============================================== -->
-            <div class="padding-bottom--double">
-                <h3 class="heading--03 margin-bottom">Breadcrumbs</h3>
+            <div data-clone-padding="bottom(double)">
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Breadcrumbs
+                </h3>
                 {% include "components/breadcrumbs.html" %}
             </div>
 
             <!-- Buttons =================================================== -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">Buttons</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Buttons
+                </h3>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Variations</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Variations
+                </h4>
 
-                <div class="padding-bottom">
+                <div data-clone-padding="bottom">
 
-                        <div class="flex-grid gutter middle">
+                        <div data-clone-grid="gutter middle">
 
-                            <div class="box pt-1of2 lt-1of3 ds-1of5">
+                            <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
-                                    class="button--c1 solid rounded"
+                                    data-clone-button="solid(c1)"
                                     type="button">
                                     Button
                                 </button>
                             </div>
 
-                            <div class="box pt-1of2 lt-1of3 ds-1of5">
+                            <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <a
-                                    class="button--c1 solid rounded"
+                                    data-clone-button="solid(c1)"
                                     href="http://google.com/"
                                     title="Check out Google!">
                                     Hyperlink
                                 </a>
                             </div>
 
-                            <div class="box pt-1of2 lt-1of3 ds-1of5">
+                            <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
-                                    class="button--c1 solid square"
+                                    data-clone-button="solid(c1)"
                                     type="button">
                                     Square
                                 </button>
                             </div>
 
-                            <div class="box pt-1of2 lt-1of3 ds-1of5">
+                            <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
-                                    class="button--c1 solid rounded"
+                                    data-clone-button="solid(c1)"
                                     type="button">
                                     Rounded
                                 </button>
                             </div>
 
-                            <div class="box pt-1of2 lt-1of3 ds-1of5">
+                            <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
-                                    class="button--c1 solid pill"
+                                    data-clone-button="solid(c1)"
                                     type="button">
                                     Pill
                                 </button>
@@ -161,49 +192,52 @@
 
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Solid</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Solid
+                </h4>
 
-                <div class="padding-bottom">
+                <div data-clone-padding="bottom">
 
-                    {# {% include "components/carousel.html" %} #}
+                    <div data-clone-grid="gutter middle">
 
-                    <div class="flex-grid gutter middle">
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 solid rounded"
+                                data-clone-button="solid(c1)"
                                 type="button">
                                 Theme Colour 01
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c2 solid rounded"
+                                data-clone-button="solid(c2)"
                                 type="button">
                                 Theme Colour 02
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c3 solid rounded"
+                                data-clone-button="solid(c3)"
                                 type="button">
                                 Theme Colour 03
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c4 solid rounded"
+                                data-clone-button="solid(c4)"
                                 type="button">
                                 Theme Colour 04
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c5 solid rounded"
+                                data-clone-button="solid(c5)"
                                 type="button">
                                 Theme Colour 05
                             </button>
@@ -213,49 +247,52 @@
 
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Outline</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Outline
+                </h4>
 
-                <div class="padding-bottom">
+                <div data-clone-padding="bottom">
 
-                    {# {% include "components/carousel.html" %} #}
+                    <div data-clone-grid="gutter middle">
 
-                    <div class="flex-grid gutter middle">
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 outline rounded"
+                                data-clone-button="outline(c1)"
                                 type="button">
                                 Theme Colour 01
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c2 outline rounded"
+                                data-clone-button="outline(c2)"
                                 type="button">
                                 Theme Colour 02
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c3 outline rounded"
+                                data-clone-button="outline(c3)"
                                 type="button">
                                 Theme Colour 03
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c4 outline rounded"
+                                data-clone-button="outline(c4)"
                                 type="button">
                                 Theme Colour 04
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c5 outline rounded"
+                                data-clone-button="outline(c5)"
                                 type="button">
                                 Theme Colour 05
                             </button>
@@ -265,59 +302,94 @@
 
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Stoplight</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Stoplight
+                </h4>
 
-                <div class="padding-bottom">
+                <div data-clone-padding="bottom">
 
-                    {# {% include "components/carousel.html" %} #}
+                    <div data-clone-grid="gutter middle">
 
-                    <div class="flex-grid gutter middle">
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--go solid rounded"
+                                data-clone-button="solid(go)"
                                 type="button">
                                 Next Step
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--slow solid rounded"
+                                data-clone-button="solid(slow)"
                                 type="button">
                                 Be Careful
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-3of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--stop solid rounded"
+                                data-clone-button="solid(stop)"
                                 type="button">
                                 Delete Item
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)"></div>
+
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)"></div>
+
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--go outline rounded"
+                                data-clone-button="outline(go)"
                                 type="button">
                                 Next Step
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--slow outline rounded"
+                                data-clone-button="outline(slow)"
                                 type="button">
                                 Be Careful
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-3of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--stop outline rounded"
+                                data-clone-button="outline(stop)"
                                 type="button">
                                 Delete Item
+                            </button>
+                        </div>
+
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)"></div>
+
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)"></div>
+
+                    </div>
+
+                </div>
+
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Disabled
+                </h4>
+
+                <div data-clone-padding="bottom">
+
+                    <div data-clone-grid="gutter middle">
+
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
+                            <button
+                                data-clone-button="solid(c1)"
+                                disabled
+                                type="button">
+                                Disabled
                             </button>
                         </div>
 
@@ -325,47 +397,22 @@
 
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Disabled</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Icons
+                </h4>
 
-                <div class="padding-bottom">
+                <div data-clone-padding="bottom">
 
-                    {# {% include "components/carousel.html" %} #}
+                    <div
+                        data-clone-grid="gutter middle"
+                        data-clone-padding="bottom(half)">
 
-                    <div class="flex-grid gutter middle">
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 solid rounded"
-                                disabled
-                                type="button">
-                                Disabled
-                            </button>
-                        </div>
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
-                            <button
-                                class="button--c1 outline rounded"
-                                disabled
-                                type="button">
-                                Disabled
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Icons</h4>
-
-                <div class="padding-bottom">
-
-                    {# {% include "components/carousel.html" %} #}
-
-                    <div class="flex-grid gutter middle padding-bottom--half">
-
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
-                            <button
-                                class="button--c1 solid rounded"
+                                data-clone-button="solid(c1)"
                                 type="button">
                                 <i class="material-icons">
                                     delete_forever
@@ -374,9 +421,9 @@
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 solid rounded"
+                                data-clone-button="solid(c1)"
                                 type="button">
                                 <i class="material-icons">
                                     perm_contact_calendar
@@ -387,11 +434,11 @@
 
                     </div>
 
-                    <div class="flex-grid gutter middle">
+                    <div data-clone-grid="gutter middle">
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 outline rounded"
+                                data-clone-button="outline(c1)"
                                 type="button">
                                 <i class="material-icons">
                                     delete_forever
@@ -400,9 +447,9 @@
                             </button>
                         </div>
 
-                        <div class="box pt-1of2 lt-1of3 ds-1of5">
+                        <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                             <button
-                                class="button--c1 outline rounded"
+                                data-clone-button="outline(c1)"
                                 type="button">
                                 <i class="material-icons">
                                     perm_contact_calendar
@@ -420,16 +467,30 @@
             <!-- Cards ===================================================== -->
 
             <!-- Carousels ================================================= -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">Carousels</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Carousels
+                </h3>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Image Carousel</h4>
-                <div class="padding-bottom">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Image Carousel
+                </h4>
+                <div data-clone-padding="bottom">
                     {% include "components/carousel-image.html" %}
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Content Carousel</h4>
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Content Carousel
+                </h4>
                 <div class="">
                     {% include "components/carousel-content.html" %}
                 </div>
@@ -437,38 +498,69 @@
             </div>
 
             <!-- Dialogues ================================================= -->
-            <div class="padding-bottom--double">
-                <h3 class="heading--03 margin-bottom">Dialogues</h3>
+            <div data-clone-padding="bottom(double)">
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Dialogs
+                </h3>
                 {% include "components/dialogue.html" %}
             </div>
 
             <!-- iframes =================================================== -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">iframes</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    iframes
+                </h3>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Videos</h4>
-                <div class="padding-bottom">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Videos
+                </h4>
+                <div data-clone-padding="bottom">
                     {% include "components/iframe-video.html" %}
                 </div>
 
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Maps</h4>
-                <div class="">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Maps
+                </h4>
+                <div>
                     {% include "components/iframe-map.html" %}
                 </div>
 
             </div>
 
             <!-- Inputs ==================================================== -->
-            <div class="padding-bottom--double">
+            <div data-clone-padding="bottom(double)">
 
-                <h3 class="heading--03 margin-bottom">Inputs</h3>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Inputs
+                </h3>
 
                 <!-- Checkboxes -------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Checkboxes</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Checkboxes
+                </h4>
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
 
-                    <div class="box b-full tl-1of2 input">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of2)"
+                        data-clone-input>
 
                         <label>I want the following superpowers:</label>
 
@@ -526,7 +618,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of2 input required">
+                    <div class="clone__flex-box b-full tl-1of2 input required">
 
                         <label>I want the following superpowers:</label>
 
@@ -590,7 +682,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Dates</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>Today's Date</label>
 
@@ -606,7 +698,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>Today's Date</label>
 
@@ -622,7 +714,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label>Today's Date</label>
 
@@ -644,7 +736,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Dropdowns (Select Elements)</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>My Preferred Partner</label>
 
@@ -680,7 +772,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>My Preferred Partner</label>
 
@@ -716,7 +808,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input required invalid">
 
                         <label>My Preferred Partner</label>
 
@@ -758,7 +850,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Numbers</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label># of Sidekicks</label>
 
@@ -774,7 +866,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label># of Sidekicks</label>
 
@@ -790,7 +882,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label># of Sidekicks</label>
 
@@ -812,7 +904,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Passwords</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>My Password</label>
 
@@ -841,7 +933,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>My Password</label>
 
@@ -870,7 +962,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label>My Password</label>
 
@@ -905,7 +997,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Radio Inputs</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                        <div class="box b-full tl-1of2 input">
+                        <div class="clone__flex-box b-full tl-1of2 input">
 
                             <label>I want the following hideout:</label>
 
@@ -957,7 +1049,7 @@
 
                         </div>
 
-                        <div class="box b-full tl-1of2 input required">
+                        <div class="clone__flex-box b-full tl-1of2 input required">
 
                             <label>I want the following superpowers:</label>
 
@@ -1015,7 +1107,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Text</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>My Name</label>
 
@@ -1031,7 +1123,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>My Name</label>
 
@@ -1047,7 +1139,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label>My Name</label>
 
@@ -1069,7 +1161,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Text w/ Button</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full input">
+                    <div class="clone__flex-box b-full input">
 
                         <label>My Name</label>
 
@@ -1079,7 +1171,7 @@
 
                             <div class="input-with-button flex-grid middle">
 
-                                <div class="box fit">
+                                <div class="clone__flex-box fit">
 
                                     <input placeholder="e.g. Clark Kent" required type="text" />
 
@@ -1105,7 +1197,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">Textareas</h4>
                 <form class="padding-bottom flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>My Story</label>
 
@@ -1121,7 +1213,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>My Story</label>
 
@@ -1137,7 +1229,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label>My Story</label>
 
@@ -1159,7 +1251,7 @@
                 <h4 class="heading--04 font-colour-c2 margin-bottom--half">URLs</h4>
                 <form class="flex-grid gutter">
 
-                    <div class="box b-full tl-1of3 input">
+                    <div class="clone__flex-box b-full tl-1of3 input">
 
                         <label>My Website</label>
 
@@ -1175,7 +1267,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input required">
+                    <div class="clone__flex-box b-full tl-1of3 input required">
 
                         <label>My Website</label>
 
@@ -1191,7 +1283,7 @@
 
                     </div>
 
-                    <div class="box b-full tl-1of3 input invalid">
+                    <div class="clone__flex-box b-full tl-1of3 input invalid">
 
                         <label>My Website</label>
 
@@ -1217,7 +1309,7 @@
                 <h3 class="heading--03 margin-bottom">Navigation</h3>
 
                 <button
-                    class="button--c1 solid"
+                    class="clone__button--c1 solid"
                     data-mobile-navigation-trigger
                     type="button">
                     Mobile Navigation
@@ -1253,15 +1345,23 @@
             </div>-->
 
             <!-- Pullquotes ================================================ -->
-            <div class="padding-bottom--double">
-                <h3 class="heading--03 margin-bottom">Pullquotes</h3>
+            <div data-clone-padding="bottom(double)">
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Pullquotes
+                </h3>
                 {% include "components/pullquote.html" %}
             </div>
 
             <!-- Skip-to-content Links ------------------------------------- -->
             <div class="">
-                <h3 class="heading--03 margin-bottom">Skip-to-content Links</h3>
-                <p class="margin-bottom">Tab to this spot to view the link.</p>
+                <h3
+                    data-clone-heading="h3"
+                    data-clone-margin="bottom">
+                    Skip-to-content Links
+                </h3>
+                <p data-clone-margin="bottom">Tab to this spot to view the link.</p>
                 {% include "components/skip-to-content.html" %}
             </div>
 

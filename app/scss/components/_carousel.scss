@@ -5,8 +5,7 @@
 
 // =============================================================================
 
-[class*="carousel--"] {
-    margin: 0 0 3rem 0;
+[data-clone-carousel] {
 
     .slick-list {
         border-radius: 5px;
@@ -16,6 +15,8 @@
 
             .slick-slide {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
                 height: auto;
             }
 
@@ -24,11 +25,11 @@
     }
 
     .slick-arrow {
-        background: rgba($black, .5);
+        background: rgba($clone__black, .5);
         border: none;
         cursor: pointer;
         display: none !important;
-        font-size: $font-scale--h3;
+        font-size: $clone__font-scale--h3;
         height: 100%;
         position: absolute;
         top: 0;
@@ -36,12 +37,12 @@
         width: 5vw;
         z-index: 5;
 
-        @media #{$tablet-landscape} {
+        @media #{$clone__tablet-landscape} {
             display: block !important;
         }
 
         i {
-            color: $white;
+            color: $clone__white;
             font-size: inherit;
             position: absolute;
             top: 50%;
@@ -53,7 +54,7 @@
 
             &:hover,
             &:focus {
-                background: rgba($black, .8);
+                background: rgba($clone__black, .8);
                 transition: all .2s ease;
             }
 
@@ -81,7 +82,7 @@
         transform: translate(-50%, 100%);
 
         li {
-            background: $c1;
+            background: $clone__c1;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
@@ -90,7 +91,7 @@
             button {
                 background: none;
                 border: 0;
-                color: $white;
+                color: $clone__white;
                 cursor: pointer;
                 height: 2rem;
                 width: 2rem;
@@ -101,7 +102,7 @@
             &.slick-active,
             &:hover,
             &:focus {
-                background: $c2;
+                background: $clone__c2;
                 transition: all .2s ease;
             }
 
@@ -109,36 +110,22 @@
 
     }
 
-    // Types -------------------------------------------------------------------
+}
 
-        &[class*="image"] {
+[data-clone-carousel="image"] {
+    margin: 0 0 3rem 0;
+    [data-clone-carousel="item"] {
+        background-position: center;
+        background-size: cover;
+        height: 0;
+        padding-bottom: 7.0315%;
+    }
+}
 
-            .carousel-item {
-                background-position: center;
-                background-size: cover;
-                height: 0;
-                padding-bottom: 7.0315%;
-            }
-
-        }
-
-        &[class*="content"] {
-
-            .carousel-item {
-                background-position: center;
-                background-size: cover;
-
-                .carousel-content {
-                    margin: 10vw;
-
-                    @media #{$tablet-landscape} {
-                        margin: 4rem 10vw;
-                    }
-
-                }
-
-            }
-
-        }
-
+[data-clone-carousel="content"] {
+    margin: 0 0 3rem 0;
+    [data-clone-carousel="item"] {
+        background-position: center;
+        background-size: cover;
+    }
 }

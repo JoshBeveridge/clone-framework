@@ -5,9 +5,9 @@
 
 // =============================================================================
 
-.accordion {
+[data-clone-accordion="object"] {
 
-    .accordion-trigger {
+    [data-clone-accordion="trigger"] {
         background: none;
         border: none;
         cursor: pointer;
@@ -15,18 +15,18 @@
         text-align: left;
         width: 100%;
 
-        [class*="accordion-icon--"] {
-            font-size: $font-scale--h4;
+        [data-clone-accordion*="icon"] {
+            font-size: $clone__font-scale--h4;
             position: absolute;
             top: 50%;
             right: 2rem;
             transform: translate(0, -50%);
 
-            &[class*="add"] {
+            &[data-clone-accordion*="--add"] {
                 display: block;
             }
 
-            &[class*="remove"] {
+            &[data-clone-accordion*="--remove"] {
                 display: none;
             }
 
@@ -34,7 +34,7 @@
 
     }
 
-    .accordion-content {
+    [data-clone-accordion="content"] {
         display: none;
 
         form {
@@ -46,24 +46,24 @@
     // States ------------------------------------------------------------------
 
         &:first-of-type {
-            border-top: 1px solid $gray;
+            border-top: 1px solid $clone__gray;
         }
 
         &:nth-child(odd) {
-            background: rgba($grey, .2);
+            background: rgba($clone__grey, .2);
         }
 
         &.active {
 
-            .accordion-trigger {
+            [data-clone-accordion="trigger"] {
 
-                [class*="accordion-icon--"] {
+                [data-clone-accordion*="icon"] {
 
-                    &[class*="add"] {
+                    &[data-clone-accordion*="--add"] {
                         display: none;
                     }
 
-                    &[class*="remove"] {
+                    &[data-clone-accordion*="--remove"] {
                         display: block;
                     }
 
@@ -71,7 +71,7 @@
 
             }
 
-            .accordion-content {
+            [data-clone-accordion="content"] {
                 display: block;
             }
 

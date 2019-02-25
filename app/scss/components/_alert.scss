@@ -5,37 +5,20 @@
 
 // =============================================================================
 
-[class*="alert--"] {
+[data-clone-alert="information"] {
+    background: rgba($clone__alert--information, .2);
+    border: 1px solid darken($clone__alert--information, 10%);
+    color: darken($clone__alert--information, 10%);
+}
 
-    .alert-title {
-        display: block;
+[data-clone-alert="warning"] {
+    background: rgba($clone__alert--warning, .2);
+    border: 1px solid darken($clone__alert--warning, 10%);
+    color: darken($clone__alert--warning, 10%);
+}
 
-        i {
-            margin-top: -.25rem;
-            margin-right: .5rem;
-            vertical-align: middle;
-        }
-
-    }
-
-    // Types -------------------------------------------------------------------
-
-        &[class*="information"] {
-            background: rgba($alert--information, .2);
-            border: 1px solid darken($alert--information, 10%);
-            color: darken($alert--information, 10%);
-        }
-
-        &[class*="warning"] {
-            background: rgba($alert--warning, .2);
-            border: 1px solid darken($alert--warning, 10%);
-            color: darken($alert--warning, 10%);
-        }
-
-        &[class*="error"] {
-            background: rgba($alert--error, .2);
-            border: 1px solid darken($alert--error, 10%);
-            color: darken($alert--error, 10%);
-        }
-
+[data-clone-alert="error"] {
+    background: rgba($clone__alert--error, .2);
+    border: 1px solid darken($clone__alert--error, 10%);
+    color: darken($clone__alert--error, 10%);
 }

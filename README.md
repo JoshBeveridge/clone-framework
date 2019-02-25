@@ -31,28 +31,99 @@ Clone uses [Gulp](https://gulpjs.com/) to manage dependencies. If you haven't al
 
 // =============================================================================
 
-// Custom Variables ============================================================
+// Custom Variables
 
-    // All available custom variables can be found [here](https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss)
+    // All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
 
-// Include Clone ===============================================================
+// Include Clone
 
     @import "../node_modules/clone-design/app/scss/clone";
 ```
 
-### Namespacing
+### Usage
 
-Clone uses a `clone__` namespace for all of its classes and variables to avoid interfering with other libraries or the styling of your own unique elements. Classes are intended to be explicit and are contructed in the following manner:
+Clone uses HTML5 custom data attributes to allow for easy, standardized, namespaced access to styles. Clone data attributes are prefixed with `data-clone` and in some cases, allow direct manipulation of styles. The following are Clone's current data attributes:
 
-`.namespace__block-name--optional-modifier`
+#### Accordion
 
-A practical example of this nomenclature with 2 modifiers in use:
+Usage: `data-clone-accordion="OPTIONS"`
 
-`.clone__background--grey--transparent`
+Accordion attributes are used exclusively to define the moving parts of an accordion:
+- `data-clone-accordion="object"`
+- `data-clone-accordion="trigger"`
+- `data-clone-accordion="content"`
+- `data-clone-accordion="icon--add"`
+- `data-clone-accordion="icon--remove"`
 
-- namespace: clone
-- block: background
-- modifiers: grey, transparent
+#### Alert
+
+Usage: `data-clone-alert="ALERT-TYPE"`
+
+#### Alignment
+
+Usage: `data-clone-alignment="TEXT-ALIGNMENT"`
+
+#### Backgrounds
+
+Usage: `data-clone-background="THEME-COLOUR(ALPHA-VALUE)"`
+
+#### Borders
+
+Usage: `data-clone-border="ORIENTATION(THICKNESS, STYLE, THEME-COLOUR)"`
+
+#### Buttons
+
+Usage: `data-clone-button="STYLE(THEME-COLOUR)"`
+
+#### Carousels
+
+Usage: `data-clone-carousel="OPTIONS"`
+
+#### Containers
+
+Usage: `data-clone-container="STYLE"`
+
+#### Fonts
+
+Usage: `data-clone-font="STYLE"`
+
+##### Font Colour
+
+Usage: `data-clone-font-colour="THEME-COLOUR"`
+
+##### Font Style
+
+Usage: `data-clone-font-style="STYLE"`
+
+##### Font Weight
+
+Usage: `data-clone-font-weight="NUMBER/VALUE"`
+
+#### Grid & Grid Items
+
+Usage (Grid): `data-clone-grid="OPTIONS"`
+
+Usage (Grid Items): `data-clone-grid-item="OPTIONS"`
+
+#### Headings
+
+Usage: `data-clone-heading="HVALUE"`
+
+#### Margins
+
+Usage: `data-clone-margin="ORIENTAION(AMOUNT)"`
+
+#### Padding
+
+Usage: `data-clone-padding="ORIENTAION(AMOUNT)"`
+
+#### Radius
+
+Usage: `data-clone-radius="STYLE"`
+
+#### Visibility
+
+Usage: `data-clone-visibility="VALUE"`
 
 You can find a list of default variables [here](https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss).
 
