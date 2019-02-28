@@ -787,6 +787,7 @@
                     data-clone-margin="bottom(half)">
                     Image Carousel
                 </h4>
+
                 <div data-clone-padding="bottom">
                     <div data-clone-carousel="image" data-slick='{"slidesToShow": 1, "dots": true}'>
     <div
@@ -811,7 +812,8 @@
                     data-clone-margin="bottom(half)">
                     Content Carousel
                 </h4>
-                <div class="">
+
+                <div>
                     <div
     data-clone-carousel="content"
     data-slick='{"slidesToShow": 1, "dots": true}'
@@ -1006,6 +1008,7 @@
                     data-clone-margin="bottom(half)">
                     Videos
                 </h4>
+
                 <div data-clone-padding="bottom">
                     <div data-clone-iframe>
 
@@ -1022,6 +1025,7 @@
                     data-clone-margin="bottom(half)">
                     Maps
                 </h4>
+
                 <div>
                     <div data-clone-iframe>
 
@@ -1050,71 +1054,71 @@
                     data-clone-margin="bottom(half)">
                     Checkboxes
                 </h4>
+
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
 
                     <div
                         data-clone-grid-item="base(1of1) tl(1of2)"
-                        data-clone-input>
+                        data-clone-input="checkbox">
 
                         <label>I want the following superpowers:</label>
 
-                        <span class="required-label">Required</span>
+                        <span>Required</span>
 
-                        <div class="input-wrapper">
+                        <div>
 
-                            <div class="checkbox-group">
+                            <label for="c1">
 
-                                <label for="c1">
+                                <input id="c1" type="checkbox" />
 
-                                    <input id="c1" type="checkbox" />
+                                <span>Flight</span>
 
-                                    <span>Flight</span>
+                            </label>
 
-                                </label>
+                            <label for="c2">
 
-                                <label for="c2">
+                                <input id="c2" type="checkbox" />
 
-                                    <input id="c2" type="checkbox" />
+                                <span>Strength</span>
 
-                                    <span>Strength</span>
+                            </label>
 
-                                </label>
+                            <label for="c3">
 
-                                <label for="c3">
+                                <input id="c3" type="checkbox" />
 
-                                    <input id="c3" type="checkbox" />
+                                <span>Laser Vision</span>
 
-                                    <span>Laser Vision</span>
+                            </label>
 
-                                </label>
+                            <label for="c4">
 
-                                <label for="c4">
+                                <input id="c4" type="checkbox" />
 
-                                    <input id="c4" type="checkbox" />
+                                <span>Invulnerability</span>
 
-                                    <span>Invulnerability</span>
+                            </label>
 
-                                </label>
+                            <label for="c5">
 
-                                <label for="c5">
+                                <input id="c5" type="checkbox" />
 
-                                    <input id="c5" type="checkbox" />
+                                <span>Telekinesis</span>
 
-                                    <span>Telekinesis</span>
+                            </label>
 
-                                </label>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
+                            <span>This input has an error or is formatted incorrectly.</span>
 
                         </div>
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of2 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of2)"
+                        data-clone-input
+                        required>
 
                         <label>I want the following superpowers:</label>
 
@@ -1175,26 +1179,20 @@
                 </form>
 
                 <!-- Dates ------------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Dates</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Dates
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
 
-                        <label>Today's Date</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input type="date" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>Today's Date</label>
 
@@ -1210,7 +1208,29 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
+
+                        <label>Today's Date</label>
+
+                        <span class="required-label">Required</span>
+
+                        <div class="input-wrapper">
+
+                            <input type="date" />
+
+                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>Today's Date</label>
 
@@ -1229,10 +1249,20 @@
                 </form>
 
                 <!-- Dropdowns --------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Dropdowns (Select Elements)</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Dropdowns
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>My Preferred Partner</label>
 
@@ -1268,7 +1298,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
 
                         <label>My Preferred Partner</label>
 
@@ -1304,7 +1337,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input required invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>My Preferred Partner</label>
 
@@ -1343,26 +1379,20 @@
                 </form>
 
                 <!-- Numbers ----------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Numbers</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Numbers
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
 
-                        <label># of Sidekicks</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="0" required type="number" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label># of Sidekicks</label>
 
@@ -1378,7 +1408,29 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
+
+                        <label># of Sidekicks</label>
+
+                        <span class="required-label">Required</span>
+
+                        <div class="input-wrapper">
+
+                            <input placeholder="0" required type="number" />
+
+                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label># of Sidekicks</label>
 
@@ -1397,10 +1449,20 @@
                 </form>
 
                 <!-- Passwords --------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Passwords</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Passwords
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>My Password</label>
 
@@ -1429,7 +1491,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
 
                         <label>My Password</label>
 
@@ -1458,7 +1523,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>My Password</label>
 
@@ -1490,10 +1558,20 @@
                 </form>
 
                 <!-- Radio Inputs ------------------------------------------ -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Radio Inputs</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Radio Inputs
+                </h4>
 
-                        <div class="clone__flex-box b-full tl-1of2 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+
+                        <div
+                            data-clone-grid-item="base(1of1) tl(1of2)"
+                            data-clone-input>
 
                             <label>I want the following hideout:</label>
 
@@ -1545,7 +1623,10 @@
 
                         </div>
 
-                        <div class="clone__flex-box b-full tl-1of2 input required">
+                        <div
+                            data-clone-grid-item="base(1of1) tl(1of2)"
+                            data-clone-input
+                            required>
 
                             <label>I want the following superpowers:</label>
 
@@ -1600,10 +1681,20 @@
                 </form>
 
                 <!-- Text -------------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Text</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Text Inputs
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>My Name</label>
 
@@ -1619,7 +1710,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
 
                         <label>My Name</label>
 
@@ -1635,7 +1729,10 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>My Name</label>
 
@@ -1654,10 +1751,20 @@
                 </form>
 
                 <!-- Input w Button ---------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Text w/ Button</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Text w/ Button
+                </h4>
 
-                    <div class="clone__flex-box b-full input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+
+                    <div
+                        data-clone-grid-item="base(1of1)"
+                        data-clone-input>
 
                         <label>My Name</label>
 
@@ -1690,26 +1797,20 @@
                 </form>
 
                 <!-- Textareas --------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">Textareas</h4>
-                <form class="padding-bottom flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Textareas
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
 
-                        <label>My Story</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <textarea placeholder="e.g. One day Bruce Wayne..." required>I am Batman.</textarea>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>My Story</label>
 
@@ -1725,7 +1826,29 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
+
+                        <label>My Story</label>
+
+                        <span class="required-label">Required</span>
+
+                        <div class="input-wrapper">
+
+                            <textarea placeholder="e.g. One day Bruce Wayne..." required>I am Batman.</textarea>
+
+                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>My Story</label>
 
@@ -1744,26 +1867,18 @@
                 </form>
 
                 <!-- URLs -------------------------------------------------- -->
-                <h4 class="heading--04 font-colour-c2 margin-bottom--half">URLs</h4>
-                <form class="flex-grid gutter">
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    URLs
+                </h4>
 
-                    <div class="clone__flex-box b-full tl-1of3 input">
+                <form data-clone-grid="gutter">
 
-                        <label>My Website</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. http://talent.canada.ca" required type="url" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="clone__flex-box b-full tl-1of3 input required">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input>
 
                         <label>My Website</label>
 
@@ -1779,7 +1894,29 @@
 
                     </div>
 
-                    <div class="clone__flex-box b-full tl-1of3 input invalid">
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        required>
+
+                        <label>My Website</label>
+
+                        <span class="required-label">Required</span>
+
+                        <div class="input-wrapper">
+
+                            <input placeholder="e.g. http://talent.canada.ca" required type="url" />
+
+                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        data-clone-grid-item="base(1of1) tl(1of3)"
+                        data-clone-input
+                        invalid>
 
                         <label>My Website</label>
 

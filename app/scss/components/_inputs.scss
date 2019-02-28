@@ -1,0 +1,66 @@
+// =============================================================================
+
+    // Clone
+    // Inputs
+
+// =============================================================================
+
+form {
+
+    [data-clone-input] {
+
+        >label {
+            display: block;
+            font-size: $clone__font-scale--small;
+            margin-bottom: .5rem;
+            padding-right: 4rem;
+        }
+
+        >span {
+            color: $clone__alert--error;
+            display: none;
+            font-size: $clone__font-scale--small;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+
+            @media #{$clone__tablet-landscape} {
+                top: 1rem;
+                right: 1rem;
+            }
+
+        }
+
+        >div {
+            position: relative;
+
+            >span {
+                color: $clone__alert--error;
+                display: none;
+                font-size: $clone__font-scale--small;
+                position: absolute;
+                top: calc(100% + .5rem);
+                left: 0;
+            }
+
+        }
+
+        &:required {
+
+            >span {
+                display: block;
+            }
+
+        }
+
+    }
+
+    [data-clone-input="checkbox"] {
+
+        >div {
+
+        }
+
+    }
+
+}
