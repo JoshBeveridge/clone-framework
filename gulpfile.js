@@ -13,6 +13,8 @@
 // Requirements ================================================================
 
     const gulp = require('gulp');
+    const { series, parallel } = require('gulp');
+    const { src, dest } = require('gulp');
     const sass = require('gulp-sass');
     const browsersync = require('browser-sync').create();
     const useref = require('gulp-useref');
@@ -47,74 +49,66 @@
     // Twig
 
         function template() {
-            return gulp.src('app/twig/*.html')
+            return src('app/twig/*.html')
             .pipe(twig())
-            .pipe(gulp.dest('cache'))
+            .pipe(dest('cache'));
         }
 
     // JavaScript
 
         function js() {
-            return gulp.src('app/js/*.js')
-            .pipe(gulp.dest('cache/js'))
+            return src('app/js/*.js')
+            .pipe(dest('cache/js'));
         }
 
     // Sass
 
         function compileCSS() {
-            return gulp.src('app/scss/**/*.scss')
+            return src('app/scss/**/*.scss')
             .pipe(sass())
             .pipe(autoprefixer({
                 browsers: ['last 2 versions'],
                 cascade: false
             }))
-            .pipe(gulp.dest('cache/css'))
+            .pipe(dest('cache/css'));
         }
 
     // Slick
 
         function moveSlick() {
-            return gulp.src('node_modules/slick-carousel/slick/slick.min.js')
-            .pipe(gulp.dest('cache/js'))
+            return src('node_modules/slick-carousel/slick/slick.min.js')
+            .pipe(dest('cache/js'));
         }
 
     // Minification
 
         function distribute() {
-            return gulp.src('cache/*.html')
+            return src('cache/*.html')
             .pipe(useref())
             .pipe(gulpIf('*.js', uglify()))
             .pipe(gulpIf('*.css', cssnano()))
-            .pipe(gulp.dest('dist'))
+            .pipe(dest('dist'))
             .pipe(browsersync.reload({
                 stream: true
-            }))
+            }));
         }
 
     // Dist Removal
 
         function cleanDist() {
-            return del.sync('dist');
+            return del('dist');
         }
 
     // Watch
 
         function watchFiles() {
-            gulp.watch('app/scss/**/*.scss', gulp.series(compileCSS, distribute));
-            gulp.watch('app/twig/**/*.html', gulp.series(template, distribute));
-            gulp.watch('app/js/**/*.js', gulp.series(js, moveSlick, distribute));
+            gulp.watch('app/scss/**/*.scss', series(compileCSS, distribute));
+            gulp.watch('app/twig/**/*.html', series(template, distribute));
+            gulp.watch('app/js/**/*.js', series(js, moveSlick, distribute));
         }
-
-    // Build
-
-        const build = gulp.series(cleanDist, template, js, moveSlick, compileCSS, distribute);
-
-    // Dev
-
-        const watch = gulp.parallel(browserSync, watchFiles);
 
     // Export
 
-        exports.build = build;
-        exports.watch = watch;
-        exports.default = watch;
+        exports.build = series(cleanDist, template, js, moveSlick, compileCSS, distribute);
+        exports.watch = parallel(browserSync, watchFiles);
+        exports.default = parallel(browserSync, watchFiles);
