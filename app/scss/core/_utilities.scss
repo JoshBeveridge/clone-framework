@@ -144,9 +144,15 @@
         };
     };
 
-    .clone__rounded {border-radius: 5px; overflow: hidden;}
+    [data-clone-radius="rounded"] {
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-    .clone__pill {border-radius: 20rem; overflow: hidden;}
+    [data-clone-radius="pill"] {
+        border-radius: 20rem;
+        overflow: hidden;
+    }
 
     .clone__shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
 

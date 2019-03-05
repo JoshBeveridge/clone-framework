@@ -1,11 +1,11 @@
 // =============================================================================
 
     // Clone
-    // Dialogues
+    // Dialogs
 
 // =============================================================================
 
-.clone__dialogue-overlay {
+.clone__dialog-overlay {
     background: rgba(0, 0, 0, .9);
     height: 100vh;
     opacity: 0;
@@ -27,7 +27,7 @@
 
 }
 
-.clone__dialogue-scroll-wrapper {
+.clone__dialog-scroll-wrapper {
     height: 100vh;
     opacity: 0;
     position: fixed;
@@ -36,7 +36,7 @@
     width: 100vw;
     z-index: 2000;
 
-    .clone__dialogue {
+    .clone__dialog {
         margin: 0 auto;
         width: 90vw;
 
@@ -48,10 +48,10 @@
             width: 50vw;
         }
 
-        .clone__dialogue-title {
+        .clone__dialog-title {
             position: relative;
 
-            .clone__dialogue-close-trigger {
+            .clone__dialog-close-trigger {
                 background: none;
                 border: none;
                 cursor: pointer;
@@ -72,7 +72,7 @@
 
         }
 
-        .clone__dialogue-body {
+        .clone__dialog-body {
 
         }
 

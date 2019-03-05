@@ -13,8 +13,7 @@
 // Requirements ================================================================
 
     const gulp = require('gulp');
-    const { series, parallel } = require('gulp');
-    const { src, dest } = require('gulp');
+    const { series, parallel, src, dest, watch } = require('gulp');
     const sass = require('gulp-sass');
     const browsersync = require('browser-sync').create();
     const useref = require('gulp-useref');
@@ -102,9 +101,9 @@
     // Watch
 
         function watchFiles() {
-            gulp.watch('app/scss/**/*.scss', series(compileCSS, distribute));
-            gulp.watch('app/twig/**/*.html', series(template, distribute));
-            gulp.watch('app/js/**/*.js', series(js, moveSlick, distribute));
+            watch('app/scss/**/*.scss', series(compileCSS, distribute));
+            watch('app/twig/**/*.html', series(template, distribute));
+            watch('app/js/**/*.js', series(js, moveSlick, distribute));
         }
 
     // Export

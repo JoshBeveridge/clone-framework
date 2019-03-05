@@ -109,6 +109,26 @@ Usage (Grid Items): `data-clone-grid-item="OPTIONS"`
 
 Usage: `data-clone-heading="HVALUE"`
 
+#### Inputs
+
+Usage: `data-clone-input="TYPE"`
+
+Inputs can be classified by their HTML type (and a few other custom types):
+- `data-clone-input="checkbox"`
+- `data-clone-input="date"`
+- `data-clone-input="select"`
+- `data-clone-input="number"`
+- `data-clone-input="password"`
+- `data-clone-input="radio"`
+- `data-clone-input="text"`
+- `data-clone-input="button"`
+- `data-clone-input="textarea"`
+- `data-clone-input="url"`
+
+Other accompanying attributes:
+- `data-clone-required` is applied to any input block that contains a form element with the `required` attribute.
+- `data-clone-invalid` is applied to any input block that is validated by HTML5 and returned as invalid.
+
 #### Margins
 
 Usage: `data-clone-margin="ORIENTAION(AMOUNT)"`

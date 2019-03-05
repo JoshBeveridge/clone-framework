@@ -6,61 +6,217 @@
 // =============================================================================
 
 form {
-
     [data-clone-input] {
-
+        position: relative;
         >label {
             display: block;
             font-size: $clone__font-scale--small;
             margin-bottom: .5rem;
             padding-right: 4rem;
         }
-
         >span {
-            color: $clone__alert--error;
-            display: none;
-            font-size: $clone__font-scale--small;
-            position: absolute;
-            top: .5rem;
-            right: .5rem;
-
-            @media #{$clone__tablet-landscape} {
-                top: 1rem;
-                right: 1rem;
-            }
-
-        }
-
-        >div {
-            position: relative;
-
-            >span {
+            &:first-of-type {
                 color: $clone__alert--error;
                 display: none;
                 font-size: $clone__font-scale--small;
                 position: absolute;
-                top: calc(100% + .5rem);
-                left: 0;
+                top: .5rem;
+                right: .5rem;
+                @media #{$clone__tablet-landscape} {
+                    top: 1rem;
+                    right: 1rem;
+                }
             }
-
-        }
-
-        &:required {
-
-            >span {
-                display: block;
+            &:last-of-type {
+                color: $clone__alert--error;
+                display: none;
+                font-size: $clone__font-scale--small;
+                position: absolute;
+                bottom: 0;
+                left: .5rem;
+                transform: translate(0, -100%);
+                @media #{$clone__tablet-landscape} {
+                    left: 1rem;
+                }
             }
-
         }
-
-    }
-
-    [data-clone-input="checkbox"] {
-
         >div {
-
+            margin-bottom: 1.5rem;
+            >input {
+                border: 1px solid $clone__gray;
+                border-radius: 5px;
+                display: block;
+                outline: none;
+                margin-bottom: 1.5rem;
+                padding: 1rem 1.5rem;
+                width: 100%;
+            }
+            >textarea {
+                border: 1px solid $clone__gray;
+                border-radius: 5px;
+                display: block;
+                outline: none;
+                margin-bottom: 1.5rem;
+                max-width: 100%;
+                min-height: 10rem;
+                min-width: 100%;
+                padding: 1rem 1.5rem;
+                width: 100%;
+            }
         }
-
+        &[data-clone-required] {
+            >span:first-of-type {
+                display: block !important;
+            }
+        }
+        &[data-clone-invalid] {
+            >label {
+                color: $clone__alert--error !important;
+            }
+            >div {
+                border-color: $clone__alert--error;
+                >input,
+                >textarea,
+                >select {
+                    border-color: $clone__alert--error;
+                }
+            }
+            >span:last-of-type {
+                display: block !important;
+            }
+        }
     }
-
+    [data-clone-input="checkbox"] {
+        >div {
+            border: 1px solid $clone__gray;
+            border-radius: 5px;
+            margin-top: .5rem;
+            padding: 1rem 1.5rem;
+            label {
+                display: block;
+                margin: 0 !important;
+                padding-top: .25rem !important;
+                padding-bottom: .25rem !important;
+                input {
+                    display: inline-block;
+                    margin: 0;
+                    width: auto;
+                }
+                span {
+                    display: inline-block;
+                    font-size: $clone__font-scale--regular;
+                    margin: 0 0 0 .5rem;
+                }
+            }
+        }
+    }
+    [data-clone-input="date"] {
+        >div >input {
+            padding: calc(1rem - 1.5px) calc(1.5rem - 1.5px);
+        }
+    }
+    [data-clone-input="dropdown"],
+    [data-clone-input="select"] {
+        >div {
+            position: relative;
+            i {
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                pointer-events: none;
+                transform: translate(0, -50%);
+            }
+            select {
+                appearance: none;
+                border: 1px solid $clone__gray;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block;
+                outline: none;
+                margin-bottom: 1.4rem;
+                padding: 1rem 3rem 1rem 1.5rem;
+                width: 100%;
+                &:focus {
+                    border: 1px solid $clone__c1;
+                }
+            }
+        }
+    }
+    [data-clone-input*="password"] {
+        >div {
+            position: relative;
+            input {
+                padding: 1rem 3rem 1rem 1.5rem;
+            }
+            button {
+                appearance: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translate(0, -50%);
+                i:first-child {
+                    display: block;
+                }
+                i:last-child {
+                    display: none;
+                }
+            }
+        }
+        &[data-clone-input*="--visible"] {
+            >div {
+                button {
+                    i:first-child {
+                        display: none;
+                    }
+                    i:last-child {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    [data-clone-input="radio"] {
+        >div {
+            border: 1px solid $clone__gray;
+            border-radius: 5px;
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+            label {
+                display: block;
+                margin: 0 !important;
+                padding-top: .25rem !important;
+                padding-bottom: .25rem !important;
+                input {
+                    display: inline-block;
+                    margin: 0;
+                    width: auto;
+                }
+                span {
+                    display: inline-block;
+                    font-size: $clone__font-scale--regular;
+                    margin: 0 0 0 .5rem;
+                }
+            }
+        }
+    }
+    [data-clone-input="button"] {
+        >div {
+            input {
+                border-radius: 5px 0 0 5px;
+                border-right: none;
+                margin-bottom: 0;
+            }
+            button {
+                border-radius: 0 5px 5px 0;
+                display: block;
+                outline: none;
+                // margin-bottom: 1.5rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
 }

@@ -909,19 +909,20 @@
                     data-clone-margin="bottom">
                     Dialogs
                 </h3>
-                <div class="clone__center">
+                <div data-clone-alignment="center">
 
     <button
-        class="clone__button--c1--solid clone__rounded"
-        data-dialogue-action="open"
-        data-dialogue-id="example-dialogue-01"
+        data-clone-button="solid(c1)"
+        data-clone-radius="rounded"
+        data-clone-dialog="example-dialog-01"
+        data-clone-dialog-action="open"
         type="button">
         Open a Dialogue
     </button>
 
 </div>
 
-<div class="clone__dialogue-overlay"></div>
+<div data-clone-dialog-overlay></div>
 
 <div
     aria-hidden="true"
@@ -1058,123 +1059,100 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of2)"
-                        data-clone-input="checkbox">
+    data-clone-grid-item="base(1of1) tl(1of2)"
+    data-clone-input="checkbox"
+>
+    <label>I want the following superpowers:</label>
+    <span>Required</span>
+    <div>
+        <label for="cA1">
+            <input
+                id="cA1"
+                type="checkbox"
+            />
+            <span>Flight</span>
+        </label>
+        <label for="cA2">
+            <input
+                id="cA2"
+                type="checkbox"
+            />
+            <span>Strength</span>
+        </label>
+        <label for="cA3">
+            <input
+                id="cA3"
+                type="checkbox"
+            />
+            <span>Laser Vision</span>
+        </label>
+        <label for="cA4">
+            <input
+                id="cA4"
+                type="checkbox"
+            />
+            <span>Invulnerability</span>
+        </label>
+        <label for="cA5">
+            <input
+                id="cA5"
+                type="checkbox"
+            />
+            <span>Telekinesis</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>I want the following superpowers:</label>
-
-                        <span>Required</span>
-
-                        <div>
-
-                            <label for="c1">
-
-                                <input id="c1" type="checkbox" />
-
-                                <span>Flight</span>
-
-                            </label>
-
-                            <label for="c2">
-
-                                <input id="c2" type="checkbox" />
-
-                                <span>Strength</span>
-
-                            </label>
-
-                            <label for="c3">
-
-                                <input id="c3" type="checkbox" />
-
-                                <span>Laser Vision</span>
-
-                            </label>
-
-                            <label for="c4">
-
-                                <input id="c4" type="checkbox" />
-
-                                <span>Invulnerability</span>
-
-                            </label>
-
-                            <label for="c5">
-
-                                <input id="c5" type="checkbox" />
-
-                                <span>Telekinesis</span>
-
-                            </label>
-
-                            <span>This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of2)"
-                        data-clone-input
-                        required>
-
-                        <label>I want the following superpowers:</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="checkbox-group">
-
-                                <label for="c1">
-
-                                    <input id="c1" type="checkbox" required/>
-
-                                    <span>Flight</span>
-
-                                </label>
-
-                                <label for="c2">
-
-                                    <input id="c2" type="checkbox" />
-
-                                    <span>Strength</span>
-
-                                </label>
-
-                                <label for="c3">
-
-                                    <input id="c3" type="checkbox" />
-
-                                    <span>Laser Vision</span>
-
-                                </label>
-
-                                <label for="c4">
-
-                                    <input id="c4" type="checkbox" />
-
-                                    <span>Invulnerability</span>
-
-                                </label>
-
-                                <label for="c5">
-
-                                    <input id="c5" type="checkbox" />
-
-                                    <span>Telekinesis</span>
-
-                                </label>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of2)"
+    data-clone-input="checkbox"
+    data-clone-required
+    data-clone-invalid
+>
+    <label>I want the following superpowers:</label>
+    <span>Required</span>
+    <div>
+        <label for="cB1">
+            <input
+                id="cB1"
+                type="checkbox"
+                required
+            />
+            <span>Flight</span>
+        </label>
+        <label for="cB2">
+            <input
+                id="cB2"
+                type="checkbox"
+            />
+            <span>Strength</span>
+        </label>
+        <label for="cB3">
+            <input
+                id="cB3"
+                type="checkbox"
+            />
+            <span>Laser Vision</span>
+        </label>
+        <label for="cB4">
+            <input
+                id="cB4"
+                type="checkbox"
+            />
+            <span>Invulnerability</span>
+        </label>
+        <label for="cB5">
+            <input
+                id="cB5"
+                type="checkbox"
+            />
+            <span>Telekinesis</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1189,62 +1167,46 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="date"
+>
+    <label>Today's Date</label>
+    <span>Required</span>
+    <div>
+        <input type="date" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>Today's Date</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="date"
+    data-clone-required
+>
+    <label>Today's Date</label>
+    <span>Required</span>
+    <div>
+        <input
+            type="date"
+            required
+        />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input type="date" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>Today's Date</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input type="date" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>Today's Date</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input type="date" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="date"
+    data-clone-invalid
+>
+    <label>Today's Date</label>
+    <span>Required</span>
+    <div>
+        <input type="date" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1259,122 +1221,79 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="select">
+    <label>My Preferred Partner</label>
+    <span>Required</span>
+    <div>
+        <i class="material-icons">
+            arrow_drop_down
+        </i>
+        <select>
+            <option selected>Select a partner...</option>
+            <option>Aquaman</option>
+            <option>Atom</option>
+            <option>Booster Gold</option>
+            <option>The Flash</option>
+            <option>Green Lantern</option>
+            <option>Hawkgirl</option>
+            <option>Martian Manhunter</option>
+            <option>Zatanna</option>
+        </select>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Preferred Partner</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="select"
+    data-clone-required>
+    <label>My Preferred Partner</label>
+    <span>Required</span>
+    <div>
+        <i class="material-icons">
+            arrow_drop_down
+        </i>
+        <select>
+            <option disabled selected>Select a partner...</option>
+            <option>Aquaman</option>
+            <option>Atom</option>
+            <option>Booster Gold</option>
+            <option>The Flash</option>
+            <option>Green Lantern</option>
+            <option>Hawkgirl</option>
+            <option>Martian Manhunter</option>
+            <option>Zatanna</option>
+        </select>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="select">
-
-                                <i class="material-icons">
-                                    arrow_drop_down
-                                </i>
-
-                                <select>
-
-                                    <option selected>Select a partner...</option>
-                                    <option>Aquaman</option>
-                                    <option>Atom</option>
-                                    <option>Booster Gold</option>
-                                    <option>The Flash</option>
-                                    <option>Green Lantern</option>
-                                    <option>Hawkgirl</option>
-                                    <option>Martian Manhunter</option>
-                                    <option>Zatanna</option>
-
-                                </select>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>My Preferred Partner</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="select">
-
-                                <i class="material-icons">
-                                    arrow_drop_down
-                                </i>
-
-                                <select>
-
-                                    <option disabled selected>Select a partner...</option>
-                                    <option>Aquaman</option>
-                                    <option>Atom</option>
-                                    <option>Booster Gold</option>
-                                    <option>The Flash</option>
-                                    <option>Green Lantern</option>
-                                    <option>Hawkgirl</option>
-                                    <option>Martian Manhunter</option>
-                                    <option>Zatanna</option>
-
-                                </select>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>My Preferred Partner</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="select">
-
-                                <i class="material-icons">
-                                    arrow_drop_down
-                                </i>
-
-                                <select>
-
-                                    <option disabled selected>Select a partner...</option>
-                                    <option>Aquaman</option>
-                                    <option>Atom</option>
-                                    <option>Booster Gold</option>
-                                    <option>The Flash</option>
-                                    <option>Green Lantern</option>
-                                    <option>Hawkgirl</option>
-                                    <option>Martian Manhunter</option>
-                                    <option>Zatanna</option>
-
-                                </select>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="select"
+    data-clone-invalid>
+    <label>My Preferred Partner</label>
+    <span>Required</span>
+    <div>
+        <i class="material-icons">
+            arrow_drop_down
+        </i>
+        <select>
+            <option selected>Select a partner...</option>
+            <option>Aquaman</option>
+            <option>Atom</option>
+            <option>Booster Gold</option>
+            <option>The Flash</option>
+            <option>Green Lantern</option>
+            <option>Hawkgirl</option>
+            <option>Martian Manhunter</option>
+            <option>Zatanna</option>
+        </select>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1389,62 +1308,39 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="number">
+    <label># of Sidekicks</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="0" type="number" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label># of Sidekicks</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="number">
+    <label># of Sidekicks</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="0" required type="number" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="0" required type="number" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label># of Sidekicks</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="0" required type="number" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label># of Sidekicks</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="0" required type="number" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="number"
+    data-clone-invalid>
+    <label># of Sidekicks</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="0" type="number" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1459,101 +1355,64 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="password">
+    <label>My Password</label>
+    <span>Required</span>
+    <div>
+        <input id="" type="password" value="G1assesAreTheBestDisguise" />
+        <button type="button">
+            <i class="material-icons">
+                visibility
+            </i>
+            <i class="material-icons">
+                visibility_off
+            </i>
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Password</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="password"
+    data-clone-required>
+    <label>My Password</label>
+    <span>Required</span>
+    <div>
+        <input id="" required type="password" value="G1assesAreTheBestDisguise" />
+        <button type="button">
+            <i class="material-icons">
+                visibility
+            </i>
+            <i class="material-icons">
+                visibility_off
+            </i>
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="password">
-
-                                <input id="" required type="password" value="G1assesAreTheBestDisguise" />
-
-                                <button type="button">
-                                    <i class="material-icons view-toggle">
-                                        visibility
-                                    </i>
-                                    <i class="material-icons hide-toggle">
-                                        visibility_off
-                                    </i>
-                                </button>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>My Password</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="password visible">
-
-                                <input id="" required type="text" value="G1assesAreTheBestDisguise" />
-
-                                <button type="button">
-                                    <i class="material-icons view-toggle">
-                                        visibility
-                                    </i>
-                                    <i class="material-icons hide-toggle">
-                                        visibility_off
-                                    </i>
-                                </button>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>My Password</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="password">
-
-                                <input id="" required type="password" value="" />
-
-                                <button type="button">
-                                    <i class="material-icons view-toggle">
-                                        visibility
-                                    </i>
-                                    <i class="material-icons hide-toggle">
-                                        visibility_off
-                                    </i>
-                                </button>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="password"
+    data-clone-invalid>
+    <label>My Password</label>
+    <span>Required</span>
+    <div>
+        <input id="" type="password" value="G1assesAreTheBestDisguise" />
+        <button type="button">
+            <i class="material-icons">
+                visibility
+            </i>
+            <i class="material-icons">
+                visibility_off
+            </i>
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1568,115 +1427,59 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
+                    <div
+    data-clone-grid-item="base(1of1) tl(1of2)"
+    data-clone-input="radio">
+    <label>I want the following hideout:</label>
+    <span>Required</span>
+    <div role="radiogroup">
+        <label for="rA1">
+            <input id="rA1" name="radioA" type="radio" />
+            <span>Crystal Fortress</span>
+        </label>
+        <label for="rA2">
+            <input id="rA2" name="radioA" type="radio" />
+            <span>Secret Cave Lair</span>
+        </label>
+        <label for="rA3">
+            <input id="rA3" name="radioA" type="radio" />
+            <span>Orbiting Space Station</span>
+        </label>
+        <label for="rA4">
+            <input id="rA4" name="radioA" type="radio" />
+            <span>Public Hall</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <div
-                            data-clone-grid-item="base(1of1) tl(1of2)"
-                            data-clone-input>
-
-                            <label>I want the following hideout:</label>
-
-                            <span class="required-label">Required</span>
-
-                            <div class="input-wrapper">
-
-                                <div
-                                    class="radio-group"
-                                    role="radiogroup">
-
-                                    <label for="rA1">
-
-                                        <input id="rA1" name="radioA" type="radio" />
-
-                                        <span>Arctic Crstal Fortress</span>
-
-                                    </label>
-
-                                    <label for="rA2">
-
-                                        <input id="rA2" name="radioA" type="radio" />
-
-                                        <span>Secret Cave Lair</span>
-
-                                    </label>
-
-                                    <label for="rA3">
-
-                                        <input id="rA3" name="radioA" type="radio" />
-
-                                        <span>Orbiting Space Station</span>
-
-                                    </label>
-
-                                    <label for="rA4">
-
-                                        <input id="rA4" name="radioA" type="radio" />
-
-                                        <span>Public Hall</span>
-
-                                    </label>
-
-                                </div>
-
-                                <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                            </div>
-
-                        </div>
-
-                        <div
-                            data-clone-grid-item="base(1of1) tl(1of2)"
-                            data-clone-input
-                            required>
-
-                            <label>I want the following superpowers:</label>
-
-                            <span class="required-label">Required</span>
-
-                            <div class="input-wrapper">
-
-                                <div
-                                    class="radio-group"
-                                    role="radiogroup">
-
-                                    <label for="rB1">
-
-                                        <input id="rB1" name="radioB" type="radio" required/>
-
-                                        <span>Arctic Crstal Fortress</span>
-
-                                    </label>
-
-                                    <label for="rB2">
-
-                                        <input id="rB2" name="radioB" type="radio" />
-
-                                        <span>Secret Cave Lair</span>
-
-                                    </label>
-
-                                    <label for="rB3">
-
-                                        <input id="rB3" name="radioB" type="radio" />
-
-                                        <span>Orbiting Space Station</span>
-
-                                    </label>
-
-                                    <label for="rB4">
-
-                                        <input id="rB4" name="radioB" type="radio" />
-
-                                        <span>Public Hall</span>
-
-                                    </label>
-
-                                </div>
-
-                                <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                            </div>
-
-                        </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of2)"
+    data-clone-input="radio"
+    data-clone-required
+    data-clone-invalid>
+    <label>I want the following hideout:</label>
+    <span>Required</span>
+    <div role="radiogroup">
+        <label for="rB1">
+            <input id="rB1" name="radioB" type="radio" />
+            <span>Crystal Fortress</span>
+        </label>
+        <label for="rB2">
+            <input id="rB2" name="radioB" type="radio" />
+            <span>Secret Cave Lair</span>
+        </label>
+        <label for="rB3">
+            <input id="rB3" name="radioB" type="radio" />
+            <span>Orbiting Space Station</span>
+        </label>
+        <label for="rB4">
+            <input id="rB4" name="radioB" type="radio" />
+            <span>Public Hall</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1691,62 +1494,40 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="text">
+    <label>My Name</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. Clark Kent" type="text" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Name</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="text"
+    data-clone-required>
+    <label>My Name</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. Clark Kent" type="text" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. Clark Kent" required type="text" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>My Name</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. Diana Prince" required type="text" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>My Name</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. Barry Allen" required type="text" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="text"
+    data-clone-invalid>
+    <label>My Name</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. Clark Kent" type="text" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1761,38 +1542,64 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of3)"
+    data-clone-input="button">
+    <label>My Name</label>
+    <span>Required</span>
+    <div data-clone-grid>
+        <input
+            data-clone-grid-item="fit"
+            placeholder="e.g. Clark Kent"
+            type="text" />
+        <button
+            data-clone-button="solid(c2)"
+            type="button">
+            Submit
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Name</label>
+<div
+    data-clone-grid-item="base(1of3)"
+    data-clone-input="button">
+    <label>My Name</label>
+    <span>Required</span>
+    <div data-clone-grid>
+        <input
+            data-clone-grid-item="fit"
+            placeholder="e.g. Clark Kent"
+            type="text"
+            required/>
+        <button
+            data-clone-button="solid(c2)"
+            type="button">
+            Submit
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <div class="input-with-button flex-grid middle">
-
-                                <div class="clone__flex-box fit">
-
-                                    <input placeholder="e.g. Clark Kent" required type="text" />
-
-                                </div>
-
-                                <button
-                                    class="input-button button--c2 solid"
-                                    type="button">
-                                    Submit
-                                </button>
-
-                            </div>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of3)"
+    data-clone-input="button"
+    data-clone-invalid>
+    <label>My Name</label>
+    <span>Required</span>
+    <div data-clone-grid>
+        <input
+            data-clone-grid-item="fit"
+            placeholder="e.g. Clark Kent"
+            type="text" />
+        <button
+            data-clone-button="solid(c2)"
+            type="button">
+            Submit
+        </button>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
@@ -1807,64 +1614,43 @@
                 <form
                     data-clone-grid="gutter"
                     data-clone-padding="bottom">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="textarea">
+    <label>My Story</label>
+    <span>Required</span>
+    <div>
+        <textarea placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Story</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="textarea">
+    <label>My Story</label>
+    <span>Required</span>
+    <div>
+        <textarea required placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <textarea placeholder="e.g. One day Bruce Wayne..." required>I am Batman.</textarea>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>My Story</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <textarea placeholder="e.g. One day Bruce Wayne..." required>I am Batman.</textarea>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>My Story</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <textarea placeholder="e.g. One day Bruce Wayne..." required></textarea>
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="textarea"
+    data-clone-invalid>
+    <label>My Story</label>
+    <span>Required</span>
+    <div>
+        <textarea placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
+
+                <!-- Uploads ----------------------------------------------- -->
 
                 <!-- URLs -------------------------------------------------- -->
                 <h4
@@ -1875,62 +1661,39 @@
                 </h4>
 
                 <form data-clone-grid="gutter">
-
                     <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input>
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="url">
+    <label>My Website</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. http://talent.canada.ca" type="url" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <label>My Website</label>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="url">
+    <label>My Website</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. http://talent.canada.ca" required type="url" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. http://talent.canada.ca" required type="url" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        required>
-
-                        <label>My Website</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. http://talent.canada.ca" required type="url" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        data-clone-grid-item="base(1of1) tl(1of3)"
-                        data-clone-input
-                        invalid>
-
-                        <label>My Website</label>
-
-                        <span class="required-label">Required</span>
-
-                        <div class="input-wrapper">
-
-                            <input placeholder="e.g. http://talent.canada.ca" required type="url" />
-
-                            <span class="error-copy">This input has an error or is formatted incorrectly.</span>
-
-                        </div>
-
-                    </div>
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="url"
+    data-clone-invalid>
+    <label>My Website</label>
+    <span>Required</span>
+    <div>
+        <input placeholder="e.g. http://talent.canada.ca" type="url" />
+    </div>
+    <span>This input has an error.</span>
+</div>
 
                 </form>
 
