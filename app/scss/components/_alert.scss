@@ -7,18 +7,18 @@
 
 [data-clone-alert="information"] {
     background: rgba($clone__alert--information, .2);
-    border: 1px solid darken($clone__alert--information, 10%);
-    color: darken($clone__alert--information, 10%);
+    border: 1px solid darken($clone__alert--information, 25%);
+    color: darken($clone__alert--information, 25%);
 }
 
 [data-clone-alert="warning"] {
     background: rgba($clone__alert--warning, .2);
-    border: 1px solid darken($clone__alert--warning, 10%);
-    color: darken($clone__alert--warning, 10%);
+    border: 1px solid darken($clone__alert--warning, 25%);
+    color: darken($clone__alert--warning, 25%);
 }
 
 [data-clone-alert="error"] {
     background: rgba($clone__alert--error, .2);
-    border: 1px solid darken($clone__alert--error, 10%);
-    color: darken($clone__alert--error, 10%);
+    border: 1px solid darken($clone__alert--error, 25%);
+    color: darken($clone__alert--error, 25%);
 }

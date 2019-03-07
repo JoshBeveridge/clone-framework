@@ -1041,7 +1041,7 @@
                 <div data-clone-padding="bottom">
                     <div data-clone-iframe>
 
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1MPS9m3v5Ro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    <iframe title="Animation of Canadarm2 catching a Cygnus resupply ship" width="560" height="315" src="https://www.youtube-nocookie.com/embed/1MPS9m3v5Ro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
 </div>
@@ -1058,7 +1058,7 @@
                 <div>
                     <div data-clone-iframe>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359536.1450225307!2d-76.0804333944307!3d45.250297496110946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x8a6a51e131dd15ed!2sOttawa%2C+ON!5e0!3m2!1sen!2sca!4v1547756358106"
+    <iframe title="A map of Ottawa, Ontario." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359536.1450225307!2d-76.0804333944307!3d45.250297496110946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x8a6a51e131dd15ed!2sOttawa%2C+ON!5e0!3m2!1sen!2sca!4v1547756358106"
         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 </div>
@@ -1199,10 +1199,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="date"
 >
-    <label>Today's Date</label>
+    <label for="DAT1">Today's Date</label>
     <span>Required</span>
     <div>
-        <input type="date" />
+        <input id="DAT1" type="date" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1212,10 +1212,11 @@
     data-clone-input="date"
     data-clone-required
 >
-    <label>Today's Date</label>
+    <label for="DAT2">Today's Date</label>
     <span>Required</span>
     <div>
         <input
+            id="DAT2"
             type="date"
             required
         />
@@ -1228,10 +1229,10 @@
     data-clone-input="date"
     data-clone-invalid
 >
-    <label>Today's Date</label>
+    <label for="DAT3">Today's Date</label>
     <span>Required</span>
     <div>
-        <input type="date" />
+        <input id="DAT3" type="date" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1252,13 +1253,13 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="select">
-    <label>My Preferred Partner</label>
+    <label for="SEL1">My Preferred Partner</label>
     <span>Required</span>
     <div>
         <i class="material-icons">
             arrow_drop_down
         </i>
-        <select>
+        <select id="SEL1">
             <option selected>Select a partner...</option>
             <option>Aquaman</option>
             <option>Atom</option>
@@ -1277,13 +1278,13 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="select"
     data-clone-required>
-    <label>My Preferred Partner</label>
+    <label for="SEL2">My Preferred Partner</label>
     <span>Required</span>
     <div>
         <i class="material-icons">
             arrow_drop_down
         </i>
-        <select>
+        <select id="SEL2">
             <option disabled selected>Select a partner...</option>
             <option>Aquaman</option>
             <option>Atom</option>
@@ -1302,13 +1303,13 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="select"
     data-clone-invalid>
-    <label>My Preferred Partner</label>
+    <label for="SEL3">My Preferred Partner</label>
     <span>Required</span>
     <div>
         <i class="material-icons">
             arrow_drop_down
         </i>
-        <select>
+        <select id="SEL3">
             <option selected>Select a partner...</option>
             <option>Aquaman</option>
             <option>Atom</option>
@@ -1339,10 +1340,10 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="number">
-    <label># of Sidekicks</label>
+    <label for="NUM1"># of Sidekicks</label>
     <span>Required</span>
     <div>
-        <input placeholder="0" type="number" />
+        <input id="NUM1" placeholder="0" type="number" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1350,10 +1351,10 @@
 <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="number">
-    <label># of Sidekicks</label>
+    <label for="NUM2"># of Sidekicks</label>
     <span>Required</span>
     <div>
-        <input placeholder="0" required type="number" />
+        <input id="NUM2" placeholder="0" required type="number" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1362,10 +1363,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="number"
     data-clone-invalid>
-    <label># of Sidekicks</label>
+    <label for="NUM3"># of Sidekicks</label>
     <span>Required</span>
     <div>
-        <input placeholder="0" type="number" />
+        <input id="NUM3" placeholder="0" type="number" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1458,9 +1459,9 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of2)"
     data-clone-input="radio">
-    <label>I want the following hideout:</label>
+    <label for="RG1">I want the following hideout:</label>
     <span>Required</span>
-    <div role="radiogroup">
+    <div id="RG1" role="radiogroup">
         <label for="rA1">
             <input id="rA1" name="radioA" type="radio" />
             <span>Crystal Fortress</span>
@@ -1486,9 +1487,9 @@
     data-clone-input="radio"
     data-clone-required
     data-clone-invalid>
-    <label>I want the following hideout:</label>
+    <label for="RG2">I want the following hideout:</label>
     <span>Required</span>
-    <div role="radiogroup">
+    <div id="RG2" role="radiogroup">
         <label for="rB1">
             <input id="rB1" name="radioB" type="radio" />
             <span>Crystal Fortress</span>
@@ -1525,10 +1526,10 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="text">
-    <label>My Name</label>
+    <label for="TI1">My Name</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. Clark Kent" type="text" />
+        <input id="TI1" placeholder="e.g. Clark Kent" type="text" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1537,10 +1538,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="text"
     data-clone-required>
-    <label>My Name</label>
+    <label for="TI2">My Name</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. Clark Kent" type="text" />
+        <input id="TI2" placeholder="e.g. Clark Kent" type="text" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1549,10 +1550,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="text"
     data-clone-invalid>
-    <label>My Name</label>
+    <label for="TI3">My Name</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. Clark Kent" type="text" />
+        <input id="TI3" placeholder="e.g. Clark Kent" type="text" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1573,11 +1574,12 @@
                     <div
     data-clone-grid-item="base(1of3)"
     data-clone-input="button">
-    <label>My Name</label>
+    <label for="WB1">My Name</label>
     <span>Required</span>
     <div data-clone-grid>
         <input
             data-clone-grid-item="fit"
+            id="WB1"
             placeholder="e.g. Clark Kent"
             type="text" />
         <button
@@ -1592,11 +1594,12 @@
 <div
     data-clone-grid-item="base(1of3)"
     data-clone-input="button">
-    <label>My Name</label>
+    <label for="WB2">My Name</label>
     <span>Required</span>
     <div data-clone-grid>
         <input
             data-clone-grid-item="fit"
+            id="WB2"
             placeholder="e.g. Clark Kent"
             type="text"
             required/>
@@ -1613,11 +1616,12 @@
     data-clone-grid-item="base(1of3)"
     data-clone-input="button"
     data-clone-invalid>
-    <label>My Name</label>
+    <label for="WB3">My Name</label>
     <span>Required</span>
     <div data-clone-grid>
         <input
             data-clone-grid-item="fit"
+            id="WB3"
             placeholder="e.g. Clark Kent"
             type="text" />
         <button
@@ -1645,10 +1649,10 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="textarea">
-    <label>My Story</label>
+    <label for="TA1">My Story</label>
     <span>Required</span>
     <div>
-        <textarea placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+        <textarea id="TA1" placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1656,10 +1660,10 @@
 <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="textarea">
-    <label>My Story</label>
+    <label for="TA2">My Story</label>
     <span>Required</span>
     <div>
-        <textarea required placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+        <textarea id="TA2" required placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1668,10 +1672,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="textarea"
     data-clone-invalid>
-    <label>My Story</label>
+    <label for="TA3">My Story</label>
     <span>Required</span>
     <div>
-        <textarea placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
+        <textarea id="TA3" placeholder="e.g. One day Bruce Wayne...">I am Batman.</textarea>
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1692,10 +1696,10 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="url">
-    <label>My Website</label>
+    <label for="URL1">My Website</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. http://talent.canada.ca" type="url" />
+        <input id="URL1" placeholder="e.g. http://talent.canada.ca" type="url" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1703,10 +1707,10 @@
 <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="url">
-    <label>My Website</label>
+    <label for="URL2">My Website</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. http://talent.canada.ca" required type="url" />
+        <input id="URL2" placeholder="e.g. http://talent.canada.ca" required type="url" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1715,10 +1719,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="url"
     data-clone-invalid>
-    <label>My Website</label>
+    <label for="URL3">My Website</label>
     <span>Required</span>
     <div>
-        <input placeholder="e.g. http://talent.canada.ca" type="url" />
+        <input id="URL3" placeholder="e.g. http://talent.canada.ca" type="url" />
     </div>
     <span>This input has an error.</span>
 </div>
