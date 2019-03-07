@@ -20,11 +20,15 @@ form {
                 display: none;
                 font-size: $clone__font-scale--small;
                 position: absolute;
-                top: .5rem;
-                right: .5rem;
-                @media #{$clone__tablet-landscape} {
-                    top: 1rem;
-                    right: 1rem;
+                top: calc((#{$clone__grid-gutter} / 2) / 2);
+                right: calc((#{$clone__grid-gutter} / 2) / 2);
+                @media #{$clone__tablet-portrait} {
+                    top: calc(#{$clone__grid-gutter} / 2);
+                    right: calc(#{$clone__grid-gutter} / 2);
+                }
+                @media #{$clone__desktop-large} {
+                    top: calc((#{$clone__grid-gutter} * 1.5) / 2);
+                    right: calc((#{$clone__grid-gutter} * 1.5) / 2);
                 }
             }
             &:last-of-type {
@@ -33,10 +37,13 @@ form {
                 font-size: $clone__font-scale--small;
                 position: absolute;
                 bottom: 0;
-                left: .5rem;
                 transform: translate(0, -100%);
-                @media #{$clone__tablet-landscape} {
-                    left: 1rem;
+                left: calc((#{$clone__grid-gutter} / 2) / 2);
+                @media #{$clone__tablet-portrait} {
+                    left: calc(#{$clone__grid-gutter} / 2);
+                }
+                @media #{$clone__desktop-large} {
+                    left: calc((#{$clone__grid-gutter} * 1.5) / 2);
                 }
             }
         }

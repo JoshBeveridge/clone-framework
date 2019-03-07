@@ -82,7 +82,7 @@
             <span data-clone-heading="h4" data-clone-font-weight="bold">
                 Accordion Title
             </span>
-            <span data-clone-heading="h5" data-clone-font-colour="c1">
+            <span data-clone-margin="top(quarter)" data-clone-heading="h5" data-clone-font-colour="c1">
                 Optional Accordion Subtitle
             </span>
         </div>
@@ -138,7 +138,7 @@
             <span data-clone-heading="h4" data-clone-font-weight="bold">
                 Accordion Title
             </span>
-            <span data-clone-heading="h5" data-clone-font-colour="c1">
+            <span data-clone-margin="top(quarter)" data-clone-heading="h5" data-clone-font-colour="c1">
                 Optional Accordion Subtitle
             </span>
         </div>
@@ -194,7 +194,7 @@
             <span data-clone-heading="h4" data-clone-font-weight="bold">
                 Accordion Title
             </span>
-            <span data-clone-heading="h5" data-clone-font-colour="c1">
+            <span data-clone-margin="top(quarter)" data-clone-heading="h5" data-clone-font-colour="c1">
                 Optional Accordion Subtitle
             </span>
         </div>
@@ -254,7 +254,7 @@
     role="alert"
 >
     <span
-        data-clone-margin="bottom(half)"
+        data-clone-margin="bottom(quarter)"
         data-clone-heading="h5"
         data-clone-font-weight="bold"
     >
@@ -280,7 +280,7 @@
     role="alert"
 >
     <span
-        data-clone-margin="bottom(half)"
+        data-clone-margin="bottom(quarter)"
         data-clone-heading="h5"
         data-clone-font-weight="bold"
     >
@@ -306,7 +306,7 @@
     role="alert"
 >
     <span
-        data-clone-margin="bottom(half)"
+        data-clone-margin="bottom(quarter)"
         data-clone-heading="h5"
         data-clone-font-weight="bold"
     >
@@ -1326,6 +1326,53 @@
 
                 </form>
 
+                <!-- Emails ------------------------------------------------ -->
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Emails
+                </h4>
+
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+                    <div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="email">
+    <label for="EM1">My Email</label>
+    <span>Required</span>
+    <div>
+        <input id="EM1" placeholder="e.g. bruce@waynefoundation.com" type="email" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="email">
+    <label for="EM2">My Email</label>
+    <span>Required</span>
+    <div>
+        <input id="EM2" placeholder="e.g. bruce@waynefoundation.com" required type="email" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="email"
+    data-clone-invalid>
+    <label for="EM3">My Email</label>
+    <span>Required</span>
+    <div>
+        <input id="EM3" placeholder="e.g. bruce@waynefoundation.com" type="email" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+                </form>
+
                 <!-- Numbers ----------------------------------------------- -->
                 <h4
                     data-clone-heading="h4"
@@ -1512,6 +1559,54 @@
 
                 </form>
 
+                <!-- Ranges ------------------------------------------------ -->
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Ranges
+                </h4>
+
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+                    <p data-clone-grid-item="base(1of1)">Coming Soon</p>
+                    <!-- <div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range">
+    <label for="RA1">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="RA1" type="range" min="0" max="100" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range">
+    <label for="RA2">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="RA2" min="0" max="100" step="5" value="10" required type="range" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range"
+    data-clone-invalid>
+    <label for="RA3">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="RA3" type="range" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+ -->
+                </form>
+
                 <!-- Text -------------------------------------------------- -->
                 <h4
                     data-clone-heading="h4"
@@ -1536,12 +1631,11 @@
 
 <div
     data-clone-grid-item="base(1of1) tl(1of3)"
-    data-clone-input="text"
-    data-clone-required>
+    data-clone-input="text">
     <label for="TI2">My Name</label>
     <span>Required</span>
     <div>
-        <input id="TI2" placeholder="e.g. Clark Kent" type="text" />
+        <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
     </div>
     <span>This input has an error.</span>
 </div>
@@ -1683,6 +1777,52 @@
                 </form>
 
                 <!-- Uploads ----------------------------------------------- -->
+                <h4
+                    data-clone-heading="h4"
+                    data-clone-font-colour="c2"
+                    data-clone-margin="bottom(half)">
+                    Uploads
+                </h4>
+
+                <form
+                    data-clone-grid="gutter"
+                    data-clone-padding="bottom">
+                    <p data-clone-grid-item="base(1of1)">Coming Soon</p>
+                    <!-- <div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range">
+    <label for="UP1">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="UP1" type="file" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range">
+    <label for="UP2">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="UP2" required type="file" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div
+    data-clone-grid-item="base(1of1) tl(1of3)"
+    data-clone-input="range"
+    data-clone-invalid>
+    <label for="UP3">THINGS</label>
+    <span>Required</span>
+    <div>
+        <input id="UP3" type="file" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+ -->
+                </form>
 
                 <!-- URLs -------------------------------------------------- -->
                 <h4

@@ -5,6 +5,15 @@
 
 // =============================================================================
 
+[data-clone-alert] {
+
+    i {
+        margin-top: -.2rem;
+        vertical-align: middle;
+    }
+
+}
+
 [data-clone-alert="information"] {
     background: rgba($clone__alert--information, .2);
     border: 1px solid darken($clone__alert--information, 25%);

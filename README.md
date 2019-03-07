@@ -118,15 +118,18 @@ Usage: `data-clone-heading="HVALUE"`
 Usage: `data-clone-input="TYPE"`
 
 Inputs can be classified by their HTML type (and a few other custom types):
+- `data-clone-input="button"`
 - `data-clone-input="checkbox"`
 - `data-clone-input="date"`
-- `data-clone-input="select"`
+- `data-clone-input="email"`
 - `data-clone-input="number"`
 - `data-clone-input="password"`
 - `data-clone-input="radio"`
+- `data-clone-input="range"` * NOT DONE
+- `data-clone-input="select"`
 - `data-clone-input="text"`
-- `data-clone-input="button"`
 - `data-clone-input="textarea"`
+- `data-clone-input="upload"` * NOT DONE
 - `data-clone-input="url"`
 
 Other accompanying attributes:
