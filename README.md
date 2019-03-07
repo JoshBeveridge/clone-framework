@@ -16,7 +16,7 @@ Clone is built in a way that allows you to theme the aesthetic of the system wit
 
 While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running [Sass](https://sass-lang.com/) and [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-1. From inside your project, run `npm install clone-design`
+1. From inside your project, run `npm install clone-framework`
 2. Create a `.scss` file inside of your Sass directory that has the following:
 
 ```
@@ -33,7 +33,7 @@ While it doesn't matter how your project compiles Sass, theming Clone requires t
 
 // Include Clone
 
-    @import "../node_modules/clone-design/app/scss/clone";
+    @import "../node_modules/clone-framework/app/scss/clone";
 
 ```
 
