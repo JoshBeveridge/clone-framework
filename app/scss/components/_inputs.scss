@@ -47,21 +47,29 @@ form {
                 border-radius: 5px;
                 display: block;
                 outline: none;
-                margin-bottom: 1.5rem;
                 padding: 1rem 1.5rem;
+                transition: all .2s ease;
                 width: 100%;
+                &:focus {
+                    box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
+                    transition: all .2s ease;
+                }
             }
             >textarea {
                 border: 1px solid $clone__gray;
                 border-radius: 5px;
                 display: block;
                 outline: none;
-                margin-bottom: 1.5rem;
                 max-width: 100%;
                 min-height: 10rem;
                 min-width: 100%;
                 padding: 1rem 1.5rem;
+                transition: all .2s ease;
                 width: 100%;
+                &:focus {
+                    box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
+                    transition: all .2s ease;
+                }
             }
         }
         &[data-clone-required] {

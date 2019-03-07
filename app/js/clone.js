@@ -159,28 +159,33 @@
             // Dialogue Handlers ===============================================
             function dialogueTrigger(trigger) {
 
-                var dialogueID = $(trigger).attr("data-dialogue-id");
-                var dialogue = $(".clone__dialogue-scroll-wrapper[data-dialogue-id='" + dialogueID +"']");
+                var dialogueID = $(trigger).attr("data-clone-dialog-id");
+                var dialogue = $(clone("dialog") + "[data-clone-dialog-id='" + dialogueID +"']");
+                var overlay = $(clone("dialog-overlay"));
+                var focusableItems = $(dialogue).find(":focusable");
 
-                if($(dialogue).hasClass("active")) {
+                if($(dialogue).attr("data-clone-dialog") != "") {
                     $("body").css("overflow", "visible");
-                    $(".clone__dialogue-overlay").removeClass("active");
-                    $(dialogue).removeClass("active contained overflowing");
+                    $(overlay).attr("data-clone-dialog-overlay", "");
+                    $(dialogue).attr("data-clone-dialog", "");
                     $(dialogue).attr("aria-hidden", "true");
-                    $(".clone__dialogue-ancestor").focus();
+                    $(focusableItems).each(function() {
+                        $(this).attr("tabindex", "-1");
+                    });
+                    $(clone("dialog-ancestor")).focus();
                 }
                 else {
-
-                    $("*").removeClass("clone__dialogue-ancestor");
-                    $(trigger).addClass("clone__dialogue-ancestor");
+                    $("*").removeAttr("data-clone-dialog-ancestor");
+                    $(trigger).attr("data-clone-dialog-ancestor", "");
                     $("body").css("overflow", "hidden");
-                    $(".clone__dialogue-overlay").addClass("active");
-                    $(dialogue).addClass("active");
+                    $(focusableItems).each(function() {
+                        $(this).attr("tabindex", "0");
+                    });
+                    $(overlay).attr("data-clone-dialog-overlay", "active");
                     $(dialogue).attr("aria-hidden", "false");
 
                     dialogueSizing(dialogue);
 
-                    var focusableItems = $(dialogue).find(":focusable");
                     var firstInput = focusableItems.first();
                     var lastInput = focusableItems.last();
 
@@ -193,51 +198,44 @@
 
                     dialogueTabbing(firstInput, lastInput);
                     dialogueEscape();
-
                 }
-
             }
 
             function dialogueSizing(dialogue) {
-
                 var viewportHeight = $(window).height();
-
                 if (dialogue != null) {
-
-                    var dialogueHeight = $(dialogue).find(".clone__dialogue").height();
-
+                    var dialogueHeight = $(dialogue).find(">div").height();
                     if (dialogueHeight > viewportHeight) {
-                        $(dialogue).removeClass("overflowing container").addClass("overflowing");
+                        $(dialogue).attr("data-clone-dialog", "active--overflowing");
                     }
                     else {
-                        $(dialogue).removeClass("overflowing container").addClass("contained");
+                        $(dialogue).attr("data-clone-dialog", "active--contained");
                     }
-
                 }
                 else {
-                    $(".clone__dialogue-scroll-wrapper").each(function() {
-
-                        var dialogueHeight = $(this).find(".clone__dialogue").height();
-                        console.log(dialogueHeight);
-
-                        if (dialogueHeight > viewportHeight) {
-                            $(this).removeClass("overflowing container").addClass("overflowing");
+                    $(clone("dialog")).each(function() {
+                        if ($(this).attr("data-clone-dialog") == false){
+                            return false;
                         }
                         else {
-                            $(this).removeClass("overflowing container").addClass("contained");
+                            var dialogueHeight = $(this).find(">div").height();
+                            if (dialogueHeight > viewportHeight) {
+                                $(this).attr("data-clone-dialog", "active--overflowing");
+                            }
+                            else {
+                                $(this).attr("data-clone-dialog", "active--contained");
+                            }
                         }
-
                     });
                 }
-
             }
 
-            $(document).on("click", "button[data-dialogue-id]", function(e) {
+            $(document).on("click", "button[data-clone-dialog-id]", function(e) {
                 e.preventDefault();
                 dialogueTrigger(this);
             });
 
-            $( window ).resize(function(e) {
+            $(window).resize(function(e) {
                 e.preventDefault();
                 dialogueSizing();
             });
@@ -273,8 +271,8 @@
 
                         if ((e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){
 
-                            $(".clone__dialogue-overlay").removeClass("active");
-                            $(".clone__dialogue-scroll-wrapper").removeClass("active contained overflowing");
+                            $(clone("dialog-overlay")).attr(clone("dialog-overlay"), "");
+                            $(clone("dialog")).attr(clone("dialog"), "");
                             $("body").css("overflow", "visible");
 
                             if (e.stopPropagation) {

@@ -5,22 +5,29 @@
 
 // =============================================================================
 
-.clone__breadcrumbs {
+[data-clone-breadcrumbs] {
 
     ol {
         list-style: none;
 
-        .clone__breadcrumb {
+        li {
             display: inline-block;
             line-height: calc(#{$clone__line-height} * 1.5);
 
-            .clone__breadcrumb-link {
+            a {
+                transition: color .2s ease;
 
                 // States ------------------------------------------------------
 
-                    &.active {
+                    &[aria-current="page"] {
                         font-weight: 700;
                         text-decoration: none;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $clone__focus-colour;
+                        transition: color .2s ease;
                     }
 
             }

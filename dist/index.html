@@ -391,37 +391,54 @@
                     data-clone-margin="bottom">
                     Breadcrumbs
                 </h3>
-                <div class="clone__center">
+                <div data-clone-alignment="center">
 
-    <nav aria-label="breadcrumb" class="clone__breadcrumbs">
+    <nav
+        aria-label="breadcrumb"
+        data-clone-breadcrumbs
+    >
         <ol>
-            <li class="clone__breadcrumb">
+            <li>
                 <a
-                    class="clone__breadcrumb-link"
                     href="#link-to-page"
-                    title="This is the title of the page link.">
-                    Page Link 01</a>
+                    title="This is the title of the page link."
+                >
+                    Page Link 01
+                </a>
                 <i class="material-icons">
                     arrow_right
                 </i>
             </li>
-            <li class="clone__breadcrumb">
-                <a class="clone__breadcrumb-link" href="#link-to-page" title="This is the title of the page link.">
-                    Page Link 02</a>
+            <li>
+                <a
+                    href="#link-to-page"
+                    title="This is the title of the page link."
+                >
+                    Page Link 02
+                </a>
                 <i class="material-icons">
                     arrow_right
                 </i>
             </li>
-            <li class="clone__breadcrumb">
-                <a class="clone__breadcrumb-link" href="#link-to-page" title="This is the title of the page link.">
-                    Page Link 03</a>
+            <li>
+                <a
+                    href="#link-to-page"
+                    title="This is the title of the page link."
+                >
+                    Page Link 03
+                </a>
                 <i class="material-icons">
                     arrow_right
                 </i>
             </li>
-            <li class="clone__breadcrumb">
-                <a aria-current="page" class="clone__breadcrumb-link active" href="#link-to-page" title="This is the title of the page link.">
-                    Page Link 04</a>
+            <li>
+                <a
+                    aria-current="page"
+                    href="#link-to-page"
+                    title="This is the title of the page link."
+                >
+                    Page Link 04
+                </a>
                 <i class="material-icons">
                     arrow_right
                 </i>
@@ -481,6 +498,7 @@
                             <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
                                     data-clone-button="solid(c1)"
+                                    data-clone-radius="rounded"
                                     type="button">
                                     Rounded
                                 </button>
@@ -489,6 +507,7 @@
                             <div data-clone-grid-item="tp(1of2) tl(1of3) ds(1of5)">
                                 <button
                                     data-clone-button="solid(c1)"
+                                    data-clone-radius="pill"
                                     type="button">
                                     Pill
                                 </button>
@@ -914,10 +933,10 @@
     <button
         data-clone-button="solid(c1)"
         data-clone-radius="rounded"
-        data-clone-dialog="example-dialog-01"
+        data-clone-dialog-id="example-dialog-01"
         data-clone-dialog-action="open"
         type="button">
-        Open a Dialogue
+        Open a Dialog
     </button>
 
 </div>
@@ -926,26 +945,36 @@
 
 <div
     aria-hidden="true"
-    aria-describedby="example-dialogue-01-description"
-    aria-labelledby="example-dialogue-01-title"
-    class="clone__dialogue-scroll-wrapper clone__padding--top--double clone__padding--bottom--double"
-    data-dialogue-id="example-dialogue-01"
+    aria-describedby="example-dialog-01-description"
+    aria-labelledby="example-dialog-01-title"
+    data-clone-dialog
+    data-clone-dialog-id="example-dialog-01"
+    data-clone-padding="top(double) bottom(double)"
     role="dialog">
 
-    <div class="clone__dialogue clone__background--white clone__rounded">
+    <div
+        data-clone-background="white(100)"
+        data-clone-radius="rounded">
 
-        <div class="clone__dialogue-title clone__padding clone__border--bottom">
+        <div
+            data-clone-padding="normal"
+            data-clone-border="bottom(thin, solid, black)">
 
             <h5
-                class="clone__heading--04"
-                id="example-dialogue-01-title">Dialogue Title</h5>
+                data-clone-heading="h4"
+                id="example-dialog-01-title">
+                Dialog Title
+            </h5>
 
-            <span class="clone__heading--05 clone__margin--top--half">Optional Dialogue Subtitle</span>
+            <span
+                data-clone-heading="h5"
+                data-clone-margin="top(half)">
+                Optional Dialog Subtitle
+            </span>
 
             <button
-                class="clone__dialogue-close-trigger"
-                data-dialogue-action="close"
-                data-dialogue-id="example-dialogue-01"
+                data-clone-dialog-action="close"
+                data-clone-dialog-id="example-dialog-01"
                 type="button">
                 <i class="material-icons">
                     close
@@ -954,33 +983,35 @@
 
         </div>
 
-        <div class="clone__dialogue-body clone__border--bottom clone__padding">
+        <div
+            data-clone-border="bottom(thin, solid, black)"
+            data-clone-padding="normal">
 
-            <div
-                class="clone__content"
-                id="example-dialogue-01-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi non dui sodales pellentesque. Sed non est nec lacus malesuada sodales. Pellentesque aliquet tristique aliquet. Morbi blandit eros vitae nisi venenatis, vel hendrerit quam blandit. Nulla iaculis blandit ultricies. Etiam posuere lectus non augue aliquet iaculis. Integer consequat, metus nec vehicula suscipit, libero justo tincidunt mi, eget aliquam eros lacus eget est. Nulla congue dolor a viverra luctus. Vivamus consectetur, lacus eu luctus malesuada, purus felis laoreet tellus, sed pellentesque mi mi quis lacus. Aliquam imperdiet elit nec euismod lacinia. Pellentesque nunc sem, tincidunt non dapibus eget, sollicitudin at arcu. Morbi maximus eleifend sem, ut scelerisque lorem tempus a. Mauris blandit felis vitae aliquam faucibus. Duis sit amet quam laoreet, iaculis nunc ut, accumsan velit.</p>
+            <div id="example-dialog-01-description">
+                <p data-clone-margin="bottom(half)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi non dui sodales pellentesque. Sed non est nec lacus malesuada sodales. Pellentesque aliquet tristique aliquet. Morbi blandit eros vitae nisi venenatis, vel hendrerit quam blandit. Nulla iaculis blandit ultricies. Etiam posuere lectus non augue aliquet iaculis. Integer consequat, metus nec vehicula suscipit, libero justo tincidunt mi, eget aliquam eros lacus eget est. Nulla congue dolor a viverra luctus. Vivamus consectetur, lacus eu luctus malesuada, purus felis laoreet tellus, sed pellentesque mi mi quis lacus. Aliquam imperdiet elit nec euismod lacinia. Pellentesque nunc sem, tincidunt non dapibus eget, sollicitudin at arcu. Morbi maximus eleifend sem, ut scelerisque lorem tempus a. Mauris blandit felis vitae aliquam faucibus. Duis sit amet quam laoreet, iaculis nunc ut, accumsan velit.</p>
                 <p>Suspendisse placerat massa justo, ut tempor orci dictum eget. Phasellus a placerat magna. Mauris quis risus quis nisi semper finibus ac dignissim odio. Donec ipsum nunc, porta quis mauris sit amet, ullamcorper varius lacus. Nulla tincidunt metus et neque molestie, sit amet mattis turpis vestibulum. Ut ac leo tempor, dictum magna sed, fringilla massa. Aliquam laoreet non dui ac facilisis. Aenean aliquet, nisi in posuere iaculis, libero turpis molestie orci, sit amet accumsan est sem eu diam. Donec imperdiet leo quam, vel lobortis dui semper sed. Quisque elementum neque viverra velit interdum ultricies.</p>
             </div>
 
         </div>
 
-        <div class="clone__actions clone__padding">
+        <div data-clone-padding="normal">
 
-            <div class="clone__flex-grid--gutter">
-                <div class="clone__flex-box clone__pp--1of2">
+            <div data-clone-grid="gutter middle">
+                <div data-clone-grid-item="base(1of2)">
                     <button
-                        class="clone__button--slow--outline clone__rounded"
-                        data-dialogue-action="close"
-                        data-dialogue-id="example-dialogue-01">
+                        data-clone-button="outline(slow)"
+                        data-clone-radius="rounded"
+                        data-clone-dialog-action="close"
+                        data-clone-dialog-id="example-dialog-01">
                         Cancel
                     </button>
                 </div>
-                <div class="clone__flex-box--flex-right clone__pp--1of2">
+                <div data-clone-grid-item="base(1of2)">
                     <button
-                        class="clone__button--go--solid clone__rounded"
-                        data-dialogue-action="close"
-                        data-dialogue-id="example-dialogue-01">
+                        data-clone-button="solid(go)"
+                        data-clone-radius="rounded"
+                        data-clone-dialog-action="close"
+                        data-clone-dialog-id="example-dialog-01">
                         Okay
                     </button>
                 </div>
@@ -1358,10 +1389,10 @@
                     <div
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="password">
-    <label>My Password</label>
+    <label for="p1">My Password</label>
     <span>Required</span>
     <div>
-        <input id="" type="password" value="G1assesAreTheBestDisguise" />
+        <input id="p1" type="password" value="G1assesAreTheBestDisguise" />
         <button type="button">
             <i class="material-icons">
                 visibility
@@ -1378,10 +1409,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="password"
     data-clone-required>
-    <label>My Password</label>
+    <label for="p2">My Password</label>
     <span>Required</span>
     <div>
-        <input id="" required type="password" value="G1assesAreTheBestDisguise" />
+        <input id="p2" required type="password" value="G1assesAreTheBestDisguise" />
         <button type="button">
             <i class="material-icons">
                 visibility
@@ -1398,10 +1429,10 @@
     data-clone-grid-item="base(1of1) tl(1of3)"
     data-clone-input="password"
     data-clone-invalid>
-    <label>My Password</label>
+    <label for="p3">My Password</label>
     <span>Required</span>
     <div>
-        <input id="" type="password" value="G1assesAreTheBestDisguise" />
+        <input id="p3" type="password" value="G1assesAreTheBestDisguise" />
         <button type="button">
             <i class="material-icons">
                 visibility
