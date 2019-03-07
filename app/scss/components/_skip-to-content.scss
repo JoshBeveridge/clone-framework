@@ -5,7 +5,7 @@
 
 // =============================================================================
 
-.clone__skip-to-content {
+[data-clone-skip-content] {
     display: block;
     height: 1px;
     position: absolute;
@@ -13,9 +13,7 @@
     left: -100vw;
     text-align: center;
     width: 1px;
-
-    // States ------------------------------------------------------------------
-
+        // States --------------------------------------------------------------
         &:focus {
             height: auto;
             position: relative;
@@ -23,5 +21,4 @@
             left: 0;
             width: 100%;
         }
-
 }

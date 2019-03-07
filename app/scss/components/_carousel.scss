@@ -6,24 +6,18 @@
 // =============================================================================
 
 [data-clone-carousel] {
-
     .slick-list {
         border-radius: 5px;
-
         .slick-track {
             display: flex;
-
             .slick-slide {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 height: auto;
             }
-
         }
-
     }
-
     .slick-arrow {
         background: rgba($clone__black, .5);
         border: none;
@@ -36,11 +30,9 @@
         transition: all .2s ease;
         width: 5vw;
         z-index: 5;
-
         @media #{$clone__tablet-landscape} {
             display: block !important;
         }
-
         i {
             color: $clone__white;
             font-size: inherit;
@@ -49,17 +41,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        // States --------------------------------------------------------------
-
+            // States ----------------------------------------------------------
             &:hover,
             &:focus {
                 background: rgba($clone__black, .8);
                 transition: all .2s ease;
             }
 
-        // Types ---------------------------------------------------------------
-
+            // Types -----------------------------------------------------------
             &.slick-prev {
                 border-radius: 5px 0 0 5px;
                 left: 0;
@@ -69,9 +58,7 @@
                 border-radius: 0 5px 5px 0;
                 right: 0;
             }
-
     }
-
     .slick-dots {
         list-style: none;
         margin: 0;
@@ -80,14 +67,12 @@
         bottom: -1rem;
         left: 50%;
         transform: translate(-50%, 100%);
-
         li {
             background: $clone__c1;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
             transition: all .2s ease;
-
             button {
                 background: none;
                 border: 0;
@@ -96,22 +81,16 @@
                 height: 2rem;
                 width: 2rem;
             }
-
-        // States ----------------------------------------------------------
-
+            // States ----------------------------------------------------------
             &.slick-active,
             &:hover,
             &:focus {
-                background: $clone__c2;
+                background: $clone__focus-colour;
                 transition: all .2s ease;
             }
-
         }
-
     }
-
 }
-
 [data-clone-carousel="image"] {
     margin: 0 0 3rem 0;
     [data-clone-carousel="item"] {
@@ -121,7 +100,6 @@
         padding-bottom: 7.0315%;
     }
 }
-
 [data-clone-carousel="content"] {
     margin: 0 0 3rem 0;
     [data-clone-carousel="item"] {

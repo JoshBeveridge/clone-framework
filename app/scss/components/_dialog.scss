@@ -47,23 +47,30 @@
             [data-clone-dialog-action="close"] {
                 background: none;
                 border: none;
+                border-radius: 100%;
                 cursor: pointer;
                 outline: none;
                 position: absolute;
                 top: $clone__padding;
                 right: $clone__padding;
                 transition: color .3s ease;
-                // States ------------------------------------------------------
+                i {
+                    display: block;
+                }
+                    // States ------------------------------------------------------
                     &:hover {
                         color: $clone__stop;
                         transition: color .3s ease;
+                    }
+                    &:focus {
+                        border: solid 3px $clone__focus-colour;
+                        transition: border .2s ease;
                     }
             }
         }
     }
 
-    // States ------------------------------------------------------------------
-
+        // States ------------------------------------------------------------------
         &[data-clone-dialog="active--contained"] {
             height: auto;
             opacity: 1;
@@ -72,7 +79,6 @@
             transform: translate(-50%, -50%);
             transition: transform 0s linear, opacity .2s ease .2s;
         }
-
         &[data-clone-dialog="active--overflowing"] {
             height: 100vh;
             opacity: 1;

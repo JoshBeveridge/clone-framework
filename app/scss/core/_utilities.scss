@@ -269,7 +269,8 @@
 
     // Defaults ----------------------------------------------------------------
 
-        [data-clone-margin="half"] {
+        [data-clone-margin="half"],
+        [data-clone-margin="all(half)"] {
             margin: calc((#{$clone__margin} / 2) / 2);
             @media #{$clone__tablet-portrait} {
                 margin: calc(#{$clone__margin} / 2);
@@ -279,7 +280,8 @@
             }
         }
 
-        [data-clone-margin="normal"] {
+        [data-clone-margin="normal"],
+        [data-clone-margin="all(normal)"] {
             margin: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
                 margin: $clone__margin;
@@ -289,7 +291,8 @@
             }
         }
 
-        [data-clone-margin="double"] {
+        [data-clone-margin="double"],
+        [data-clone-margin="all(double)"] {
             margin: $clone__margin;
             @media #{$clone__tablet-portrait} {
                 margin: calc(#{$clone__margin} * 2);
@@ -299,7 +302,8 @@
             }
         }
 
-        [data-clone-margin="triple"] {
+        [data-clone-margin="triple"],
+        [data-clone-margin="all(triple)"] {
             margin: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
                 margin: calc(#{$clone__margin} * 3);
@@ -485,7 +489,8 @@
 
     // Defaults ----------------------------------------------------------------
 
-        [data-clone-padding="half"] {
+        [data-clone-padding="half"],
+        [data-clone-padding="all(half)"] {
             padding: calc((#{$clone__padding} / 2) / 2);
             @media #{$clone__tablet-portrait} {
                 padding: calc(#{$clone__padding} / 2);
@@ -495,7 +500,8 @@
             }
         }
 
-        [data-clone-padding="normal"] {
+        [data-clone-padding="normal"],
+        [data-clone-padding="all(normal)"] {
             padding: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
                 padding: $clone__padding;
@@ -505,7 +511,8 @@
             }
         }
 
-        [data-clone-padding="double"] {
+        [data-clone-padding="double"],
+        [data-clone-padding="all(double)"] {
             padding: $clone__padding;
             @media #{$clone__tablet-portrait} {
                 padding: calc(#{$clone__padding} * 2);
@@ -515,7 +522,8 @@
             }
         }
 
-        [data-clone-padding="triple"] {
+        [data-clone-padding="triple"],
+        [data-clone-padding="all(triple)"] {
             padding: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
                 padding: calc(#{$clone__padding} * 3);

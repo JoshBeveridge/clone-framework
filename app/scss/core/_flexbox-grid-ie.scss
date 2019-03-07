@@ -11,8 +11,8 @@ body[id*="Trident/7.0"] {
         max-width: 100%;
     }
 
-    @for $i from 1 through 12 {
-        @for $r from 1 through 12 {
+    @for $i from 1 through $clone__grid-columns {
+        @for $r from 1 through $clone__grid-columns {
             [data-clone-grid-item*="base(#{$i}of#{$r})"] {
                 max-width: ($i / $r * 100%);
             }

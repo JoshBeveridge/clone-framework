@@ -10,12 +10,17 @@ $clone__font--serif: serif !default;
 $clone__font--script: "Euphoria Script", cursive !default;
 $clone__font--monospace: "Consolas", mono-space !default;
 
+$clone__font-default: $clone__font--sans !default;
+
 $clone__font-scale: 1.333 !default;
 
 $clone__line-height: 1.5 !default;
 
 $clone__margin: 2rem !default;
 $clone__padding: 2rem !default;
+
+$clone__grid-columns: 12 !default;
+$clone__grid-gutter: $clone__padding !default;
 
 $clone__white: #FFFFFF !default;
 $clone__black: #333333 !default;
@@ -52,7 +57,9 @@ $clone__c5: purple !default;
 $clone__c5--light: lighten($clone__c5, 10%) !default;
 $clone__c5--dark: darken($clone__c5, 10%) !default;
 
-$clone__focus-colour: teal !default;
+$clone__hover-colour: teal !default;
+
+$clone__focus-colour: $clone__hover-colour !default;
 
 $clone__alert--information: $clone__go !default;
 $clone__alert--warning: $clone__slow !default;

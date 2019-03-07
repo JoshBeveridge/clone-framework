@@ -32,14 +32,20 @@
         }
         @if $modifier == "gutter" {
             [data-clone-grid*="gutter"] {
-                margin: -.5rem;
-                @media #{$clone__tablet-landscape} {
-                    margin: -1rem;
+                margin: calc(((#{$clone__grid-gutter} / 2) / 2) * -1);
+                @media #{$clone__tablet-portrait} {
+                    margin: calc((#{$clone__grid-gutter} / 2) * -1);
+                }
+                @media #{$clone__desktop-large} {
+                    margin: calc(((#{$clone__grid-gutter} * 1.5) / 2) * -1);
                 }
                 >[data-clone-grid-item] {
-                    padding: .5rem;
-                    @media #{$clone__tablet-landscape} {
-                        padding: 1rem;
+                    padding: calc((#{$clone__grid-gutter} / 2) / 2);
+                    @media #{$clone__tablet-portrait} {
+                        padding: calc(#{$clone__grid-gutter} / 2);
+                    }
+                    @media #{$clone__desktop-large} {
+                        padding: calc((#{$clone__grid-gutter} * 1.5) / 2);
                     }
                 }
             }
@@ -76,8 +82,8 @@
         }
     }
 
-    @for $i from 1 through 12 {
-        @for $r from 1 through 12 {
+    @for $i from 1 through $clone__grid-columns {
+        @for $r from 1 through $clone__grid-columns {
             [data-clone-grid-item*="base(#{$i}of#{$r})"] {
                 flex: 0 0 calc(#{$i} / #{$r} * 100%);
             }
