@@ -33,7 +33,7 @@ While it doesn't matter how your project compiles Sass, theming Clone requires t
 
 // Include Clone
 
-    @import "../node_modules/clone-framework/app/scss/clone";
+    @import "../node_modules/clone-design/app/scss/clone";
 
 ```
 
