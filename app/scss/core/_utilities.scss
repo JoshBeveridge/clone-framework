@@ -31,6 +31,8 @@
 
     [data-clone-alignment="center"],
     [data-clone-alignment="centre"] {text-align: center;}
+    [data-clone-alignment="right"] {text-align: right};
+    [data-clone-alignment="left"] {text-align: left};
 
 // a11y ========================================================================
 
@@ -207,7 +209,7 @@
             [data-clone-font-weight="#{$key}"] {font-weight: $value;}
         };
 
-    // Headings ----------------------------------------------------------------
+    // Font Size ---------------------------------------------------------------
 
         [data-clone-heading] {display: block;}
 
@@ -216,6 +218,7 @@
         [data-clone-heading="h3"] {font-size: $clone__font-scale--h3;}
         [data-clone-heading="h4"] {font-size: $clone__font-scale--h4;}
         [data-clone-heading="h5"] {font-size: $clone__font-scale--h5;}
+        [data-clone-heading="small"] {font-size: $clone__font-scale--small;}
 
     // Font Styles -------------------------------------------------------------
 
@@ -336,7 +339,7 @@
             }
         }
 
-        [data-clone-margin="top(quarter)"] {
+        [data-clone-margin*="top(quarter)"] {
             margin-top: calc((#{$clone__margin} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 margin-top: calc(#{$clone__margin} / 4);
@@ -388,7 +391,7 @@
             }
         }
 
-        [data-clone-margin="right(quarter)"] {
+        [data-clone-margin*="right(quarter)"] {
             margin-right: calc((#{$clone__margin} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 margin-right: calc(#{$clone__margin} / 4);
@@ -440,7 +443,7 @@
             }
         }
 
-        [data-clone-margin="bottom(quarter)"] {
+        [data-clone-margin*="bottom(quarter)"] {
             margin-bottom: calc((#{$clone__margin} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 margin-bottom: calc(#{$clone__margin} / 4);
@@ -492,7 +495,7 @@
             }
         }
 
-        [data-clone-margin="left(quarter)"] {
+        [data-clone-margin*="left(quarter)"] {
             margin-left: calc((#{$clone__margin} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 margin-left: calc(#{$clone__margin} / 4);
@@ -607,7 +610,7 @@
             }
         }
 
-        [data-clone-padding="top(quarter)"] {
+        [data-clone-padding*="top(quarter)"] {
             padding-top: calc((#{$clone__padding} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 padding-top: calc(#{$clone__padding} / 4);
@@ -659,7 +662,7 @@
             }
         }
 
-        [data-clone-padding="right(quarter)"] {
+        [data-clone-padding*="right(quarter)"] {
             padding-right: calc((#{$clone__padding} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 padding-right: calc(#{$clone__padding} / 4);
@@ -711,7 +714,7 @@
             }
         }
 
-        [data-clone-padding="bottom(quarter)"] {
+        [data-clone-padding*="bottom(quarter)"] {
             padding-bottom: calc((#{$clone__padding} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 padding-bottom: calc(#{$clone__padding} / 4);
@@ -763,7 +766,7 @@
             }
         }
 
-        [data-clone-padding="left(quarter)"] {
+        [data-clone-padding*="left(quarter)"] {
             padding-left: calc((#{$clone__padding} / 2) / 4);
             @media #{$clone__tablet-portrait} {
                 padding-left: calc(#{$clone__padding} / 4);
