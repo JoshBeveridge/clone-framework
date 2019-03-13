@@ -41,8 +41,10 @@
     // BrowserSync Reload
 
         function browserSyncReload(done) {
-            browsersync.reload();
-            done();
+            return src('cache/*.html')
+            .pipe(browsersync.reload({
+                stream: true
+            }));
         }
 
     // Twig
@@ -101,13 +103,13 @@
     // Watch
 
         function watchFiles() {
-            watch('app/scss/**/*.scss', series(compileCSS, distribute));
-            watch('app/twig/**/*.html', series(template, distribute));
-            watch('app/js/**/*.js', series(js, moveSlick, distribute));
+            watch('app/scss/**/*.scss', series(compileCSS, browserSyncReload));
+            watch('app/twig/**/*.html', series(template, browserSyncReload));
+            watch('app/js/**/*.js', series(js, moveSlick, browserSyncReload));
         }
 
     // Export
 
         exports.build = series(cleanDist, template, js, moveSlick, compileCSS, distribute);
-        exports.watch = parallel(browserSync, watchFiles);
-        exports.default = parallel(browserSync, watchFiles);
+        exports.watch = series(cleanDist, template, js, moveSlick, compileCSS, parallel(browserSync, watchFiles));
+        exports.default = series(cleanDist, template, js, moveSlick, compileCSS, parallel(browserSync, watchFiles));

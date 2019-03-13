@@ -14,9 +14,9 @@ Clone uses [Gulp](https://gulpjs.com/) to manage dependencies. If you haven't al
 
 Clone is built in a way that allows you to theme the aesthetic of the system without the need to alter Clone's source files. This means that you'll be able to update Clone without any worry of losing or modifying your changes. All theming will occur in your project's root Sass directory and pull Clone's primary `.scss` file from `node_modules`.
 
-While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running [Sass](https://sass-lang.com/) and [Autoprefixer](https://github.com/postcss/autoprefixer).
+While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), and [Slick Carousel](http://kenwheeler.github.io/slick/).
 
-1. From inside your project, run `npm install clone-design`
+1. From inside your project, run `npm install clone-framework`
 2. Create a `.scss` file inside of your Sass directory that has the following:
 
 ```
@@ -36,6 +36,12 @@ While it doesn't matter how your project compiles Sass, theming Clone requires t
     @import "../node_modules/clone-design/app/scss/clone";
 
 ```
+
+You'll also want to copy the Javascript file located at `/node_modules/clone-framework/dist/js/app.min.js` as this will allow you to use Clones interactive components (accordions, dialogs, front-end form validation, etc.). Keep in mind that when you update Clone through Node to copy this JavaScript file over to ensure you have the latest copy.
+
+#### CDN
+
+Coming Soon!
 
 ### Usage
 
