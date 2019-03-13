@@ -805,3 +805,28 @@
                 padding-left: calc((#{$clone__padding} * 3) * 1.5);
             }
         }
+
+// Overlays ====================================================================
+
+    @each $key, $value in $clone-colour-map {
+        @for $alpha from 0 through 100 {
+            $newValue: unquote($key)+"("+$alpha+")";
+            [data-clone-overlay="#{$newValue}"] {
+                position: relative;
+                &::before {
+                    $decimal: $alpha / 100;
+                    background: rgba($value, $decimal);
+                    content: " ";
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                * {
+                    position: relative;
+                }
+            }
+        }
+    };
