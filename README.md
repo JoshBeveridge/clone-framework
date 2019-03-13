@@ -140,6 +140,10 @@ Other accompanying attributes:
 
 Usage: `data-clone-margin="ORIENTAION(AMOUNT)"`
 
+#### Overlays
+
+Usage: `data-clone-overlay="THEME-COLOUR(ALPHA-VALUE)
+
 #### Padding
 
 Usage: `data-clone-padding="ORIENTAION(AMOUNT)"`
