@@ -43,6 +43,12 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
+Stable Release: 2.1.1
+
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.1/dist/css/system.min.css
+
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.1/dist/js/app.min.js
+
 ### Usage
 
 Clone uses HTML5 custom data attributes to allow for easy, standardized, namespaced access to styles. Clone data attributes are prefixed with `data-clone` and in some cases, allow direct manipulation of styles. The following are Clone's current data attributes:
