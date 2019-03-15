@@ -45,36 +45,50 @@
         [data-clone-alignment*="base(#{$key})"] {
             text-align: $value;
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__phone-portrait} {
             [data-clone-alignment*="pp(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__phone-landscape} {
             [data-clone-alignment*="pl(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__tablet-portrait} {
             [data-clone-alignment*="tp(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__tablet-landscape} {
             [data-clone-alignment*="tl(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__desktop-small} {
             [data-clone-alignment*="ds(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__desktop-medium} {
             [data-clone-alignment*="dm(#{$key})"] {
                 text-align: $value;
             }
         }
+    }
+    @each $key, $value in $clone-alignment-map {
         @media #{$clone__desktop-large} {
             [data-clone-alignment*="dl(#{$key})"] {
                 text-align: $value;
@@ -259,14 +273,14 @@
 
     // Font Sizes --------------------------------------------------------------
 
-        [data-clone-heading] {display: block;}
+        // [data-clone-font-size] {display: block;}
 
-        [data-clone-heading="h1"] {font-size: $clone__font-scale--h1;}
-        [data-clone-heading="h2"] {font-size: $clone__font-scale--h2;}
-        [data-clone-heading="h3"] {font-size: $clone__font-scale--h3;}
-        [data-clone-heading="h4"] {font-size: $clone__font-scale--h4;}
-        [data-clone-heading="h5"] {font-size: $clone__font-scale--h5;}
-        [data-clone-heading="small"] {font-size: $clone__font-scale--small;}
+        [data-clone-font-size="h1"] {font-size: $clone__font-scale--h1;}
+        [data-clone-font-size="h2"] {font-size: $clone__font-scale--h2;}
+        [data-clone-font-size="h3"] {font-size: $clone__font-scale--h3;}
+        [data-clone-font-size="h4"] {font-size: $clone__font-scale--h4;}
+        [data-clone-font-size="h5"] {font-size: $clone__font-scale--h5;}
+        [data-clone-font-size="small"] {font-size: $clone__font-scale--small;}
 
     // Font Styles -------------------------------------------------------------
 
