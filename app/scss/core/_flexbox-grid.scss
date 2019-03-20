@@ -12,42 +12,84 @@
         flex-wrap: wrap;
     }
 
-    $clone-grid-modifier-list: ("top", "middle", "bottom", "gutter");
+    [data-clone-grid*="top"] {
+        align-items: flex-start;
+    }
 
-    @each $modifier in $clone-grid-modifier-list {
-        @if $modifier == "top" {
-            [data-clone-grid*="top"] {
-                align-items: flex-start;
+    [data-clone-grid*="middle"] {
+        align-items: center;
+    }
+
+    [data-clone-grid*="bottom"] {
+        align-items: flex-end;
+    }
+
+    [data-clone-grid*="gutter"] {
+        margin: calc((#{$clone__margin} / 2) * -1);
+        @media #{$clone__tablet-portrait} {
+            margin: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+        }
+        @media #{$clone__desktop-large} {
+            margin: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+        }
+        >[data-clone-grid-item] {
+            padding: calc(#{$clone__padding} / 2);
+            @media #{$clone__tablet-portrait} {
+                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+            }
+            @media #{$clone__desktop-large} {
+                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
-        @if $modifier == "middle" {
-            [data-clone-grid*="middle"] {
-                align-items: center;
+    }
+
+    [data-clone-grid*="gutter(vertical)"] {
+        margin-top: calc((#{$clone__margin} / 2) * -1);
+        margin-bottom: calc((#{$clone__margin} / 2) * -1);
+        @media #{$clone__tablet-portrait} {
+            margin-top: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+            margin-bottom: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+        }
+        @media #{$clone__desktop-large} {
+            margin-top: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+            margin-bottom: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+        }
+        >[data-clone-grid-item] {
+            padding-top: calc(#{$clone__padding} / 2);
+            padding-bottom: calc(#{$clone__padding} / 2);
+            @media #{$clone__tablet-portrait} {
+                padding-top: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+                padding-bottom: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+            }
+            @media #{$clone__desktop-large} {
+                padding-top: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                padding-bottom: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
-        @if $modifier == "bottom" {
-            [data-clone-grid*="bottom"] {
-                align-items: flex-end;
-            }
+    }
+
+    [data-clone-grid*="gutter(sides)"],
+    [data-clone-grid*="gutter(horizontal)"] {
+        margin-right: calc((#{$clone__margin} / 2) * -1);
+        margin-left: calc((#{$clone__margin} / 2) * -1);
+        @media #{$clone__tablet-portrait} {
+            margin-right: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+            margin-left: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
         }
-        @if $modifier == "gutter" {
-            [data-clone-grid*="gutter"] {
-                margin: calc(((#{$clone__grid-gutter} / 2) / 2) * -1);
-                @media #{$clone__tablet-portrait} {
-                    margin: calc((#{$clone__grid-gutter} / 2) * -1);
-                }
-                @media #{$clone__desktop-large} {
-                    margin: calc(((#{$clone__grid-gutter} * 1.5) / 2) * -1);
-                }
-                >[data-clone-grid-item] {
-                    padding: calc((#{$clone__grid-gutter} / 2) / 2);
-                    @media #{$clone__tablet-portrait} {
-                        padding: calc(#{$clone__grid-gutter} / 2);
-                    }
-                    @media #{$clone__desktop-large} {
-                        padding: calc((#{$clone__grid-gutter} * 1.5) / 2);
-                    }
-                }
+        @media #{$clone__desktop-large} {
+            margin-right: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+            margin-left: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+        }
+        >[data-clone-grid-item] {
+            padding-right: calc(#{$clone__padding} / 2);
+            padding-left: calc(#{$clone__padding} / 2);
+            @media #{$clone__tablet-portrait} {
+                padding-right: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+                padding-left: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+            }
+            @media #{$clone__desktop-large} {
+                padding-right: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                padding-left: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
     }

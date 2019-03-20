@@ -1,6 +1,6 @@
 {
   "name": "clone-framework",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "A lightweight, themeable design system.",
   "main": "app/index.js",
   "scripts": {

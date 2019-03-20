@@ -16,9 +16,15 @@ a[data-clone-button] {
     border: none;
     cursor: pointer;
     outline: none;
-    padding: .6rem 2rem .7rem;
     text-align: center;
     transition: all .2s ease;
+    padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+    @media #{$clone__tablet-portrait} {
+        padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+    }
+    @media #{$clone__desktop-large} {
+        padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+    }
 
     i {
         margin: -.2rem .25rem 0 -.5rem;

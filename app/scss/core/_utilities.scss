@@ -336,264 +336,264 @@
 
         [data-clone-margin="quarter"],
         [data-clone-margin="all(quarter)"] {
-            margin: calc((#{$clone__margin} / 2) / 4);
+            margin: calc(#{$clone__margin} / 4);
             @media #{$clone__tablet-portrait} {
-                margin: calc(#{$clone__margin} / 4);
+                margin: calc((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 1.5) / 4);
+                margin: calc(((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin="half"],
         [data-clone-margin="all(half)"] {
-            margin: calc((#{$clone__margin} / 2) / 2);
+            margin: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
-                margin: calc(#{$clone__margin} / 2);
+                margin: calc((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 1.5) / 2);
+                margin: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin="normal"],
         [data-clone-margin="all(normal)"] {
-            margin: calc(#{$clone__margin} / 2);
+            margin: #{$clone__margin};
             @media #{$clone__tablet-portrait} {
-                margin: $clone__margin;
+                margin: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc(#{$clone__margin} * 1.5);
+                margin: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin="double"],
         [data-clone-margin="all(double)"] {
-            margin: $clone__margin;
+            margin: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
-                margin: calc(#{$clone__margin} * 2);
+                margin: calc((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 2) * 1.5);
+                margin: calc(((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin="triple"],
         [data-clone-margin="all(triple)"] {
-            margin: calc(#{$clone__margin} * 2);
+            margin: calc(#{$clone__margin} * 3);
             @media #{$clone__tablet-portrait} {
-                margin: calc(#{$clone__margin} * 3);
+                margin: calc((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 3) * 1.5);
+                margin: calc(((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Top Margin --------------------------------------------------------------
 
         [data-clone-margin*="top"] {
-            margin-top: calc(#{$clone__margin} / 2);
+            margin-top: #{$clone__margin};
             @media #{$clone__tablet-portrait} {
-                margin-top: $clone__margin;
+                margin-top: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-top: calc(#{$clone__margin} * 1.5);
+                margin-top: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="top(quarter)"] {
-            margin-top: calc((#{$clone__margin} / 2) / 4);
+            margin-top: calc(#{$clone__margin} / 4);
             @media #{$clone__tablet-portrait} {
-                margin-top: calc(#{$clone__margin} / 4);
+                margin-top: calc((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-top: calc((#{$clone__margin} * 1.5) / 4);
+                margin-top: calc(((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="top(half)"] {
-            margin-top: calc((#{$clone__margin} / 2) / 2);
+            margin-top: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
-                margin-top: calc(#{$clone__margin} / 2);
+                margin-top: calc((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-top: calc((#{$clone__margin} * 1.5) / 2);
+                margin-top: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="top(double)"] {
-            margin-top: $clone__margin;
+            margin-top: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
-                margin-top: calc(#{$clone__margin} * 2);
+                margin-top: calc((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 2) * 1.5);
+                margin-top: calc(((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="top(triple)"] {
-            margin-top: calc(#{$clone__margin} * 2);
+            margin-top: calc(#{$clone__margin} * 3);
             @media #{$clone__tablet-portrait} {
-                margin-top: calc(#{$clone__margin} * 3);
+                margin-top: calc((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-top: calc((#{$clone__margin} * 3) * 1.5);
+                margin-top: calc(((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Right Margin ------------------------------------------------------------
 
         [data-clone-margin*="right"] {
-            margin-right: calc(#{$clone__margin} / 2);
+            margin-right: #{$clone__margin};
             @media #{$clone__tablet-portrait} {
-                margin-right: $clone__margin;
+                margin-right: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-right: calc(#{$clone__margin} * 1.5);
+                margin-right: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="right(quarter)"] {
-            margin-right: calc((#{$clone__margin} / 2) / 4);
+            margin-right: calc(#{$clone__margin} / 4);
             @media #{$clone__tablet-portrait} {
-                margin-right: calc(#{$clone__margin} / 4);
+                margin-right: calc((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-right: calc((#{$clone__margin} * 1.5) / 4);
+                margin-right: calc(((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="right(half)"] {
-            margin-right: calc((#{$clone__margin} / 2) / 2);
+            margin-right: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
-                margin-right: calc(#{$clone__margin} / 2);
+                margin-right: calc((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-right: calc((#{$clone__margin} * 1.5) / 2);
+                margin-right: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="right(double)"] {
-            margin-right: $clone__margin;
+            margin-right: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
-                margin-right: calc(#{$clone__margin} * 2);
+                margin-right: calc((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 2) * 1.5);
+                margin-right: calc(((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="right(triple)"] {
-            margin-right: calc(#{$clone__margin} * 2);
+            margin-right: calc(#{$clone__margin} * 3);
             @media #{$clone__tablet-portrait} {
-                margin-right: calc(#{$clone__margin} * 3);
+                margin-right: calc((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-right: calc((#{$clone__margin} * 3) * 1.5);
+                margin-right: calc(((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Bottom Margin -----------------------------------------------------------
 
         [data-clone-margin*="bottom"] {
-            margin-bottom: calc(#{$clone__margin} / 2);
+            margin-bottom: #{$clone__margin};
             @media #{$clone__tablet-portrait} {
-                margin-bottom: $clone__margin;
+                margin-bottom: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-bottom: calc(#{$clone__margin} * 1.5);
+                margin-bottom: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="bottom(quarter)"] {
-            margin-bottom: calc((#{$clone__margin} / 2) / 4);
+            margin-bottom: calc(#{$clone__margin} / 4);
             @media #{$clone__tablet-portrait} {
-                margin-bottom: calc(#{$clone__margin} / 4);
+                margin-bottom: calc((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-bottom: calc((#{$clone__margin} * 1.5) / 4);
+                margin-bottom: calc(((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="bottom(half)"] {
-            margin-bottom: calc((#{$clone__margin} / 2) / 2);
+            margin-bottom: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
-                margin-bottom: calc(#{$clone__margin} / 2);
+                margin-bottom: calc((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-bottom: calc((#{$clone__margin} * 1.5) / 2);
+                margin-bottom: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="bottom(double)"] {
-            margin-bottom: $clone__margin;
+            margin-bottom: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
-                margin-bottom: calc(#{$clone__margin} * 2);
+                margin-bottom: calc((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 2) * 1.5);
+                margin-bottom: calc(((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="bottom(triple)"] {
-            margin-bottom: calc(#{$clone__margin} * 2);
+            margin-bottom: calc(#{$clone__margin} * 3);
             @media #{$clone__tablet-portrait} {
-                margin-bottom: calc(#{$clone__margin} * 3);
+                margin-bottom: calc((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-bottom: calc((#{$clone__margin} * 3) * 1.5);
+                margin-bottom: calc(((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Left Margin -------------------------------------------------------------
 
         [data-clone-margin*="left"] {
-            margin-left: calc(#{$clone__margin} / 2);
+            margin-left: #{$clone__margin};
             @media #{$clone__tablet-portrait} {
-                margin-left: $clone__margin;
+                margin-left: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-left: calc(#{$clone__margin} * 1.5);
+                margin-left: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="left(quarter)"] {
-            margin-left: calc((#{$clone__margin} / 2) / 4);
+            margin-left: calc(#{$clone__margin} / 4);
             @media #{$clone__tablet-portrait} {
-                margin-left: calc(#{$clone__margin} / 4);
+                margin-left: calc((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-left: calc((#{$clone__margin} * 1.5) / 4);
+                margin-left: calc(((#{$clone__margin} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="left(half)"] {
-            margin-left: calc((#{$clone__margin} / 2) / 2);
+            margin-left: calc(#{$clone__margin} / 2);
             @media #{$clone__tablet-portrait} {
-                margin-left: calc(#{$clone__margin} / 2);
+                margin-left: calc((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-left: calc((#{$clone__margin} * 1.5) / 2);
+                margin-left: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="left(double)"] {
-            margin-left: $clone__margin;
+            margin-left: calc(#{$clone__margin} * 2);
             @media #{$clone__tablet-portrait} {
-                margin-left: calc(#{$clone__margin} * 2);
+                margin-left: calc((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin: calc((#{$clone__margin} * 2) * 1.5);
+                margin-left: calc(((#{$clone__margin} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-margin*="left(triple)"] {
-            margin-left: calc(#{$clone__margin} * 2);
+            margin-left: calc(#{$clone__margin} * 3);
             @media #{$clone__tablet-portrait} {
-                margin-left: calc(#{$clone__margin} * 3);
+                margin-left: calc((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                margin-left: calc((#{$clone__margin} * 3) * 1.5);
+                margin-left: calc(((#{$clone__margin} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
@@ -607,264 +607,264 @@
 
         [data-clone-padding="quarter"],
         [data-clone-padding="all(quarter)"] {
-            padding: calc((#{$clone__padding} / 2) / 4);
+            padding: calc(#{$clone__padding} / 4);
             @media #{$clone__tablet-portrait} {
-                padding: calc(#{$clone__padding} / 4);
+                padding: calc((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding: calc((#{$clone__padding} * 1.5) / 4);
+                padding: calc(((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding="half"],
         [data-clone-padding="all(half)"] {
-            padding: calc((#{$clone__padding} / 2) / 2);
+            padding: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
-                padding: calc(#{$clone__padding} / 2);
+                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding: calc((#{$clone__padding} * 1.5) / 2);
+                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding="normal"],
         [data-clone-padding="all(normal)"] {
-            padding: calc(#{$clone__padding} / 2);
+            padding: #{$clone__padding};
             @media #{$clone__tablet-portrait} {
-                padding: $clone__padding;
+                padding: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding: calc(#{$clone__padding} * 1.5);
+                padding: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding="double"],
         [data-clone-padding="all(double)"] {
-            padding: calc((#{$clone__padding} / 2) * 2);
+            padding: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
-                padding: calc(#{$clone__padding} * 2);
+                padding: calc((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding: calc((#{$clone__padding} * 1.5) * 2);
+                padding: calc(((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding="triple"],
         [data-clone-padding="all(triple)"] {
-            padding: calc((#{$clone__padding} / 2) * 3);
+            padding: calc(#{$clone__padding} * 3);
             @media #{$clone__tablet-portrait} {
-                padding: calc(#{$clone__padding} * 3);
+                padding: calc((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding: calc((#{$clone__padding} * 1.5) * 3);
+                padding: calc(((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Top Padding -------------------------------------------------------------
 
         [data-clone-padding*="top"] {
-            padding-top: calc(#{$clone__padding} / 2);
+            padding-top: #{$clone__padding};
             @media #{$clone__tablet-portrait} {
-                padding-top: $clone__padding;
+                padding-top: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-top: calc(#{$clone__padding} * 1.5);
+                padding-top: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="top(quarter)"] {
-            padding-top: calc((#{$clone__padding} / 2) / 4);
+            padding-top: calc(#{$clone__padding} / 4);
             @media #{$clone__tablet-portrait} {
-                padding-top: calc(#{$clone__padding} / 4);
+                padding-top: calc((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-top: calc((#{$clone__padding} * 1.5) / 4);
+                padding-top: calc(((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="top(half)"] {
-            padding-top: calc((#{$clone__padding} / 2) / 2);
+            padding-top: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
-                padding-top: calc(#{$clone__padding} / 2);
+                padding-top: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-top: calc((#{$clone__padding} * 1.5) / 2);
+                padding-top: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="top(double)"] {
-            padding-top: $clone__padding;
+            padding-top: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
-                padding-top: calc(#{$clone__padding} * 2);
+                padding-top: calc((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-top: calc((#{$clone__padding} * 2) * 1.5);
+                padding-top: calc(((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="top(triple)"] {
-            padding-top: calc(#{$clone__padding} * 2);
+            padding-top: calc(#{$clone__padding} * 3);
             @media #{$clone__tablet-portrait} {
-                padding-top: calc(#{$clone__padding} * 3);
+                padding-top: calc((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-top: calc((#{$clone__padding} * 3) * 1.5);
+                padding-top: calc(((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Right Padding -----------------------------------------------------------
 
         [data-clone-padding*="right"] {
-            padding-right: calc(#{$clone__padding} / 2);
+            padding-right: #{$clone__padding};
             @media #{$clone__tablet-portrait} {
-                padding-right: $clone__padding;
+                padding-right: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-right: calc(#{$clone__padding} * 1.5);
+                padding-right: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="right(quarter)"] {
-            padding-right: calc((#{$clone__padding} / 2) / 4);
+            padding-right: calc(#{$clone__padding} / 4);
             @media #{$clone__tablet-portrait} {
-                padding-right: calc(#{$clone__padding} / 4);
+                padding-right: calc((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-right: calc((#{$clone__padding} * 1.5) / 4);
+                padding-right: calc(((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="right(half)"] {
-            padding-right: calc((#{$clone__padding} / 2) / 2);
+            padding-right: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
-                padding-right: calc(#{$clone__padding} / 2);
+                padding-right: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-right: calc((#{$clone__padding} * 1.5) / 2);
+                padding-right: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="right(double)"] {
-            padding-right: $clone__padding;
+            padding-right: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
-                padding-right: calc(#{$clone__padding} * 2);
+                padding-right: calc((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-right: calc((#{$clone__padding} * 2) * 1.5);
+                padding-right: calc(((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="right(triple)"] {
-            padding-right: calc(#{$clone__padding} * 2);
+            padding-right: calc(#{$clone__padding} * 3);
             @media #{$clone__tablet-portrait} {
-                padding-right: calc(#{$clone__padding} * 3);
+                padding-right: calc((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-right: calc((#{$clone__padding} * 3) * 1.5);
+                padding-right: calc(((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Bottom Padding ----------------------------------------------------------
 
         [data-clone-padding*="bottom"] {
-            padding-bottom: calc(#{$clone__padding} / 2);
+            padding-bottom: #{$clone__padding};
             @media #{$clone__tablet-portrait} {
-                padding-bottom: $clone__padding;
+                padding-bottom: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-bottom: calc(#{$clone__padding} * 1.5);
+                padding-bottom: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="bottom(quarter)"] {
-            padding-bottom: calc((#{$clone__padding} / 2) / 4);
+            padding-bottom: calc(#{$clone__padding} / 4);
             @media #{$clone__tablet-portrait} {
-                padding-bottom: calc(#{$clone__padding} / 4);
+                padding-bottom: calc((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-bottom: calc((#{$clone__padding} * 1.5) / 4);
+                padding-bottom: calc(((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="bottom(half)"] {
-            padding-bottom: calc((#{$clone__padding} / 2) / 2);
+            padding-bottom: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
-                padding-bottom: calc(#{$clone__padding} / 2);
+                padding-bottom: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-bottom: calc((#{$clone__padding} * 1.5) / 2);
+                padding-bottom: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="bottom(double)"] {
-            padding-bottom: $clone__padding;
+            padding-bottom: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
-                padding-bottom: calc(#{$clone__padding} * 2);
+                padding-bottom: calc((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-bottom: calc((#{$clone__padding} * 2) * 1.5);
+                padding-bottom: calc(((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="bottom(triple)"] {
-            padding-bottom: calc(#{$clone__padding} * 2);
+            padding-bottom: calc(#{$clone__padding} * 3);
             @media #{$clone__tablet-portrait} {
-                padding-bottom: calc(#{$clone__padding} * 3);
+                padding-bottom: calc((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-bottom: calc((#{$clone__padding} * 3) * 1.5);
+                padding-bottom: calc(((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
     // Left Padding ------------------------------------------------------------
 
         [data-clone-padding*="left"] {
-            padding-left: calc(#{$clone__padding} / 2);
+            padding-left: #{$clone__padding};
             @media #{$clone__tablet-portrait} {
-                padding-left: $clone__padding;
+                padding-left: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-left: calc(#{$clone__padding} * 1.5);
+                padding-left: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="left(quarter)"] {
-            padding-left: calc((#{$clone__padding} / 2) / 4);
+            padding-left: calc(#{$clone__padding} / 4);
             @media #{$clone__tablet-portrait} {
-                padding-left: calc(#{$clone__padding} / 4);
+                padding-left: calc((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-left: calc((#{$clone__padding} * 1.5) / 4);
+                padding-left: calc(((#{$clone__padding} / 4) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="left(half)"] {
-            padding-left: calc((#{$clone__padding} / 2) / 2);
+            padding-left: calc(#{$clone__padding} / 2);
             @media #{$clone__tablet-portrait} {
-                padding-left: calc(#{$clone__padding} / 2);
+                padding-left: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-left: calc((#{$clone__padding} * 1.5) / 2);
+                padding-left: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="left(double)"] {
-            padding-left: $clone__padding;
+            padding-left: calc(#{$clone__padding} * 2);
             @media #{$clone__tablet-portrait} {
-                padding-left: calc(#{$clone__padding} * 2);
+                padding-left: calc((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-left: calc((#{$clone__padding} * 2) * 1.5);
+                padding-left: calc(((#{$clone__padding} * 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 
         [data-clone-padding*="left(triple)"] {
-            padding-left: calc(#{$clone__padding} * 2);
+            padding-left: calc(#{$clone__padding} * 3);
             @media #{$clone__tablet-portrait} {
-                padding-left: calc(#{$clone__padding} * 3);
+                padding-left: calc((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier});
             }
             @media #{$clone__desktop-large} {
-                padding-left: calc((#{$clone__padding} * 3) * 1.5);
+                padding-left: calc(((#{$clone__padding} * 3) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
             }
         }
 

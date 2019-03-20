@@ -20,15 +20,15 @@ form {
                 display: none;
                 font-size: $clone__font-scale--small;
                 position: absolute;
-                top: calc((#{$clone__grid-gutter} / 2) / 2);
-                right: calc((#{$clone__grid-gutter} / 2) / 2);
+                top: calc(#{$clone__padding} / 2);
+                right: calc(#{$clone__padding} / 2);
                 @media #{$clone__tablet-portrait} {
-                    top: calc(#{$clone__grid-gutter} / 2);
-                    right: calc(#{$clone__grid-gutter} / 2);
+                    top: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+                    right: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
                 }
                 @media #{$clone__desktop-large} {
-                    top: calc((#{$clone__grid-gutter} * 1.5) / 2);
-                    right: calc((#{$clone__grid-gutter} * 1.5) / 2);
+                    top: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                    right: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
                 }
             }
             &:last-of-type {
@@ -36,14 +36,15 @@ form {
                 display: none;
                 font-size: $clone__font-scale--small;
                 position: absolute;
-                bottom: 0;
-                transform: translate(0, -100%);
-                left: calc((#{$clone__grid-gutter} / 2) / 2);
+                bottom: calc(#{$clone__padding} / 2);
+                left: calc(#{$clone__padding} / 2);
                 @media #{$clone__tablet-portrait} {
-                    left: calc(#{$clone__grid-gutter} / 2);
+                    bottom: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+                    left: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
                 }
                 @media #{$clone__desktop-large} {
-                    left: calc((#{$clone__grid-gutter} * 1.5) / 2);
+                    bottom: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                    left: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
                 }
             }
         }
@@ -54,9 +55,15 @@ form {
                 border-radius: 5px;
                 display: block;
                 outline: none;
-                padding: 1rem 1.5rem;
                 transition: all .2s ease;
                 width: 100%;
+                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+                @media #{$clone__tablet-portrait} {
+                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+                }
+                @media #{$clone__desktop-large} {
+                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                }
                 &:focus {
                     box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
                     transition: all .2s ease;
@@ -70,9 +77,15 @@ form {
                 max-width: 100%;
                 min-height: 10rem;
                 min-width: 100%;
-                padding: 1rem 1.5rem;
                 transition: all .2s ease;
                 width: 100%;
+                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+                @media #{$clone__tablet-portrait} {
+                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+                }
+                @media #{$clone__desktop-large} {
+                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                }
                 &:focus {
                     box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
                     transition: all .2s ease;
@@ -106,7 +119,13 @@ form {
             border: 1px solid $clone__gray;
             border-radius: 5px;
             margin-top: .5rem;
-            padding: 1rem 1.5rem;
+            padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+            @media #{$clone__tablet-portrait} {
+                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+            }
+            @media #{$clone__desktop-large} {
+                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+            }
             label {
                 display: block;
                 margin: 0 !important;
@@ -114,20 +133,29 @@ form {
                 padding-bottom: .25rem !important;
                 input {
                     display: inline-block;
-                    margin: 0;
+                    margin-top: .4rem;
                     width: auto;
+                    vertical-align: top;
                 }
                 span {
                     display: inline-block;
                     font-size: $clone__font-scale--regular;
-                    margin: 0 0 0 .5rem;
+                    margin: 0;
+                    max-width: 90%;
+                    padding-left: .5rem;
                 }
             }
         }
     }
     [data-clone-input="date"] {
         >div >input {
-            padding: calc(1rem - 1.5px) calc(1.5rem - 1.5px);
+            padding: calc((#{$clone__padding} / 2) - 1px) calc(#{$clone__padding} - 1px);
+            @media #{$clone__tablet-portrait} {
+                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) - 1px) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) - 1px);
+            }
+            @media #{$clone__desktop-large} {
+                padding: calc((((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) - 1px) calc(((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) - 1px);
+            }
         }
     }
     [data-clone-input="dropdown"],
@@ -149,8 +177,14 @@ form {
                 display: block;
                 outline: none;
                 margin-bottom: 1.4rem;
-                padding: 1rem 3rem 1rem 1.5rem;
                 width: 100%;
+                padding: calc(#{$clone__padding} / 2) 3rem calc(#{$clone__padding} / 2) #{$clone__padding};
+                @media #{$clone__tablet-portrait} {
+                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) 3rem calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+                }
+                @media #{$clone__desktop-large} {
+                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) 3rem calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                }
                 &:focus {
                     border: 1px solid $clone__c1;
                 }
@@ -161,7 +195,7 @@ form {
         >div {
             position: relative;
             input {
-                padding: 1rem 3rem 1rem 1.5rem;
+                padding-right: 3rem;
             }
             button {
                 appearance: none;
@@ -199,7 +233,13 @@ form {
             border-radius: 5px;
             margin-top: .5rem;
             margin-bottom: 1.5rem;
-            padding: 1rem 1.5rem;
+            padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+            @media #{$clone__tablet-portrait} {
+                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+            }
+            @media #{$clone__desktop-large} {
+                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+            }
             label {
                 display: block;
                 margin: 0 !important;
@@ -207,13 +247,16 @@ form {
                 padding-bottom: .25rem !important;
                 input {
                     display: inline-block;
-                    margin: 0;
+                    margin-top: .4rem;
                     width: auto;
+                    vertical-align: top;
                 }
                 span {
                     display: inline-block;
                     font-size: $clone__font-scale--regular;
-                    margin: 0 0 0 .5rem;
+                    margin: 0;
+                    max-width: 90%;
+                    padding-left: .5rem;
                 }
             }
         }
@@ -229,8 +272,13 @@ form {
                 border-radius: 0 5px 5px 0;
                 display: block;
                 outline: none;
-                // margin-bottom: 1.5rem;
-                padding: 1rem 1.5rem;
+                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
+                @media #{$clone__tablet-portrait} {
+                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+                }
+                @media #{$clone__desktop-large} {
+                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                }
             }
         }
     }

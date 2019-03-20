@@ -63,6 +63,8 @@
                         $(trigger).attr("aria-expanded", "true");
                         $(trigger).parent(object).addClass("active");
                         $(trigger).parent(object).find(content).attr("aria-hidden", "false");
+                        var focusableItems = $(trigger).siblings(content).find(":focusable");
+                        focusableItems.first().focus();
                     }
                 }
 
@@ -157,88 +159,100 @@
                 });
 
             // Dialogue Handlers ===============================================
-            function dialogueTrigger(trigger) {
 
-                var dialogueID = $(trigger).attr("data-clone-dialog-id");
-                var dialogue = $(clone("dialog") + "[data-clone-dialog-id='" + dialogueID +"']");
-                var overlay = $(clone("dialog-overlay"));
-                var focusableItems = $(dialogue).find(":focusable");
-
-                if($(dialogue).attr("data-clone-dialog") != "") {
-                    $("body").css("overflow", "visible");
-                    $(overlay).attr("data-clone-dialog-overlay", "");
-                    $(dialogue).attr("data-clone-dialog", "");
-                    $(dialogue).attr("aria-hidden", "true");
-                    $(focusableItems).each(function() {
-                        $(this).attr("tabindex", "-1");
-                    });
-                    $(clone("dialog-ancestor")).focus();
-                }
-                else {
-                    $("*").removeAttr("data-clone-dialog-ancestor");
-                    $(trigger).attr("data-clone-dialog-ancestor", "");
-                    $("body").css("overflow", "hidden");
-                    $(focusableItems).each(function() {
-                        $(this).attr("tabindex", "0");
-                    });
-                    $(overlay).attr("data-clone-dialog-overlay", "active");
-                    $(dialogue).attr("aria-hidden", "false");
-
-                    dialogueSizing(dialogue);
-
-                    var firstInput = focusableItems.first();
-                    var lastInput = focusableItems.last();
-
-                    if (dialogue.find("form").length == 0) {
-                        lastInput.focus();
-                    }
-                    else {
-                        firstInput.focus();
-                    }
-
-                    dialogueTabbing(firstInput, lastInput);
-                    dialogueEscape();
-                }
-            }
-
-            function dialogueSizing(dialogue) {
-                var viewportHeight = $(window).height();
-                if (dialogue != null) {
-                    var dialogueHeight = $(dialogue).find(">div").height();
-                    if (dialogueHeight > viewportHeight) {
-                        $(dialogue).attr("data-clone-dialog", "active--overflowing");
-                    }
-                    else {
-                        $(dialogue).attr("data-clone-dialog", "active--contained");
-                    }
-                }
-                else {
+                // Dialog Tabindex on Pageload ---------------------------------
+                function dialogTabIndex() {
                     $(clone("dialog")).each(function() {
-                        if ($(this).attr("data-clone-dialog") == false){
-                            return false;
+                        $(this).find(":focusable").attr("tabindex", "-1");
+                    });
+                }
+
+                dialogTabIndex();
+
+                // Dialog Triger -----------------------------------------------
+                function dialogueTrigger(trigger) {
+
+                    var dialogueID = $(trigger).attr("data-clone-dialog-id");
+                    var dialogue = $(clone("dialog") + "[data-clone-dialog-id='" + dialogueID +"']");
+                    var overlay = $(clone("dialog-overlay"));
+                    var focusableItems = $(dialogue).find(":focusable");
+
+                    if($(dialogue).attr("data-clone-dialog") != "") {
+                        $("body").css("overflow", "visible");
+                        $(overlay).attr("data-clone-dialog-overlay", "");
+                        $(dialogue).attr("data-clone-dialog", "");
+                        $(dialogue).attr("aria-hidden", "true");
+                        $(focusableItems).each(function() {
+                            $(this).attr("tabindex", "-1");
+                        });
+                        $(clone("dialog-ancestor")).focus();
+                    }
+                    else {
+                        $("*").removeAttr("data-clone-dialog-ancestor");
+                        $(trigger).attr("data-clone-dialog-ancestor", "");
+                        $("body").css("overflow", "hidden");
+                        $(focusableItems).each(function() {
+                            $(this).attr("tabindex", "0");
+                        });
+                        $(overlay).attr("data-clone-dialog-overlay", "active");
+                        $(dialogue).attr("aria-hidden", "false");
+
+                        dialogueSizing(dialogue);
+
+                        var firstInput = focusableItems.first();
+                        var lastInput = focusableItems.last();
+
+                        if (dialogue.find("form").length == 0) {
+                            lastInput.focus();
                         }
                         else {
-                            var dialogueHeight = $(this).find(">div").height();
-                            if (dialogueHeight > viewportHeight) {
-                                $(this).attr("data-clone-dialog", "active--overflowing");
+                            firstInput.focus();
+                        }
+
+                        dialogueTabbing(firstInput, lastInput);
+                        dialogueEscape();
+                    }
+                }
+
+                // Dialog Sizing -----------------------------------------------
+                function dialogueSizing(dialogue) {
+                    var viewportHeight = $(window).height();
+                    if (dialogue != null) {
+                        var dialogueHeight = $(dialogue).find(">div").height();
+                        if (dialogueHeight > viewportHeight) {
+                            $(dialogue).attr("data-clone-dialog", "active--overflowing");
+                        }
+                        else {
+                            $(dialogue).attr("data-clone-dialog", "active--contained");
+                        }
+                    }
+                    else {
+                        $(clone("dialog")).each(function() {
+                            if ($(this).attr("data-clone-dialog") == false){
+                                return false;
                             }
                             else {
-                                $(this).attr("data-clone-dialog", "active--contained");
+                                var dialogueHeight = $(this).find(">div").height();
+                                if (dialogueHeight > viewportHeight) {
+                                    $(this).attr("data-clone-dialog", "active--overflowing");
+                                }
+                                else {
+                                    $(this).attr("data-clone-dialog", "active--contained");
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
                 }
-            }
 
-            $(document).on("click", "button[data-clone-dialog-id]", function(e) {
-                e.preventDefault();
-                dialogueTrigger(this);
-            });
+                $(document).on("click", "button[data-clone-dialog-id]", function(e) {
+                    e.preventDefault();
+                    dialogueTrigger(this);
+                });
 
-            $(window).resize(function(e) {
-                e.preventDefault();
-                dialogueSizing();
-            });
+                $(window).resize(function(e) {
+                    e.preventDefault();
+                    dialogueSizing();
+                });
 
                 // Tab Handler -------------------------------------------------
                 function dialogueTabbing(first, last) {

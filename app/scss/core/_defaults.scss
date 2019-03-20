@@ -16,8 +16,10 @@ $clone__font-scale: 1.333 !default;
 
 $clone__line-height: 1.5 !default;
 
-$clone__margin: 2rem !default;
-$clone__padding: 2rem !default;
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone__margin: 1rem !default;
+$clone__padding: 1rem !default;
+$clone__whitespace-multiplier: 1.25 !default;
 
 $clone__grid-columns: 12 !default;
 $clone__grid-gutter: $clone__padding !default;
