@@ -15,8 +15,8 @@
     }
 
     ::selection {
-        background: $clone__black;
-        color: $clone__white;
+        background: $clone__selection-background-colour !important;
+        color: contrasting-color($clone__selection-background-colour, $clone__white, $clone__black) !important;
     }
 
 // Font Scale ==================================================================
@@ -40,12 +40,6 @@
     $clone__font-scale--h5: $clone__font-scale--regular;
     $clone__font-scale--small: calc(1rem/(#{$clone__font-scale}));
 
-// Headings ====================================================================
-
-    [class*="clone__heading--"] {
-        display: block;
-    }
-
 // Copy & Misc =================================================================
 
     a {
@@ -54,4 +48,11 @@
         font-size: inherit;
         font-weight: inherit;
         text-decoration: underline;
+        transition: color .2s ease;
+
+        &:hover {
+            color: $clone__hover-colour !important;
+            transition: color .2s ease;
+        }
+
     }

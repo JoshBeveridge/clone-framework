@@ -1,7 +1,7 @@
 {
   "name": "clone-framework",
-  "version": "2.1.4",
-  "description": "A lightweight, themeable design system.",
+  "version": "2.1.5",
+  "description": "A data-attribute-based themeable design system.",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
