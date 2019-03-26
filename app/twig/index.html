@@ -45,7 +45,7 @@
         <link async rel="stylesheet" href="css/clone.css">
         <!--endbuild-->
 
-        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- <script>hljs.initHighlightingOnLoad();</script> -->
 
     </head>
 
@@ -789,7 +789,7 @@
             </div>
 
             <!-- Skip-to-content Links ------------------------------------- -->
-            <div class="">
+            <div data-clone-padding="bottom(double)">
                 <h3
                     data-clone-font-size="h3"
                     data-clone-margin="bottom">
@@ -799,6 +799,16 @@
                 {% include "components/skip-to-content.html" %}
             </div>
 
+            <!-- Tables ==================================================== -->
+            <div>
+                <h3
+                    data-clone-font-size="h3"
+                    data-clone-margin="bottom">
+                    Tables
+                </h3>
+                {% include "components/table.html" %}
+            </div>
+
             <!-- Tags ====================================================== -->
             <!--<div class="">
                 <h3 class="heading--03 margin-bottom">Tags</h3>
@@ -806,11 +816,7 @@
 
         </div>
 
-        <!--build:js js/app.min.js-->
-        <script src="js/slick.min.js"></script>
-        <!--endbuild-->
-
-        <!--build:js js/app.min.js-->
+        <!--build:js js/clone.min.js-->
         <script src="js/clone.js"></script>
         <!--endbuild-->
 

@@ -1,0 +1,46 @@
+// =============================================================================
+
+    // Clone
+    // Tables
+
+// =============================================================================
+[data-clone-table] {
+    overflow: auto;
+    width: 100%;
+    table {
+        border: 1px solid $clone__black;
+        border-collapse: collapse;
+        min-width: 40rem;
+        text-align: left;
+        @media #{$clone__tablet-landscape} {
+            min-width: 100%;
+        }
+        thead {
+            border-bottom: 1px solid $clone__black;
+            tr {
+                th {
+                    background: $clone__table-heading-colour;
+                    color: contrasting-color($clone__table-heading-colour, $clone__white, $clone__black);
+                    padding: #{$clone__padding};
+                }
+                td {
+                    padding: #{$clone__padding};
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background: rgba(0, 0, 0, .1);
+                }
+                th {
+                    background: rgba(0, 0, 0, .1);
+                    padding: #{$clone__padding};
+                }
+                td {
+                    padding: #{$clone__padding};
+                }
+            }
+        }
+    }
+}
