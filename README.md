@@ -43,11 +43,11 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
-Stable Release: 2.1.6
+Stable Release: 2.1.7
 
-CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.6/dist/css/system.min.css
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.7/dist/css/clone.min.css
 
-JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.6/dist/js/app.min.js
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.7/dist/js/clone.min.js
 
 ### Usage
 
