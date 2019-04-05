@@ -29,10 +29,10 @@
 
 // Alignment ===================================================================
 
-    [data-clone-alignment="center"],
-    [data-clone-alignment="centre"] {text-align: center;}
-    [data-clone-alignment="right"] {text-align: right;}
-    [data-clone-alignment="left"] {text-align: left;}
+    [data-c-alignment="center"],
+    [data-c-alignment="centre"] {text-align: center;}
+    [data-c-alignment="right"] {text-align: right;}
+    [data-c-alignment="left"] {text-align: left;}
 
     $clone-alignment-map: (
         "left": left,
@@ -42,55 +42,55 @@
     );
 
     @each $key, $value in $clone-alignment-map {
-        [data-clone-alignment*="base(#{$key})"] {
+        [data-c-alignment*="base(#{$key})"] {
             text-align: $value;
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__phone-portrait} {
-            [data-clone-alignment*="pp(#{$key})"] {
+        @media #{$clone-phone-portrait} {
+            [data-c-alignment*="pp(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__phone-landscape} {
-            [data-clone-alignment*="pl(#{$key})"] {
+        @media #{$clone-phone-landscape} {
+            [data-c-alignment*="pl(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__tablet-portrait} {
-            [data-clone-alignment*="tp(#{$key})"] {
+        @media #{$clone-tablet-portrait} {
+            [data-c-alignment*="tp(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__tablet-landscape} {
-            [data-clone-alignment*="tl(#{$key})"] {
+        @media #{$clone-tablet-landscape} {
+            [data-c-alignment*="tl(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__desktop-small} {
-            [data-clone-alignment*="ds(#{$key})"] {
+        @media #{$clone-desktop-small} {
+            [data-c-alignment*="ds(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__desktop-medium} {
-            [data-clone-alignment*="dm(#{$key})"] {
+        @media #{$clone-desktop-medium} {
+            [data-c-alignment*="dm(#{$key})"] {
                 text-align: $value;
             }
         }
     }
     @each $key, $value in $clone-alignment-map {
-        @media #{$clone__desktop-large} {
-            [data-clone-alignment*="dl(#{$key})"] {
+        @media #{$clone-desktop-large} {
+            [data-c-alignment*="dl(#{$key})"] {
                 text-align: $value;
             }
         }
@@ -98,7 +98,7 @@
 
 // a11y ========================================================================
 
-    [data-clone-visibility="invisible"] {
+    [data-c-visibility="invisible"] {
         height: 1px;
         overflow: hidden;
         position: absolute;
@@ -107,7 +107,7 @@
         width: 1px;
     }
 
-    [data-clone-visibility="hidden"] {
+    [data-c-visibility="hidden"] {
         display: none;
         visibility: hidden;
     }
@@ -115,17 +115,17 @@
 // Backgrounds =================================================================
 
     $clone-colour-map: (
-        "white": $clone__white,
-        "grey": $clone__grey,
-        "black": $clone__black,
-        "go": $clone__go,
-        "slow": $clone__slow,
-        "stop": $clone__stop,
-        "c1": $clone__c1,
-        "c2": $clone__c2,
-        "c3": $clone__c3,
-        "c4": $clone__c4,
-        "c5": $clone__c5
+        "white": $clone-white,
+        "grey": $clone-grey,
+        "black": $clone-black,
+        "go": $clone-go,
+        "slow": $clone-slow,
+        "stop": $clone-stop,
+        "c1": $clone-c1,
+        "c2": $clone-c2,
+        "c3": $clone-c3,
+        "c4": $clone-c4,
+        "c5": $clone-c5
     );
 
     $clone-opacity-list: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
@@ -133,7 +133,7 @@
     @each $key, $value in $clone-colour-map {
         @each $alpha in $clone-opacity-list {
             $newValue: unquote($key)+"("+$alpha+")";
-            [data-clone-background="#{$newValue}"] {
+            [data-c-background="#{$newValue}"] {
                 $decimal: $alpha / 100;
                 background: rgba($value, $decimal)
             }
@@ -148,7 +148,7 @@
     @each $style in $clone-border-style-list {
         @each $width in $clone-border-width-list {
             @each $key, $value in $clone-colour-map {
-                &[data-clone-border*="all(#{$width}, #{$style}, #{$key})"] {
+                &[data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
                     border-color: $value;
                     border-style: unquote($style);
                     @if ($width == "thin") {
@@ -160,7 +160,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-clone-border*="top(#{$width}, #{$style}, #{$key})"] {
+                &[data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
                     border-top-color: $value;
                     border-top-style: unquote($style);
                     @if ($width == "thin") {
@@ -172,7 +172,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-clone-border*="right(#{$width}, #{$style}, #{$key})"] {
+                &[data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
                     border-right-color: $value;
                     border-right-style: unquote($style);
                     @if ($width == "thin") {
@@ -184,7 +184,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-clone-border*="bottom(#{$width}, #{$style}, #{$key})"] {
+                &[data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
                     border-bottom-color: $value;
                     border-bottom-style: unquote($style);
                     @if ($width == "thin") {
@@ -196,7 +196,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-clone-border*="left(#{$width}, #{$style}, #{$key})"] {
+                &[data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
                     border-left-color: $value;
                     border-left-style: unquote($style);
                     @if ($width == "thin") {
@@ -210,26 +210,26 @@
         };
     };
 
-    [data-clone-radius="rounded"] {
+    [data-c-radius="rounded"] {
         border-radius: 5px;
         overflow: hidden;
     }
 
-    [data-clone-radius="pill"] {
+    [data-c-radius="pill"] {
         border-radius: 20rem;
         overflow: hidden;
     }
 
-    .clone__shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
+    .clone-shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
 
 // Containers ==================================================================
 
-    [data-clone-container="layout"] {
+    [data-c-container="layout"] {
         margin: 0 auto;
         max-width: 80rem;
         width: 90%;
     }
-    [data-clone-container="copy"] {
+    [data-c-container="copy"] {
         margin: 0 auto;
         max-width: 39rem;
         width: 90%;
@@ -237,20 +237,20 @@
 
 // Fonts =======================================================================
 
-    [data-clone-font="sans"] {font-family: $clone__font--sans;}
-    [data-clone-font="serif"] {font-family: $clone__font--serif;}
-    [data-clone-font="script"] {font-family: $clone__font--script;}
-    [data-clone-font="mono"] {font-family: $clone__font--monospace;}
+    [data-c-font="sans"] {font-family: $clone-font--sans;}
+    [data-c-font="serif"] {font-family: $clone-font--serif;}
+    [data-c-font="script"] {font-family: $clone-font--script;}
+    [data-c-font="mono"] {font-family: $clone-font--monospace;}
 
     // Font Colour -------------------------------------------------------------
 
         @each $key, $value in $clone-colour-map {
-            [data-clone-font-colour="#{$key}"] {color: $value;}
-            [data-clone-font-colour="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-clone-font-colour="#{$key}--dark"] {color: darken($value, 10%);}
-            [data-clone-font-color="#{$key}"] {color: $value;}
-            [data-clone-font-color="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-clone-font-color="#{$key}--dark"] {color: darken($value, 10%);}
+            [data-c-font-colour="#{$key}"] {color: $value;}
+            [data-c-font-colour="#{$key}--light"] {color: lighten($value, 10%);}
+            [data-c-font-colour="#{$key}--dark"] {color: darken($value, 10%);}
+            [data-c-font-color="#{$key}"] {color: $value;}
+            [data-c-font-color="#{$key}--light"] {color: lighten($value, 10%);}
+            [data-c-font-color="#{$key}--dark"] {color: darken($value, 10%);}
         };
 
     // Font Weights ------------------------------------------------------------
@@ -270,68 +270,68 @@
         );
 
         @each $key, $value in $clone-weight-map {
-            [data-clone-font-weight="#{$key}"] {font-weight: $value;}
+            [data-c-font-weight="#{$key}"] {font-weight: $value;}
         };
 
     // Font Sizes --------------------------------------------------------------
 
-        // [data-clone-font-size] {display: block;}
+        // [data-c-font-size] {display: block;}
 
-        [data-clone-font-size="h1"] {font-size: $clone__font-scale--h1;}
-        [data-clone-font-size="h2"] {font-size: $clone__font-scale--h2;}
-        [data-clone-font-size="h3"] {font-size: $clone__font-scale--h3;}
-        [data-clone-font-size="h4"] {font-size: $clone__font-scale--h4;}
-        [data-clone-font-size="h5"] {font-size: $clone__font-scale--h5;}
-        [data-clone-font-size="small"] {font-size: $clone__font-scale--small;}
+        [data-c-font-size="h1"] {font-size: $clone-font-scale--h1;}
+        [data-c-font-size="h2"] {font-size: $clone-font-scale--h2;}
+        [data-c-font-size="h3"] {font-size: $clone-font-scale--h3;}
+        [data-c-font-size="h4"] {font-size: $clone-font-scale--h4;}
+        [data-c-font-size="h5"] {font-size: $clone-font-scale--h5;}
+        [data-c-font-size="small"] {font-size: $clone-font-scale--small;}
 
     // Font Styles -------------------------------------------------------------
 
-        [data-clone-font-style="italic"] {font-style: italic;}
+        [data-c-font-style="italic"] {font-style: italic;}
 
 // Functions ===================================================================
 
-    @function sqrt ($clone__r) {
-        $clone__x0: 1;
-        $clone__x1: $clone__x0;
+    @function sqrt ($clone-r) {
+        $clone-x0: 1;
+        $clone-x1: $clone-x0;
 
-        @for $clone__i from 1 through 10 {
-            $clone__x1: $clone__x0 - ($clone__x0 * $clone__x0 - abs($clone__r)) / (2 * $clone__x0);
-            $clone__x0: $clone__x1;
+        @for $clone-i from 1 through 10 {
+            $clone-x1: $clone-x0 - ($clone-x0 * $clone-x0 - abs($clone-r)) / (2 * $clone-x0);
+            $clone-x0: $clone-x1;
         }
 
-        @return $clone__x1;
+        @return $clone-x1;
     }
 
-    $clone__red-magic-number: 241;
-    $clone__green-magic-number: 691;
-    $clone__blue-magic-number: 68;
-    $clone__brightness-divisor: $clone__red-magic-number + $clone__green-magic-number + $clone__blue-magic-number;
+    $clone-red-magic-number: 241;
+    $clone-green-magic-number: 691;
+    $clone-blue-magic-number: 68;
+    $clone-brightness-divisor: $clone-red-magic-number + $clone-green-magic-number + $clone-blue-magic-number;
 
-    @function brightness($clone__color) {
+    @function brightness($clone-color) {
         // Extract color components
-        $clone__red-component: red($clone__color);
-        $clone__green-component: green($clone__color);
-        $clone__blue-component: blue($clone__color);
+        $clone-red-component: red($clone-color);
+        $clone-green-component: green($clone-color);
+        $clone-blue-component: blue($clone-color);
 
         // Calculate a brightness value in 3d color space between 0 and 255
-        $clone__number: sqrt((($clone__red-component * $clone__red-component * $clone__red-magic-number) + ($clone__green-component * $clone__green-component * $clone__green-magic-number) + ($clone__blue-component * $clone__blue-component * $clone__blue-magic-number)) / $clone__brightness-divisor);
+        $clone-number: sqrt((($clone-red-component * $clone-red-component * $clone-red-magic-number) + ($clone-green-component * $clone-green-component * $clone-green-magic-number) + ($clone-blue-component * $clone-blue-component * $clone-blue-magic-number)) / $clone-brightness-divisor);
 
         // Convert to percentage and return
-        @return 100% * $clone__number / 255;
+        @return 100% * $clone-number / 255;
     }
 
-    @function contrasting-color($clone__color, $clone__light, $clone__dark) {
-        @if brightness($clone__color) < 65% {
-            @return $clone__light;
+    @function contrasting-color($clone-color, $clone-light, $clone-dark) {
+        @if brightness($clone-color) < 65% {
+            @return $clone-light;
         } @else {
-            @return $clone__dark;
+            @return $clone-dark;
         }
     }
 
 // Whitespace ==================================================================
 
-    [data-clone-margin],
-    [data-clone-padding] {
+    [data-c-margin],
+    [data-c-padding] {
         display: block;
     }
 
@@ -348,32 +348,32 @@
         "half": "/ 2",
         "double": "* 2",
         "triple": "* 3"
-        );
+    );
 
     // Margins -----------------------------------------------------------------
 
-        // Shorthand ([data-clone-margin=normal]) ------------------------------
+        // Shorthand ([data-c-margin=normal]) ------------------------------
         @each $wKey, $wValue in $clone-whitespace-map {
-            [data-clone-margin="#{$wKey}"] {
-                margin: calc(#{$clone__margin} #{$wValue});
-                @media #{$clone__tablet-portrait} {
-                    margin: calc((#{$clone__margin} #{$wValue}) * #{$clone__whitespace-multiplier});
+            [data-c-margin="#{$wKey}"] {
+                margin: calc(#{$clone-margin} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
                 }
-                @media #{$clone__desktop-large} {
-                    margin: calc(((#{$clone__margin} #{$wValue}) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                @media #{$clone-desktop-large} {
+                    margin: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                 }
             }
         }
 
-        // Shorthand ([data-clone-margin=top]) ---------------------------------
+        // Shorthand ([data-c-margin=top]) ---------------------------------
         @each $oKey, $oValue in $clone-orientation-map {
-            [data-clone-margin="#{$oKey}"] {
-                margin#{$oValue}: calc(#{$clone__margin});
-                @media #{$clone__tablet-portrait} {
-                    margin#{$oValue}: calc(#{$clone__margin} * #{$clone__whitespace-multiplier});
+            [data-c-margin="#{$oKey}"] {
+                margin#{$oValue}: calc(#{$clone-margin});
+                @media #{$clone-tablet-portrait} {
+                    margin#{$oValue}: calc(#{$clone-margin} * #{$clone-whitespace-multiplier});
                 }
-                @media #{$clone__desktop-large} {
-                    margin#{$oValue}: calc((#{$clone__margin} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                @media #{$clone-desktop-large} {
+                    margin#{$oValue}: calc((#{$clone-margin} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                 }
             }
         }
@@ -381,13 +381,13 @@
         // Margin Syntax -------------------------------------------------------
         @each $oKey, $oValue in $clone-orientation-map {
             @each $wKey, $wValue in $clone-whitespace-map {
-                [data-clone-margin*="#{$oKey}(#{$wKey})"] {
-                    margin#{$oValue}: calc(#{$clone__margin} #{$wValue});
-                    @media #{$clone__tablet-portrait} {
-                        margin#{$oValue}: calc((#{$clone__margin} #{$wValue}) * #{$clone__whitespace-multiplier});
+                [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                    margin#{$oValue}: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
                     }
-                    @media #{$clone__desktop-large} {
-                        margin#{$oValue}: calc(((#{$clone__margin} #{$wValue}) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                     }
                 }
             }
@@ -395,28 +395,28 @@
 
     // Padding -----------------------------------------------------------------
 
-        // Shorthand ([data-clone-padding=normal]) -----------------------------
+        // Shorthand ([data-c-padding=normal]) -----------------------------
         @each $wKey, $wValue in $clone-whitespace-map {
-            [data-clone-padding="#{$wKey}"] {
-                padding: calc(#{$clone__padding} #{$wValue});
-                @media #{$clone__tablet-portrait} {
-                    padding: calc((#{$clone__padding} #{$wValue}) * #{$clone__whitespace-multiplier});
+            [data-c-padding="#{$wKey}"] {
+                padding: calc(#{$clone-padding} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
                 }
-                @media #{$clone__desktop-large} {
-                    padding: calc(((#{$clone__padding} #{$wValue}) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                 }
             }
         }
 
-        // Shorthand ([data-clone-padding=top]) --------------------------------
+        // Shorthand ([data-c-padding=top]) --------------------------------
         @each $oKey, $oValue in $clone-orientation-map {
-            [data-clone-padding="#{$oKey}"] {
-                padding#{$oValue}: calc(#{$clone__padding});
-                @media #{$clone__tablet-portrait} {
-                    padding#{$oValue}: calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+            [data-c-padding="#{$oKey}"] {
+                padding#{$oValue}: calc(#{$clone-padding});
+                @media #{$clone-tablet-portrait} {
+                    padding#{$oValue}: calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
                 }
-                @media #{$clone__desktop-large} {
-                    padding#{$oValue}: calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                @media #{$clone-desktop-large} {
+                    padding#{$oValue}: calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                 }
             }
         }
@@ -424,13 +424,13 @@
         // Padding Syntax ------------------------------------------------------
         @each $oKey, $oValue in $clone-orientation-map {
             @each $wKey, $wValue in $clone-whitespace-map {
-                [data-clone-padding*="#{$oKey}(#{$wKey})"] {
-                    padding#{$oValue}: calc(#{$clone__padding} #{$wValue});
-                    @media #{$clone__tablet-portrait} {
-                        padding#{$oValue}: calc((#{$clone__padding} #{$wValue}) * #{$clone__whitespace-multiplier});
+                [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                    padding#{$oValue}: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
                     }
-                    @media #{$clone__desktop-large} {
-                        padding#{$oValue}: calc(((#{$clone__padding} #{$wValue}) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
                     }
                 }
             }
@@ -441,7 +441,7 @@
     @each $key, $value in $clone-colour-map {
         @each $alpha in $clone-opacity-list {
             $newValue: unquote($key)+"("+$alpha+")";
-            [data-clone-overlay="#{$newValue}"] {
+            [data-c-overlay="#{$newValue}"] {
                 position: relative;
                 &::before {
                     $decimal: $alpha / 100;

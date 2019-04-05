@@ -5,72 +5,74 @@
 
 // =============================================================================
 
-$clone__font--sans: "Open Sans", sans-serif !default;
-$clone__font--serif: serif !default;
-$clone__font--script: "Euphoria Script", cursive !default;
-$clone__font--monospace: "Consolas", mono-space !default;
+$clone-font--sans: "Open Sans", sans-serif !default;
+$clone-font--serif: serif !default;
+$clone-font--script: "Euphoria Script", cursive !default;
+$clone-font--monospace: "Consolas", mono-space !default;
 
-$clone__font-default: $clone__font--sans !default;
+$clone-font-default: $clone-font--sans !default;
 
-$clone__font-scale: 1.333 !default;
+$clone-font-scale: 1.333 !default;
 
-$clone__line-height: 1.5 !default;
+$clone-line-height: 1.5 !default;
 
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
-$clone__margin: 1rem !default;
-$clone__padding: 1rem !default;
-$clone__whitespace-multiplier: 1.25 !default;
+$clone-margin: 1rem !default;
+$clone-padding: 1rem !default;
+$clone-whitespace-multiplier: 1.25 !default;
 
-$clone__grid-columns: 12 !default;
-$clone__grid-gutter: $clone__padding !default;
+$clone-grid-columns: 12 !default;
+$clone-grid-gutter: $clone-padding !default;
 
-$clone__white: #FFFFFF !default;
-$clone__black: #333333 !default;
+$clone-white: #FFFFFF !default;
+$clone-black: #333333 !default;
 
-$clone__go: green !default;
-$clone__slow: orange !default;
-$clone__stop: red !default;
+$clone-go: green !default;
+$clone-slow: orange !default;
+$clone-stop: red !default;
 
-$clone__grey: gray !default;
-$clone__grey--light: lighten($clone__grey, 10%) !default;
-$clone__grey--dark: darken($clone__grey, 10%) !default;
+$clone-grey: gray !default;
+$clone-grey--light: lighten($clone-grey, 10%) !default;
+$clone-grey--dark: darken($clone-grey, 10%) !default;
 
-$clone__gray: $clone__grey;
-$clone__gray--light: $clone__grey--light;
-$clone__gray--dark: $clone__grey--dark;
+$clone-gray: $clone-grey;
+$clone-gray--light: $clone-grey--light;
+$clone-gray--dark: $clone-grey--dark;
 
-$clone__c1: #5B1647 !default;
-$clone__c1--light: lighten($clone__c1, 10%) !default;
-$clone__c1--dark: darken($clone__c1, 10%) !default;
+$clone-c1: #5B1647 !default;
+$clone-c1--light: lighten($clone-c1, 10%) !default;
+$clone-c1--dark: darken($clone-c1, 10%) !default;
 
-$clone__c2: #96043E !default;
-$clone__c2--light: lighten($clone__c2, 10%) !default;
-$clone__c2--dark: darken($clone__c2, 10%) !default;
+$clone-c2: #96043E !default;
+$clone-c2--light: lighten($clone-c2, 10%) !default;
+$clone-c2--dark: darken($clone-c2, 10%) !default;
 
-$clone__c3: #C90035 !default;
-$clone__c3--light: lighten($clone__c3, 10%) !default;
-$clone__c3--dark: darken($clone__c3, 10%) !default;
+$clone-c3: #C90035 !default;
+$clone-c3--light: lighten($clone-c3, 10%) !default;
+$clone-c3--dark: darken($clone-c3, 10%) !default;
 
-$clone__c4: blue !default;
-$clone__c4--light: lighten($clone__c4, 10%) !default;
-$clone__c4--dark: darken($clone__c4, 10%) !default;
+$clone-c4: blue !default;
+$clone-c4--light: lighten($clone-c4, 10%) !default;
+$clone-c4--dark: darken($clone-c4, 10%) !default;
 
-$clone__c5: purple !default;
-$clone__c5--light: lighten($clone__c5, 10%) !default;
-$clone__c5--dark: darken($clone__c5, 10%) !default;
+$clone-c5: purple !default;
+$clone-c5--light: lighten($clone-c5, 10%) !default;
+$clone-c5--dark: darken($clone-c5, 10%) !default;
 
-$clone__hover-colour: teal !default;
+$clone-default-font-colour: $clone-black !default;
 
-$clone__focus-colour: $clone__hover-colour !default;
+$clone-hover-colour: teal !default;
 
-$clone__selection-background-colour: $clone__c5 !default;
+$clone-focus-colour: $clone-hover-colour !default;
 
-$clone__table-heading-colour: $clone__c1 !default;
+$clone-selection-background-colour: $clone-c5 !default;
 
-$clone__alert--information: $clone__go !default;
-$clone__alert--warning: $clone__slow !default;
-$clone__alert--error: $clone__stop !default;
+$clone-table-heading-colour: $clone-c1 !default;
 
-$clone__blockquote-colour: $clone__c1 !default;
+$clone-alert--information: $clone-go !default;
+$clone-alert--warning: $clone-slow !default;
+$clone-alert--error: $clone-stop !default;
 
-$clone__pullquote-colour: $clone__c2 !default;
+$clone-blockquote-colour: $clone-c1 !default;
+
+$clone-pullquote-colour: $clone-c2 !default;

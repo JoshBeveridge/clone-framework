@@ -1,47 +1,49 @@
 <div
-    data-clone-accordion="object"
-    data-clone-border="bottom(thin, solid, black)"
-    data-clone-background="white(100)"
+    data-c-accordion="object"
+    data-c-border="bottom(thin, solid, black)"
+    data-c-background="white(100)"
 >
     <button
         aria-expanded="false"
-        data-clone-accordion="trigger"
-        data-clone-padding="right"
+        data-c-accordion="trigger"
+        data-c-padding="right"
         tabindex="0"
         type="button"
     >
-        <div data-clone-padding="top(half) right bottom(half) left(half)">
-            <span data-clone-heading="h4" data-clone-font-weight="bold">
+        <div data-c-padding="top(half) right bottom(half) left(half)">
+            <span data-c-heading="h4" data-c-font-weight="bold">
                 Accordion Title
             </span>
-            <span data-clone-margin="top(quarter)" data-clone-heading="h5" data-clone-font-colour="c1">
+            <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
                 Optional Accordion Subtitle
             </span>
         </div>
-        <span data-clone-visibility="invisible">
-            Click to edit...
+        <span data-c-visibility="invisible">
+            Click to view...
         </span>
         <i
+            aria-hidden="true"
             class="material-icons"
-            data-clone-accordion="icon--add"
-            data-clone-font-colour="black"
+            data-c-accordion="icon--add"
+            data-c-font-colour="black"
         >
             add_circle
         </i>
         <i
+            aria-hidden="true"
             class="material-icons"
-            data-clone-accordion="icon--remove"
-            data-clone-font-colour="black"
+            data-c-accordion="icon--remove"
+            data-c-font-colour="black"
         >
             remove_circle
         </i>
     </button>
     <div
         aria-hidden="true"
-        data-clone-accordion="content"
-        data-clone-padding="right(half) left(half)"
+        data-c-accordion="content"
+        data-c-padding="right(half) left(half)"
     >
-        <div data-clone-padding="bottom(half)">
+        <div data-c-padding="bottom(half)">
             <!-- Content Goes Here -->
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -4,281 +4,278 @@
     // Inputs
 
 // =============================================================================
-
-form {
-    [data-clone-input] {
-        position: relative;
-        >label {
-            display: block;
-            font-size: $clone__font-scale--small;
-            margin-bottom: .5rem;
-            padding-right: 4rem;
-        }
-        >span {
-            &:first-of-type {
-                color: $clone__alert--error;
-                display: none;
-                font-size: $clone__font-scale--small;
-                position: absolute;
-                top: calc(#{$clone__padding} / 2);
-                right: calc(#{$clone__padding} / 2);
-                @media #{$clone__tablet-portrait} {
-                    top: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                    right: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    top: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                    right: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
+[data-c-input] {
+    position: relative;
+    >label {
+        display: block;
+        font-size: $clone-font-scale--small;
+        margin-bottom: .5rem;
+        padding-right: 4rem;
+    }
+    >span {
+        &:first-of-type {
+            color: $clone-alert--error;
+            display: none;
+            font-size: $clone-font-scale--small;
+            position: absolute;
+            top: calc(#{$clone-padding} / 2);
+            right: calc(#{$clone-padding} / 2);
+            @media #{$clone-tablet-portrait} {
+                top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
-            &:last-of-type {
-                color: $clone__alert--error;
-                display: none;
-                font-size: $clone__font-scale--small;
-                position: absolute;
-                bottom: calc(#{$clone__padding} / 2);
-                left: calc(#{$clone__padding} / 2);
-                @media #{$clone__tablet-portrait} {
-                    bottom: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                    left: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    bottom: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                    left: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
+            @media #{$clone-desktop-large} {
+                top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
-        >div {
-            margin-bottom: 1.5rem;
-            >input {
-                border: 1px solid $clone__gray;
-                border-radius: 5px;
-                display: block;
-                outline: none;
-                transition: all .2s ease;
-                width: 100%;
-                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-                @media #{$clone__tablet-portrait} {
-                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
-                &:focus {
-                    box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
-                    transition: all .2s ease;
-                }
+        &:last-of-type {
+            color: $clone-alert--error;
+            display: none;
+            font-size: $clone-font-scale--small;
+            position: absolute;
+            bottom: calc(#{$clone-padding} / 2);
+            left: calc(#{$clone-padding} / 2);
+            @media #{$clone-tablet-portrait} {
+                bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
-            >textarea {
-                border: 1px solid $clone__gray;
-                border-radius: 5px;
-                display: block;
-                outline: none;
-                max-width: 100%;
-                min-height: 10rem;
-                min-width: 100%;
-                transition: all .2s ease;
-                width: 100%;
-                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-                @media #{$clone__tablet-portrait} {
-                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
-                &:focus {
-                    box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
-                    transition: all .2s ease;
-                }
-            }
-        }
-        &[data-clone-required] {
-            >span:first-of-type {
-                display: block !important;
-            }
-        }
-        &[data-clone-invalid] {
-            >label {
-                color: $clone__alert--error !important;
-            }
-            >div {
-                border-color: $clone__alert--error;
-                >input,
-                >textarea,
-                >select {
-                    border-color: $clone__alert--error;
-                }
-            }
-            >span:last-of-type {
-                display: block !important;
+            @media #{$clone-desktop-large} {
+                bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
     }
-    [data-clone-input="checkbox"] {
-        >div {
-            border: 1px solid $clone__gray;
+    >div {
+        margin-bottom: 1.5rem;
+        >input {
+            border: 1px solid $clone-gray;
             border-radius: 5px;
-            margin-top: .5rem;
-            padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-            @media #{$clone__tablet-portrait} {
-                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+            display: block;
+            outline: none;
+            transition: all .2s ease;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
             }
-            @media #{$clone__desktop-large} {
-                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
-            label {
-                display: block;
-                margin: 0 !important;
-                padding-top: .25rem !important;
-                padding-bottom: .25rem !important;
-                input {
-                    display: inline-block;
-                    margin-top: .4rem;
-                    width: auto;
-                    vertical-align: top;
-                }
-                span {
-                    display: inline-block;
-                    font-size: $clone__font-scale--regular;
-                    margin: 0;
-                    max-width: 90%;
-                    padding-left: .5rem;
-                }
+            &:focus {
+                box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                transition: all .2s ease;
+            }
+        }
+        >textarea {
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            display: block;
+            outline: none;
+            max-width: 100%;
+            min-height: 10rem;
+            min-width: 100%;
+            transition: all .2s ease;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:focus {
+                box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                transition: all .2s ease;
             }
         }
     }
-    [data-clone-input="date"] {
-        >div >input {
-            padding: calc((#{$clone__padding} / 2) - 1px) calc(#{$clone__padding} - 1px);
-            @media #{$clone__tablet-portrait} {
-                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) - 1px) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) - 1px);
-            }
-            @media #{$clone__desktop-large} {
-                padding: calc((((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) - 1px) calc(((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) - 1px);
-            }
+    &[data-c-required] {
+        >span:first-of-type {
+            display: block !important;
         }
     }
-    [data-clone-input="dropdown"],
-    [data-clone-input="select"] {
+    &[data-c-invalid] {
+        >label {
+            color: $clone-alert--error !important;
+        }
         >div {
-            position: relative;
-            i {
-                position: absolute;
-                top: 50%;
-                right: 1rem;
-                pointer-events: none;
-                transform: translate(0, -50%);
-            }
-            select {
-                appearance: none;
-                border: 1px solid $clone__gray;
-                border-radius: 5px;
-                cursor: pointer;
-                display: block;
-                outline: none;
-                margin-bottom: 1.4rem;
-                width: 100%;
-                padding: calc(#{$clone__padding} / 2) 3rem calc(#{$clone__padding} / 2) #{$clone__padding};
-                @media #{$clone__tablet-portrait} {
-                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) 3rem calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) 3rem calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
-                &:focus {
-                    border: 1px solid $clone__c1;
-                }
+            border-color: $clone-alert--error;
+            >input,
+            >textarea,
+            >select {
+                border-color: $clone-alert--error;
             }
         }
+        >span:last-of-type {
+            display: block !important;
+        }
     }
-    [data-clone-input*="password"] {
-        >div {
-            position: relative;
+}
+[data-c-input="checkbox"] {
+    >div {
+        border: 1px solid $clone-gray;
+        border-radius: 5px;
+        margin-top: .5rem;
+        padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        label {
+            display: block;
+            margin: 0 !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
             input {
-                padding-right: 3rem;
+                display: inline-block;
+                margin-top: .4rem;
+                width: auto;
+                vertical-align: top;
             }
+            span {
+                display: inline-block;
+                font-size: $clone-font-scale--regular;
+                margin: 0;
+                max-width: 90%;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+[data-c-input="date"] {
+    >div >input {
+        padding: calc((#{$clone-padding} / 2) - 1px) calc(#{$clone-padding} - 1px);
+        @media #{$clone-tablet-portrait} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) - 1px) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) - 1px);
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc((((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px) calc(((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px);
+        }
+    }
+}
+[data-c-input="dropdown"],
+[data-c-input="select"] {
+    >div {
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            pointer-events: none;
+            transform: translate(0, -50%);
+        }
+        select {
+            appearance: none;
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            outline: none;
+            margin-bottom: 1.4rem;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) 3rem calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 3rem calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 3rem calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:focus {
+                border: 1px solid $clone-c1;
+            }
+        }
+    }
+}
+[data-c-input*="password"] {
+    >div {
+        position: relative;
+        input {
+            padding-right: 3rem;
+        }
+        button {
+            appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translate(0, -50%);
+            i:first-child {
+                display: block;
+            }
+            i:last-child {
+                display: none;
+            }
+        }
+    }
+    &[data-c-input*="--visible"] {
+        >div {
             button {
-                appearance: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                right: 1rem;
-                transform: translate(0, -50%);
                 i:first-child {
-                    display: block;
-                }
-                i:last-child {
                     display: none;
                 }
-            }
-        }
-        &[data-clone-input*="--visible"] {
-            >div {
-                button {
-                    i:first-child {
-                        display: none;
-                    }
-                    i:last-child {
-                        display: block;
-                    }
+                i:last-child {
+                    display: block;
                 }
             }
         }
     }
-    [data-clone-input="radio"] {
-        >div {
-            border: 1px solid $clone__gray;
-            border-radius: 5px;
-            margin-top: .5rem;
-            margin-bottom: 1.5rem;
-            padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-            @media #{$clone__tablet-portrait} {
-                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
-            }
-            @media #{$clone__desktop-large} {
-                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-            }
-            label {
-                display: block;
-                margin: 0 !important;
-                padding-top: .25rem !important;
-                padding-bottom: .25rem !important;
-                input {
-                    display: inline-block;
-                    margin-top: .4rem;
-                    width: auto;
-                    vertical-align: top;
-                }
-                span {
-                    display: inline-block;
-                    font-size: $clone__font-scale--regular;
-                    margin: 0;
-                    max-width: 90%;
-                    padding-left: .5rem;
-                }
-            }
+}
+[data-c-input="radio"] {
+    >div {
+        border: 1px solid $clone-gray;
+        border-radius: 5px;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+        padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
         }
-    }
-    [data-clone-input="button"] {
-        >div {
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        label {
+            display: block;
+            margin: 0 !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
             input {
-                border-radius: 5px 0 0 5px;
-                border-right: none;
-                margin-bottom: 0;
+                display: inline-block;
+                margin-top: .4rem;
+                width: auto;
+                vertical-align: top;
             }
-            button {
-                border-radius: 0 5px 5px 0;
-                display: block;
-                outline: none;
-                padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-                @media #{$clone__tablet-portrait} {
-                    padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
-                }
-                @media #{$clone__desktop-large} {
-                    padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                }
+            span {
+                display: inline-block;
+                font-size: $clone-font-scale--regular;
+                margin: 0;
+                max-width: 90%;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+[data-c-input="button"] {
+    >div {
+        input {
+            border-radius: 5px 0 0 5px;
+            border-right: none;
+            margin-bottom: 0;
+        }
+        button {
+            border-radius: 0 5px 5px 0;
+            display: block;
+            outline: none;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
     }

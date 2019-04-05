@@ -7,156 +7,184 @@
 
 // The Grid ====================================================================
 
-    [data-clone-grid] {
+    [data-c-grid] {
         display: flex;
         flex-wrap: wrap;
     }
 
-    [data-clone-grid*="top"] {
+    [data-c-grid*="top"] {
         align-items: flex-start;
     }
 
-    [data-clone-grid*="middle"] {
+    [data-c-grid*="middle"] {
         align-items: center;
     }
 
-    [data-clone-grid*="bottom"] {
+    [data-c-grid*="bottom"] {
         align-items: flex-end;
     }
 
-    [data-clone-grid*="gutter"] {
-        margin: calc((#{$clone__margin} / 2) * -1);
-        @media #{$clone__tablet-portrait} {
-            margin: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+    [data-c-grid*="gutter"] {
+        margin: calc((#{$clone-margin} / 2) * -1);
+        @media #{$clone-tablet-portrait} {
+            margin: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
         }
-        @media #{$clone__desktop-large} {
-            margin: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+        @media #{$clone-desktop-large} {
+            margin: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
         }
-        >[data-clone-grid-item] {
-            padding: calc(#{$clone__padding} / 2);
-            @media #{$clone__tablet-portrait} {
-                padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+        >[data-c-grid-item] {
+            padding: calc(#{$clone-padding} / 2);
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
-            @media #{$clone__desktop-large} {
-                padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-            }
-        }
-    }
-
-    [data-clone-grid*="gutter(vertical)"] {
-        margin-top: calc((#{$clone__margin} / 2) * -1);
-        margin-bottom: calc((#{$clone__margin} / 2) * -1);
-        @media #{$clone__tablet-portrait} {
-            margin-top: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
-            margin-bottom: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
-        }
-        @media #{$clone__desktop-large} {
-            margin-top: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
-            margin-bottom: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
-        }
-        >[data-clone-grid-item] {
-            padding-top: calc(#{$clone__padding} / 2);
-            padding-bottom: calc(#{$clone__padding} / 2);
-            @media #{$clone__tablet-portrait} {
-                padding-top: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                padding-bottom: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-            }
-            @media #{$clone__desktop-large} {
-                padding-top: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                padding-bottom: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
     }
 
-    [data-clone-grid*="gutter(sides)"],
-    [data-clone-grid*="gutter(horizontal)"] {
-        margin-right: calc((#{$clone__margin} / 2) * -1);
-        margin-left: calc((#{$clone__margin} / 2) * -1);
-        @media #{$clone__tablet-portrait} {
-            margin-right: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
-            margin-left: calc(((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * -1);
+    [data-c-grid*="gutter(vertical)"] {
+        margin-top: calc((#{$clone-margin} / 2) * -1);
+        margin-bottom: calc((#{$clone-margin} / 2) * -1);
+        @media #{$clone-tablet-portrait} {
+            margin-top: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+            margin-bottom: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
         }
-        @media #{$clone__desktop-large} {
-            margin-right: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
-            margin-left: calc((((#{$clone__margin} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) * -1);
+        @media #{$clone-desktop-large} {
+            margin-top: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+            margin-bottom: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
         }
-        >[data-clone-grid-item] {
-            padding-right: calc(#{$clone__padding} / 2);
-            padding-left: calc(#{$clone__padding} / 2);
-            @media #{$clone__tablet-portrait} {
-                padding-right: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
-                padding-left: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier});
+        >[data-c-grid-item] {
+            padding-top: calc(#{$clone-padding} / 2);
+            padding-bottom: calc(#{$clone-padding} / 2);
+            @media #{$clone-tablet-portrait} {
+                padding-top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                padding-bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
-            @media #{$clone__desktop-large} {
-                padding-right: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
-                padding-left: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+            @media #{$clone-desktop-large} {
+                padding-top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                padding-bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
     }
 
-    [data-clone-grid-item] {
+    [data-c-grid*="gutter(sides)"],
+    [data-c-grid*="gutter(horizontal)"] {
+        margin-right: calc((#{$clone-margin} / 2) * -1);
+        margin-left: calc((#{$clone-margin} / 2) * -1);
+        @media #{$clone-tablet-portrait} {
+            margin-right: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+            margin-left: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+        }
+        @media #{$clone-desktop-large} {
+            margin-right: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+            margin-left: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+        }
+        >[data-c-grid-item] {
+            padding-right: calc(#{$clone-padding} / 2);
+            padding-left: calc(#{$clone-padding} / 2);
+            @media #{$clone-tablet-portrait} {
+                padding-right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                padding-left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding-right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                padding-left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+    }
+
+    [data-c-grid-item] {
         flex: 0 0 100%;
         max-width: 100%;
         min-width: 0;
     }
 
-    [data-clone-grid-item*="top"] {
+    [data-c-grid-item*="top"] {
         align-items: flex-start;
     }
-    [data-clone-grid-item*="middle"] {
+    [data-c-grid-item*="middle"] {
         align-items: center;
     }
-    [data-clone-grid-item*="bottom"] {
+    [data-c-grid-item*="bottom"] {
         align-items: flex-end;
     }
-    [data-clone-grid-item*="fit"] {
+    [data-c-grid-item*="fit"] {
         flex: 1;
     }
 
-    @for $i from 1 through $clone__grid-columns {
-        @for $r from 1 through $clone__grid-columns {
-            [data-clone-grid-item*="base(#{$i}of#{$r})"] {
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            [data-c-grid-item*="base(#{$i}of#{$r})"] {
                 flex: 0 0 (#{$i} / #{$r} * 100%);
                 max-width: ($i / $r * 100%);
             }
-            @media #{$clone__phone-portrait} {
-                [data-clone-grid-item*="pp(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-phone-portrait} {
+                [data-c-grid-item*="pp(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__phone-landscape} {
-                [data-clone-grid-item*="pl(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-phone-landscape} {
+                [data-c-grid-item*="pl(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__tablet-portrait} {
-                [data-clone-grid-item*="tp(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-tablet-portrait} {
+                [data-c-grid-item*="tp(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__tablet-landscape} {
-                [data-clone-grid-item*="tl(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-tablet-landscape} {
+                [data-c-grid-item*="tl(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__desktop-small} {
-                [data-clone-grid-item*="ds(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-desktop-small} {
+                [data-c-grid-item*="ds(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__desktop-medium} {
-                [data-clone-grid-item*="dm(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-desktop-medium} {
+                [data-c-grid-item*="dm(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }
             }
-            @media #{$clone__desktop-large} {
-                [data-clone-grid-item*="dl(#{$i}of#{$r})"] {
+        }
+    }
+    @for $i from 1 through $clone-grid-columns {
+        @for $r from 1 through $clone-grid-columns {
+            @media #{$clone-desktop-large} {
+                [data-c-grid-item*="dl(#{$i}of#{$r})"] {
                     flex: 0 0 calc(#{$i} / #{$r} * 100%);
                     max-width: ($i / $r * 100%);
                 }

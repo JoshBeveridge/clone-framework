@@ -5,46 +5,51 @@
 
 // =============================================================================
 
-a[data-clone-button] {
+a[data-c-button] {
     display: inline-block;
     max-width: 100%;
     text-decoration: underline;
     vertical-align: middle;
 }
 
-[data-clone-button] {
+[data-c-button] {
     border: none;
     cursor: pointer;
     outline: none;
     text-align: center;
     transition: all .2s ease;
-    padding: calc(#{$clone__padding} / 2) #{$clone__padding};
-    @media #{$clone__tablet-portrait} {
-        padding: calc((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) calc(#{$clone__padding} * #{$clone__whitespace-multiplier});
+    padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+    @media #{$clone-tablet-portrait} {
+        padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
     }
-    @media #{$clone__desktop-large} {
-        padding: calc(((#{$clone__padding} / 2) * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier}) calc((#{$clone__padding} * #{$clone__whitespace-multiplier}) * #{$clone__whitespace-multiplier});
+    @media #{$clone-desktop-large} {
+        padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
     }
 
     i {
         margin: -.2rem .25rem 0 -.5rem;
+        transition: all .2s ease;
         vertical-align: middle;
     }
 
         // States --------------------------------------------------------------
         &:hover {
-            background: rgba($clone__focus-colour, .2);
-            border-color: $clone__focus-colour;
-            color: $clone__focus-colour;
+            background: rgba($clone-focus-colour, .2);
+            border-color: $clone-focus-colour;
+            color: $clone-focus-colour;
             transition: all .2s ease;
+            i {
+                color: $clone-focus-colour;
+                transition: all .2s ease;
+            }
         }
         &:focus {
-            box-shadow: -3px -3px 0 $clone__focus-colour, 3px -3px 0 $clone__focus-colour, 3px 3px 0 $clone__focus-colour, -3px 3px 0 $clone__focus-colour;
+            box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
         }
         &:disabled {
-            background: lighten($clone__grey, 30%);
-            border-color: lighten($clone__grey, 30%);
-            color: $clone__grey;
+            background: lighten($clone-grey, 30%);
+            border-color: lighten($clone-grey, 30%);
+            color: $clone-grey;
             pointer-events: none;
         }
 
@@ -57,17 +62,23 @@ a[data-clone-button] {
     @each $style in $clone-button-style-list {
         @each $key, $value in $clone-colour-map {
             @if $style == "solid" {
-                [data-clone-button="#{$style}(#{$key})"] {
+                [data-c-button="#{$style}(#{$key})"] {
                     background: $value;
                     border: 1px solid $value;
-                    color: contrasting-color($value, $clone__white, $clone__black);
+                    color: contrasting-color($value, $clone-white, $clone-black);
+                    i {
+                        color: contrasting-color($value, $clone-white, $clone-black);
+                    }
                 }
             }
             @if $style == "outline" {
-                [data-clone-button="#{$style}(#{$key})"] {
+                [data-c-button="#{$style}(#{$key})"] {
                     background: none;
                     border: 1px solid $value;
                     color: $value;
+                    i {
+                        color: contrasting-color($value, $clone-white, $clone-black);
+                    }
                 }
             }
         }

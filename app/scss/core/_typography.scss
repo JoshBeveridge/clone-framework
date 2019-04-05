@@ -8,15 +8,16 @@
 // Fonts =======================================================================
 
     * {
-        font-family: $clone__font-default;
+        color: $clone-default-font-colour;
+        font-family: $clone-font-default;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1;
     }
 
     ::selection {
-        background: $clone__selection-background-colour !important;
-        color: contrasting-color($clone__selection-background-colour, $clone__white, $clone__black) !important;
+        background: $clone-selection-background-colour !important;
+        color: contrasting-color($clone-selection-background-colour, $clone-white, $clone-black) !important;
     }
 
 // Font Scale ==================================================================
@@ -25,20 +26,20 @@
     body {
         font-size: 110%;
 
-        @media #{$clone__tablet-portrait} {
+        @media #{$clone-tablet-portrait} {
             font-size: 120%;
         }
 
     }
 
-    $clone__font-scale--regular: 1rem;
+    $clone-font-scale--regular: 1rem;
 
-    $clone__font-scale--h1: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale})))));
-    $clone__font-scale--h2: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale}*(#{$clone__font-scale}))));
-    $clone__font-scale--h3: calc(1rem*(#{$clone__font-scale}*(#{$clone__font-scale})));
-    $clone__font-scale--h4: calc(1rem*(#{$clone__font-scale}));
-    $clone__font-scale--h5: $clone__font-scale--regular;
-    $clone__font-scale--small: calc(1rem/(#{$clone__font-scale}));
+    $clone-font-scale--h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
+    $clone-font-scale--h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
+    $clone-font-scale--h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale})));
+    $clone-font-scale--h4: calc(1rem*(#{$clone-font-scale}));
+    $clone-font-scale--h5: $clone-font-scale--regular;
+    $clone-font-scale--small: calc(1rem/(#{$clone-font-scale}));
 
 // Copy & Misc =================================================================
 
@@ -51,8 +52,35 @@
         transition: color .2s ease;
 
         &:hover {
-            color: $clone__hover-colour !important;
+            color: $clone-hover-colour !important;
             transition: color .2s ease;
         }
 
+    }
+
+    ul,
+    ol {
+        padding-left: $clone-padding;
+        @media #{$clone-tablet-portrait} {
+            padding-left: calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding-left: calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        li {
+            color: inherit;
+            font-size: inherit;
+        }
+    }
+
+    em {
+        color: inherit;
+        font-size: inherit;
+        font-style: italic;
+    }
+
+    strong {
+        color: inherit;
+        font-size: inherit;
+        font-weight: 600;
     }

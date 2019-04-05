@@ -5,14 +5,15 @@
 
 // =============================================================================
 
-[data-clone-breadcrumbs] {
+[data-c-breadcrumbs] {
 
     ol {
         list-style: none;
+        padding: 0;
 
         li {
             display: inline-block;
-            line-height: calc(#{$clone__line-height} * 1.5);
+            line-height: calc(#{$clone-line-height} * 1.5);
 
             a {
                 transition: color .2s ease;
@@ -26,7 +27,7 @@
 
                     &:hover,
                     &:focus {
-                        color: $clone__focus-colour;
+                        color: $clone-focus-colour;
                         transition: color .2s ease;
                     }
 

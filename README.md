@@ -33,7 +33,7 @@ While it doesn't matter how your project compiles Sass, theming Clone requires t
 
 // Include Clone
 
-    @import "../node_modules/clone-design/app/scss/clone";
+    @import "../node_modules/clone-framework/app/scss/clone";
 
 ```
 
@@ -43,11 +43,11 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
-Stable Release: 2.1.7
+Stable Release: 2.1.8
 
-CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.7/dist/css/clone.min.css
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.8/dist/css/clone.min.css
 
-JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.7/dist/js/clone.min.js
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.8/dist/js/clone.min.js
 
 ### Usage
 
@@ -55,122 +55,122 @@ Clone uses HTML5 custom data attributes to allow for easy, standardized, namespa
 
 #### Accordion
 
-Usage: `data-clone-accordion="OPTIONS"`
+Usage: `data-c-accordion="OPTIONS"`
 
 Accordion attributes are used exclusively to define the moving parts of an accordion:
-- `data-clone-accordion="object"`
-- `data-clone-accordion="trigger"`
-- `data-clone-accordion="content"`
-- `data-clone-accordion="icon--add"`
-- `data-clone-accordion="icon--remove"`
+- `data-c-accordion="object"`
+- `data-c-accordion="trigger"`
+- `data-c-accordion="content"`
+- `data-c-accordion="icon--add"`
+- `data-c-accordion="icon--remove"`
 
 #### Alert
 
-Usage: `data-clone-alert="ALERT-TYPE"`
+Usage: `data-c-alert="ALERT-TYPE"`
 
 #### Alignment
 
-Usage: `data-clone-alignment="TEXT-ALIGNMENT"`
+Usage: `data-c-alignment="TEXT-ALIGNMENT"`
 
 #### Backgrounds
 
-Usage: `data-clone-background="THEME-COLOUR(ALPHA-VALUE)"`
+Usage: `data-c-background="THEME-COLOUR(ALPHA-VALUE)"`
 
 #### Borders
 
-Usage: `data-clone-border="ORIENTATION(THICKNESS, STYLE, THEME-COLOUR)"`
+Usage: `data-c-border="ORIENTATION(THICKNESS, STYLE, THEME-COLOUR)"`
 
 #### Buttons
 
-Usage: `data-clone-button="STYLE(THEME-COLOUR)"`
+Usage: `data-c-button="STYLE(THEME-COLOUR)"`
 
 #### Carousels
 
-Usage: `data-clone-carousel="OPTIONS"`
+Usage: `data-c-carousel="OPTIONS"`
 
 #### Containers
 
-Usage: `data-clone-container="STYLE"`
+Usage: `data-c-container="STYLE"`
 
 #### Dialogs
 
-`data-clone-dialog`
-`data-clone-dialog-id`
-`data-clone-dialog-action`
-`data-clone-dialog-overlay`
+`data-c-dialog`
+`data-c-dialog-id`
+`data-c-dialog-action`
+`data-c-dialog-overlay`
 
 #### Fonts
 
-Usage: `data-clone-font="STYLE"`
+Usage: `data-c-font="STYLE"`
 
 ##### Font Colour
 
-Usage: `data-clone-font-colour="THEME-COLOUR"`
+Usage: `data-c-font-colour="THEME-COLOUR"`
 
 ##### Font Style
 
-Usage: `data-clone-font-style="STYLE"`
+Usage: `data-c-font-style="STYLE"`
 
 ##### Font Weight
 
-Usage: `data-clone-font-weight="NUMBER/VALUE"`
+Usage: `data-c-font-weight="NUMBER/VALUE"`
 
 #### Grid & Grid Items
 
-Usage (Grid): `data-clone-grid="OPTIONS"`
+Usage (Grid): `data-c-grid="OPTIONS"`
 
-Usage (Grid Items): `data-clone-grid-item="OPTIONS"`
+Usage (Grid Items): `data-c-grid-item="OPTIONS"`
 
 #### Headings
 
-Usage: `data-clone-heading="HVALUE"`
+Usage: `data-c-heading="HVALUE"`
 
 #### Inputs
 
-Usage: `data-clone-input="TYPE"`
+Usage: `data-c-input="TYPE"`
 
 Inputs can be classified by their HTML type (and a few other custom types):
-- `data-clone-input="button"`
-- `data-clone-input="checkbox"`
-- `data-clone-input="date"`
-- `data-clone-input="email"`
-- `data-clone-input="number"`
-- `data-clone-input="password"`
-- `data-clone-input="radio"`
-- `data-clone-input="range"` * NOT DONE
-- `data-clone-input="select"`
-- `data-clone-input="text"`
-- `data-clone-input="textarea"`
-- `data-clone-input="upload"` * NOT DONE
-- `data-clone-input="url"`
+- `data-c-input="button"`
+- `data-c-input="checkbox"`
+- `data-c-input="date"`
+- `data-c-input="email"`
+- `data-c-input="number"`
+- `data-c-input="password"`
+- `data-c-input="radio"`
+- `data-c-input="range"` * NOT DONE
+- `data-c-input="select"`
+- `data-c-input="text"`
+- `data-c-input="textarea"`
+- `data-c-input="upload"` * NOT DONE
+- `data-c-input="url"`
 
 Other accompanying attributes:
-- `data-clone-required` is applied to any input block that contains a form element with the `required` attribute.
-- `data-clone-invalid` is applied to any input block that is validated by HTML5 and returned as invalid.
+- `data-c-required` is applied to any input block that contains a form element with the `required` attribute.
+- `data-c-invalid` is applied to any input block that is validated by HTML5 and returned as invalid.
 
 #### Margins
 
-Usage: `data-clone-margin="ORIENTAION(AMOUNT)"`
+Usage: `data-c-margin="ORIENTAION(AMOUNT)"`
 
 #### Overlays
 
-Usage: `data-clone-overlay="THEME-COLOUR(ALPHA-VALUE)
+Usage: `data-c-overlay="THEME-COLOUR(ALPHA-VALUE)
 
 #### Padding
 
-Usage: `data-clone-padding="ORIENTAION(AMOUNT)"`
+Usage: `data-c-padding="ORIENTAION(AMOUNT)"`
 
 #### Radius
 
-Usage: `data-clone-radius="STYLE"`
+Usage: `data-c-radius="STYLE"`
 
 #### Skip to Content
 
-Usage: `data-clone-skip-content`
+Usage: `data-c-skip-content`
 
 #### Visibility
 
-Usage: `data-clone-visibility="VALUE"`
+Usage: `data-c-visibility="VALUE"`
 
 You can find a list of default variables [here](https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss).
 

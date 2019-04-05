@@ -34,14 +34,14 @@
         function clone(attr, option, selector) {
             if (option != null) {
                 if (selector != null) {
-                    return '[data-clone-' + attr + selector + '=\'' + option + '\']';
+                    return '[data-c-' + attr + selector + '=\'' + option + '\']';
                 }
                 else {
-                    return '[data-clone-' + attr + '=\'' + option + '\']';
+                    return '[data-c-' + attr + '=\'' + option + '\']';
                 }
             }
             else {
-                return '[data-clone-' + attr + ']';
+                return '[data-c-' + attr + ']';
             }
         }
 
@@ -88,7 +88,7 @@
                     // Required Fields -----------------------------------------
                     function requiredFields() {
                         $("input:required, textarea:required, select:required").each(function(e) {
-                            $(this).parents(clone("input")).attr("data-clone-required", "");
+                            $(this).parents(clone("input")).attr("data-c-required", "");
                         });
                     }
 
@@ -102,16 +102,16 @@
                                     return false;
                                 }
                                 else {
-                                    $(this).parents(clone("input")).attr("data-clone-invalid", "");
+                                    $(this).parents(clone("input")).attr("data-c-invalid", "");
                                 }
                             }
                             else {
                                 if ($(this).isValid() == true) {
                                     if ($(this).val() == "" || $(this).attr("type") == "password") {
-                                        $(this).parents(clone("input")).removeAttr("data-clone-invalid");
+                                        $(this).parents(clone("input")).removeAttr("data-c-invalid");
                                     }
                                     else {
-                                        $(this).parents(clone("input")).removeAttr("data-clone-invalid");
+                                        $(this).parents(clone("input")).removeAttr("data-c-invalid");
                                     }
                                 }
                                 else {
@@ -119,7 +119,7 @@
                                         return false;
                                     }
                                     else {
-                                        $(this).parents(clone("input")).attr("data-clone-invalid", "");
+                                        $(this).parents(clone("input")).attr("data-c-invalid", "");
                                     }
                                 }
                             }
@@ -127,10 +127,10 @@
                         else {
                             if ($(this).isValid() == true) {
                                 if ($(this).val() == "" || $(this).attr("type") == "password") {
-                                    $(this).parents(clone("input")).removeAttr("data-clone-invalid");
+                                    $(this).parents(clone("input")).removeAttr("data-c-invalid");
                                 }
                                 else {
-                                    $(this).parents(clone("input")).removeAttr("data-clone-invalid");
+                                    $(this).parents(clone("input")).removeAttr("data-c-invalid");
                                 }
                             }
                             else {
@@ -138,7 +138,7 @@
                                     return false;
                                 }
                                 else {
-                                    $(this).parents(clone("input")).attr("data-clone-invalid", "");
+                                    $(this).parents(clone("input")).attr("data-c-invalid", "");
                                 }
                             }
                         }
@@ -150,11 +150,11 @@
                     var x = $(this).siblings("input");
                     if (x.attr("type") === "password") {
                         x.attr("type", "text");
-                        x.parents(clone("input", "password", "*")).attr("data-clone-input", "password--visible");
+                        x.parents(clone("input", "password", "*")).attr("data-c-input", "password--visible");
                     }
                     else {
                         x.attr("type", "password");
-                        x.parents(clone("input", "password", "*")).attr("data-clone-input", "password");
+                        x.parents(clone("input", "password", "*")).attr("data-c-input", "password");
                     }
                 });
 
@@ -172,15 +172,15 @@
                 // Dialog Triger -----------------------------------------------
                 function dialogueTrigger(trigger) {
 
-                    var dialogueID = $(trigger).attr("data-clone-dialog-id");
-                    var dialogue = $(clone("dialog") + "[data-clone-dialog-id='" + dialogueID +"']");
+                    var dialogueID = $(trigger).attr("data-c-dialog-id");
+                    var dialogue = $(clone("dialog") + "[data-c-dialog-id='" + dialogueID +"']");
                     var overlay = $(clone("dialog-overlay"));
                     var focusableItems = $(dialogue).find(":focusable");
 
-                    if($(dialogue).attr("data-clone-dialog") != "") {
+                    if($(dialogue).attr("data-c-dialog") != "") {
                         $("body").css("overflow", "visible");
-                        $(overlay).attr("data-clone-dialog-overlay", "");
-                        $(dialogue).attr("data-clone-dialog", "");
+                        $(overlay).attr("data-c-dialog-overlay", "");
+                        $(dialogue).attr("data-c-dialog", "");
                         $(dialogue).attr("aria-hidden", "true");
                         $(focusableItems).each(function() {
                             $(this).attr("tabindex", "-1");
@@ -188,13 +188,13 @@
                         $(clone("dialog-ancestor")).focus();
                     }
                     else {
-                        $("*").removeAttr("data-clone-dialog-ancestor");
-                        $(trigger).attr("data-clone-dialog-ancestor", "");
+                        $("*").removeAttr("data-c-dialog-ancestor");
+                        $(trigger).attr("data-c-dialog-ancestor", "");
                         $("body").css("overflow", "hidden");
                         $(focusableItems).each(function() {
                             $(this).attr("tabindex", "0");
                         });
-                        $(overlay).attr("data-clone-dialog-overlay", "active");
+                        $(overlay).attr("data-c-dialog-overlay", "active");
                         $(dialogue).attr("aria-hidden", "false");
 
                         dialogueSizing(dialogue);
@@ -220,31 +220,31 @@
                     if (dialogue != null) {
                         var dialogueHeight = $(dialogue).find(">div").height();
                         if (dialogueHeight > viewportHeight) {
-                            $(dialogue).attr("data-clone-dialog", "active--overflowing");
+                            $(dialogue).attr("data-c-dialog", "active--overflowing");
                         }
                         else {
-                            $(dialogue).attr("data-clone-dialog", "active--contained");
+                            $(dialogue).attr("data-c-dialog", "active--contained");
                         }
                     }
                     else {
                         $(clone("dialog")).each(function() {
-                            if ($(this).attr("data-clone-dialog") == false){
+                            if ($(this).attr("data-c-dialog") == false){
                                 return false;
                             }
                             else {
                                 var dialogueHeight = $(this).find(">div").height();
                                 if (dialogueHeight > viewportHeight) {
-                                    $(this).attr("data-clone-dialog", "active--overflowing");
+                                    $(this).attr("data-c-dialog", "active--overflowing");
                                 }
                                 else {
-                                    $(this).attr("data-clone-dialog", "active--contained");
+                                    $(this).attr("data-c-dialog", "active--contained");
                                 }
                             }
                         });
                     }
                 }
 
-                $(document).on("click", "button[data-clone-dialog-id]", function(e) {
+                $(document).on("click", "button[data-c-dialog-id]", function(e) {
                     e.preventDefault();
                     dialogueTrigger(this);
                 });

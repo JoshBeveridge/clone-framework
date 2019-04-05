@@ -5,7 +5,7 @@
 
 // =============================================================================
 
-[data-clone-dialog-overlay] {
+[data-c-dialog-overlay] {
     background: rgba(0, 0, 0, .9);
     height: 100vh;
     opacity: 0;
@@ -18,13 +18,13 @@
     z-index: 1000;
 }
 
-[data-clone-dialog-overlay*="active"] {
+[data-c-dialog-overlay*="active"] {
     opacity: 1;
     transform: translate(0, 0);
     transition: transform 0s linear, opacity .2s ease;
 }
 
-[data-clone-dialog] {
+[data-c-dialog] {
     height: 100vh;
     opacity: 0;
     position: fixed;
@@ -36,34 +36,34 @@
     >div {
         margin: 0 auto;
         width: 90vw;
-        @media #{$clone__tablet-landscape} {
+        @media #{$clone-tablet-landscape} {
             width: 75vw;
         }
-        @media #{$clone__desktop-medium} {
+        @media #{$clone-desktop-medium} {
             width: 50vw;
         }
         >div:nth-child(1) {
             position: relative;
-            [data-clone-dialog-action="close"] {
+            [data-c-dialog-action="close"] {
                 background: none;
                 border: none;
                 border-radius: 100%;
                 cursor: pointer;
                 outline: none;
                 position: absolute;
-                top: $clone__padding;
-                right: $clone__padding;
+                top: $clone-padding;
+                right: $clone-padding;
                 transition: color .3s ease;
                 i {
                     display: block;
                 }
                     // States ------------------------------------------------------
                     &:hover {
-                        color: $clone__stop;
+                        color: $clone-stop;
                         transition: color .3s ease;
                     }
                     &:focus {
-                        border: solid 3px $clone__focus-colour;
+                        border: solid 3px $clone-focus-colour;
                         transition: border .2s ease;
                     }
             }
@@ -71,7 +71,7 @@
     }
 
         // States ------------------------------------------------------------------
-        &[data-clone-dialog="active--contained"] {
+        &[data-c-dialog="active--contained"] {
             height: auto;
             opacity: 1;
             top: 50%;
@@ -79,7 +79,7 @@
             transform: translate(-50%, -50%);
             transition: transform 0s linear, opacity .2s ease .2s;
         }
-        &[data-clone-dialog="active--overflowing"] {
+        &[data-c-dialog="active--overflowing"] {
             height: 100vh;
             opacity: 1;
             overflow: auto;

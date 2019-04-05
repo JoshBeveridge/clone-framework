@@ -5,7 +5,7 @@
 
 // =============================================================================
 
-[data-clone-carousel] {
+[data-c-carousel] {
     .slick-list {
         border-radius: 5px;
         .slick-track {
@@ -19,22 +19,22 @@
         }
     }
     .slick-arrow {
-        background: rgba($clone__black, .5);
+        background: rgba($clone-black, .5);
         border: none;
         cursor: pointer;
         display: none !important;
-        font-size: $clone__font-scale--h3;
+        font-size: $clone-font-scale--h3;
         height: 100%;
         position: absolute;
         top: 0;
         transition: all .2s ease;
         width: 5vw;
         z-index: 5;
-        @media #{$clone__tablet-landscape} {
+        @media #{$clone-tablet-landscape} {
             display: block !important;
         }
         i {
-            color: $clone__white;
+            color: $clone-white;
             font-size: inherit;
             position: absolute;
             top: 50%;
@@ -44,7 +44,7 @@
             // States ----------------------------------------------------------
             &:hover,
             &:focus {
-                background: rgba($clone__black, .8);
+                background: rgba($clone-black, .8);
                 transition: all .2s ease;
             }
 
@@ -68,7 +68,7 @@
         left: 50%;
         transform: translate(-50%, 100%);
         li {
-            background: $clone__c1;
+            background: $clone-c1;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
@@ -76,7 +76,7 @@
             button {
                 background: none;
                 border: 0;
-                color: $clone__white;
+                color: $clone-white;
                 cursor: pointer;
                 height: 2rem;
                 width: 2rem;
@@ -85,24 +85,24 @@
             &.slick-active,
             &:hover,
             &:focus {
-                background: $clone__focus-colour;
+                background: $clone-focus-colour;
                 transition: all .2s ease;
             }
         }
     }
 }
-[data-clone-carousel="image"] {
+[data-c-carousel="image"] {
     margin: 0 0 3rem 0;
-    [data-clone-carousel="item"] {
+    [data-c-carousel="item"] {
         background-position: center;
         background-size: cover;
         height: 0;
         padding-bottom: 7.0315%;
     }
 }
-[data-clone-carousel="content"] {
+[data-c-carousel="content"] {
     margin: 0 0 3rem 0;
-    [data-clone-carousel="item"] {
+    [data-c-carousel="item"] {
         background-position: center;
         background-size: cover;
     }
