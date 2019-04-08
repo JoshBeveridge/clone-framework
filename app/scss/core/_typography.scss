@@ -9,10 +9,13 @@
 
     * {
         color: $clone-default-font-colour;
-        font-family: $clone-font-default;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1;
+    }
+
+    *:not(i) {
+        font-family: $clone-font-default;
     }
 
     ::selection {

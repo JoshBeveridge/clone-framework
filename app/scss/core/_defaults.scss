@@ -76,3 +76,6 @@ $clone-alert--error: $clone-stop !default;
 $clone-blockquote-colour: $clone-c1 !default;
 
 $clone-pullquote-colour: $clone-c2 !default;
+
+$clone-accordion-border-colour: $clone-black !default;
+$clone-accordion-background-colour: lighten($clone-grey, 40%) !default;

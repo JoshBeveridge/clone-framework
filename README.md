@@ -43,15 +43,19 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
-Stable Release: 2.1.8
+Stable Release: 2.1.9
 
-CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.8/dist/css/clone.min.css
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.9/dist/css/clone.min.css
 
-JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.8/dist/js/clone.min.js
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.1.9/dist/js/clone.min.js
 
 ### Usage
 
-Clone uses HTML5 custom data attributes to allow for easy, standardized, namespaced access to styles. Clone data attributes are prefixed with `data-clone` and in some cases, allow direct manipulation of styles. The following are Clone's current data attributes:
+Clone uses HTML5 custom data attributes to allow for easy, standardized, namespaced access to styles. Clone data attributes are prefixed with `data-clone` and in some cases, allow direct manipulation of styles.
+
+In order for Clone's styles to apply to your markup, wrap your parent element in `data-clone`, or alternatively, place `data-clone` on your `<body>` element to apply Clone to your whole site.
+
+The following are Clone's current data attributes:
 
 #### Accordion
 

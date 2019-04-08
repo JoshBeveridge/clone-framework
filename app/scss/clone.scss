@@ -5,85 +5,86 @@
 
 // =============================================================================
 
-// Slick Carousel by Ken Wheeler ===============================================
+[data-clone] {
 
+    // Slick Carousel by Ken Wheeler ===========================================
     // @import "../../node_modules/slick-carousel/slick/slick.scss";
 
-// User Variables ==============================================================
-
+    // User Variables ==========================================================
     @import "core/defaults";
 
-// Core System Files ===========================================================
-
+    // Core System Files =======================================================
     @import "core/media";
     @import "core/typography";
     @import "core/system";
     @import "core/utilities";
 
-// Grids =======================================================================
+    // Grids ===================================================================
 
-    // Available media queries (MQ) include:
-        // pp (Phone: Portrait)
-        // pl (Phone: Landscape)
-        // tp (Tablet: Portrait)
-        // tl (Tablet: Landscape)
-        // ds (Desktop: Small)
-        // dm (Desktop: Medium)
-        // dl (Desktop: Large)
+        // Available media queries (MQ) include:
+            // pp (Phone: Portrait)
+            // pl (Phone: Landscape)
+            // tp (Tablet: Portrait)
+            // tl (Tablet: Landscape)
+            // ds (Desktop: Small)
+            // dm (Desktop: Medium)
+            // dl (Desktop: Large)
 
-    @import "core/flexbox-grid";
+        @import "core/flexbox-grid";
 
-// Navigation ==================================================================
+    // Navigation ==============================================================
 
-    @import "components/navigation";
+        @import "components/navigation";
 
-// Components ==================================================================
+    // Components ==============================================================
 
-    // Accordions
-    @import "components/accordion";
+        // Accordions
+        @import "components/accordion";
 
-    // Alerts
-    @import "components/alert";
+        // Alerts
+        @import "components/alert";
 
-    // Back-to-top Links
-    @import "components/back-to-top-link";
+        // Back-to-top Links
+        @import "components/back-to-top-link";
 
-    // Blockquote
-    @import "components/blockquote";
+        // Blockquote
+        @import "components/blockquote";
 
-    // Breadcrumbs
-    @import "components/breadcrumbs";
+        // Breadcrumbs
+        @import "components/breadcrumbs";
 
-    // Buttons
-    @import "components/button";
+        // Buttons
+        @import "components/button";
 
-    // Cards
+        // Cards
 
-    // Carousels
-    @import "components/carousel";
+        // Carousels
+        @import "components/carousel";
 
-    // Dialogs
-    @import "components/dialog";
+        // Dialogs
+        @import "components/dialog";
 
-    // Iframes
-    @import "components/iframe";
+        // Iframes
+        @import "components/iframe";
 
-    // Inputs
-    @import "components/inputs";
+        // Inputs
+        @import "components/inputs";
 
-    // Pullquotes
-    @import "components/pullquote";
+        // Pullquotes
+        @import "components/pullquote";
 
-    // Skip-to-content
-    @import "components/skip-to-content";
+        // Skip-to-content
+        @import "components/skip-to-content";
 
-    // Tables
-    @import "components/table";
+        // Tables
+        @import "components/table";
 
-    // Tags
+        // Tags
 
-// Templates ===================================================================
+    // Templates ===============================================================
 
-    // Text Content
+        // Text Content
 
-    // Content with Sidebar
+        // Content with Sidebar
+
+}

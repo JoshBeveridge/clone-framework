@@ -77,7 +77,7 @@ a[data-c-button] {
                     border: 1px solid $value;
                     color: $value;
                     i {
-                        color: contrasting-color($value, $clone-white, $clone-black);
+                        color: $value;
                     }
                 }
             }

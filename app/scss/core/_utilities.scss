@@ -148,7 +148,7 @@
     @each $style in $clone-border-style-list {
         @each $width in $clone-border-width-list {
             @each $key, $value in $clone-colour-map {
-                &[data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
+                [data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
                     border-color: $value;
                     border-style: unquote($style);
                     @if ($width == "thin") {
@@ -160,7 +160,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
+                [data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
                     border-top-color: $value;
                     border-top-style: unquote($style);
                     @if ($width == "thin") {
@@ -172,7 +172,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
+                [data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
                     border-right-color: $value;
                     border-right-style: unquote($style);
                     @if ($width == "thin") {
@@ -184,7 +184,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
+                [data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
                     border-bottom-color: $value;
                     border-bottom-style: unquote($style);
                     @if ($width == "thin") {
@@ -196,7 +196,7 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
-                &[data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
+                [data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
                     border-left-color: $value;
                     border-left-style: unquote($style);
                     @if ($width == "thin") {

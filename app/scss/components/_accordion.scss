@@ -6,6 +6,7 @@
 // =============================================================================
 
 [data-c-accordion="object"] {
+    border-bottom: 1px solid $clone-accordion-border-colour;
 
     [data-c-accordion="trigger"] {
         background: none;
@@ -46,11 +47,11 @@
     // States ------------------------------------------------------------------
 
         &:first-of-type {
-            border-top: 1px solid $clone-gray;
+            border-top: 1px solid $clone-accordion-border-colour;
         }
 
         &:nth-child(odd) {
-            background: rgba($clone-grey, .2);
+            background: $clone-accordion-background-colour;
         }
 
         &.active {
