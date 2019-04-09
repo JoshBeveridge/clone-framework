@@ -25,16 +25,6 @@
 
 // Font Scale ==================================================================
 
-    html,
-    body {
-        font-size: 110%;
-
-        @media #{$clone-tablet-portrait} {
-            font-size: 120%;
-        }
-
-    }
-
     $clone-font-scale--regular: 1rem;
 
     $clone-font-scale--h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
@@ -43,6 +33,14 @@
     $clone-font-scale--h4: calc(1rem*(#{$clone-font-scale}));
     $clone-font-scale--h5: $clone-font-scale--regular;
     $clone-font-scale--small: calc(1rem/(#{$clone-font-scale}));
+
+    h1, h2, h3, h4, h5 {
+        line-height: calc(#{$clone-line-height} * 85%);
+        span {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
 
 // Copy & Misc =================================================================
 
@@ -73,6 +71,16 @@
         li {
             color: inherit;
             font-size: inherit;
+            margin-bottom: calc(#{$clone-margin} / 2);
+            @media #{$clone-tablet-portrait} {
+                margin-bottom: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                margin-bottom: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
