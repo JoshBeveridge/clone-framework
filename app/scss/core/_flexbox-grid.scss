@@ -103,6 +103,9 @@
     >div {
         height: 100%;
     }
+    [data-c-grid] {
+        height: 100%;
+    }
 }
 
 [data-c-grid-item*="top"] {
