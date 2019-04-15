@@ -9,6 +9,18 @@
 @import "core/defaults";
 @import "core/media";
 
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
 [data-clone] {
 
     // Slick Carousel by Ken Wheeler ===========================================
