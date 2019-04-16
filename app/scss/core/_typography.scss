@@ -8,10 +8,12 @@
 // Fonts =======================================================================
 
     * {
-        color: $clone-default-font-colour;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1;
+        p, h1, h2, h3, h4, h5, ul, ol, [data-c-input] *, table * {
+            color: $clone-default-font-colour;
+        }
     }
 
     *:not(i) {
@@ -61,12 +63,12 @@
 
     ul,
     ol {
-        padding-left: $clone-padding;
+        padding-left: calc($clone-padding * 2);
         @media #{$clone-tablet-portrait} {
-            padding-left: calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            padding-left: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
         }
         @media #{$clone-desktop-large} {
-            padding-left: calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            padding-left: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
         }
         li {
             color: inherit;
@@ -80,6 +82,15 @@
             }
             &:last-child {
                 margin-bottom: 0;
+            }
+            >ul {
+                margin-top: calc(#{$clone-margin} / 2);
+                @media #{$clone-tablet-portrait} {
+                    margin-top: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-top: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
             }
         }
     }

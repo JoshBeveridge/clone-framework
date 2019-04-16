@@ -57,6 +57,17 @@
 
             <a id="content"></a>
 
+            <pre data-c-margin="bottom"><code>// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
+
+// Custom Variables
+// All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
+
+// Include Clone
+@import &quot;../node_modules/clone-framework/app/scss/clone&quot;;</code></pre>
+
+            <p data-c-margin="bottom">this is a sentence with <code>code in it.</code></p>
+
             <!-- Accordions ================================================ -->
             <div data-c-padding="bottom(double)">
 
@@ -66,158 +77,56 @@
                     Accordions
                 </h3>
 
-                <div
-    data-c-accordion="object"
-    data-c-background="white(100)">
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(half) right bottom(half) left(half)">
-            <span data-c-heading="h4" data-c-font-weight="bold">
-                Accordion Title
-            </span>
-            <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
-                Optional Accordion Subtitle
-            </span>
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add"
-            data-c-font-colour="black">
-            add_circle
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove"
-            data-c-font-colour="black">
-            remove_circle
-        </i>
-    </button>
+                <div data-c-accordion="group">
     <div
-        aria-hidden="true"
-        data-c-accordion="content"
-        data-c-padding="right(half) left(half)">
-        <div data-c-padding="bottom(half)">
-            <!-- Content Goes Here -->
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Egestas purus <a href="google.com" title="hi">viverra accumsan</a> in nisl nisi scelerisque eu
-                ultrices. A condimentum vitae sapien pellentesque habitant morbi
-                tristique senectus et.
-            </p>
-        </div>
-    </div>
-</div>
-
-                <div
-    data-c-accordion="object"
-    data-c-background="white(100)">
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(half) right bottom(half) left(half)">
-            <span data-c-heading="h4" data-c-font-weight="bold">
-                Accordion Title
+        data-c-accordion="object"
+        data-c-background="white(100)">
+        <button
+            aria-expanded="false"
+            data-c-accordion="trigger"
+            data-c-padding="right"
+            tabindex="0"
+            type="button">
+            <div data-c-padding="top(half) right bottom(half) left(half)">
+                <span data-c-heading="h4" data-c-font-weight="bold">
+                    Accordion Title
+                </span>
+                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
+                    Optional Accordion Subtitle
+                </span>
+            </div>
+            <span data-c-visibility="invisible">
+                Click to view...
             </span>
-            <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
-                Optional Accordion Subtitle
-            </span>
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
+            <i
+                aria-hidden="true"
+                class="material-icons"
+                data-c-accordion="icon--add"
+                data-c-font-colour="black">
+                add_circle
+            </i>
+            <i
+                aria-hidden="true"
+                class="material-icons"
+                data-c-accordion="icon--remove"
+                data-c-font-colour="black">
+                remove_circle
+            </i>
+        </button>
+        <div
             aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add"
-            data-c-font-colour="black">
-            add_circle
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove"
-            data-c-font-colour="black">
-            remove_circle
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        data-c-accordion="content"
-        data-c-padding="right(half) left(half)">
-        <div data-c-padding="bottom(half)">
-            <!-- Content Goes Here -->
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Egestas purus <a href="google.com" title="hi">viverra accumsan</a> in nisl nisi scelerisque eu
-                ultrices. A condimentum vitae sapien pellentesque habitant morbi
-                tristique senectus et.
-            </p>
-        </div>
-    </div>
-</div>
-
-                <div
-    data-c-accordion="object"
-    data-c-background="white(100)">
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(half) right bottom(half) left(half)">
-            <span data-c-heading="h4" data-c-font-weight="bold">
-                Accordion Title
-            </span>
-            <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
-                Optional Accordion Subtitle
-            </span>
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add"
-            data-c-font-colour="black">
-            add_circle
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove"
-            data-c-font-colour="black">
-            remove_circle
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        data-c-accordion="content"
-        data-c-padding="right(half) left(half)">
-        <div data-c-padding="bottom(half)">
-            <!-- Content Goes Here -->
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Egestas purus <a href="google.com" title="hi">viverra accumsan</a> in nisl nisi scelerisque eu
-                ultrices. A condimentum vitae sapien pellentesque habitant morbi
-                tristique senectus et.
-            </p>
+            data-c-accordion="content"
+            data-c-padding="right(half) left(half)">
+            <div data-c-padding="bottom(half)">
+                <!-- Content Goes Here -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Egestas purus <a href="google.com" title="hi">viverra accumsan</a> in nisl nisi scelerisque eu
+                    ultrices. A condimentum vitae sapien pellentesque habitant morbi
+                    tristique senectus et.
+                </p>
+            </div>
         </div>
     </div>
 </div>

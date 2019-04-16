@@ -59,6 +59,17 @@
 
             <a id="content"></a>
 
+            <pre data-c-margin="bottom"><code>{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
+
+// Custom Variables
+// All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";{% endfilter %}</code></pre>
+
+            <p data-c-margin="bottom">this is a sentence with <code>code in it.</code></p>
+
             <!-- Accordions ================================================ -->
             <div data-c-padding="bottom(double)">
 
@@ -68,8 +79,6 @@
                     Accordions
                 </h3>
 
-                {% include "components/accordion.html" %}
-                {% include "components/accordion.html" %}
                 {% include "components/accordion.html" %}
 
             </div>
