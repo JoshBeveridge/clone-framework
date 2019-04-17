@@ -11,21 +11,20 @@
 "use strict";
 
 // Requirements ================================================================
-
-    const gulp = require('gulp');
-    const { series, parallel, src, dest, watch } = require('gulp');
-    const sass = require('gulp-sass');
-    const browsersync = require('browser-sync').create();
-    const useref = require('gulp-useref');
-    const uglify = require('gulp-uglify');
-    const gulpIf = require('gulp-if');
-    const concat = require('gulp-concat');
-    const rename = require('gulp-rename');
-    const autoprefixer = require('gulp-autoprefixer');
-    const cssnano = require('gulp-cssnano');
-    const del = require('del');
-    const runSequence = require('run-sequence');
-    const twig = require('gulp-twig');
+const gulp = require('gulp');
+const { series, parallel, src, dest, watch } = require('gulp');
+const sass = require('gulp-sass');
+const browsersync = require('browser-sync').create();
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const gulpIf = require('gulp-if');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+const del = require('del');
+const runSequence = require('run-sequence');
+const twig = require('gulp-twig');
 
 // Tasks =======================================================================
 

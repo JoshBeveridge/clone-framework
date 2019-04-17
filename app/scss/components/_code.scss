@@ -8,12 +8,25 @@ pre {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
     font-family: $clone-font--monospace;
-    padding: calc(#{$clone-padding});
-    @media #{$clone-tablet-portrait} {
-        padding: calc((#{$clone-padding}) * #{$clone-whitespace-multiplier});
+    font-size: $clone-font-scale--regular;
+    overflow: auto;
+    padding: 0;
+    code {
+        padding: calc(#{$clone-padding});
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding}) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        * {
+            font-family: $clone-font--monospace;
+            font-size: $clone-font-scale--regular;
+        }
     }
-    @media #{$clone-desktop-large} {
-        padding: calc(((#{$clone-padding}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+    * {
+        font-family: $clone-font--monospace;
+        font-size: $clone-font-scale--regular;
     }
 }
 
@@ -21,11 +34,16 @@ code {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
     font-family: $clone-font--monospace;
-    padding: calc(#{$clone-padding} / 6);
+    font-size: inherit;
+    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3);
     @media #{$clone-tablet-portrait} {
-        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier});
+        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier});
     }
     @media #{$clone-desktop-large} {
-        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+    }
+    * {
+        font-family: $clone-font--monospace;
+        font-size: $clone-font-scale--regular;
     }
 }

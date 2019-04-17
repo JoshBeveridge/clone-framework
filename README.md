@@ -29,7 +29,7 @@ While it doesn't matter how your project compiles Sass, theming Clone requires t
 
 // Custom Variables
 
-    // All available custom variables can be found at https://github.com/joshdrink/Clone/blob/dev/app/scss/core/_defaults.scss
+    // All available custom variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/variables.scss
 
 // Include Clone
 
@@ -43,11 +43,11 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
-Stable Release: 2.2.4
+Stable Release: 2.2.5
 
-CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.4/dist/css/clone.min.css
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.5/dist/css/clone.min.css
 
-JS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.4/dist/js/clone.min.js
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.5/dist/js/clone.min.js
 
 ### Usage
 
@@ -109,7 +109,7 @@ Usage: `data-c-font="STYLE"`
 
 ##### Font Colour
 
-Usage: `data-c-font-colour="THEME-COLOUR"`
+Usage: `data-c-colour="THEME-COLOUR"`
 
 ##### Font Style
 

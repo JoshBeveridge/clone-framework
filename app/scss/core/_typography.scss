@@ -63,7 +63,7 @@
 
     ul,
     ol {
-        padding-left: calc($clone-padding * 2);
+        padding-left: calc(#{$clone-padding} * 2);
         @media #{$clone-tablet-portrait} {
             padding-left: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
         }

@@ -245,12 +245,18 @@
     // Font Colour -------------------------------------------------------------
 
         @each $key, $value in $clone-colour-map {
-            [data-c-font-colour="#{$key}"] {color: $value;}
-            [data-c-font-colour="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-c-font-colour="#{$key}--dark"] {color: darken($value, 10%);}
-            [data-c-font-color="#{$key}"] {color: $value;}
-            [data-c-font-color="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-c-font-color="#{$key}--dark"] {color: darken($value, 10%);}
+            [data-c-colour="#{$key}"],
+            [data-c-colour="#{$key}"] * {color: $value;}
+            [data-c-colour="#{$key}--light"],
+            [data-c-colour="#{$key}--light"] * {color: lighten($value, 10%);}
+            [data-c-colour="#{$key}--dark"],
+            [data-c-colour="#{$key}--dark"] * {color: darken($value, 10%);}
+            [data-c-color="#{$key}"],
+            [data-c-color="#{$key}"] * {color: $value;}
+            [data-c-color="#{$key}--light"],
+            [data-c-color="#{$key}--light"] * {color: lighten($value, 10%);}
+            [data-c-color="#{$key}--dark"],
+            [data-c-color="#{$key}--dark"] * {color: darken($value, 10%);}
         };
 
     // Font Weights ------------------------------------------------------------
