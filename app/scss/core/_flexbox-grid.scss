@@ -100,7 +100,8 @@
 }
 
 [data-c-grid-item*="equal-col"] {
-    >div {
+    >div,
+    >pre {
         height: 100%;
     }
     [data-c-grid] {
