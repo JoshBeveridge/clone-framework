@@ -10,7 +10,7 @@
     * {
         font-size: 1rem;
         font-weight: 400;
-        line-height: 1;
+        line-height: $clone-line-height;
         p, h1, h2, h3, h4, h5, ul, ol, [data-c-input] *, table * {
             color: $clone-default-font-colour;
         }
@@ -24,17 +24,6 @@
         background: $clone-selection-background-colour !important;
         color: contrasting-color($clone-selection-background-colour, $clone-white, $clone-black) !important;
     }
-
-// Font Scale ==================================================================
-
-    $clone-font-scale--regular: 1rem;
-
-    $clone-font-scale--h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
-    $clone-font-scale--h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
-    $clone-font-scale--h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale})));
-    $clone-font-scale--h4: calc(1rem*(#{$clone-font-scale}));
-    $clone-font-scale--h5: $clone-font-scale--regular;
-    $clone-font-scale--small: calc(1rem/(#{$clone-font-scale}));
 
     h1, h2, h3, h4, h5 {
         line-height: calc(#{$clone-line-height} * .85);

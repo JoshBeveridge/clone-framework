@@ -84,3 +84,14 @@ $clone-pullquote-colour: $clone-c2 !default;
 
 $clone-accordion-border-colour: $clone-black !default;
 $clone-accordion-background-colour: lighten($clone-grey, 40%) !default;
+
+// Font Scale ==================================================================
+
+$clone-font-scale--regular: 1rem;
+
+$clone-font-scale--h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
+$clone-font-scale--h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
+$clone-font-scale--h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale})));
+$clone-font-scale--h4: calc(1rem*(#{$clone-font-scale}));
+$clone-font-scale--h5: $clone-font-scale--regular;
+$clone-font-scale--small: calc(1rem/(#{$clone-font-scale}));

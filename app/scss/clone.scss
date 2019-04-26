@@ -9,10 +9,6 @@
 @import "core/defaults";
 @import "core/media";
 
-* {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     max-width: 100%;
@@ -27,9 +23,9 @@ body {
     // @import "../../node_modules/slick-carousel/slick/slick.scss";
 
     // Core System Files =======================================================
-    @import "core/typography";
     @import "core/system";
     @import "core/utilities";
+    @import "core/typography";
 
     // Grids ===================================================================
 

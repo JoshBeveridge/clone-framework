@@ -224,6 +224,11 @@
 
 // Containers ==================================================================
 
+    [data-c-container="full"] {
+        margin: 0 auto;
+        width: 90%;
+    }
+
     [data-c-container="layout"] {
         margin: 0 auto;
         max-width: $clone-wide-layout;
