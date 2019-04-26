@@ -1,5 +1,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg)
-![GitHub file size in bytes](https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/clone.css.svg)
+![GitHub file size in bytes](https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/clone.min.css.svg?label=CDN%20CSS)
+![GitHub file size in bytes](https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/clone.min.js.svg?label=CDN%20JS)
+![Website](https://img.shields.io/website/http/clone-documentation.s3-website.ca-central-1.amazonaws.com.svg?down_message=Docs%20Down&up_message=Visit%20Docs)
 
 # Clone
 
@@ -46,11 +48,11 @@ You'll also want to copy the Javascript file located at `/node_modules/clone-fra
 
 Coming Soon!
 
-Stable Release: 2.2.5
+Stable Release: 2.2.6
 
-CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.5/dist/css/clone.min.css
+CSS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/css/clone.min.css
 
-JS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.5/dist/js/clone.min.js
+JS: https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/js/clone.min.js
 
 ### Usage
 
