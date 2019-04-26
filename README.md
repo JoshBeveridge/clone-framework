@@ -1,3 +1,6 @@
+![GitHub package.json version](https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg)
+![GitHub file size in bytes](https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/clone.css.svg)
+
 # Clone
 
 A lightweight, themeable design system.

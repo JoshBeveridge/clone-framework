@@ -1,3 +1,4 @@
+<!-- This is an example Dialog trigger. -->
 <div data-c-alignment="center">
     <button
         data-c-button="solid(c1)"
@@ -9,8 +10,10 @@
     </button>
 </div>
 
+<!-- This overlay is required somewhere on the site, but not necessarily next to the dialog.-->
 <div data-c-dialog-overlay></div>
 
+<!-- Actual Dialog -->
 <div
     aria-hidden="true"
     aria-describedby="example-dialog-01-description"
@@ -19,51 +22,39 @@
     data-c-dialog-id="example-dialog-01"
     data-c-padding="top(double) bottom(double)"
     role="dialog">
-
     <div
         data-c-background="white(100)"
         data-c-radius="rounded">
-
         <div
             data-c-padding="normal"
             data-c-border="bottom(thin, solid, black)">
-
             <h5
                 data-c-font-size="h4"
                 id="example-dialog-01-title">
-                Dialog Title
+                <!-- Dialog Title Here -->
             </h5>
-
+            <!-- This subtitle span can be removed if a subtitle isn't needed. -->
             <span
                 data-c-font-size="h5"
                 data-c-margin="top(half)">
-                Optional Dialog Subtitle
+                <!-- Dialog Subtitle Here -->
             </span>
-
             <button
                 data-c-dialog-action="close"
                 data-c-dialog-id="example-dialog-01"
                 type="button">
-                <i class="material-icons">
-                    close
-                </i>
+                <i class="material-icons">close</i>
             </button>
-
         </div>
-
         <div
             data-c-border="bottom(thin, solid, black)"
             data-c-padding="normal">
-
             <div id="example-dialog-01-description">
-                <p data-c-margin="bottom(half)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mi non dui sodales pellentesque. Sed non est nec lacus malesuada sodales. Pellentesque aliquet tristique aliquet. Morbi blandit eros vitae nisi venenatis, vel hendrerit quam blandit. Nulla iaculis blandit ultricies. Etiam posuere lectus non augue aliquet iaculis. Integer consequat, metus nec vehicula suscipit, libero justo tincidunt mi, eget aliquam eros lacus eget est. Nulla congue dolor a viverra luctus.</p>
-                <p>Suspendisse placerat massa justo, ut tempor orci dictum eget. Phasellus a placerat magna. Mauris quis risus quis nisi semper finibus ac dignissim odio. Donec ipsum nunc, porta quis mauris sit amet, ullamcorper varius lacus. Nulla tincidunt metus et neque molestie, sit amet mattis turpis vestibulum. Ut ac leo tempor, dictum magna sed, fringilla massa. Aliquam laoreet non dui ac facilisis. Aenean aliquet, nisi in posuere iaculis, libero turpis molestie orci, sit amet accumsan est sem eu diam. Donec imperdiet leo quam, vel lobortis dui semper sed. Quisque elementum neque viverra velit interdum ultricies.</p>
+                <!-- Dialog Content Here-->
             </div>
-
         </div>
-
+        <!-- The following dialog actions can be customized depending on the dialog. -->
         <div data-c-padding="normal">
-
             <div data-c-grid="gutter middle">
                 <div data-c-grid-item="base(1of2)">
                     <button
@@ -86,9 +77,6 @@
                     </button>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
