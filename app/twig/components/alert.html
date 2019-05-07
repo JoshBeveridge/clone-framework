@@ -4,19 +4,25 @@
     data-c-radius="rounded"
     data-c-padding="half"
     role="alert">
+    <div>
     <!-- This title/icon span is optional. -->
-    <span
-        data-c-margin="bottom(quarter)"
-        data-c-heading="h5"
-        data-c-font-weight="bold">
-        <i
-            aria-hidden="true"
-            class="material-icons">
-            report_problem
-        </i>
-        <!-- Alert Title Here -->
-    </span>
-    <p>
-        <!-- Alert Content Here -->
-    </p>
+        <span
+            data-c-margin="bottom(quarter)"
+            data-c-heading="h5"
+            data-c-font-weight="bold">
+            <i
+                aria-hidden="true"
+                class="material-icons">
+                report_problem
+            </i>
+            <!-- Alert Title Here -->
+        </span>
+        <p>
+            <!-- Alert Content Here -->
+        </p>
+    </div>
+    <!-- This optional close trigger will remove the element from the DOM. You'll need to manually add events if you need it to persist or perform further action. -->
+    <button data-c-alert="close-trigger">
+        <i class="material-icons">close</i>
+    </button>
 </div>

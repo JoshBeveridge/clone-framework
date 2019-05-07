@@ -98,7 +98,7 @@ const twig = require('gulp-twig');
     function watchFiles() {
         watch('app/scss/**/*.scss', series(compileCSS, browserSyncReload));
         watch('app/twig/**/*.html', series(template, browserSyncReload));
-        watch('app/js/**/*.js', series(moveSlick, concatScripts, browserSyncReload));
+        watch('app/js/**/*.js', series(concatScripts, browserSyncReload));
     }
 
     // Export

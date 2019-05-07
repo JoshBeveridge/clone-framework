@@ -1,0 +1,90 @@
+// =============================================================================
+
+    // Clone
+    // Menus
+
+// =============================================================================
+$submenu-colour: $clone-c3;
+[data-c-menu*="topbar"] {
+    position: sticky;
+    top: 0;
+    left: 0;
+    * {
+        vertical-align: middle;
+    }
+    >ul,
+    >div >ul {
+        list-style: none;
+        margin: -1rem;
+        padding: 0;
+        >li {
+            display: inline-block;
+            margin: 0 1rem;
+            position: relative;
+            >a {
+                display: inline-block;
+                padding: 1rem 0;
+            }
+            >i {
+                display: inline-block;
+                margin: 0 -1rem 0 0;
+                padding: 1rem;
+            }
+            >ul {
+                background: $submenu-colour;
+                // display: none;
+                margin: 0;
+                max-height: 70vh;
+                overflow: auto;
+                padding: 0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                text-align: left;
+                transform: translate(0, 100%);
+                li {
+                    display: block;
+                    margin: 0;
+                    position: relative;
+                    a {
+                        display: block;
+                        min-width: 20vw;
+                        padding: 1rem 3rem 1rem 1rem;
+                    }
+                    i {
+                        display: inline-block;
+                        padding: 1rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    ul {
+                        background: lighten($submenu-colour, 5%);
+                        margin: 0;
+                        padding: 0;
+                        // display: none;
+                        li {
+                            a {
+                                display: block;
+                                min-width: 15vw;
+                                padding: 1rem 3rem 1rem 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+[data-c-menu*="topbar(left)"] {
+    text-align: left;
+}
+[data-c-menu*="topbar(centre)"] {
+    text-align: center;
+}
+[data-c-menu*="topbar(center)"] {
+    text-align: center;
+}
+[data-c-menu*="topbar(right)"] {
+    text-align: right;
+}

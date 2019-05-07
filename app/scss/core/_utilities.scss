@@ -15,15 +15,7 @@
         // Headings
         // Styles
     // Margins
-        // Half Margins
-        // Regular Margins
-        // Double Margins
-        // Triple Margins
     // Padding
-        // Half Padding
-        // Regular Padding
-        // Double Padding
-        // Triple Padding
 
 // =============================================================================
 
@@ -403,6 +395,15 @@
                     }
                 }
             }
+        }
+
+        // Auto Margins --------------------------------------------------------
+        [data-c-margin*="right(auto)"] {
+            margin-right: auto;
+        }
+
+        [data-c-margin*="left(auto)"] {
+            margin-left: auto;
         }
 
     // Padding -----------------------------------------------------------------

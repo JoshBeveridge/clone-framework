@@ -6,13 +6,21 @@
 // =============================================================================
 
 [data-c-alert] {
-
+    align-items: flex-start;
+    display: flex;
     i {
         margin-top: -.2rem;
         margin-right: .3rem;
         vertical-align: middle;
     }
+}
 
+[data-c-alert="close-trigger"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: -.5rem;
+    padding: .5rem;
 }
 
 [data-c-alert="information"] {
