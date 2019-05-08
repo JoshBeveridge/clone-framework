@@ -23,8 +23,8 @@ const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const del = require('del');
-const runSequence = require('run-sequence');
 const twig = require('gulp-twig');
+const gzip = require('gulp-gzip');
 
 // Tasks =======================================================================
 
@@ -89,6 +89,18 @@ const twig = require('gulp-twig');
         }));
     }
 
+    function compressCSS() {
+        return src('dist/css/*.css')
+        .pipe(gzip())
+        .pipe(dest('dist/css/gzip'))
+    }
+
+    function compressJS() {
+        return src('dist/js/*.js')
+        .pipe(gzip())
+        .pipe(dest('dist/js/gzip'))
+    }
+
     // Dist Removal
     function cleanDist() {
         return del('dist');
@@ -102,6 +114,6 @@ const twig = require('gulp-twig');
     }
 
     // Export
-    exports.build = series(cleanDist, template, moveSlick, concatScripts, compileCSS, distribute);
+    exports.build = series(cleanDist, template, moveSlick, concatScripts, compileCSS, distribute, compressCSS, compressJS);
     exports.watch = series(cleanDist, template, moveSlick, concatScripts, compileCSS, parallel(browserSync, watchFiles));
     exports.default = series(cleanDist, template, moveSlick, concatScripts, compileCSS, parallel(browserSync, watchFiles));
