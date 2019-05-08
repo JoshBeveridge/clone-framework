@@ -25,7 +25,10 @@ $submenu-colour: $clone-c3;
                 display: inline-block;
                 padding: 1rem 0;
             }
-            >i {
+            >button {
+                background: none;
+                border: none;
+                cursor: pointer;
                 display: inline-block;
                 margin: 0 -1rem 0 0;
                 padding: 1rem;
@@ -51,7 +54,10 @@ $submenu-colour: $clone-c3;
                         min-width: 20vw;
                         padding: 1rem 3rem 1rem 1rem;
                     }
-                    i {
+                    button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
                         display: inline-block;
                         padding: 1rem;
                         position: absolute;
@@ -62,7 +68,7 @@ $submenu-colour: $clone-c3;
                         background: lighten($submenu-colour, 5%);
                         margin: 0;
                         padding: 0;
-                        // display: none;
+                        display: none;
                         li {
                             a {
                                 display: block;
