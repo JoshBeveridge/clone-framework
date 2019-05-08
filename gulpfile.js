@@ -54,9 +54,14 @@ const gzip = require('gulp-gzip');
     }
 
     // Slick
-    function moveSlick() {
+    function moveSlickJS() {
         return src('node_modules/slick-carousel/slick/slick.min.js')
         .pipe(dest('app/js'));
+    }
+
+    function moveSlickCSS() {
+        return src('node_modules/slick-carousel/slick/slick.scss')
+        .pipe(dest('app/scss'));
     }
 
     // Move JavaScript
@@ -114,6 +119,6 @@ const gzip = require('gulp-gzip');
     }
 
     // Export
-    exports.build = series(cleanDist, template, moveSlick, concatScripts, compileCSS, distribute, compressCSS, compressJS);
-    exports.watch = series(cleanDist, template, moveSlick, concatScripts, compileCSS, parallel(browserSync, watchFiles));
-    exports.default = series(cleanDist, template, moveSlick, concatScripts, compileCSS, parallel(browserSync, watchFiles));
+    exports.build = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, distribute, compressCSS, compressJS);
+    exports.watch = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, parallel(browserSync, watchFiles));
+    exports.default = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, parallel(browserSync, watchFiles));

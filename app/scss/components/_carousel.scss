@@ -19,8 +19,8 @@
         }
     }
     .slick-slide .slick-list .slick-track >div {
-        margin-right: 10vw;
-        margin-left: 10vw;
+        // margin-right: 10vw;
+        // margin-left: 10vw;
     }
     .slick-arrow {
         background: rgba($clone-black, .5);
@@ -95,10 +95,13 @@
         }
     }
 }
+[data-c-carousel="item"] {
+    padding: 0 10vw;
+}
 [data-c-carousel="image"] {
-    overflow: hidden;
-    position: relative;
-    margin: 0 0 3rem 0;
+    // overflow: hidden;
+    // position: relative;
+    margin: 0 0 5rem 0;
     [data-c-carousel="item"] {
         background-position: center;
         background-size: cover;
@@ -107,9 +110,9 @@
     }
 }
 [data-c-carousel="content"] {
-    overflow: hidden;
-    position: relative;
-    margin: 0 0 3rem 0;
+    // overflow: hidden;
+    // position: relative;
+    margin: 0 0 5rem 0;
     [data-c-carousel="item"] {
         background-position: center;
         background-size: cover;
