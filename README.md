@@ -5,7 +5,7 @@
 
 # Clone
 
-A lightweight, themeable design system.
+Clone is a simple design framework for building websites.
 
 Produced at [Talent Cloud](https://talent.canada.ca/).
 
