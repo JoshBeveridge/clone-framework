@@ -3,6 +3,7 @@
 
 // Layout Variables
 $clone-wide-layout: 80rem;
+$clone-form-layout: 60rem;
 $clone-copy-layout: 39rem;
 
 // Whitespace Variables
@@ -93,4 +94,4 @@ $clone-selection-background-colour: $clone-c5;
 
     // Accordions
     $clone-accordion-border-colour: $clone-black;
-    $clone-accordion-background-colour: lighten($clone-grey, 40%);
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 40%);

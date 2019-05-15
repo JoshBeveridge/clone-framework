@@ -1,10 +1,9 @@
-<!-- Alerts can have three arguments: information, warning, error. -->
+<!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. information(toast) -->
 <div
     data-c-alert="error"
     data-c-radius="rounded"
-    data-c-padding="half"
     role="alert">
-    <div>
+    <div data-c-padding="half">
     <!-- This title/icon span is optional. -->
         <span
             data-c-margin="bottom(quarter)"
@@ -22,7 +21,7 @@
         </p>
     </div>
     <!-- This optional close trigger will remove the element from the DOM. You'll need to manually add events if you need it to persist or perform further action. -->
-    <button data-c-alert="close-trigger">
+    <button data-c-alert="close-trigger" data-c-padding="half">
         <i class="material-icons">close</i>
     </button>
 </div>

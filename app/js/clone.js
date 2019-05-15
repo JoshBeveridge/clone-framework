@@ -45,7 +45,7 @@
 
         // Accordion Handlers ==================================================
         function accordionTrigger(trigger) {
-            var object = clone("accordion", "object");
+            var object = clone("accordion", "accordion");
             var content = clone("accordion", "content");
             if ($(trigger).parent(object).hasClass("active")) {
                 $(trigger).attr("aria-expanded", "false");

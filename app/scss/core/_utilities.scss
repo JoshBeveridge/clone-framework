@@ -212,7 +212,7 @@
         overflow: hidden;
     }
 
-    .clone-shadow {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
+    [data-c-card] {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
 
 // Containers ==================================================================
 
@@ -220,10 +220,14 @@
         margin: 0 auto;
         width: 90%;
     }
-
     [data-c-container="layout"] {
         margin: 0 auto;
         max-width: $clone-wide-layout;
+        width: 90%;
+    }
+    [data-c-container="form"] {
+        margin: 0 auto;
+        max-width: $clone-form-layout;
         width: 90%;
     }
     [data-c-container="copy"] {
@@ -243,19 +247,35 @@
 
         @each $key, $value in $clone-colour-map {
             [data-c-colour="#{$key}"],
-            [data-c-colour="#{$key}"] * {color: $value;}
+            [data-c-colour="#{$key}"] {color: $value;}
             [data-c-colour="#{$key}--light"],
-            [data-c-colour="#{$key}--light"] * {color: lighten($value, 10%);}
+            [data-c-colour="#{$key}--light"] {color: lighten($value, 10%);}
             [data-c-colour="#{$key}--dark"],
-            [data-c-colour="#{$key}--dark"] * {color: darken($value, 10%);}
+            [data-c-colour="#{$key}--dark"] {color: darken($value, 10%);}
             [data-c-color="#{$key}"],
-            [data-c-color="#{$key}"] * {color: $value;}
+            [data-c-color="#{$key}"] {color: $value;}
             [data-c-color="#{$key}--light"],
-            [data-c-color="#{$key}--light"] * {color: lighten($value, 10%);}
+            [data-c-color="#{$key}--light"] {color: lighten($value, 10%);}
             [data-c-color="#{$key}--dark"],
-            [data-c-color="#{$key}--dark"] * {color: darken($value, 10%);}
+            [data-c-color="#{$key}--dark"] {color: darken($value, 10%);}
         };
 
+    // Hover Colour ------------------------------------------------------------
+    @each $key, $value in $clone-colour-map {
+        [data-c-hover-colour="#{$key}"]:hover,
+        [data-c-hover-colour="#{$key}"]:hover {color: $value;}
+        [data-c-hover-colour="#{$key}--light"]:hover,
+        [data-c-hover-colour="#{$key}--light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-colour="#{$key}--dark"]:hover,
+        [data-c-hover-colour="#{$key}--dark"]:hover {color: darken($value, 10%);}
+        [data-c-hover-color="#{$key}"]:hover,
+        [data-c-hover-color="#{$key}"]:hover {color: $value;}
+        [data-c-hover-color="#{$key}--light"]:hover,
+        [data-c-hover-color="#{$key}--light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-color="#{$key}--dark"]:hover,
+        [data-c-hover-color="#{$key}--dark"]:hover {color: darken($value, 10%);}
+    };
+    
     // Font Weights ------------------------------------------------------------
 
         $clone-weight-map: (

@@ -11,9 +11,6 @@
         font-size: 1rem;
         font-weight: 400;
         line-height: $clone-line-height;
-        p, h1, h2, h3, h4, h5, ul, ol, [data-c-input] *, table * {
-            color: $clone-default-font-colour;
-        }
     }
 
     *:not(i) {

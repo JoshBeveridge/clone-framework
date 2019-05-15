@@ -17,6 +17,7 @@ $clone-font-scale: 1.333 !default;
 $clone-line-height: 1.5 !default;
 
 $clone-wide-layout: 80rem !default;
+$clone-form-layout: 60rem !default;
 $clone-copy-layout: 39rem !default;
 
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
@@ -83,7 +84,7 @@ $clone-blockquote-colour: $clone-c1 !default;
 $clone-pullquote-colour: $clone-c2 !default;
 
 $clone-accordion-border-colour: $clone-black !default;
-$clone-accordion-background-colour: lighten($clone-grey, 40%) !default;
+$clone-accordion-alternating-background-colour: lighten($clone-grey, 40%) !default;
 
 // Font Scale ==================================================================
 
