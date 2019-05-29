@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.3
+- fixes a bug with toast alerts on mobile not displaying correctly
+
 ## 2.3.2
 - fixes a bug with accordion alternating colours being too light
 - fixes a bug where carousel active dots would be the same colour as inactive ones

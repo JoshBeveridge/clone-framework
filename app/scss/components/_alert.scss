@@ -49,9 +49,15 @@
 }
 
 [data-c-alert*="toast"] {
-    max-width: 33.33vw;
+    margin: 0 auto;
+    max-width: 90vw;
     position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+    right: 5vw;
+    bottom: 5vw;
     z-index: 100000;
+    @media #{$clone-tablet-portrait} {
+        max-width: 35rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
 }
