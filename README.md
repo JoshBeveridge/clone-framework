@@ -12,6 +12,10 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.2
+- fixes a bug with accordion alternating colours being too light
+- fixes a bug where carousel active dots would be the same colour as inactive ones
+
 ## 2.3.1
 - began playing with Clone's default theme, Brave (please note that this will continue to change)
 - default variable file has been reworked to be more informative and structured

@@ -1,6 +1,6 @@
 {
   "name": "clone-framework",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "A data-attribute-based themeable design system.",
   "main": "app/index.js",
   "scripts": {

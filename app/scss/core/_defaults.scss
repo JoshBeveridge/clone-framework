@@ -75,7 +75,7 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Accordions
     $clone-accordion-border-colour: $clone-black !default;
-    $clone-accordion-alternating-background-colour: lighten($clone-grey, 40%) !default;
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%) !default;
 
     // Alerts
     $clone-alert-information: $clone-go !default;
@@ -93,7 +93,7 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Tables
     $clone-table-heading-colour: $clone-c1 !default;
-    $clone-table-alternating-colour: rgba(0, 0, 0, .1) !default;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1) !default; // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
 
 // Font Variables
 
