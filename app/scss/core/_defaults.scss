@@ -1,98 +1,120 @@
-// =============================================================================
+// Clone =======================================================================
 
-    // Clone
-    // Default Variables
-
-// =============================================================================
-
-$clone-font--sans: "Open Sans", sans-serif !default;
-$clone-font--serif: serif !default;
-$clone-font--script: "Euphoria Script", cursive !default;
-$clone-font--monospace: "Consolas", mono-space !default;
-
-$clone-font-default: $clone-font--sans !default;
-
-$clone-font-scale: 1.333 !default;
-
-$clone-line-height: 1.5 !default;
-
+// Layout Variables
 $clone-wide-layout: 80rem !default;
 $clone-form-layout: 60rem !default;
 $clone-copy-layout: 39rem !default;
 
+// Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
 $clone-margin: 1rem !default;
 $clone-padding: 1rem !default;
-$clone-whitespace-multiplier: 1.25 !default;
+$clone-whitespace-multiplier: 1.4 !default;
 
+// Grid Variables
 $clone-grid-columns: 12 !default;
 $clone-grid-gutter: $clone-padding !default;
 
-$clone-white: #FFFFFF !default;
-$clone-black: #333333 !default;
+// Main Colour Variables
 
-$clone-go: green !default;
-$clone-slow: orange !default;
-$clone-stop: red !default;
+    // Black & White
+    $clone-white: #FFFFFF !default;
+    $clone-black: #111111 !default;
 
-$clone-grey: gray !default;
-$clone-grey--light: lighten($clone-grey, 10%) !default;
-$clone-grey--dark: darken($clone-grey, 10%) !default;
+    // Grey/Gray
+    $clone-grey: rgba(150, 150, 150, 1) !default;
+    $clone-grey-light: lighten($clone-grey, 10%) !default;
+    $clone-grey-dark: darken($clone-grey, 10%) !default;
 
-$clone-gray: $clone-grey;
-$clone-gray--light: $clone-grey--light;
-$clone-gray--dark: $clone-grey--dark;
+    $clone-gray: $clone-grey !default;
+    $clone-gray-light: $clone-grey-light !default;
+    $clone-gray-dark: $clone-grey-dark !default;
 
-$clone-c1: #5B1647 !default;
-$clone-c1--light: lighten($clone-c1, 10%) !default;
-$clone-c1--dark: darken($clone-c1, 10%) !default;
+    // Theme Colours
+    $clone-c1: #ED5555 !default;
+    $clone-c1-light: lighten($clone-c1, 10%) !default;
+    $clone-c1-dark: darken($clone-c1, 10%) !default;
 
-$clone-c2: #96043E !default;
-$clone-c2--light: lighten($clone-c2, 10%) !default;
-$clone-c2--dark: darken($clone-c2, 10%) !default;
+    $clone-c2: #F2A460 !default;
+    $clone-c2-light: lighten($clone-c2, 10%) !default;
+    $clone-c2-dark: darken($clone-c2, 10%) !default;
 
-$clone-c3: #C90035 !default;
-$clone-c3--light: lighten($clone-c3, 10%) !default;
-$clone-c3--dark: darken($clone-c3, 10%) !default;
+    $clone-c3: #B6C6B6 !default;
+    $clone-c3-light: lighten($clone-c3, 10%) !default;
+    $clone-c3-dark: darken($clone-c3, 10%) !default;
 
-$clone-c4: blue !default;
-$clone-c4--light: lighten($clone-c4, 10%) !default;
-$clone-c4--dark: darken($clone-c4, 10%) !default;
+    $clone-c4: #8C819E !default;
+    $clone-c4-light: lighten($clone-c4, 10%) !default;
+    $clone-c4-dark: darken($clone-c4, 10%) !default;
 
-$clone-c5: purple !default;
-$clone-c5--light: lighten($clone-c5, 10%) !default;
-$clone-c5--dark: darken($clone-c5, 10%) !default;
+    $clone-c5: #545482 !default;
+    $clone-c5-light: lighten($clone-c5, 10%) !default;
+    $clone-c5-dark: darken($clone-c5, 10%) !default;
 
-$clone-default-font-colour: $clone-black !default;
+    // Go, Slow, Stop
+    $clone-go: green !default;
+    $clone-slow: orange !default;
+    $clone-stop: red !default;
+    $clone-error: $clone-stop !default;
 
-$clone-hover-colour: teal !default;
+// Sitewide Colour Variables
 
-$clone-focus-colour: $clone-hover-colour !default;
+    // Text Selection
+    $clone-selection-background-colour: $clone-c5 !default;
 
-$clone-selection-background-colour: $clone-c5 !default;
+    // Hover
+    $clone-hover-colour: $clone-c1 !default;
 
-$clone-code-background: $clone-black !default;
+    // Focus
+    $clone-focus-colour: $clone-hover-colour !default;
 
-$clone-table-heading-colour: $clone-c1 !default;
+    // Visited Links
+    $clone-visited-colour: $clone-c4-dark !default;
 
-$clone-alert--information: $clone-go !default;
-$clone-alert--warning: $clone-slow !default;
-$clone-alert--error: $clone-stop !default;
+// Component Colour Variables
 
-$clone-blockquote-colour: $clone-c1 !default;
+    // Accordions
+    $clone-accordion-border-colour: $clone-black !default;
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 40%) !default;
 
-$clone-pullquote-colour: $clone-c2 !default;
+    // Alerts
+    $clone-alert-information: $clone-go !default;
+    $clone-alert-warning: $clone-slow !default;
+    $clone-alert-error: $clone-stop !default;
 
-$clone-accordion-border-colour: $clone-black !default;
-$clone-accordion-alternating-background-colour: lighten($clone-grey, 40%) !default;
+    // Blockquotes
+    $clone-blockquote-colour: $clone-c1 !default;
 
-// Font Scale ==================================================================
+    // Code Blocks
+    $clone-code-background: $clone-black !default;
 
-$clone-font-scale--regular: 1rem;
+    // Pullquotes
+    $clone-pullquote-colour: $clone-c2 !default;
 
-$clone-font-scale--h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
-$clone-font-scale--h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
-$clone-font-scale--h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale})));
-$clone-font-scale--h4: calc(1rem*(#{$clone-font-scale}));
-$clone-font-scale--h5: $clone-font-scale--regular;
-$clone-font-scale--small: calc(1rem/(#{$clone-font-scale}));
+    // Tables
+    $clone-table-heading-colour: $clone-c1 !default;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1) !default;
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: "Open Sans", sans-serif !default;
+    $clone-font-serif: serif !default;
+    $clone-font-script: "Euphoria Script", cursive !default;
+    $clone-font-monospace: "Consolas", mono-space !default;
+
+    $clone-font-default: $clone-font-sans !default;
+
+    // Default Line Height
+    $clone-line-height: 1.5 !default;
+
+    // The Typography Scale
+    $clone-font-scale-normal: 1rem !default;
+    $clone-font-scale: 1.333 !default;
+
+    $clone-font-scale-h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
+    $clone-font-scale-h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
+    $clone-font-scale-h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
+    $clone-font-scale-h4: calc(1rem*(#{$clone-font-scale})) !default;
+    $clone-font-scale-h5: $clone-font-scale-normal !default;
+    $clone-font-scale-small: calc(1rem/(#{$clone-font-scale})) !default;

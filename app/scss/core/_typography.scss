@@ -8,8 +8,7 @@
 // Fonts =======================================================================
 
     * {
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 1em;
         line-height: $clone-line-height;
     }
 
@@ -23,6 +22,7 @@
     }
 
     h1, h2, h3, h4, h5 {
+        font-weight: 400;
         line-height: calc(#{$clone-line-height} * .85);
         span {
             font-size: inherit;
@@ -43,6 +43,10 @@
         &:hover {
             color: $clone-hover-colour !important;
             transition: color .2s ease;
+        }
+
+        &:visited {
+            color: $clone-visited-colour;
         }
 
     }

@@ -109,6 +109,7 @@
     $clone-colour-map: (
         "white": $clone-white,
         "grey": $clone-grey,
+        "gray": $clone-grey,
         "black": $clone-black,
         "go": $clone-go,
         "slow": $clone-slow,
@@ -238,10 +239,10 @@
 
 // Fonts =======================================================================
 
-    [data-c-font="sans"] {font-family: $clone-font--sans;}
-    [data-c-font="serif"] {font-family: $clone-font--serif;}
-    [data-c-font="script"] {font-family: $clone-font--script;}
-    [data-c-font="mono"] {font-family: $clone-font--monospace;}
+    [data-c-font="sans"] {font-family: $clone-font-sans;}
+    [data-c-font="serif"] {font-family: $clone-font-serif;}
+    [data-c-font="script"] {font-family: $clone-font-script;}
+    [data-c-font="mono"] {font-family: $clone-font-monospace;}
 
     // Font Colour -------------------------------------------------------------
 
@@ -300,12 +301,14 @@
 
         // [data-c-font-size] {display: block;}
 
-        [data-c-font-size="h1"] {font-size: $clone-font-scale--h1;}
-        [data-c-font-size="h2"] {font-size: $clone-font-scale--h2;}
-        [data-c-font-size="h3"] {font-size: $clone-font-scale--h3;}
-        [data-c-font-size="h4"] {font-size: $clone-font-scale--h4;}
-        [data-c-font-size="h5"] {font-size: $clone-font-scale--h5;}
-        [data-c-font-size="small"] {font-size: $clone-font-scale--small;}
+        [data-c-font-size="h1"] {font-size: $clone-font-scale-h1;}
+        [data-c-font-size="h2"] {font-size: $clone-font-scale-h2;}
+        [data-c-font-size="h3"] {font-size: $clone-font-scale-h3;}
+        [data-c-font-size="h4"] {font-size: $clone-font-scale-h4;}
+        [data-c-font-size="h5"] {font-size: $clone-font-scale-h5;}
+        [data-c-font-size="normal"] {font-size: $clone-font-scale-normal;}
+        [data-c-font-size="regular"] {font-size: $clone-font-scale-normal;}
+        [data-c-font-size="small"] {font-size: $clone-font-scale-small;}
 
     // Font Styles -------------------------------------------------------------
 

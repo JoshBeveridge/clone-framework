@@ -5,44 +5,47 @@
 
 // =============================================================================
 [data-c-input] {
+    padding: calc(#{$clone-padding} / 2) 0;
+    @media #{$clone-tablet-portrait} {
+        padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 0;
+    }
+    @media #{$clone-desktop-large} {
+        padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 0;
+    }
     position: relative;
     >label {
         display: block;
-        font-size: $clone-font-scale--small;
+        font-size: $clone-font-scale-small;
         margin-bottom: .5rem;
         padding-right: 4rem;
     }
     >span {
         &:first-of-type {
-            color: $clone-alert--error;
+            color: $clone-alert-error;
             display: none;
-            font-size: $clone-font-scale--small;
+            font-size: $clone-font-scale-small;
             position: absolute;
             top: calc(#{$clone-padding} / 2);
-            right: calc(#{$clone-padding} / 2);
+            right: 0;
             @media #{$clone-tablet-portrait} {
                 top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
-                right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
             @media #{$clone-desktop-large} {
                 top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
         &:last-of-type {
-            color: $clone-alert--error;
+            color: $clone-alert-error;
             display: none;
-            font-size: $clone-font-scale--small;
+            font-size: $clone-font-scale-small;
             position: absolute;
             bottom: calc(#{$clone-padding} / 2);
-            left: calc(#{$clone-padding} / 2);
+            left: 0;
             @media #{$clone-tablet-portrait} {
                 bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
-                left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
             @media #{$clone-desktop-large} {
                 bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
         }
     }
@@ -97,14 +100,14 @@
     }
     &[data-c-invalid] {
         >label {
-            color: $clone-alert--error !important;
+            color: $clone-alert-error !important;
         }
         >div {
-            border-color: $clone-alert--error;
+            border-color: $clone-alert-error;
             >input,
             >textarea,
             >select {
-                border-color: $clone-alert--error;
+                border-color: $clone-alert-error;
             }
         }
         >span:last-of-type {
@@ -137,7 +140,7 @@
             }
             span {
                 display: inline-block;
-                font-size: $clone-font-scale--regular;
+                font-size: $clone-font-scale-normal;
                 margin: 0;
                 max-width: 90%;
                 padding-left: .5rem;
@@ -251,7 +254,7 @@
             }
             span {
                 display: inline-block;
-                font-size: $clone-font-scale--regular;
+                font-size: $clone-font-scale-normal;
                 margin: 0;
                 max-width: 90%;
                 padding-left: .5rem;
@@ -276,6 +279,32 @@
             }
             @media #{$clone-desktop-large} {
                 padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+    }
+}
+
+// Inside of a Flex Grid =======================================================
+[data-c-grid*="gutter"] {
+    [data-c-input] {
+        >span {
+            &:first-of-type {
+                right: calc(#{$clone-padding} / 2);
+                @media #{$clone-tablet-portrait} {
+                    right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+            &:last-of-type {
+                left: calc(#{$clone-padding} / 2);
+                @media #{$clone-tablet-portrait} {
+                    left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
             }
         }
     }

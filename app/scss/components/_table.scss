@@ -31,10 +31,10 @@
         tbody {
             tr {
                 &:nth-child(even) {
-                    background: rgba(0, 0, 0, .1);
+                    background: $clone-table-alternating-colour;
                 }
                 th {
-                    background: rgba(0, 0, 0, .1);
+                    background: $clone-table-alternating-colour;
                     padding: #{$clone-padding};
                 }
                 td {

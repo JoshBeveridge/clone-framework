@@ -69,6 +69,9 @@ a[data-c-button] {
                     i {
                         color: contrasting-color($value, $clone-white, $clone-black);
                     }
+                    &:visited {
+                        color: contrasting-color($value, $clone-white, $clone-black);
+                    }
                 }
             }
             @if $style == "outline" {

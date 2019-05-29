@@ -7,27 +7,27 @@
 pre {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
-    font-family: $clone-font--monospace;
-    font-size: $clone-font-scale--regular;
+    font-family: $clone-font-monospace;
+    font-size: $clone-font-scale-normal;
     overflow: auto;
     padding: 0;
     code {
         padding: 0 !important;
         * {
-            font-family: $clone-font--monospace;
-            font-size: $clone-font-scale--regular;
+            font-family: $clone-font-monospace;
+            font-size: $clone-font-scale-normal;
         }
     }
     * {
-        font-family: $clone-font--monospace;
-        font-size: $clone-font-scale--regular;
+        font-family: $clone-font-monospace;
+        font-size: $clone-font-scale-normal;
     }
 }
 
 code {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
-    font-family: $clone-font--monospace;
+    font-family: $clone-font-monospace;
     font-size: inherit;
     padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3) !important;
     @media #{$clone-tablet-portrait} {
@@ -37,7 +37,7 @@ code {
         padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
     }
     * {
-        font-family: $clone-font--monospace;
-        font-size: $clone-font-scale--regular;
+        font-family: $clone-font-monospace;
+        font-size: $clone-font-scale-normal;
     }
 }
