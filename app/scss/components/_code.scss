@@ -8,19 +8,19 @@ pre {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
     font-family: $clone-font-monospace;
-    font-size: $clone-font-scale-normal;
+    font-size: $clone-default-font-size;
     overflow: auto;
     padding: 0;
     code {
         padding: 0 !important;
         * {
             font-family: $clone-font-monospace;
-            font-size: $clone-font-scale-normal;
+            font-size: $clone-default-font-size;
         }
     }
     * {
         font-family: $clone-font-monospace;
-        font-size: $clone-font-scale-normal;
+        font-size: $clone-default-font-size;
     }
 }
 
@@ -38,6 +38,6 @@ code {
     }
     * {
         font-family: $clone-font-monospace;
-        font-size: $clone-font-scale-normal;
+        font-size: $clone-default-font-size;
     }
 }

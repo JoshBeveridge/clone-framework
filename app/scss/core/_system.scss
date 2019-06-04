@@ -20,6 +20,10 @@ body {
     width: 100%;
 }
 
+p, div {
+    font-size: $clone-default-font-size
+}
+
 img,
 iframe {
     max-width: 100%;

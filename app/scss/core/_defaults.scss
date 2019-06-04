@@ -19,7 +19,7 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Black & White
     $clone-white: #FFFFFF !default;
-    $clone-black: #111111 !default;
+    $clone-black: rgba(10, 10, 20, 1) !default;
 
     // Grey/Gray
     $clone-grey: rgba(150, 150, 150, 1) !default;
@@ -31,23 +31,23 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-gray-dark: $clone-grey-dark !default;
 
     // Theme Colours
-    $clone-c1: #ED5555 !default;
+    $clone-c1: #F14948 !default;
     $clone-c1-light: lighten($clone-c1, 10%) !default;
     $clone-c1-dark: darken($clone-c1, 10%) !default;
 
-    $clone-c2: #F2A460 !default;
+    $clone-c2: #F1604D !default;
     $clone-c2-light: lighten($clone-c2, 10%) !default;
     $clone-c2-dark: darken($clone-c2, 10%) !default;
 
-    $clone-c3: #B6C6B6 !default;
+    $clone-c3: #F47953 !default;
     $clone-c3-light: lighten($clone-c3, 10%) !default;
     $clone-c3-dark: darken($clone-c3, 10%) !default;
 
-    $clone-c4: #8C819E !default;
+    $clone-c4: #F79559 !default;
     $clone-c4-light: lighten($clone-c4, 10%) !default;
     $clone-c4-dark: darken($clone-c4, 10%) !default;
 
-    $clone-c5: #545482 !default;
+    $clone-c5: #F7AF5B !default;
     $clone-c5-light: lighten($clone-c5, 10%) !default;
     $clone-c5-dark: darken($clone-c5, 10%) !default;
 
@@ -85,6 +85,10 @@ $clone-grid-gutter: $clone-padding !default;
     // Blockquotes
     $clone-blockquote-colour: $clone-c1 !default;
 
+    // Carousels
+    $clone-carousel-dot-colour: $clone-c5 !default;
+    $clone-carousel-dot-active-colour: $clone-hover-colour !default;
+
     // Code Blocks
     $clone-code-background: $clone-black !default;
 
@@ -109,12 +113,12 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-line-height: 1.5 !default;
 
     // The Typography Scale
-    $clone-font-scale-normal: 1rem !default;
+    $clone-default-font-size: 1rem !default;
     $clone-font-scale: 1.333 !default;
 
-    $clone-font-scale-h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
-    $clone-font-scale-h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
-    $clone-font-scale-h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
-    $clone-font-scale-h4: calc(1rem*(#{$clone-font-scale})) !default;
-    $clone-font-scale-h5: $clone-font-scale-normal !default;
-    $clone-font-scale-small: calc(1rem/(#{$clone-font-scale})) !default;
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
+    $clone-font-scale-h5: $clone-default-font-size !default;
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;

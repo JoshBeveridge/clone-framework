@@ -72,7 +72,7 @@
         left: 50%;
         transform: translate(-50%, 100%);
         li {
-            background: $clone-c5;
+            background: $clone-carousel-dot-colour;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
@@ -89,7 +89,7 @@
             &.slick-active,
             &:hover,
             &:focus {
-                background: $clone-focus-colour;
+                background: $clone-carousel-dot-active-colour;
                 transition: all .2s ease;
             }
         }

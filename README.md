@@ -12,6 +12,17 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.4
+- adds `data-c-card` to add reusable box shadows
+- adds top/bottom, left/right shortcuts for margins and padding (`data-c-margin="tb(double)"`)
+- adds shorthand for `data-c-align`
+- adds support for `data-c-tag` (still needs documentation)
+- changes Brave to a more cohesive theme
+- removes `display: block` from `data-c-margin/padding`
+  - this required updates to accordion and dialog subtitles (`span` -> `p`)
+- adds variables to customize carousel colours
+- fixes font scale to use custom variable
+
 ## 2.3.3
 - fixes a bug with toast alerts on mobile not displaying correctly
 

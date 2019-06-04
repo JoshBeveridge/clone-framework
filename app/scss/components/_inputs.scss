@@ -140,7 +140,7 @@
             }
             span {
                 display: inline-block;
-                font-size: $clone-font-scale-normal;
+                font-size: $clone-default-font-size;
                 margin: 0;
                 max-width: 90%;
                 padding-left: .5rem;
@@ -254,7 +254,7 @@
             }
             span {
                 display: inline-block;
-                font-size: $clone-font-scale-normal;
+                font-size: $clone-default-font-size;
                 margin: 0;
                 max-width: 90%;
                 padding-left: .5rem;
