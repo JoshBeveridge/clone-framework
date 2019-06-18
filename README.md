@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.5
+- adds `data-c-dialog-focus` to allow for customization of which element gets focused first when a dialog is opened
+
 ## 2.3.4
 - adds `data-c-card` to add reusable box shadows
 - adds top/bottom, left/right shortcuts for margins and padding (`data-c-margin="tb(double)"`)

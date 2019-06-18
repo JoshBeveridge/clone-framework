@@ -170,6 +170,8 @@
                 var dialogueID = $(trigger).attr("data-c-dialog-id");
                 var dialogue = $(clone("dialog") + "[data-c-dialog-id='" + dialogueID +"']");
                 var overlay = $(clone("dialog-overlay"));
+                var targetInput = $("[data-c-dialog-focus]");
+                $(targetInput).attr("tabindex", "0");
                 var focusableItems = $(dialogue).find(":focusable");
 
                 if($(dialogue).attr("data-c-dialog") != "") {
@@ -191,19 +193,10 @@
                     });
                     $(overlay).attr("data-c-dialog-overlay", "active");
                     $(dialogue).attr("aria-hidden", "false");
-
                     dialogueSizing(dialogue);
-
                     var firstInput = focusableItems.first();
                     var lastInput = focusableItems.last();
-
-                    if (dialogue.find("form").length == 0) {
-                        lastInput.focus();
-                    }
-                    else {
-                        firstInput.focus();
-                    }
-
+                    $(targetInput).focus();
                     dialogueTabbing(firstInput, lastInput);
                     dialogueEscape();
                 }
