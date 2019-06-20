@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.7
+- fixes a bug with the dist file nomenclature (`.min.` was missing)
+
 ## 2.3.6
 - revamped `.gulpfile` to be more explicit and use modern methods for autoprefixer and cssnano
 - fixed the `index.html` link to point to new URL

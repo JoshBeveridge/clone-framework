@@ -23,6 +23,7 @@ const cssnano = require('cssnano');
 const del = require('del');
 const twig = require('gulp-twig');
 const gzip = require('gulp-gzip');
+const rename = require('gulp-rename');
 
 // Tasks =======================================================================
 
@@ -85,11 +86,17 @@ const gzip = require('gulp-gzip');
     function distCacheJS() {
         return src('cache/js/*.js')
         .pipe(uglify())
+        .pipe(rename(function(path) {
+            path.extname = ".min.js";
+        }))
         .pipe(dest('dist/js'));
     }
     function distCacheCSS() {
         return src('cache/css/*.css')
         .pipe(postcss([cssnano()]))
+        .pipe(rename(function(path) {
+            path.extname = ".min.css";
+        }))
         .pipe(dest('dist/css'));
     }
 
