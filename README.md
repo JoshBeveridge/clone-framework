@@ -12,6 +12,15 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.6
+- revamped `.gulpfile` to be more explicit and use modern methods for autoprefixer and cssnano
+- fixed the `index.html` link to point to new URL
+- migrated layouts to a more logical nomenclature (`large`, `medium`, `small`) - support for `layout`, `form`, and `copy` continues
+- creates a variable to control `data-c-card`'s box shadow
+- adds support for top/bottom (tb) and right/left (rl, lr) to borders
+- fixes a few spacing issues with dialog headers
+- fixes a bug with `data-c-font-style` not working with the `underline` value
+
 ## 2.3.5
 - adds `data-c-dialog-focus` to allow for customization of which element gets focused first when a dialog is opened
 

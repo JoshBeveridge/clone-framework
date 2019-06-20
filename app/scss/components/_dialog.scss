@@ -49,13 +49,19 @@
                 border: none;
                 border-radius: 100%;
                 cursor: pointer;
+                height: 2rem;
                 outline: none;
                 position: absolute;
                 top: $clone-padding;
                 right: $clone-padding;
                 transition: color .3s ease;
+                width: 2rem;
                 i {
                     display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
                     // States ------------------------------------------------------
                     &:hover {

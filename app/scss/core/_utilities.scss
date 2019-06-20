@@ -166,6 +166,40 @@
                 }
             };
             @each $key, $value in $clone-colour-map {
+                [data-c-border*="tb(#{$width}, #{$style}, #{$key})"],
+                [data-c-border*="bt(#{$width}, #{$style}, #{$key})"] {
+                    border-top-color: $value;
+                    border-bottom-color: $value;
+                    border-top-style: unquote($style);
+                    border-bottom-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-top-width: 1px;
+                        border-bottom-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-top-width: .5rem;
+                        border-bottom-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="rl(#{$width}, #{$style}, #{$key})"],
+                [data-c-border*="lr(#{$width}, #{$style}, #{$key})"] {
+                    border-right-color: $value;
+                    border-left-color: $value;
+                    border-right-style: unquote($style);
+                    border-left-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-right-width: 1px;
+                        border-left-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-right-width: .5rem;
+                        border-left-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
                 [data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
                     border-top-color: $value;
                     border-top-style: unquote($style);
@@ -226,12 +260,10 @@
         overflow: hidden;
     }
 
-    [data-c-card] {box-shadow: 0 5px 10px rgba(0, 0, 0, .3);}
-
 // Cards =======================================================================
 
     [data-c-card] {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+        box-shadow: $clone-card-shadow
     }
 
 // Containers ==================================================================
@@ -240,19 +272,22 @@
         margin: 0 auto;
         width: 90%;
     }
-    [data-c-container="layout"] {
+    [data-c-container="layout"],
+    [data-c-container="large"] {
         margin: 0 auto;
-        max-width: $clone-wide-layout;
+        max-width: $clone-large-layout;
         width: 90%;
     }
-    [data-c-container="form"] {
+    [data-c-container="form"],
+    [data-c-container="medium"] {
         margin: 0 auto;
-        max-width: $clone-form-layout;
+        max-width: $clone-medium-layout;
         width: 90%;
     }
-    [data-c-container="copy"] {
+    [data-c-container="copy"],
+    [data-c-container="small"] {
         margin: 0 auto;
-        max-width: $clone-copy-layout;
+        max-width: $clone-small-layout;
         width: 90%;
     }
 
@@ -332,7 +367,7 @@
     // Font Styles -------------------------------------------------------------
 
         [data-c-font-style="italic"] {font-style: italic;}
-        [data-c-font-style="underline"] {font-style: underline;}
+        [data-c-font-style="underline"] {text-decoration: underline;}
 
 // Functions ===================================================================
 
@@ -425,7 +460,8 @@
         // Adds a top/bottom and left/right shorthand.
         @each $wKey, $wValue in $clone-whitespace-map {
             // Top/Bottom
-            [data-c-margin*="tb(#{$wKey})"] {
+            [data-c-margin*="tb(#{$wKey})"],
+            [data-c-margin*="bt(#{$wKey})"] {
                 margin-top: calc(#{$clone-margin} #{$wValue});;
                 margin-bottom: calc(#{$clone-margin} #{$wValue});;
                 @media #{$clone-tablet-portrait} {
@@ -511,7 +547,8 @@
         // Adds a top/bottom and left/right shorthand.
         @each $wKey, $wValue in $clone-whitespace-map {
             // Top/Bottom
-            [data-c-padding*="tb(#{$wKey})"] {
+            [data-c-padding*="tb(#{$wKey})"],
+            [data-c-padding*="bt(#{$wKey})"] {
                 padding-top: calc(#{$clone-padding} #{$wValue});;
                 padding-bottom: calc(#{$clone-padding} #{$wValue});;
                 @media #{$clone-tablet-portrait} {
@@ -586,7 +623,6 @@
     @each $key, $value in $clone-colour-map {
         [data-c-tag="#{$key}"] {
             background: $value;
-            border-radius: 5px;
             color: contrasting-color($value, $clone-white, $clone-black);
             display: inline-block;
             line-height: $clone-line-height;

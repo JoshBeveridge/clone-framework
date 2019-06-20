@@ -1,6 +1,6 @@
 {
   "name": "clone-framework",
-  "version": "2.3.4",
+  "version": "2.3.6",
   "description": "A data-attribute-based themeable design system.",
   "main": "app/index.js",
   "scripts": {
@@ -17,13 +17,15 @@
   },
   "homepage": "https://github.com/joshdrink/clone#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.6.3",
+    "cssnano": "^4.1.10",
     "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
     "gulp-gzip": "^1.4.2",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-twig": "^1.2.0",
@@ -31,5 +33,8 @@
     "gulp-useref": "^3.1.6",
     "run-sequence": "^2.2.1",
     "slick-carousel": "^1.8.1"
-  }
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ]
 }

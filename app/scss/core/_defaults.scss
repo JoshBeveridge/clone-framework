@@ -1,9 +1,12 @@
 // Clone =======================================================================
 
 // Layout Variables
-$clone-wide-layout: 80rem !default;
-$clone-form-layout: 60rem !default;
-$clone-copy-layout: 39rem !default;
+$clone-large-layout: 80rem !default;
+$clone-medium-layout: 60rem !default;
+$clone-small-layout: 39rem !default;
+$clone-wide-layout: $clone-large-layout;
+$clone-form-layout: $clone-medium-layout;
+$clone-copy-layout: $clone-small-layout;
 
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
@@ -70,6 +73,11 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Visited Links
     $clone-visited-colour: $clone-c4-dark !default;
+
+// Component Options
+
+    // Cards
+    $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;
 
 // Component Colour Variables
 

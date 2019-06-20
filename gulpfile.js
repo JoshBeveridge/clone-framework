@@ -15,13 +15,11 @@ const gulp = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 const browsersync = require('browser-sync').create();
-const useref = require('gulp-useref');
 const uglify = require('gulp-uglify');
-const gulpIf = require('gulp-if');
 const concat = require('gulp-concat');
-const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const del = require('del');
 const twig = require('gulp-twig');
 const gzip = require('gulp-gzip');
@@ -75,25 +73,27 @@ const gzip = require('gulp-gzip');
     function compileCSS() {
         return src('app/scss/**/*.scss')
         .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        .pipe(postcss([autoprefixer()]))
         .pipe(dest('cache/css'));
     }
 
     // Minification
-    function distribute() {
-        return src('cache/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulpIf('*.css', cssnano()))
-        .pipe(dest('dist'))
-        .pipe(browsersync.reload({
-            stream: true
-        }));
+    function distCacheHTML() {
+        return src('cache/**/*.html')
+        .pipe(dest('dist'));
+    }
+    function distCacheJS() {
+        return src('cache/js/*.js')
+        .pipe(uglify())
+        .pipe(dest('dist/js'));
+    }
+    function distCacheCSS() {
+        return src('cache/css/*.css')
+        .pipe(postcss([cssnano()]))
+        .pipe(dest('dist/css'));
     }
 
+    // Compression
     function compressCSS() {
         return src('dist/css/*.css')
         .pipe(gzip())
@@ -106,19 +106,31 @@ const gzip = require('gulp-gzip');
         .pipe(dest('dist/js/gzip'))
     }
 
+    // Cache Removal
+    function cleanCache() {
+        return del('cache/**/*')
+    }
+
     // Dist Removal
     function cleanDist() {
         return del('dist');
     }
 
+    // Compile
+    const devCompile = series(template, concatScripts, compileCSS);
+    const distCompile = series(cleanCache, moveSlickJS, moveSlickCSS, template, concatScripts, compileCSS);
+
+    // Dist
+    const dist = series(distCacheHTML, distCacheJS, distCacheCSS, compressCSS, compressJS);
+
     // Watch
     function watchFiles() {
-        watch('app/scss/**/*.scss', series(compileCSS, browserSyncReload));
-        watch('app/twig/**/*.html', series(template, browserSyncReload));
-        watch('app/js/**/*.js', series(concatScripts, browserSyncReload));
+        watch('app/scss/**/*.scss', series(devCompile, browserSyncReload));
+        watch('app/twig/**/*.twig', series(devCompile, browserSyncReload));
+        watch('app/js/*.js', series(devCompile, browserSyncReload));
     }
 
     // Export
-    exports.build = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, distribute, compressCSS, compressJS);
-    exports.watch = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, parallel(browserSync, watchFiles));
-    exports.default = series(cleanDist, template, moveSlickJS, concatScripts, moveSlickCSS, compileCSS, parallel(browserSync, watchFiles));
+    exports.build = series(cleanDist, distCompile, dist);
+    exports.watch = series(cleanCache, moveSlickJS, moveSlickCSS, devCompile, parallel(browserSync, watchFiles));
+    exports.default = series(cleanCache, moveSlickJS, moveSlickCSS, devCompile, parallel(browserSync, watchFiles));
