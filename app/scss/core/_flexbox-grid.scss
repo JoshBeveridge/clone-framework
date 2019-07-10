@@ -125,7 +125,7 @@
 @for $i from 1 through $clone-grid-columns {
     @for $r from 1 through $clone-grid-columns {
         [data-c-grid-item*="base(#{$i}of#{$r})"] {
-            flex: 0 0 (#{$i} / #{$r} * 100%);
+            flex: 0 0 calc(#{$i} / #{$r} * 100%);
             max-width: ($i / $r * 100%);
         }
     }

@@ -20,9 +20,6 @@ body {
 
 [data-clone] {
 
-    // Slick Carousel by Ken Wheeler ===========================================
-    // @import "../../node_modules/slick-carousel/slick/slick.scss";
-
     // Core System Files =======================================================
     @import "core/system";
     @import "core/utilities";
@@ -90,13 +87,5 @@ body {
 
         // Tables
         @import "components/table";
-
-        // Tags
-
-    // Templates ===============================================================
-
-        // Text Content
-
-        // Content with Sidebar
 
 }

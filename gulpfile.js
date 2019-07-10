@@ -24,6 +24,7 @@ const del = require('del');
 const twig = require('gulp-twig');
 const gzip = require('gulp-gzip');
 const rename = require('gulp-rename');
+const postImport = require('postcss-import');
 
 // Tasks =======================================================================
 
@@ -78,6 +79,13 @@ const rename = require('gulp-rename');
         .pipe(dest('cache/css'));
     }
 
+    // Playground File
+    function createPen() {
+        return src('app/pen/clone.scss')
+        .pipe(postcss([postImport(), autoprefixer()], {syntax: require('postcss-scss')}))
+        .pipe(dest('dist/pen'));
+    }
+
     // Minification
     function distCacheHTML() {
         return src('cache/**/*.html')
@@ -128,7 +136,7 @@ const rename = require('gulp-rename');
     const distCompile = series(cleanCache, moveSlickJS, moveSlickCSS, template, concatScripts, compileCSS);
 
     // Dist
-    const dist = series(distCacheHTML, distCacheJS, distCacheCSS, compressCSS, compressJS);
+    const dist = series(distCacheHTML, distCacheJS, distCacheCSS, compressCSS, compressJS, createPen);
 
     // Watch
     function watchFiles() {

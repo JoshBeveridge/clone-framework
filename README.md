@@ -12,6 +12,10 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.8
+- fixes a bug with grid elements missing `calc`
+- adds a new pen folder in dist to test CodePen Integration
+
 ## 2.3.7
 - fixes a bug with the dist file nomenclature (`.min.` was missing)
 

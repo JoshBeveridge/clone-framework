@@ -1,0 +1,2620 @@
+// =============================================================================
+
+    // Clone
+
+    // Core
+
+    // =============================================================================
+
+    // User Variables ==============================================================
+
+    // Clone =======================================================================
+
+    // Layout Variables
+
+    $clone-large-layout: 80rem !default;
+
+    $clone-medium-layout: 60rem !default;
+
+    $clone-small-layout: 39rem !default;
+
+    $clone-wide-layout: $clone-large-layout;
+
+    $clone-form-layout: $clone-medium-layout;
+
+    $clone-copy-layout: $clone-small-layout;
+
+    // Whitespace Variables
+
+    // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+
+    $clone-margin: 1rem !default;
+
+    $clone-padding: 1rem !default;
+
+    $clone-whitespace-multiplier: 1.4 !default;
+
+    // Grid Variables
+
+    $clone-grid-columns: 12 !default;
+
+    $clone-grid-gutter: $clone-padding !default;
+
+    // Main Colour Variables
+
+    // Black & White
+
+    $clone-white: #FFFFFF !default;
+
+    $clone-black: rgba(10, 10, 20, 1) !default;
+
+    // Grey/Gray
+
+    $clone-grey: rgba(150, 150, 150, 1) !default;
+
+    $clone-grey-light: lighten($clone-grey, 10%) !default;
+
+    $clone-grey-dark: darken($clone-grey, 10%) !default;
+
+    $clone-gray: $clone-grey !default;
+
+    $clone-gray-light: $clone-grey-light !default;
+
+    $clone-gray-dark: $clone-grey-dark !default;
+
+    // Theme Colours
+
+    $clone-c1: #F14948 !default;
+
+    $clone-c1-light: lighten($clone-c1, 10%) !default;
+
+    $clone-c1-dark: darken($clone-c1, 10%) !default;
+
+    $clone-c2: #F1604D !default;
+
+    $clone-c2-light: lighten($clone-c2, 10%) !default;
+
+    $clone-c2-dark: darken($clone-c2, 10%) !default;
+
+    $clone-c3: #F47953 !default;
+
+    $clone-c3-light: lighten($clone-c3, 10%) !default;
+
+    $clone-c3-dark: darken($clone-c3, 10%) !default;
+
+    $clone-c4: #F79559 !default;
+
+    $clone-c4-light: lighten($clone-c4, 10%) !default;
+
+    $clone-c4-dark: darken($clone-c4, 10%) !default;
+
+    $clone-c5: #F7AF5B !default;
+
+    $clone-c5-light: lighten($clone-c5, 10%) !default;
+
+    $clone-c5-dark: darken($clone-c5, 10%) !default;
+
+    // Go, Slow, Stop
+
+    $clone-go: green !default;
+
+    $clone-slow: orange !default;
+
+    $clone-stop: red !default;
+
+    $clone-error: $clone-stop !default;
+
+    // Sitewide Colour Variables
+
+    // Text Selection
+
+    $clone-selection-background-colour: $clone-c5 !default;
+
+    // Hover
+
+    $clone-hover-colour: $clone-c1 !default;
+
+    // Focus
+
+    $clone-focus-colour: $clone-hover-colour !default;
+
+    // Visited Links
+
+    $clone-visited-colour: $clone-c4-dark !default;
+
+    // Component Options
+
+    // Cards
+
+    $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;
+
+    // Component Colour Variables
+
+    // Accordions
+
+    $clone-accordion-border-colour: $clone-black !default;
+
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%) !default;
+
+    // Alerts
+
+    $clone-alert-information: $clone-go !default;
+
+    $clone-alert-warning: $clone-slow !default;
+
+    $clone-alert-error: $clone-stop !default;
+
+    // Blockquotes
+
+    $clone-blockquote-colour: $clone-c1 !default;
+
+    // Carousels
+
+    $clone-carousel-dot-colour: $clone-c5 !default;
+
+    $clone-carousel-dot-active-colour: $clone-hover-colour !default;
+
+    // Code Blocks
+
+    $clone-code-background: $clone-black !default;
+
+    // Pullquotes
+
+    $clone-pullquote-colour: $clone-c2 !default;
+
+    // Tables
+
+    $clone-table-heading-colour: $clone-c1 !default;
+
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1) !default;
+
+    // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
+
+    // Font Variables
+
+    // Fonts
+
+    $clone-font-sans: "Open Sans", sans-serif !default;
+
+    $clone-font-serif: serif !default;
+
+    $clone-font-script: "Euphoria Script", cursive !default;
+
+    $clone-font-monospace: "Consolas", mono-space !default;
+
+    $clone-font-default: $clone-font-sans !default;
+
+    // Default Line Height
+
+    $clone-line-height: 1.5 !default;
+
+    // The Typography Scale
+
+    $clone-default-font-size: 1rem !default;
+
+    $clone-font-scale: 1.333 !default;
+
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
+
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
+
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
+
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
+
+    $clone-font-scale-h5: $clone-default-font-size !default;
+
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;
+
+    // =============================================================================
+
+    // Clone
+
+    // Media Queries
+
+    // =============================================================================
+
+    // Phone (Portrait): 320px
+
+    $clone-phone-portrait: "screen and (min-width: 20em)";
+
+    // Phone (Landscape): 480px
+
+    $clone-phone-landscape: "screen and (min-width: 30em)";
+
+    // Tablet (Portrait): 768px
+
+    $clone-tablet-portrait: "screen and (min-width: 48em)";
+
+    // Tablet (Landscape): 1024px
+
+    $clone-tablet-landscape: "screen and (min-width: 64em)";
+
+    // Desktop (Small)
+
+    $clone-desktop-small: "screen and (min-width: 64.01em)";
+
+    // Desktop (Medium): 1600px
+
+    $clone-desktop-medium: "screen and (min-width: 100em)";
+
+    // Desktop (Large): 1760px
+
+    $clone-desktop-large: "screen and (min-width: 110em)";
+
+    /* Slider */
+
+    .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+    .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+
+    .slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+    .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+
+    .slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+
+    .slick-arrow.slick-hidden {
+    display: none;
+}
+
+    // Core System Files =======================================================
+
+    // =============================================================================
+
+    // Clone
+
+    // System Settings
+
+    // =============================================================================
+
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    html,
+body {
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+    p, div {
+    font-size: $clone-default-font-size
+}
+
+    img,
+iframe {
+    max-width: 100%;
+}
+
+    // =============================================================================
+
+    // Clone
+
+    // Utility Classes
+
+    // =============================================================================
+
+    // Table of Contents ===========================================================
+
+    // Backgrounds
+
+    // Borders
+
+    // Cards
+
+    // Containers
+
+    // Fonts
+
+    // Colour
+
+    // Headings
+
+    // Styles
+
+    // Margins
+
+    // Padding
+
+    // =============================================================================
+
+    // Alignment ===================================================================
+
+    [data-c-alignment="center"],
+    [data-c-alignment="centre"],
+    [data-c-align="center"],
+    [data-c-align="centre"] {text-align: center;}
+
+    [data-c-alignment="right"],
+    [data-c-align="right"] {text-align: right;}
+
+    [data-c-alignment="left"],
+    [data-c-align="left"] {text-align: left;}
+
+    $clone-alignment-map: (
+        "left": left,
+        "center": center,
+        "centre": center,
+        "right": right
+    );
+
+    @each $key, $value in $clone-alignment-map {
+        [data-c-alignment*="base(#{$key})"],
+        [data-c-align*="base(#{$key})"] {
+            text-align: $value;
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-phone-portrait} {
+            [data-c-alignment*="pp(#{$key})"],
+            [data-c-align*="pp(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-phone-landscape} {
+            [data-c-alignment*="pl(#{$key})"],
+            [data-c-align*="pl(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-tablet-portrait} {
+            [data-c-alignment*="tp(#{$key})"],
+            [data-c-align*="tp(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-tablet-landscape} {
+            [data-c-alignment*="tl(#{$key})"],
+            [data-c-align*="tl(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-desktop-small} {
+            [data-c-alignment*="ds(#{$key})"],
+            [data-c-align*="ds(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-desktop-medium} {
+            [data-c-alignment*="dm(#{$key})"],
+            [data-c-align*="dm(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    @each $key, $value in $clone-alignment-map {
+        @media #{$clone-desktop-large} {
+            [data-c-alignment*="dl(#{$key})"],
+            [data-c-align*="dl(#{$key})"] {
+                text-align: $value;
+            }
+        }
+    }
+
+    // a11y ========================================================================
+
+    [data-c-visibility="invisible"] {
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        width: 1px;
+    }
+
+    [data-c-visibility="hidden"] {
+        display: none;
+        visibility: hidden;
+    }
+
+    // Backgrounds =================================================================
+
+    $clone-colour-map: (
+        "white": $clone-white,
+        "grey": $clone-grey,
+        "gray": $clone-grey,
+        "black": $clone-black,
+        "go": $clone-go,
+        "slow": $clone-slow,
+        "stop": $clone-stop,
+        "c1": $clone-c1,
+        "c2": $clone-c2,
+        "c3": $clone-c3,
+        "c4": $clone-c4,
+        "c5": $clone-c5
+    );
+
+    $clone-opacity-list: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+
+    @each $key, $value in $clone-colour-map {
+        @each $alpha in $clone-opacity-list {
+            $newValue: unquote($key)+"("+$alpha+")";
+            [data-c-background="#{$newValue}"] {
+                $decimal: $alpha / 100;
+                background: rgba($value, $decimal)
+            }
+        }
+    }
+
+    // Borders =====================================================================
+
+    $clone-border-style-list: ("solid", "dashed");
+
+    $clone-border-width-list: ("thick", "thin");
+
+    @each $style in $clone-border-style-list {
+        @each $width in $clone-border-width-list {
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
+                    border-color: $value;
+                    border-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="tb(#{$width}, #{$style}, #{$key})"],
+                [data-c-border*="bt(#{$width}, #{$style}, #{$key})"] {
+                    border-top-color: $value;
+                    border-bottom-color: $value;
+                    border-top-style: unquote($style);
+                    border-bottom-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-top-width: 1px;
+                        border-bottom-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-top-width: .5rem;
+                        border-bottom-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="rl(#{$width}, #{$style}, #{$key})"],
+                [data-c-border*="lr(#{$width}, #{$style}, #{$key})"] {
+                    border-right-color: $value;
+                    border-left-color: $value;
+                    border-right-style: unquote($style);
+                    border-left-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-right-width: 1px;
+                        border-left-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-right-width: .5rem;
+                        border-left-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
+                    border-top-color: $value;
+                    border-top-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-top-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-top-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
+                    border-right-color: $value;
+                    border-right-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-right-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-right-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
+                    border-bottom-color: $value;
+                    border-bottom-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-bottom-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-bottom-width: .5rem;
+                    }
+                }
+            };
+            @each $key, $value in $clone-colour-map {
+                [data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
+                    border-left-color: $value;
+                    border-left-style: unquote($style);
+                    @if ($width == "thin") {
+                        border-left-width: 1px;
+                    }
+                    @if ($width == "thick") {
+                        border-left-width: .5rem;
+                    }
+                }
+            };
+        };
+    }
+
+    [data-c-radius="rounded"] {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    [data-c-radius="pill"] {
+        border-radius: 20rem;
+        overflow: hidden;
+    }
+
+    // Cards =======================================================================
+
+    [data-c-card] {
+        box-shadow: $clone-card-shadow
+    }
+
+    // Containers ==================================================================
+
+    [data-c-container="full"] {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    [data-c-container="layout"],
+    [data-c-container="large"] {
+        margin: 0 auto;
+        max-width: $clone-large-layout;
+        width: 90%;
+    }
+
+    [data-c-container="form"],
+    [data-c-container="medium"] {
+        margin: 0 auto;
+        max-width: $clone-medium-layout;
+        width: 90%;
+    }
+
+    [data-c-container="copy"],
+    [data-c-container="small"] {
+        margin: 0 auto;
+        max-width: $clone-small-layout;
+        width: 90%;
+    }
+
+    // Fonts =======================================================================
+
+    [data-c-font="sans"] {font-family: $clone-font-sans;}
+
+    [data-c-font="serif"] {font-family: $clone-font-serif;}
+
+    [data-c-font="script"] {font-family: $clone-font-script;}
+
+    [data-c-font="mono"] {font-family: $clone-font-monospace;}
+
+    // Font Colour -------------------------------------------------------------
+
+    @each $key, $value in $clone-colour-map {
+            [data-c-colour="#{$key}"],
+            [data-c-colour="#{$key}"] {color: $value;}
+            [data-c-colour="#{$key}--light"],
+            [data-c-colour="#{$key}--light"] {color: lighten($value, 10%);}
+            [data-c-colour="#{$key}--dark"],
+            [data-c-colour="#{$key}--dark"] {color: darken($value, 10%);}
+            [data-c-color="#{$key}"],
+            [data-c-color="#{$key}"] {color: $value;}
+            [data-c-color="#{$key}--light"],
+            [data-c-color="#{$key}--light"] {color: lighten($value, 10%);}
+            [data-c-color="#{$key}--dark"],
+            [data-c-color="#{$key}--dark"] {color: darken($value, 10%);}
+        }
+
+    // Hover Colour ------------------------------------------------------------
+
+    @each $key, $value in $clone-colour-map {
+        [data-c-hover-colour="#{$key}"]:hover,
+        [data-c-hover-colour="#{$key}"]:hover {color: $value;}
+        [data-c-hover-colour="#{$key}--light"]:hover,
+        [data-c-hover-colour="#{$key}--light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-colour="#{$key}--dark"]:hover,
+        [data-c-hover-colour="#{$key}--dark"]:hover {color: darken($value, 10%);}
+        [data-c-hover-color="#{$key}"]:hover,
+        [data-c-hover-color="#{$key}"]:hover {color: $value;}
+        [data-c-hover-color="#{$key}--light"]:hover,
+        [data-c-hover-color="#{$key}--light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-color="#{$key}--dark"]:hover,
+        [data-c-hover-color="#{$key}--dark"]:hover {color: darken($value, 10%);}
+    }
+
+    // Font Weights ------------------------------------------------------------
+
+    $clone-weight-map: (
+            "100": 100,
+            "200": 200,
+            "300": 300,
+            "400": 400,
+            "normal": 400,
+            "500": 500,
+            "600": 600,
+            "700": 700,
+            "bold": 700,
+            "800": 800,
+            "900": 900
+        );
+
+    @each $key, $value in $clone-weight-map {
+            [data-c-font-weight="#{$key}"] {font-weight: $value;}
+        }
+
+    // Font Sizes --------------------------------------------------------------
+
+    // [data-c-font-size] {display: block;}
+
+    [data-c-font-size="h1"] {font-size: $clone-font-scale-h1;}
+
+    [data-c-font-size="h2"] {font-size: $clone-font-scale-h2;}
+
+    [data-c-font-size="h3"] {font-size: $clone-font-scale-h3;}
+
+    [data-c-font-size="h4"] {font-size: $clone-font-scale-h4;}
+
+    [data-c-font-size="h5"] {font-size: $clone-font-scale-h5;}
+
+    [data-c-font-size="normal"] {font-size: $clone-default-font-size;}
+
+    [data-c-font-size="regular"] {font-size: $clone-default-font-size;}
+
+    [data-c-font-size="small"] {font-size: $clone-font-scale-small;}
+
+    // Font Styles -------------------------------------------------------------
+
+    [data-c-font-style="italic"] {font-style: italic;}
+
+    [data-c-font-style="underline"] {text-decoration: underline;}
+
+    // Functions ===================================================================
+
+    @function sqrt ($clone-r) {
+        $clone-x0: 1;
+        $clone-x1: $clone-x0;
+
+        @for $clone-i from 1 through 10 {
+            $clone-x1: $clone-x0 - ($clone-x0 * $clone-x0 - abs($clone-r)) / (2 * $clone-x0);
+            $clone-x0: $clone-x1;
+        }
+
+        @return $clone-x1;
+    }
+
+    $clone-red-magic-number: 241;
+
+    $clone-green-magic-number: 691;
+
+    $clone-blue-magic-number: 68;
+
+    $clone-brightness-divisor: $clone-red-magic-number + $clone-green-magic-number + $clone-blue-magic-number;
+
+    @function brightness($clone-color) {
+        // Extract color components
+        $clone-red-component: red($clone-color);
+        $clone-green-component: green($clone-color);
+        $clone-blue-component: blue($clone-color);
+
+        // Calculate a brightness value in 3d color space between 0 and 255
+        $clone-number: sqrt((($clone-red-component * $clone-red-component * $clone-red-magic-number) + ($clone-green-component * $clone-green-component * $clone-green-magic-number) + ($clone-blue-component * $clone-blue-component * $clone-blue-magic-number)) / $clone-brightness-divisor);
+
+        // Convert to percentage and return
+        @return 100% * $clone-number / 255;
+    }
+
+    @function contrasting-color($clone-color, $clone-light, $clone-dark) {
+        @if brightness($clone-color) < 65% {
+            @return $clone-light;
+        } @else {
+            @return $clone-dark;
+        }
+    }
+
+    // Whitespace ==================================================================
+
+    $clone-orientation-map: (
+        "all": "",
+        "top": "-top",
+        "right": "-right",
+        "bottom": "-bottom",
+        "left": "-left"
+    );
+
+    $clone-whitespace-map: (
+        "normal": "",
+        "quarter": "/ 4",
+        "half": "/ 2",
+        "double": "* 2",
+        "triple": "* 3"
+    );
+
+    // Margins -----------------------------------------------------------------
+
+    // Shorthand ([data-c-margin=normal]) ----------------------------------
+
+    // Adds a whitespace shorthand that defaults to all sides of the element.
+
+    @each $wKey, $wValue in $clone-whitespace-map {
+            [data-c-margin="#{$wKey}"] {
+                margin: calc(#{$clone-margin} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Shorthand ([data-c-margin=top]) -------------------------------------
+
+    // Adds an orientation shorthand that defaults to the normal whitespace value.
+
+    @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-margin="#{$oKey}"] {
+                margin#{$oValue}: calc(#{$clone-margin});
+                @media #{$clone-tablet-portrait} {
+                    margin#{$oValue}: calc(#{$clone-margin} * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin#{$oValue}: calc((#{$clone-margin} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Shorthand ([data-c-margin="tb(normal)" ------------------------------
+
+    // Adds a top/bottom and left/right shorthand.
+
+    @each $wKey, $wValue in $clone-whitespace-map {
+            // Top/Bottom
+            [data-c-margin*="tb(#{$wKey})"],
+            [data-c-margin*="bt(#{$wKey})"] {
+                margin-top: calc(#{$clone-margin} #{$wValue});;
+                margin-bottom: calc(#{$clone-margin} #{$wValue});;
+                @media #{$clone-tablet-portrait} {
+                    margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-top: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    margin-bottom: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+            // Right/Left
+            [data-c-margin*="rl(#{$wKey})"],
+            [data-c-margin*="lr(#{$wKey})"] {
+                margin-right: calc(#{$clone-margin} #{$wValue});;
+                margin-left: calc(#{$clone-margin} #{$wValue});;
+                @media #{$clone-tablet-portrait} {
+                    margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-right: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    margin-left: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Margin Syntax -------------------------------------------------------
+
+    @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map {
+                [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                    margin#{$oValue}: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    }
+                }
+            }
+        }
+
+    // Auto Margins --------------------------------------------------------
+
+    [data-c-margin*="right(auto)"] {
+            margin-right: auto;
+        }
+
+    [data-c-margin*="left(auto)"] {
+            margin-left: auto;
+        }
+
+    // Padding -----------------------------------------------------------------
+
+    // Shorthand ([data-c-padding=normal]) ---------------------------------
+
+    // Adds a whitespace shorthand that defaults to all sides of the element.
+
+    @each $wKey, $wValue in $clone-whitespace-map {
+            [data-c-padding="#{$wKey}"] {
+                padding: calc(#{$clone-padding} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Shorthand ([data-c-padding=top]) ------------------------------------
+
+    // Adds an orientation shorthand that defaults to the normal whitespace value.
+
+    @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-padding="#{$oKey}"] {
+                padding#{$oValue}: calc(#{$clone-padding});
+                @media #{$clone-tablet-portrait} {
+                    padding#{$oValue}: calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding#{$oValue}: calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Shorthand ([data-c-padding="tb(normal)" -----------------------------
+
+    // Adds a top/bottom and left/right shorthand.
+
+    @each $wKey, $wValue in $clone-whitespace-map {
+            // Top/Bottom
+            [data-c-padding*="tb(#{$wKey})"],
+            [data-c-padding*="bt(#{$wKey})"] {
+                padding-top: calc(#{$clone-padding} #{$wValue});;
+                padding-bottom: calc(#{$clone-padding} #{$wValue});;
+                @media #{$clone-tablet-portrait} {
+                    padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-top: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    padding-bottom: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+            // Right/Left
+            [data-c-padding*="rl(#{$wKey})"],
+            [data-c-padding*="lr(#{$wKey})"] {
+                padding-right: calc(#{$clone-padding} #{$wValue});;
+                padding-left: calc(#{$clone-padding} #{$wValue});;
+                @media #{$clone-tablet-portrait} {
+                    padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-right: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    padding-left: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+
+    // Padding Syntax ------------------------------------------------------
+
+    @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map {
+                [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                    padding#{$oValue}: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    }
+                }
+            }
+        }
+
+    // Overlays ====================================================================
+
+    @each $key, $value in $clone-colour-map {
+        @each $alpha in $clone-opacity-list {
+            $newValue: unquote($key)+"("+$alpha+")";
+            [data-c-overlay="#{$newValue}"] {
+                background-position: center center;
+                background-size: cover;
+                position: relative;
+                &::before {
+                    $decimal: $alpha / 100;
+                    background: rgba($value, $decimal);
+                    content: " ";
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                * {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    // Tags ========================================================================
+
+    @each $key, $value in $clone-colour-map {
+        [data-c-tag="#{$key}"] {
+            background: $value;
+            color: contrasting-color($value, $clone-white, $clone-black);
+            display: inline-block;
+            line-height: $clone-line-height;
+            padding: calc(#{$clone-padding} / 4) calc(#{$clone-padding} / 2);
+            vertical-align: middle;
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+    }
+
+    // =============================================================================
+
+    // Clone
+
+    // Typography
+
+    // =============================================================================
+
+    // Fonts =======================================================================
+
+    * {
+        font-size: 1em;
+        line-height: $clone-line-height;
+    }
+
+    *:not(i) {
+        font-family: $clone-font-default;
+    }
+
+    ::selection {
+        background: $clone-selection-background-colour !important;
+        color: contrasting-color($clone-selection-background-colour, $clone-white, $clone-black) !important;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 400;
+        line-height: calc(#{$clone-line-height} * .85);
+        span {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
+
+    // Copy & Misc =================================================================
+
+    a {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-decoration: underline;
+        transition: color .2s ease;
+
+        &:hover {
+            color: $clone-hover-colour !important;
+            transition: color .2s ease;
+        }
+
+        &:visited {
+            color: $clone-visited-colour;
+        }
+
+    }
+
+    ul,
+    ol {
+        padding-left: calc(#{$clone-padding} * 2);
+        @media #{$clone-tablet-portrait} {
+            padding-left: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding-left: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        li {
+            color: inherit;
+            font-size: inherit;
+            margin-bottom: calc(#{$clone-margin} / 2);
+            @media #{$clone-tablet-portrait} {
+                margin-bottom: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                margin-bottom: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            >ul {
+                margin-top: calc(#{$clone-margin} / 2);
+                @media #{$clone-tablet-portrait} {
+                    margin-top: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-top: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+    }
+
+    em {
+        color: inherit;
+        font-size: inherit;
+        font-style: italic;
+    }
+
+    strong {
+        color: inherit;
+        font-size: inherit;
+        font-weight: 600;
+    }
+
+    // Grids ===================================================================
+
+    // Available media queries (MQ) include:
+
+    // pp (Phone: Portrait)
+
+    // pl (Phone: Landscape)
+
+    // tp (Tablet: Portrait)
+
+    // tl (Tablet: Landscape)
+
+    // ds (Desktop: Small)
+
+    // dm (Desktop: Medium)
+
+    // dl (Desktop: Large)
+
+    // =============================================================================
+
+    // Clone
+
+    // Flexbox Grid
+
+    // =============================================================================
+
+    // The Grid ====================================================================
+
+    [data-c-grid] {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    [data-c-grid*="top"] {
+    align-items: flex-start;
+}
+
+    [data-c-grid*="middle"] {
+    align-items: center;
+}
+
+    [data-c-grid*="bottom"] {
+    align-items: flex-end;
+}
+
+    [data-c-grid*="gutter"] {
+    margin: calc((#{$clone-margin} / 2) * -1);
+    @media #{$clone-tablet-portrait} {
+        margin: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    @media #{$clone-desktop-large} {
+        margin: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    >[data-c-grid-item] {
+        padding: calc(#{$clone-padding} / 2);
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+    }
+}
+
+    [data-c-grid*="gutter(vertical)"] {
+    margin-top: calc((#{$clone-margin} / 2) * -1);
+    margin-bottom: calc((#{$clone-margin} / 2) * -1);
+    @media #{$clone-tablet-portrait} {
+        margin-top: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+        margin-bottom: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    @media #{$clone-desktop-large} {
+        margin-top: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+        margin-bottom: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    >[data-c-grid-item] {
+        padding-top: calc(#{$clone-padding} / 2);
+        padding-bottom: calc(#{$clone-padding} / 2);
+        @media #{$clone-tablet-portrait} {
+            padding-top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            padding-bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding-top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            padding-bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+    }
+}
+
+    [data-c-grid*="gutter(sides)"],
+[data-c-grid*="gutter(horizontal)"] {
+    margin-right: calc((#{$clone-margin} / 2) * -1);
+    margin-left: calc((#{$clone-margin} / 2) * -1);
+    @media #{$clone-tablet-portrait} {
+        margin-right: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+        margin-left: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    @media #{$clone-desktop-large} {
+        margin-right: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+        margin-left: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+    }
+    >[data-c-grid-item] {
+        padding-right: calc(#{$clone-padding} / 2);
+        padding-left: calc(#{$clone-padding} / 2);
+        @media #{$clone-tablet-portrait} {
+            padding-right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            padding-left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding-right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            padding-left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+    }
+}
+
+    [data-c-grid-item] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+    [data-c-grid-item*="equal-col"] {
+    >div,
+    >pre {
+        height: 100%;
+    }
+    [data-c-grid] {
+        height: 100%;
+    }
+}
+
+    [data-c-grid-item*="top"] {
+    align-items: flex-start;
+}
+
+    [data-c-grid-item*="middle"] {
+    align-items: center;
+}
+
+    [data-c-grid-item*="bottom"] {
+    align-items: flex-end;
+}
+
+    [data-c-grid-item*="fit"] {
+    flex: 1;
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        [data-c-grid-item*="base(#{$i}of#{$r})"] {
+            flex: 0 0 calc(#{$i} / #{$r} * 100%);
+            max-width: ($i / $r * 100%);
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-phone-portrait} {
+            [data-c-grid-item*="pp(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-phone-landscape} {
+            [data-c-grid-item*="pl(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-tablet-portrait} {
+            [data-c-grid-item*="tp(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-tablet-landscape} {
+            [data-c-grid-item*="tl(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-desktop-small} {
+            [data-c-grid-item*="ds(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-desktop-medium} {
+            [data-c-grid-item*="dm(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    @for $i from 1 through $clone-grid-columns {
+    @for $r from 1 through $clone-grid-columns {
+        @media #{$clone-desktop-large} {
+            [data-c-grid-item*="dl(#{$i}of#{$r})"] {
+                flex: 0 0 calc(#{$i} / #{$r} * 100%);
+                max-width: ($i / $r * 100%);
+            }
+        }
+    }
+}
+
+    // Navigation ==============================================================
+
+    // =============================================================================
+
+    // Clone
+
+    // Menus
+
+    // =============================================================================
+
+    $submenu-colour: $clone-c3;
+
+    [data-c-menu*="topbar"] {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    * {
+        vertical-align: middle;
+    }
+    >ul,
+    >div >ul {
+        list-style: none;
+        margin: -1rem;
+        padding: 0;
+        >li {
+            display: inline-block;
+            margin: 0 1rem;
+            position: relative;
+            >a {
+                display: inline-block;
+                padding: 1rem 0;
+            }
+            >button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: inline-block;
+                margin: 0 -1rem 0 0;
+                padding: 1rem;
+            }
+            >ul {
+                background: $submenu-colour;
+                // display: none;
+                margin: 0;
+                max-height: 70vh;
+                overflow: auto;
+                padding: 0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                text-align: left;
+                transform: translate(0, 100%);
+                li {
+                    display: block;
+                    margin: 0;
+                    position: relative;
+                    a {
+                        display: block;
+                        min-width: 20vw;
+                        padding: 1rem 3rem 1rem 1rem;
+                    }
+                    button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 1rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    ul {
+                        background: lighten($submenu-colour, 5%);
+                        margin: 0;
+                        padding: 0;
+                        display: none;
+                        li {
+                            a {
+                                display: block;
+                                min-width: 15vw;
+                                padding: 1rem 3rem 1rem 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    [data-c-menu*="topbar(left)"] {
+    text-align: left;
+}
+
+    [data-c-menu*="topbar(centre)"] {
+    text-align: center;
+}
+
+    [data-c-menu*="topbar(center)"] {
+    text-align: center;
+}
+
+    [data-c-menu*="topbar(right)"] {
+    text-align: right;
+}
+
+    // Components ==============================================================
+
+    // Accordions
+
+    // =============================================================================
+
+    // Clone
+
+    // Accordions
+
+    // =============================================================================
+
+    [data-c-accordion*="group"] {
+    [data-c-accordion="accordion"] {
+        border-bottom: 1px solid $clone-accordion-border-colour;
+
+        [data-c-accordion="trigger"] {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            text-align: left;
+            width: 100%;
+
+            [data-c-accordion*="icon"] {
+                font-size: $clone-font-scale-h4;
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translate(0, -50%);
+
+                &[data-c-accordion*="--add"] {
+                    display: block;
+                }
+
+                &[data-c-accordion*="--remove"] {
+                    display: none;
+                }
+
+            }
+
+            @each $key, $value in $clone-colour-map {
+                @each $alpha in $clone-opacity-list {
+                    $newValue: unquote($key)+"("+$alpha+")";
+                    &[data-c-background="#{$newValue}"] {
+                        $decimal: $alpha / 100;
+                        background: rgba($value, $decimal)
+                    }
+                }
+            };
+
+        }
+
+        [data-c-accordion="content"] {
+            display: none;
+
+            form {
+                padding-bottom: 0;
+            }
+
+        }
+
+        // States ------------------------------------------------------------------
+
+            &:first-of-type {
+                border-top: 1px solid $clone-accordion-border-colour;
+            }
+
+            &.active {
+
+                [data-c-accordion="trigger"] {
+
+                    [data-c-accordion*="icon"] {
+
+                        &[data-c-accordion*="--add"] {
+                            display: none;
+                        }
+
+                        &[data-c-accordion*="--remove"] {
+                            display: block;
+                        }
+
+                    }
+
+                }
+
+                [data-c-accordion="content"] {
+                    display: block;
+                }
+
+            }
+
+    }
+}
+
+    [data-c-accordion="group(alt)"] {
+    [data-c-accordion="accordion"] {
+        &:nth-child(odd) {
+            background: $clone-accordion-alternating-background-colour;
+        }
+    }
+}
+
+    // Alerts
+
+    // =============================================================================
+
+    // Clone
+
+    // Alerts
+
+    // =============================================================================
+
+    [data-c-alert] {
+    align-items: flex-start;
+    display: flex;
+    i {
+        margin-top: -.2rem;
+        margin-right: .3rem;
+        vertical-align: middle;
+    }
+}
+
+    [data-c-alert="close-trigger"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+    [data-c-alert*="information"] {
+    background: mix(white, $clone-alert-information, 75%);
+    border: 1px solid darken($clone-alert-information, 25%);
+    color: darken($clone-alert-information, 25%);
+    * {
+        color: darken($clone-alert-information, 25%);
+    }
+}
+
+    [data-c-alert*="warning"] {
+    background: mix(white, $clone-alert-warning, 75%);
+    border: 1px solid darken($clone-alert-warning, 25%);
+    color: darken($clone-alert-warning, 25%);
+    * {
+        color: darken($clone-alert-warning, 25%);
+    }
+}
+
+    [data-c-alert*="error"] {
+    background: mix(white, $clone-alert-error, 75%);
+    border: 1px solid darken($clone-alert-error, 25%);
+    color: darken($clone-alert-error, 25%);
+    * {
+        color: darken($clone-alert-error, 25%);
+    }
+}
+
+    [data-c-alert*="toast"] {
+    margin: 0 auto;
+    max-width: 90vw;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vw;
+    z-index: 100000;
+    @media #{$clone-tablet-portrait} {
+        max-width: 35rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
+}
+
+    // Back-to-top Links
+
+    // =============================================================================
+
+    // Clone
+
+    // Back-to-top Link
+
+    // =============================================================================
+
+    .clone-back-to-top-link {
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+
+    i {
+        margin-top: -.25rem;
+        margin-right: .5rem;
+        vertical-align: middle;
+    }
+
+}
+
+    // Blockquote
+
+    // =============================================================================
+
+    // Clone
+
+    // Blockquotes
+
+    // =============================================================================
+
+    .clone-blockquote {
+    background: rgba($clone-blockquote-colour, .2);
+    border-left: .25rem solid darken($clone-blockquote-colour, 10%);
+
+    .clone-blockquote-author {
+        color: darken($clone-blockquote-colour, 10%);
+        text-align: right;
+    }
+
+}
+
+    // Breadcrumbs
+
+    // =============================================================================
+
+    // Clone
+
+    // Breadcrumbs
+
+    // =============================================================================
+
+    [data-c-breadcrumbs] {
+
+    ol,
+    ul {
+        margin: -1rem;
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            line-height: calc(#{$clone-line-height} * 1.5);
+            margin: 0;
+
+            a {
+                margin: 1rem;
+                transition: color .2s ease;
+
+                // States ------------------------------------------------------
+
+                    &[aria-current="page"] {
+                        font-weight: 700;
+                        pointer-events: none;
+                        text-decoration: none;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $clone-focus-colour;
+                        transition: color .2s ease;
+                    }
+
+            }
+
+            i {
+                margin-top: -.25rem;
+                vertical-align: middle;
+            }
+
+            // States ----------------------------------------------------------
+
+                &:last-child {
+
+                    i {
+                        display: none;
+                    }
+
+                }
+
+        }
+
+    }
+
+}
+
+    // Buttons
+
+    // =============================================================================
+
+    // Clone
+
+    // Buttons
+
+    // =============================================================================
+
+    a[data-c-button] {
+    display: inline-block;
+    max-width: 100%;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+
+    [data-c-button] {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: all .2s ease;
+    padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+    @media #{$clone-tablet-portrait} {
+        padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+    }
+    @media #{$clone-desktop-large} {
+        padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+    }
+
+    i {
+        margin: -.2rem .25rem 0 -.5rem;
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+        // States --------------------------------------------------------------
+        &:hover {
+            background: rgba($clone-focus-colour, .2);
+            border-color: $clone-focus-colour;
+            color: $clone-focus-colour;
+            transition: all .2s ease;
+            i {
+                color: $clone-focus-colour;
+                transition: all .2s ease;
+            }
+        }
+        &:focus {
+            box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+        }
+        &:disabled {
+            background: lighten($clone-grey, 30%);
+            border-color: lighten($clone-grey, 30%);
+            color: $clone-grey;
+            pointer-events: none;
+        }
+
+}
+
+    // Variations ------------------------------------------------------------------
+
+    $clone-button-style-list: ("solid", "outline");
+
+    @each $style in $clone-button-style-list {
+        @each $key, $value in $clone-colour-map {
+            @if $style == "solid" {
+                [data-c-button="#{$style}(#{$key})"] {
+                    background: $value;
+                    border: 1px solid $value;
+                    color: contrasting-color($value, $clone-white, $clone-black);
+                    i {
+                        color: contrasting-color($value, $clone-white, $clone-black);
+                    }
+                    &:visited {
+                        color: contrasting-color($value, $clone-white, $clone-black);
+                    }
+                }
+            }
+            @if $style == "outline" {
+                [data-c-button="#{$style}(#{$key})"] {
+                    background: none;
+                    border: 1px solid $value;
+                    color: $value;
+                    i {
+                        color: $value;
+                    }
+                }
+            }
+        }
+    }
+
+    // Cards
+
+    // Carousels
+
+    // =============================================================================
+
+    // Clone
+
+    // Carousels
+
+    // =============================================================================
+
+    [data-c-carousel] {
+    .slick-list {
+        // border-radius: 5px;
+        .slick-track {
+            display: flex;
+            .slick-slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+            }
+        }
+    }
+    .slick-slide .slick-list .slick-track >div {
+        // margin-right: 10vw;
+        // margin-left: 10vw;
+    }
+    .slick-arrow {
+        background: rgba($clone-black, .5);
+        border: none;
+        cursor: pointer;
+        display: none !important;
+        font-size: $clone-font-scale-h3;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all .2s ease;
+        width: 5vw;
+        z-index: 5;
+        @media #{$clone-tablet-landscape} {
+            display: block !important;
+        }
+        i {
+            color: $clone-white;
+            font-size: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+            // States ----------------------------------------------------------
+            &:hover,
+            &:focus {
+                background: rgba($clone-black, .8);
+                transition: all .2s ease;
+            }
+
+            // Types -----------------------------------------------------------
+            &.slick-prev {
+                // border-radius: 5px 0 0 5px;
+                left: 0;
+            }
+
+            &.slick-next {
+                // border-radius: 0 5px 5px 0;
+                right: 0;
+            }
+    }
+    .slick-dots {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        li {
+            background: $clone-carousel-dot-colour;
+            border-radius: 100%;
+            display: inline-block;
+            margin: 0 .5rem;
+            transition: all .2s ease;
+            button {
+                background: none;
+                border: 0;
+                color: $clone-white;
+                cursor: pointer;
+                height: 2rem;
+                width: 2rem;
+            }
+            // States ----------------------------------------------------------
+            &.slick-active,
+            &:hover,
+            &:focus {
+                background: $clone-carousel-dot-active-colour;
+                transition: all .2s ease;
+            }
+        }
+    }
+}
+
+    [data-c-carousel="item"] {
+    padding: 0 10vw;
+}
+
+    [data-c-carousel="image"] {
+    // overflow: hidden;
+    // position: relative;
+    margin: 0 0 5rem 0;
+    [data-c-carousel="item"] {
+        background-position: center;
+        background-size: cover;
+        height: 0;
+        padding-bottom: 7.0315%;
+    }
+}
+
+    [data-c-carousel="content"] {
+    // overflow: hidden;
+    // position: relative;
+    margin: 0 0 5rem 0;
+    [data-c-carousel="item"] {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+    // Code
+
+    // =============================================================================
+
+    // Clone
+
+    // Code
+
+    // =============================================================================
+
+    pre {
+    background: $clone-code-background;
+    color: contrasting-color($clone-code-background, $clone-white, $clone-black);
+    font-family: $clone-font-monospace;
+    font-size: $clone-default-font-size;
+    overflow: auto;
+    padding: 0;
+    code {
+        padding: 0 !important;
+        * {
+            font-family: $clone-font-monospace;
+            font-size: $clone-default-font-size;
+        }
+    }
+    * {
+        font-family: $clone-font-monospace;
+        font-size: $clone-default-font-size;
+    }
+}
+
+    code {
+    background: $clone-code-background;
+    color: contrasting-color($clone-code-background, $clone-white, $clone-black);
+    font-family: $clone-font-monospace;
+    font-size: inherit;
+    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3) !important;
+    @media #{$clone-tablet-portrait} {
+        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) !important;
+    }
+    @media #{$clone-desktop-large} {
+        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
+    }
+    * {
+        font-family: $clone-font-monospace;
+        font-size: $clone-default-font-size;
+    }
+}
+
+    // Dialogs
+
+    // =============================================================================
+
+    // Clone
+
+    // Dialogs
+
+    // =============================================================================
+
+    [data-c-dialog-overlay] {
+    background: rgba(0, 0, 0, .9);
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100vw, 0);
+    transition: transform 0s linear .4s, opacity .2s ease .2s;
+    width: 100vw;
+    z-index: 1000;
+}
+
+    [data-c-dialog-overlay*="active"] {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: transform 0s linear, opacity .2s ease;
+}
+
+    [data-c-dialog] {
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    transform: translate(-100vw, 0);
+    transition: transform 0s linear .2s, opacity .2s ease;
+    width: 100vw;
+    z-index: 2000;
+
+    >div {
+        margin: 0 auto;
+        width: 90vw;
+        @media #{$clone-tablet-landscape} {
+            width: 75vw;
+        }
+        @media #{$clone-desktop-medium} {
+            width: 50vw;
+        }
+        >div:nth-child(1) {
+            position: relative;
+            [data-c-dialog-action="close"] {
+                background: none;
+                border: none;
+                border-radius: 100%;
+                cursor: pointer;
+                height: 2rem;
+                outline: none;
+                position: absolute;
+                top: $clone-padding;
+                right: $clone-padding;
+                transition: color .3s ease;
+                width: 2rem;
+                i {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                    // States ------------------------------------------------------
+                    &:hover {
+                        color: $clone-stop;
+                        transition: color .3s ease;
+                    }
+                    &:focus {
+                        border: solid 3px $clone-focus-colour;
+                        transition: border .2s ease;
+                    }
+            }
+        }
+    }
+
+        // States ------------------------------------------------------------------
+        &[data-c-dialog="active--contained"] {
+            height: auto;
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0s linear, opacity .2s ease .2s;
+        }
+        &[data-c-dialog="active--overflowing"] {
+            height: 100vh;
+            opacity: 1;
+            overflow: auto;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            transition: transform 0s linear, opacity .2s ease .2s;
+        }
+
+}
+
+    // Iframes
+
+    // =============================================================================
+
+    // Clone
+
+    // iFrames
+
+    // =============================================================================
+
+    [data-c-iframe] {
+    height: 0;
+    padding: 0 0 56.25%;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+    // Inputs
+
+    // =============================================================================
+
+    // Clone
+
+    // Inputs
+
+    // =============================================================================
+
+    [data-c-input] {
+    padding: calc(#{$clone-padding} / 2) 0;
+    @media #{$clone-tablet-portrait} {
+        padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 0;
+    }
+    @media #{$clone-desktop-large} {
+        padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 0;
+    }
+    position: relative;
+    >label {
+        display: block;
+        font-size: $clone-font-scale-small;
+        margin-bottom: .5rem;
+        padding-right: 4rem;
+    }
+    >span {
+        &:first-of-type {
+            color: $clone-alert-error;
+            display: none;
+            font-size: $clone-font-scale-small;
+            position: absolute;
+            top: calc(#{$clone-padding} / 2);
+            right: 0;
+            @media #{$clone-tablet-portrait} {
+                top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+        &:last-of-type {
+            color: $clone-alert-error;
+            display: none;
+            font-size: $clone-font-scale-small;
+            position: absolute;
+            bottom: calc(#{$clone-padding} / 2);
+            left: 0;
+            @media #{$clone-tablet-portrait} {
+                bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+    }
+    >div {
+        margin-bottom: 1.5rem;
+        >input {
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            display: block;
+            outline: none;
+            transition: all .2s ease;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:focus {
+                box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                transition: all .2s ease;
+            }
+        }
+        >textarea {
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            display: block;
+            outline: none;
+            max-width: 100%;
+            min-height: 10rem;
+            min-width: 100%;
+            transition: all .2s ease;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:focus {
+                box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                transition: all .2s ease;
+            }
+        }
+    }
+    &[data-c-required] {
+        >span:first-of-type {
+            display: block !important;
+        }
+    }
+    &[data-c-invalid] {
+        >label {
+            color: $clone-alert-error !important;
+        }
+        >div {
+            border-color: $clone-alert-error;
+            >input,
+            >textarea,
+            >select {
+                border-color: $clone-alert-error;
+            }
+        }
+        >span:last-of-type {
+            display: block !important;
+        }
+    }
+}
+
+    [data-c-input="checkbox"] {
+    >div {
+        border: 1px solid $clone-gray;
+        border-radius: 5px;
+        margin-top: .5rem;
+        padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        label {
+            display: block;
+            margin: 0 !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
+            input {
+                display: inline-block;
+                margin-top: .4rem;
+                width: auto;
+                vertical-align: top;
+            }
+            span {
+                display: inline-block;
+                font-size: $clone-default-font-size;
+                margin: 0;
+                max-width: 90%;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+
+    [data-c-input="date"] {
+    >div >input {
+        padding: calc((#{$clone-padding} / 2) - 1px) calc(#{$clone-padding} - 1px);
+        @media #{$clone-tablet-portrait} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) - 1px) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) - 1px);
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc((((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px) calc(((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px);
+        }
+    }
+}
+
+    [data-c-input="dropdown"],
+[data-c-input="select"] {
+    >div {
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            pointer-events: none;
+            transform: translate(0, -50%);
+        }
+        select {
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            outline: none;
+            margin-bottom: 1.4rem;
+            width: 100%;
+            padding: calc(#{$clone-padding} / 2) 3rem calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 3rem calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 3rem calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            &:focus {
+                border: 1px solid $clone-c1;
+            }
+        }
+    }
+}
+
+    [data-c-input*="password"] {
+    >div {
+        position: relative;
+        input {
+            padding-right: 3rem;
+        }
+        button {
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translate(0, -50%);
+            i:first-child {
+                display: block;
+            }
+            i:last-child {
+                display: none;
+            }
+        }
+    }
+    &[data-c-input*="--visible"] {
+        >div {
+            button {
+                i:first-child {
+                    display: none;
+                }
+                i:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+    [data-c-input="radio"] {
+    >div {
+        border: 1px solid $clone-gray;
+        border-radius: 5px;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+        padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        label {
+            display: block;
+            margin: 0 !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
+            input {
+                display: inline-block;
+                margin-top: .4rem;
+                width: auto;
+                vertical-align: top;
+            }
+            span {
+                display: inline-block;
+                font-size: $clone-default-font-size;
+                margin: 0;
+                max-width: 90%;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+
+    [data-c-input="button"] {
+    >div {
+        input {
+            border-radius: 5px 0 0 5px;
+            border-right: none;
+            margin-bottom: 0;
+        }
+        button {
+            border-radius: 0 5px 5px 0;
+            display: block;
+            outline: none;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+        }
+    }
+}
+
+    // Inside of a Flex Grid =======================================================
+
+    [data-c-grid*="gutter"] {
+    [data-c-input] {
+        >span {
+            &:first-of-type {
+                right: calc(#{$clone-padding} / 2);
+                @media #{$clone-tablet-portrait} {
+                    right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+            &:last-of-type {
+                left: calc(#{$clone-padding} / 2);
+                @media #{$clone-tablet-portrait} {
+                    left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+    }
+}
+
+    // Pullquotes
+
+    // =============================================================================
+
+    // Clone
+
+    // Pullquotes
+
+    // =============================================================================
+
+    .clone-pullquote {
+
+    .clone-pullquote-copy {
+        color: $clone-pullquote-colour;
+    }
+
+}
+
+    // Skip-to-content
+
+    // =============================================================================
+
+    // Clone
+
+    // Skip to Content
+
+    // =============================================================================
+
+    [data-c-skip-content] {
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: -100vh;
+    left: -100vw;
+    text-align: center;
+    width: 1px;
+        // States --------------------------------------------------------------
+        &:focus {
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+}
+
+    // Tables
+
+    // =============================================================================
+
+    // Clone
+
+    // Tables
+
+    // =============================================================================
+
+    [data-c-table] {
+    overflow: auto;
+    width: 100%;
+    table {
+        border: 1px solid $clone-black;
+        border-collapse: collapse;
+        min-width: 40rem;
+        text-align: left;
+        @media #{$clone-tablet-landscape} {
+            min-width: 100%;
+        }
+        thead {
+            border-bottom: 1px solid $clone-black;
+            tr {
+                th {
+                    background: $clone-table-heading-colour;
+                    color: contrasting-color($clone-table-heading-colour, $clone-white, $clone-black);
+                    padding: #{$clone-padding};
+                }
+                td {
+                    padding: #{$clone-padding};
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background: $clone-table-alternating-colour;
+                }
+                th {
+                    background: $clone-table-alternating-colour;
+                    padding: #{$clone-padding};
+                }
+                td {
+                    padding: #{$clone-padding};
+                }
+            }
+        }
+    }
+}
+
+    body {
+            margin: 0;
+            max-width: 100%;
+            min-height: 100vh;
+            position: relative;
+            width: 100%;
+        }
