@@ -296,7 +296,8 @@
     [data-c-font="sans"] {font-family: $clone-font-sans;}
     [data-c-font="serif"] {font-family: $clone-font-serif;}
     [data-c-font="script"] {font-family: $clone-font-script;}
-    [data-c-font="mono"] {font-family: $clone-font-monospace;}
+    [data-c-font="mono"],
+    [data-c-font="monospace"] {font-family: $clone-font-monospace;}
 
     // Font Colour -------------------------------------------------------------
 
@@ -318,16 +319,10 @@
     // Hover Colour ------------------------------------------------------------
     @each $key, $value in $clone-colour-map {
         [data-c-hover-colour="#{$key}"]:hover,
-        [data-c-hover-colour="#{$key}"]:hover {color: $value;}
-        [data-c-hover-colour="#{$key}--light"]:hover,
-        [data-c-hover-colour="#{$key}--light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-colour="#{$key}--dark"]:hover,
-        [data-c-hover-colour="#{$key}--dark"]:hover {color: darken($value, 10%);}
-        [data-c-hover-color="#{$key}"]:hover,
         [data-c-hover-color="#{$key}"]:hover {color: $value;}
-        [data-c-hover-color="#{$key}--light"]:hover,
+        [data-c-hover-colour="#{$key}--light"]:hover,
         [data-c-hover-color="#{$key}--light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-color="#{$key}--dark"]:hover,
+        [data-c-hover-colour="#{$key}--dark"]:hover,
         [data-c-hover-color="#{$key}--dark"]:hover {color: darken($value, 10%);}
     };
     
