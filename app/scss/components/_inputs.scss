@@ -55,6 +55,7 @@
             border: 1px solid $clone-gray;
             border-radius: 5px;
             display: block;
+            font-size: $clone-default-font-size;
             outline: none;
             transition: all .2s ease;
             width: 100%;
@@ -74,6 +75,7 @@
             border: 1px solid $clone-gray;
             border-radius: 5px;
             display: block;
+            font-size: $clone-default-font-size;
             outline: none;
             max-width: 100%;
             min-height: 10rem;
@@ -176,6 +178,7 @@
             border-radius: 5px;
             cursor: pointer;
             display: block;
+            font-size: $clone-default-font-size;
             outline: none;
             margin-bottom: 1.4rem;
             width: 100%;
@@ -272,6 +275,7 @@
         button {
             border-radius: 0 5px 5px 0;
             display: block;
+            font-size: $clone-default-font-size;
             outline: none;
             padding: calc(#{$clone-padding} / 2) #{$clone-padding};
             @media #{$clone-tablet-portrait} {

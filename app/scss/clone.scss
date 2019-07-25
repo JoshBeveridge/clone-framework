@@ -22,8 +22,8 @@ body {
 
     // Core System Files =======================================================
     @import "core/system";
-    @import "core/utilities";
     @import "core/typography";
+    @import "core/utilities";
 
     // Grids ===================================================================
 
@@ -87,5 +87,8 @@ body {
 
         // Tables
         @import "components/table";
+
+        // Tags
+        @import "components/tag";
 
 }

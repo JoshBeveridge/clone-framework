@@ -24,8 +24,8 @@ body {
 
     // Core System Files =======================================================
     @import "core/system";
-    @import "core/utilities";
     @import "core/typography";
+    @import "core/utilities";
 
     // Grids ===================================================================
 
@@ -89,11 +89,6 @@ body {
         @import "components/table";
 
         // Tags
-
-    // Templates ===============================================================
-
-        // Text Content
-
-        // Content with Sidebar
+        @import "components/tag";
 
 }

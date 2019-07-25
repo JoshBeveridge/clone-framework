@@ -47,7 +47,7 @@ const rename = require('gulp-rename');
 
     // Twig
     function template() {
-        return src('app/twig/*.html')
+        return src('app/twig/*.twig')
         .pipe(twig())
         .pipe(dest('cache'));
     }

@@ -8,12 +8,12 @@
 // Fonts =======================================================================
 
     * {
-        font-size: 1em;
+        // font-size: 1em;
         line-height: $clone-line-height;
     }
 
     *:not(i) {
-        font-family: $clone-font-default;
+        // font-family: $clone-font-default;
     }
 
     ::selection {
@@ -24,17 +24,16 @@
     h1, h2, h3, h4, h5 {
         font-weight: 400;
         line-height: calc(#{$clone-line-height} * .85);
-        span {
-            font-size: inherit;
-            font-weight: inherit;
-        }
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a, span, blockquote, aside, button, label, input, textarea, table, ul, li {
+        font-family: $clone-font-default;
     }
 
 // Copy & Misc =================================================================
 
     a {
         color: inherit;
-        font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
         text-decoration: underline;

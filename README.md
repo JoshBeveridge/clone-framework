@@ -12,6 +12,11 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.9
+- migrates `HTML` files to `twig` files
+- fixes quite a few inheritance bugs for colour, font, weight, etc.
+- reduces redundancy in a few utility SCSS functions
+
 ## 2.3.8
 - fixes a bug with grid elements missing `calc`
 - adds a new pen folder in dist to test CodePen Integration

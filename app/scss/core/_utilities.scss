@@ -293,28 +293,41 @@
 
 // Fonts =======================================================================
 
-    [data-c-font="sans"] {font-family: $clone-font-sans;}
-    [data-c-font="serif"] {font-family: $clone-font-serif;}
-    [data-c-font="script"] {font-family: $clone-font-script;}
+    [data-c-font="sans"] {
+        font-family: $clone-font-sans;
+        a, span {
+            font-family: $clone-font-sans;
+        }
+    }
+    [data-c-font="serif"] {
+        font-family: $clone-font-serif;
+        a, span {
+            font-family: $clone-font-serif;
+        }
+    }
+    [data-c-font="script"] {
+        font-family: $clone-font-script;
+        a, span {
+            font-family: $clone-font-script;
+        }
+    }
     [data-c-font="mono"],
-    [data-c-font="monospace"] {font-family: $clone-font-monospace;}
+    [data-c-font="monospace"] {
+        font-family: $clone-font-monospace;
+        a, span {
+            font-family: $clone-font-monospace;
+        }
+    }
 
     // Font Colour -------------------------------------------------------------
-
-        @each $key, $value in $clone-colour-map {
-            [data-c-colour="#{$key}"],
-            [data-c-colour="#{$key}"] {color: $value;}
-            [data-c-colour="#{$key}--light"],
-            [data-c-colour="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-c-colour="#{$key}--dark"],
-            [data-c-colour="#{$key}--dark"] {color: darken($value, 10%);}
-            [data-c-color="#{$key}"],
-            [data-c-color="#{$key}"] {color: $value;}
-            [data-c-color="#{$key}--light"],
-            [data-c-color="#{$key}--light"] {color: lighten($value, 10%);}
-            [data-c-color="#{$key}--dark"],
-            [data-c-color="#{$key}--dark"] {color: darken($value, 10%);}
-        };
+    @each $key, $value in $clone-colour-map {
+        [data-c-colour="#{$key}"],
+        [data-c-color="#{$key}"] {color: $value;}
+        [data-c-colour="#{$key}--light"],
+        [data-c-color="#{$key}--light"] {color: lighten($value, 10%);}
+        [data-c-colour="#{$key}--dark"],
+        [data-c-color="#{$key}--dark"] {color: darken($value, 10%);}
+    };
 
     // Hover Colour ------------------------------------------------------------
     @each $key, $value in $clone-colour-map {
@@ -327,42 +340,37 @@
     };
     
     // Font Weights ------------------------------------------------------------
+    $clone-weight-map: (
+        "100": 100,
+        "200": 200,
+        "300": 300,
+        "400": 400,
+        "normal": 400,
+        "500": 500,
+        "600": 600,
+        "700": 700,
+        "bold": 700,
+        "800": 800,
+        "900": 900
+    );
 
-        $clone-weight-map: (
-            "100": 100,
-            "200": 200,
-            "300": 300,
-            "400": 400,
-            "normal": 400,
-            "500": 500,
-            "600": 600,
-            "700": 700,
-            "bold": 700,
-            "800": 800,
-            "900": 900
-        );
-
-        @each $key, $value in $clone-weight-map {
-            [data-c-font-weight="#{$key}"] {font-weight: $value;}
-        };
+    @each $key, $value in $clone-weight-map {
+        [data-c-font-weight="#{$key}"] {font-weight: $value;}
+    };
 
     // Font Sizes --------------------------------------------------------------
-
-        // [data-c-font-size] {display: block;}
-
-        [data-c-font-size="h1"] {font-size: $clone-font-scale-h1;}
-        [data-c-font-size="h2"] {font-size: $clone-font-scale-h2;}
-        [data-c-font-size="h3"] {font-size: $clone-font-scale-h3;}
-        [data-c-font-size="h4"] {font-size: $clone-font-scale-h4;}
-        [data-c-font-size="h5"] {font-size: $clone-font-scale-h5;}
-        [data-c-font-size="normal"] {font-size: $clone-default-font-size;}
-        [data-c-font-size="regular"] {font-size: $clone-default-font-size;}
-        [data-c-font-size="small"] {font-size: $clone-font-scale-small;}
+    [data-c-font-size="h1"] {font-size: $clone-font-scale-h1;}
+    [data-c-font-size="h2"] {font-size: $clone-font-scale-h2;}
+    [data-c-font-size="h3"] {font-size: $clone-font-scale-h3;}
+    [data-c-font-size="h4"] {font-size: $clone-font-scale-h4;}
+    [data-c-font-size="h5"] {font-size: $clone-font-scale-h5;}
+    [data-c-font-size="normal"] {font-size: $clone-default-font-size;}
+    [data-c-font-size="regular"] {font-size: $clone-default-font-size;}
+    [data-c-font-size="small"] {font-size: $clone-font-scale-small;}
 
     // Font Styles -------------------------------------------------------------
-
-        [data-c-font-style="italic"] {font-style: italic;}
-        [data-c-font-style="underline"] {text-decoration: underline;}
+    [data-c-font-style="italic"] {font-style: italic;}
+    [data-c-font-style="underline"] {text-decoration: underline;}
 
 // Functions ===================================================================
 
