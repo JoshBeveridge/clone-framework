@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.10
+- fixes inheritance bugs in inputs
+
 ## 2.3.9
 - migrates `HTML` files to `twig` files
 - fixes quite a few inheritance bugs for colour, font, weight, etc.

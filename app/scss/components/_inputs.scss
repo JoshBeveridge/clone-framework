@@ -54,17 +54,18 @@
         >input {
             border: 1px solid $clone-gray;
             border-radius: 5px;
+            color: $clone-black;
             display: block;
             font-size: $clone-default-font-size;
             outline: none;
             transition: all .2s ease;
             width: 100%;
-            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            padding: calc(#{$clone-padding} / 2);
             @media #{$clone-tablet-portrait} {
-                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
             }
             @media #{$clone-desktop-large} {
-                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
             &:focus {
                 box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
@@ -74,6 +75,7 @@
         >textarea {
             border: 1px solid $clone-gray;
             border-radius: 5px;
+            color: $clone-black;
             display: block;
             font-size: $clone-default-font-size;
             outline: none;
@@ -141,6 +143,7 @@
                 vertical-align: top;
             }
             span {
+                color: $clone-black;
                 display: inline-block;
                 font-size: $clone-default-font-size;
                 margin: 0;
@@ -166,6 +169,7 @@
     >div {
         position: relative;
         i {
+            color: $clone-black;
             position: absolute;
             top: 50%;
             right: 1rem;
@@ -176,6 +180,7 @@
             appearance: none;
             border: 1px solid $clone-gray;
             border-radius: 5px;
+            color: $clone-black;
             cursor: pointer;
             display: block;
             font-size: $clone-default-font-size;
@@ -205,6 +210,7 @@
             appearance: none;
             background: none;
             border: none;
+            color: $clone-black;
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -256,6 +262,7 @@
                 vertical-align: top;
             }
             span {
+                color: $clone-black;
                 display: inline-block;
                 font-size: $clone-default-font-size;
                 margin: 0;
