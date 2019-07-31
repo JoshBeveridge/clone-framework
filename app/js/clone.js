@@ -164,7 +164,7 @@
 
             dialogTabIndex();
 
-            // Dialog Triger -----------------------------------------------
+            // Dialog Trigger -----------------------------------------------
             function dialogueTrigger(trigger) {
 
                 var dialogueID = $(trigger).attr("data-c-dialog-id");
@@ -276,5 +276,34 @@
                     }
                 });
             }
+
+        // Menu Handlers =======================================================
+        function toggleMenu(trigger) {
+            $("[data-c-menu]").toggleClass("active");
+        }
+
+        $(document).on("click", "[data-c-menu-mobile-trigger]", function(e) {
+            e.preventDefault();
+            toggleMenu(this);
+        });
+        
+        function toggleSubmenu(trigger) {
+            var parent = $(trigger).closest("li");
+            if ($(parent).hasClass("active")) {
+                $(parent).removeClass("active");
+                $(parent).find("ul").removeClass("active");
+                $(parent).find("li").removeClass("active");
+            }
+            else {
+                $(parent).addClass("active");
+                $(parent).children("ul").addClass("active");
+            }
+        }
+
+        $(document).on("click", "[data-c-menu-submenu-trigger]", function(e) {
+            e.preventDefault();
+            toggleSubmenu(this);
+        });
+
     });
 })(jQuery);

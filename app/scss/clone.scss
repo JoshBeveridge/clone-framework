@@ -9,6 +9,7 @@
 @import "core/defaults";
 @import "core/media";
 @import "slick";
+@import "core/functions";
 
 body {
     margin: 0;
@@ -17,6 +18,9 @@ body {
     position: relative;
     width: 100%;
 }
+
+// Navigation ==================================================================
+@import "components/menus";
 
 [data-clone] {
 
@@ -37,10 +41,6 @@ body {
             // dl (Desktop: Large)
         
         @import "core/flexbox-grid";
-
-    // Navigation ==============================================================
-
-        @import "components/menus";
 
     // Components ==============================================================
 

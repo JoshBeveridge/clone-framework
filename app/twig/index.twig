@@ -53,101 +53,9 @@
 
     </head>
 
-    <body data-clone>
+    <body data-clone data-c-menu-style="topbar(left)">
 
-        {# <nav 
-            data-c-background="black(90)"
-            data-c-colour="white"
-            data-c-menu="topbar(center)">
-            <div data-c-container="layout">
-                <ul>
-                    <li>
-                        <a href="" title="">Home</a>
-                    </li>
-                    <li>
-                        <a href="" title="">About</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Information</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Blog</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Resources</a>
-                        <button>
-                            <i class="material-icons">add</i>
-                        </button>
-                        <ul>
-                            <li>
-                                <a href="" title="">This is a really long submenu item title.</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Sub</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Sub</a>
-                            </li>
-                            <li>
-                                <a href="" title="">Sub</a>
-                                <button>
-                                    <i class="material-icons">add</i>
-                                </button>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="">This is another really long sub menu item title.</a>
-                                <button>
-                                    <i class="material-icons">add</i>
-                                </button>
-                                <ul>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">This is an extra long nested submenu title.</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="">Sub</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="" title="">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <button 
-            type="button"
-            data-c-menu="mobile-trigger">
-            Menu
-        </button> #}
+        {% include "components/menu.twig" %}
 
         <div
             data-c-container="copy"
@@ -155,6 +63,37 @@
             data-c-alignment="centre"
             data-c-colour="black">
             <p>Looking for documentation? Check out <a href="https://designwithclone.ca">Clone's Docs</a> for more information.</p>
+            
+            <p data-c-margin="tb(normal)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sagittis libero. Aenean sed ipsum scelerisque, iaculis mi eu, pulvinar eros. Aliquam vehicula augue eget lobortis tempus. Sed eget nibh id nibh luctus consectetur. Vestibulum at pulvinar lorem. Nulla iaculis laoreet pellentesque. Vivamus vitae aliquet erat, non tempor diam. Proin sollicitudin, turpis eu tempus scelerisque, lacus nulla fringilla odio, sollicitudin viverra lectus nisi condimentum felis. Vestibulum iaculis nunc vitae velit lobortis, euismod pretium est consequat. Vivamus nunc enim, lacinia ut nunc sed, imperdiet egestas erat. Sed sem nisi, blandit et vulputate nec, faucibus non erat. Integer a nibh interdum, venenatis neque in, fermentum eros. Mauris eleifend est in turpis facilisis, sit amet gravida augue maximus. Nam accumsan justo non ipsum luctus fringilla. Duis id nulla sit amet neque scelerisque hendrerit. Aenean at dui vitae mi aliquet maximus vestibulum sed tellus.</p>
+
+            <p data-c-margin="tb(normal)">Etiam venenatis cursus porta. Donec tristique pretium euismod. Sed viverra neque leo. Nam et purus porta, convallis nunc ac, auctor est. Suspendisse nec enim neque. Suspendisse potenti. Quisque mattis mauris eget libero pharetra, ut sodales justo sagittis.</p>
+
+            <p data-c-margin="tb(normal)">Integer non dignissim ex, non aliquet nulla. Vestibulum lobortis sodales quam, nec bibendum felis viverra sed. Donec ullamcorper elementum mauris, ut venenatis augue dapibus in. Aliquam ligula ex, mollis sit amet tellus in, consequat suscipit augue. Vestibulum fringilla lacinia eleifend. Donec tristique ultrices dolor vitae auctor. Fusce sit amet risus vitae purus scelerisque mollis. Curabitur bibendum ante id sapien cursus, nec vulputate erat aliquet. Ut interdum mollis ornare. Vestibulum pellentesque urna in nulla posuere pretium. Sed justo nisi, mattis vitae sapien sit amet, mattis bibendum justo. Proin ut viverra neque, ac feugiat elit.</p>
+
+            <p data-c-margin="tb(normal)">Praesent sagittis et dui eget eleifend. Vestibulum vulputate et velit sed euismod. Nunc ultricies velit ornare, interdum ex sit amet, laoreet arcu. Morbi maximus aliquam eros a ullamcorper. Vestibulum dui nisl, feugiat a nisl quis, ultricies porttitor lorem. Praesent sit amet diam molestie, imperdiet augue quis, hendrerit ipsum. Morbi facilisis sagittis lectus, in volutpat nisl varius ac. Vestibulum ut lacus a justo molestie mattis ac ut enim. Integer laoreet sapien nibh, sit amet venenatis metus fringilla volutpat. Etiam ut maximus arcu. Nullam sodales orci et quam sagittis pellentesque. Integer at pharetra ante, rutrum tincidunt justo. Aliquam vulputate gravida nibh, vitae blandit justo lobortis ut. Donec at metus dictum, fringilla massa vel, tristique ligula. Suspendisse hendrerit, leo ac cursus auctor, ipsum lorem tristique lectus, id dapibus felis turpis eget mi.</p>
+
+            <p data-c-margin="tb(normal)">Praesent fermentum justo enim, nec placerat ligula imperdiet vulputate. Aenean dui erat, pulvinar in dui quis, hendrerit euismod tellus. Nullam dapibus eros et massa rutrum vestibulum. Proin congue, risus quis tempor consequat, lacus diam tristique lorem, ac cursus tortor ligula ut nisi. Vivamus porttitor volutpat dolor. Praesent sed mi vel nunc gravida congue ut in est. Nulla vestibulum felis at magna vestibulum, vitae mattis felis varius. Nam lacus eros, tempor malesuada aliquet eget, dictum at sapien. Vestibulum faucibus ex quam, eget bibendum leo aliquet ac.</p>
+
+            <p data-c-margin="tb(normal)">Pellentesque rutrum dictum tellus, eu pharetra felis mattis ac. Sed non ipsum odio. Nam mi nulla, viverra a justo et, finibus efficitur nisl. Nulla facilisi. Duis bibendum lorem quis eros gravida iaculis in condimentum ipsum. Suspendisse potenti. Curabitur mollis erat at neque placerat viverra. Integer purus odio, semper vel nisl et, egestas consectetur leo. Cras ut dui dapibus, tempus orci eu, maximus lectus. Mauris ornare maximus tellus, at porttitor diam suscipit ac. Pellentesque dictum sodales commodo. Duis placerat efficitur ipsum ut accumsan. In ullamcorper erat ut felis tristique, at bibendum eros venenatis.</p>
+
+            <p data-c-margin="tb(normal)">Integer sit amet nibh nec justo facilisis tincidunt. Mauris consequat aliquam elit, eu egestas lacus tempor quis. Ut quis consequat sapien. Vestibulum fermentum ultricies dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce id massa purus.</p>
+
+            <p data-c-margin="tb(normal)">Donec gravida ligula eros, a tempus sapien tempus quis. Sed sit amet vestibulum ipsum, nec efficitur elit. Etiam ut finibus ex. Nam venenatis massa vitae pulvinar gravida. Nullam ac blandit tortor. Aenean lectus augue, faucibus a elit sed, hendrerit semper nulla. Curabitur eu felis id sem varius pharetra mollis eget nunc. Nunc placerat in justo id tristique. In in ultricies leo. Cras porttitor magna ac eros efficitur sodales. Nulla a lectus velit.</p>
+
+            <p data-c-margin="tb(normal)">Suspendisse potenti. Etiam dapibus nulla velit, eu tincidunt diam hendrerit eget. Morbi quis tellus magna. Donec arcu ipsum, viverra eget euismod ut, scelerisque a augue. Donec id diam sed nibh placerat cursus non et ex. Cras quis hendrerit turpis, quis condimentum enim. Quisque facilisis turpis vel dui tincidunt sagittis. Nam vel dolor magna. Nunc et est eget elit interdum efficitur vitae quis odio. Quisque a accumsan mi, posuere mattis purus. Fusce dignissim lacinia mattis. Cras ipsum dui, consequat sed iaculis nec, tincidunt sed sapien. Maecenas mattis diam vitae feugiat vehicula. Praesent risus ante, dignissim eget pellentesque quis, dignissim eget odio. Aliquam pharetra ex et erat dignissim, nec viverra enim faucibus. Maecenas orci arcu, finibus sed velit ac, lobortis facilisis arcu.</p>
+
+            <p data-c-margin="tb(normal)">Praesent mattis justo hendrerit, eleifend tellus iaculis, porta diam. Aliquam tempus felis quis dictum euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Phasellus ut nunc vehicula, pellentesque nulla eu, tristique tortor. Phasellus eu dui est. Nam auctor nibh vel odio dignissim, id facilisis mauris luctus. Nullam eleifend quis nisl vitae tincidunt. Donec sit amet sem porttitor, commodo neque dictum, sagittis mauris. Maecenas mauris purus, ornare quis placerat id, ultrices eget nisi. Etiam id sem sodales, scelerisque tellus a, placerat lacus.</p>
+
+            <p data-c-margin="tb(normal)">Suspendisse erat ipsum, malesuada quis luctus at, facilisis id est. Aenean venenatis scelerisque justo a rutrum. Morbi ultrices enim sed arcu auctor laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eleifend ex eget gravida finibus. Aenean gravida eu ante nec aliquam. Nunc et condimentum lorem. Nulla nunc tellus, maximus ut luctus et, congue non odio. Ut malesuada leo eu dui volutpat sagittis. Ut urna ipsum, volutpat id feugiat id, convallis vitae mauris. Mauris et feugiat lectus, dictum mollis sem. Duis dui odio, eleifend sed tincidunt id, pretium ut nisi. Morbi finibus, mi id commodo fringilla, justo tellus dapibus ante, vitae facilisis ex sapien vel risus. Nunc iaculis velit quam, id euismod justo posuere et. Cras hendrerit felis vitae arcu placerat, vitae tempus dolor fermentum. Proin sollicitudin mi elit, eget aliquet quam pretium vitae.</p>
+
+            <p data-c-margin="tb(normal)">Curabitur placerat lacus at massa ultrices molestie at sit amet lacus. Morbi at massa sit amet risus tempus imperdiet at quis nibh. Nam fermentum justo quis suscipit mattis. Morbi tristique massa nec nibh efficitur sodales. Proin arcu eros, ullamcorper non odio vitae, suscipit consectetur sem. Integer ultricies fringilla sapien, consequat vehicula eros tempor quis. Ut commodo tristique porttitor. Suspendisse quis metus erat. Vivamus ut enim vel diam sodales fringilla. Aenean et sem et dui ornare maximus at nec mauris. Etiam finibus mauris non quam tincidunt congue. Nunc vulputate tellus ac varius laoreet. Vivamus rhoncus tellus nec ex bibendum rhoncus.</p>
+
+            <p data-c-margin="tb(normal)">Duis congue quis odio varius tincidunt. Nulla porttitor convallis massa sit amet lobortis. Duis vehicula aliquet metus non faucibus. Nam quis aliquet lorem. Mauris a interdum felis, at faucibus sem. Ut vel orci eget leo blandit tristique. Mauris efficitur velit eu justo fermentum vehicula. Morbi ac nunc leo. Sed malesuada, velit vitae iaculis aliquam, lectus turpis vestibulum nunc, eu lacinia augue turpis vitae leo. Quisque pellentesque mi massa, eget ultrices quam congue in. Suspendisse metus velit, tempus at luctus non, scelerisque id ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+            <p data-c-margin="tb(normal)">Quisque molestie mauris eget elementum euismod. Fusce nec mattis lacus. Duis tincidunt a ante non ullamcorper. Pellentesque lectus lorem, cursus eu convallis vel, interdum vitae urna. Nulla eu lorem et dui dignissim pellentesque. Aenean vel aliquet metus, mattis maximus enim. Vivamus rutrum laoreet tristique. Nullam efficitur augue et pharetra fermentum. Quisque cursus mauris ante, at ultrices nisl volutpat eget. Maecenas dapibus lacus felis, vitae tristique orci blandit ut. Integer gravida urna id sem volutpat, quis aliquet quam interdum. Sed vulputate, libero quis scelerisque sollicitudin, mauris justo pretium elit, nec dapibus felis magna vel ante. Mauris eget tortor eu eros mattis fringilla.</p>
+
+            <p data-c-margin="tb(normal)">Morbi pretium ex lorem, ac lobortis dolor sollicitudin eget. Suspendisse odio justo, laoreet eget pulvinar eu, vestibulum non sapien. Cras vel quam fringilla, pellentesque lectus eu, rhoncus mi. Integer ullamcorper lacinia velit ac sodales. Duis cursus tortor nunc, ac fringilla orci faucibus eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In viverra turpis vel justo aliquet lacinia. Pellentesque luctus, erat vulputate elementum sagittis, dui sem condimentum purus, quis maximus ante metus ac est. Praesent nec tellus orci. Sed ut ante odio. Sed eu metus eget ex mollis vehicula. Ut dictum arcu a aliquet tempor.</p>
+
         </div>
 
         <!--build:js js/clone.min.js-->
