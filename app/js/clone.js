@@ -279,7 +279,14 @@
 
         // Menu Handlers =======================================================
         function toggleMenu(trigger) {
-            $("[data-c-menu]").toggleClass("active");
+            if ($(trigger).hasClass("active")) {
+                $(trigger).removeClass("active");
+                $("[data-c-menu]").removeClass("active");
+            }
+            else {
+                $(trigger).addClass("active");
+                $("[data-c-menu]").addClass("active");
+            }
         }
 
         $(document).on("click", "[data-c-menu-mobile-trigger]", function(e) {
@@ -303,6 +310,22 @@
         $(document).on("click", "[data-c-menu-submenu-trigger]", function(e) {
             e.preventDefault();
             toggleSubmenu(this);
+        });
+
+        function menuItemClick(trigger) {
+            var destination = $(trigger).attr("href");
+            console.log(destination);
+            if (destination.match("^#")) {
+                $("[data-c-menu-mobile-trigger]").removeClass("active");
+                $("[data-c-menu]").removeClass("active");
+            }
+            else {
+
+            }
+        }
+
+        $(document).on("click", "[data-c-menu] a", function(e) {
+            menuItemClick(this);
         });
 
     });

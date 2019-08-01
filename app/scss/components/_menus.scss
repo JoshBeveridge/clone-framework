@@ -4,12 +4,6 @@
     // Menus
 
 // =============================================================================
-$clone-menu-background-colour: $clone-c3;
-$clone-menu-font-colour: $clone-white;
-$clone-menu-divider-colour: $clone-c2;
-$clone-menu-icon-colour: $clone-white;
-$clone-submenu-background-colour: $clone-c2;
-
 [data-c-menu-mobile-trigger] {
     position: fixed;
     bottom: 0;
@@ -56,7 +50,8 @@ $clone-submenu-background-colour: $clone-c2;
                 display: block;
             }
         }
-        >ul >li >a {
+        >ul >li >a,
+        >ul >li >p {
             color: $clone-menu-font-colour;
         }
         >ul >li >button >i {
@@ -81,16 +76,17 @@ $clone-submenu-background-colour: $clone-c2;
             width: 100%;
             li {
                 position: relative;
-                a {
+                a,
+                p {
                     display: block;
                     margin: 0 10vw;
-                    padding: 3vh 9vh 3vh 0;
+                    padding: 2vh 9vh 2vh 0;
                 }
                 button {
                     background: none;
                     border: none;
                     cursor: pointer;
-                    padding: 3vh;
+                    padding: 2vh;
                     i {
                         font-size: $clone-default-font-size;
                     }
@@ -136,19 +132,28 @@ $clone-submenu-background-colour: $clone-c2;
         // Colours =================================================================
     
             // Main Menu
-            >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color($clone-menu-background-colour, rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li:not(:first-child) >a,
+            >ul >li:not(:first-child) >p {
+                border-top: 1px solid $clone-menu-divider-colour;
+            }
+            >ul >li >a:hover {
+                color: contrasting-color($clone-menu-background-colour, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             // Layer 1
             >ul >li >ul {
                 background: $clone-submenu-background-colour;
             }
-            >ul >li >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color($clone-submenu-background-colour, rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li >ul >li:not(:first-child) >a,
+            >ul >li >ul >li:not(:first-child) >p {
+                border-top: 1px solid contrasting-color($clone-submenu-background-colour, rgba($clone-white, .3), rgba($clone-black, .3));
             }
-            >ul >li >ul >li >a {
+            >ul >li >ul >li >a,
+            >ul >li >ul >li >p {
                 color: contrasting-color($clone-submenu-background-colour, $clone-white, $clone-black);
                 margin-left: 15vw;
+            }
+            >ul >li >ul >li >a:hover {
+                color: contrasting-color($clone-submenu-background-colour, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             >ul >li >ul >li >button >i {
                 color: contrasting-color($clone-submenu-background-colour, $clone-white, $clone-black);
@@ -157,12 +162,17 @@ $clone-submenu-background-colour: $clone-c2;
             >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-colour, 5%);
             }
-            >ul >li >ul >li >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 5%), rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li >ul >li >ul >li:not(:first-child) >a,
+            >ul >li >ul >li >ul >li:not(:first-child) >p {
+                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 5%), rgba($clone-white, .3), rgba($clone-black, .3));
             }
-            >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >p {
                 color: contrasting-color(darken($clone-submenu-background-colour, 5%), $clone-white, $clone-black);
                 margin-left: 20vw;
+            }
+            >ul >li >ul >li >ul >li >a:hover {
+                color: contrasting-color(darken($clone-submenu-background-colour, 5%), $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-colour, 5%), $clone-white, $clone-black);
@@ -171,12 +181,17 @@ $clone-submenu-background-colour: $clone-c2;
             >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-colour, 10%);
             }
-            >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 10%), rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a,
+            >ul >li >ul >li >ul >li >ul >li:not(:first-child) >p {
+                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 10%), rgba($clone-white, .3), rgba($clone-black, .3));
             }
-            >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >p {
                 color: contrasting-color(darken($clone-submenu-background-colour, 10%), $clone-white, $clone-black);
                 margin-left: 25vw;
+            }
+            >ul >li >ul >li >ul >li >ul >li >a:hover {
+                color: contrasting-color(darken($clone-submenu-background-colour, 10%), $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             >ul >li >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-colour, 10%), $clone-white, $clone-black);
@@ -185,12 +200,17 @@ $clone-submenu-background-colour: $clone-c2;
             >ul >li >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-colour, 15%);
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 15%), rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >p {
+                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 15%), rgba($clone-white, .3), rgba($clone-black, .3));
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 color: contrasting-color(darken($clone-submenu-background-colour, 15%), $clone-white, $clone-black);
                 margin-left: 30vw;
+            }
+            >ul >li >ul >li >ul >li >ul >li >ul >li >a:hover {
+                color: contrasting-color(darken($clone-submenu-background-colour, 15%), $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             >ul >li >ul >li >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-colour, 15%), $clone-white, $clone-black);
@@ -199,12 +219,17 @@ $clone-submenu-background-colour: $clone-c2;
             >ul >li >ul >li >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-colour, 20%);
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a {
-                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 20%), rgba($clone-white, .5), rgba($clone-black, .5));
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li:not(:first-child) >p {
+                border-top: 1px solid contrasting-color(darken($clone-submenu-background-colour, 20%), rgba($clone-white, .3), rgba($clone-black, .3));
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 color: contrasting-color(darken($clone-submenu-background-colour, 20%), $clone-white, $clone-black);
                 margin-left: 35vw;
+            }
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a:hover {
+                color: contrasting-color(darken($clone-submenu-background-colour, 20%), $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
             >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-colour, 20%), $clone-white, $clone-black);
@@ -225,11 +250,15 @@ $clone-submenu-background-colour: $clone-c2;
                 >li {
                     display: inline-block;
                     position: relative;
-                    >a {
+                    &:not(:last-child) {
+                        border-right: 1px solid $clone-menu-divider-colour;
+                    }
+                    >a,
+                    >p {
                         border: none !important;
                         display: inline-block;
                         margin: 0;
-                        padding: 1rem;
+                        padding: 1rem calc(1rem + 4px) 1rem 1rem;
                     }
                     >button {
                         margin-left: -1rem;
@@ -242,6 +271,7 @@ $clone-submenu-background-colour: $clone-c2;
                         max-height: 70vh;
                         overflow: auto;
                         position: absolute;
+                        left: -4px;
                         width: 25vw;
                     }
                     ul {
@@ -258,16 +288,20 @@ $clone-submenu-background-colour: $clone-c2;
                     }
                 }
             }
-            >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >p {
                 margin-left: 2rem;
             }
-            >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 3rem;
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 4rem;
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 5rem;
             }
         }
@@ -326,7 +360,8 @@ $clone-submenu-background-colour: $clone-c2;
             >ul {
                 li {
                     position: relative;
-                    >a {
+                    >a,
+                    >p {
                         margin: 0 3vw;
                         padding: 1rem 3rem 1rem 0;
                     }
@@ -336,19 +371,24 @@ $clone-submenu-background-colour: $clone-c2;
                     }
                 }
             }
-            >ul >li >ul >li >a {
+            >ul >li >ul >li >a,
+            >ul >li >ul >li >p {
                 margin-left: 4vw;
             }
-            >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >p {
                 margin-left: 5vw;
             }
-            >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 6vw;
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 7vw;
             }
-            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a {
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >a,
+            >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 8vw;
             }
         }

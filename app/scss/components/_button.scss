@@ -29,7 +29,8 @@ a[data-c-button] {
     }
 
     i {
-        margin: -.2rem .25rem 0 -.5rem;
+        font-size: inherit;
+        margin: -.2rem .5rem 0 -.5rem;
         transition: all .2s ease;
         vertical-align: middle;
     }

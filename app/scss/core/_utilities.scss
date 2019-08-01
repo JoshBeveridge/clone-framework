@@ -141,7 +141,10 @@
             $newValue: unquote($key)+"("+$alpha+")";
             [data-c-background="#{$newValue}"] {
                 $decimal: $alpha / 100;
-                background: rgba($value, $decimal)
+                background: rgba($value, $decimal);
+                a:hover {
+                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                }
             }
         }
     };
@@ -323,20 +326,20 @@
     @each $key, $value in $clone-colour-map {
         [data-c-colour="#{$key}"],
         [data-c-color="#{$key}"] {color: $value;}
-        [data-c-colour="#{$key}--light"],
-        [data-c-color="#{$key}--light"] {color: lighten($value, 10%);}
-        [data-c-colour="#{$key}--dark"],
-        [data-c-color="#{$key}--dark"] {color: darken($value, 10%);}
+        [data-c-colour="#{$key}-light"],
+        [data-c-color="#{$key}-light"] {color: lighten($value, 10%);}
+        [data-c-colour="#{$key}-dark"],
+        [data-c-color="#{$key}-dark"] {color: darken($value, 10%);}
     };
 
     // Hover Colour ------------------------------------------------------------
     @each $key, $value in $clone-colour-map {
         [data-c-hover-colour="#{$key}"]:hover,
         [data-c-hover-color="#{$key}"]:hover {color: $value;}
-        [data-c-hover-colour="#{$key}--light"]:hover,
-        [data-c-hover-color="#{$key}--light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-colour="#{$key}--dark"]:hover,
-        [data-c-hover-color="#{$key}--dark"]:hover {color: darken($value, 10%);}
+        [data-c-hover-colour="#{$key}-light"]:hover,
+        [data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-colour="#{$key}-dark"]:hover,
+        [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
     };
     
     // Font Weights ------------------------------------------------------------

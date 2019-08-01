@@ -8,12 +8,19 @@ Clone is a simple design framework for building websites.
 
 Produced at [Talent Cloud](https://talent.canada.ca/).
 
-[Visit Clone's Docs](http://designwithclone.ca/).
+[Visit Clone's Docs](https://designwithclone.ca/).
 
 # Changelog
 
 ## 2.3.10
+- adds customizable, responsive menus to Clone
+    - menus can be topbars or sidebars, and support up to 5 nested submenus in the `ul` structure
+    - new variables have been added to facilitate cutomizing the menu
+    - please see [the docs](https://designwithclone.ca/#menus) for more information
+- moved Sass functions outside of the `[data-clone]` attribute
+- adds light, default, and dark hover variables to account for colour disparity when the hover colour matches a background colour
 - fixes inheritance bugs in inputs
+- fixes a bug with icon font size in buttons
 
 ## 2.3.9
 - migrates `HTML` files to `twig` files

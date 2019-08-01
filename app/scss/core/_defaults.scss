@@ -66,7 +66,9 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-selection-background-colour: $clone-c5 !default;
 
     // Hover
-    $clone-hover-colour: $clone-c1 !default;
+    $clone-hover-colour: $clone-c4 !default;
+    $clone-hover-colour-light: lighten($clone-c4, 10%);
+    $clone-hover-colour-dark: darken($clone-c4, 10%);
 
     // Focus
     $clone-focus-colour: $clone-hover-colour !default;
@@ -99,6 +101,14 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Code Blocks
     $clone-code-background: $clone-black !default;
+
+    // Menus
+    $clone-menu-background-colour: $clone-black !default;
+    $clone-submenu-background-colour: $clone-c2 !default;
+
+    $clone-menu-font-colour: $clone-white !default;
+    $clone-menu-divider-colour: rgba($clone-c4, .5) !default;
+    $clone-menu-icon-colour: $clone-white !default;
 
     // Pullquotes
     $clone-pullquote-colour: $clone-c2 !default;
