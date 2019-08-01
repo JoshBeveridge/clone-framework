@@ -600,5 +600,30 @@
             @media #{$clone-desktop-large} {
                 padding: calc(((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
             }
+            @media (hover: hover) {
+                a:hover {
+                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                }
+            }
+        }
+        a[data-c-tag="#{$key}"] {
+            @media (hover: hover) {
+                &:hover {
+                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                }
+            }
+        }
+        // IE 11 Hover Support
+        &[id*="Trident/7.0"] {
+            [data-c-tag="#{$key}"] {
+                a:hover {
+                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                }
+            }
+            a[data-c-tag="#{$key}"] {
+                &:hover {
+                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                }
+            }
         }
     };

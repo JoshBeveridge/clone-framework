@@ -39,15 +39,24 @@
         text-decoration: underline;
         transition: color .2s ease;
 
-        &:hover {
-            color: $clone-hover-colour !important;
-            transition: color .2s ease;
+        @media (hover: hover) {
+            &:hover {
+                color: $clone-hover-colour !important;
+                transition: color .2s ease;
+            }
         }
 
         &:visited {
             color: $clone-visited-colour;
         }
 
+    }
+    // IE 11 Hover Support
+    &[id*="Trident/7.0"] {
+        a:hover {
+            color: $clone-hover-colour !important;
+            transition: color .2s ease;
+        }
     }
 
     ul,

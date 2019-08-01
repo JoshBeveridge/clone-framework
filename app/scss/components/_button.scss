@@ -36,14 +36,16 @@ a[data-c-button] {
     }
 
         // States --------------------------------------------------------------
-        &:hover {
-            background: rgba($clone-focus-colour, .2);
-            border-color: $clone-focus-colour;
-            color: $clone-focus-colour;
-            transition: all .2s ease;
-            i {
+        @media (hover: hover) {
+            &:hover {
+                background: rgba($clone-focus-colour, .2);
+                border-color: $clone-focus-colour;
                 color: $clone-focus-colour;
                 transition: all .2s ease;
+                i {
+                    color: $clone-focus-colour;
+                    transition: all .2s ease;
+                }
             }
         }
         &:focus {
@@ -56,6 +58,22 @@ a[data-c-button] {
             pointer-events: none;
         }
 
+}
+
+// IE 11 Hover Support
+&[id*="Trident/7.0"] {
+    [data-c-button] {
+        &:hover {
+            background: rgba($clone-focus-colour, .2);
+            border-color: $clone-focus-colour;
+            color: $clone-focus-colour;
+            transition: all .2s ease;
+            i {
+                color: $clone-focus-colour;
+                transition: all .2s ease;
+            }
+        }
+    }
 }
 
 // Variations ------------------------------------------------------------------

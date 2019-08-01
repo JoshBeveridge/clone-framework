@@ -12,6 +12,10 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.11
+- fixes hover bugs on touch devices
+- fixes hover colour on tags
+
 ## 2.3.10
 - adds customizable, responsive menus to Clone
     - menus can be topbars or sidebars, and support up to 5 nested submenus in the `ul` structure
