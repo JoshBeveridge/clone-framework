@@ -8,6 +8,26 @@
 [data-c-alert] {
     align-items: flex-start;
     display: flex;
+    >div {
+        [data-c-alert="close-trigger"],
+        [data-c-alert-close-trigger] {
+            background: none;
+            border: none;
+            cursor: pointer;
+            float: right;
+            margin: calc((#{$clone-margin} / 2) * -1) calc((#{$clone-margin} / 2) * -1) 0 0;
+            @media #{$clone-tablet-portrait} {
+                margin: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1) calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1) 0 0;
+            }
+            @media #{$clone-desktop-large} {
+                margin: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1) calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1) 0 0;
+            }
+            i {
+                margin-right: .15rem;
+                margin-left: .15rem;
+            }
+        }
+    }
     i {
         margin-top: -.2rem;
         margin-right: .3rem;

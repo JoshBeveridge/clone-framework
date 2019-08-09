@@ -44,34 +44,72 @@
     $(document).ready(function () {
 
         // Accordion Handlers ==================================================
-        function accordionTrigger(trigger) {
-            var object = clone("accordion", "accordion");
-            var content = clone("accordion", "content");
-            if ($(trigger).parent(object).hasClass("active")) {
-                $(trigger).attr("aria-expanded", "false");
-                $(trigger).parent(object).removeClass("active");
-                $(trigger).parent(object).find(content).attr("aria-hidden", "true");
+        
+            // Old
+            function accordionTriggerOld(trigger) {
+                var object = clone("accordion", "accordion");
+                var content = clone("accordion", "content");
+                if ($(trigger).parent(object).hasClass("active")) {
+                    $(trigger).attr("aria-expanded", "false");
+                    $(trigger).parent(object).removeClass("active");
+                    $(trigger).parent(object).find(content).attr("aria-hidden", "true");
+                }
+                else {
+                    $(trigger).attr("aria-expanded", "true");
+                    $(trigger).parent(object).addClass("active");
+                    $(trigger).parent(object).find(content).attr("aria-hidden", "false");
+                    var focusableItems = $(trigger).siblings(content).find(":focusable");
+                    focusableItems.first().focus();
+                }
             }
-            else {
-                $(trigger).attr("aria-expanded", "true");
-                $(trigger).parent(object).addClass("active");
-                $(trigger).parent(object).find(content).attr("aria-hidden", "false");
-                var focusableItems = $(trigger).siblings(content).find(":focusable");
-                focusableItems.first().focus();
-            }
-        }
 
-        $(document).on("click", clone("accordion", "trigger"), function (e) {
-            e.preventDefault();
-            accordionTrigger(this);
-        });
+            $(document).on("click", clone("accordion", "trigger"), function (e) {
+                e.preventDefault();
+                accordionTriggerOld(this);
+            });
+
+            // New
+            function accordionTrigger(trigger) {
+                var accordion = "[data-c-accordion='']";
+                var content = "[data-c-accordion-content";
+                if ($(trigger).parent(accordion).hasClass("active")) {
+                    $(trigger).attr("aria-expanded", "false");
+                    $(trigger).parent(accordion).removeClass("active");
+                    $(trigger).parent(accordion).find(content).attr("aria-hidden", "true");
+                }
+                else {
+                    $(trigger).attr("aria-expanded", "true");
+                    $(trigger).parent(accordion).addClass("active");
+                    $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
+                    var focusableItems = $(trigger).siblings(content).find(":focusable");
+                    focusableItems.first().focus();
+                }
+            }
+
+            $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+                e.preventDefault();
+                accordionTrigger(this);
+            });
 
         // Alert Handlers ======================================================
-        function alertTrigger(trigger) {
-            $(trigger).parent("div").remove();
+        
+        // Old
+        function alertTriggerOld(trigger) {
+            $(trigger).closest("[data-c-alert='information']").remove();
+            $(trigger).closest("[data-c-alert='warning']").remove();
+            $(trigger).closest("[data-c-alert='error']").remove();
         }
 
         $(document).on("click", clone("alert", "close-trigger"), function (e) {
+            e.preventDefault();
+            alertTriggerOld(this);
+        });
+
+        // New
+        function alertTrigger(trigger) {
+            $(trigger).closest("[data-c-alert]").remove();
+        }
+        $(document).on("click", "[data-c-alert-close-trigger]", function (e) {
             e.preventDefault();
             alertTrigger(this);
         });
@@ -153,7 +191,7 @@
                 }
             });
 
-        // Dialogue Handlers ===============================================
+        // Dialog Handlers ===============================================
 
             // Dialog Tabindex on Pageload ---------------------------------
             function dialogTabIndex() {
@@ -165,20 +203,20 @@
             dialogTabIndex();
 
             // Dialog Trigger -----------------------------------------------
-            function dialogueTrigger(trigger) {
+            function dialogTrigger(trigger) {
 
-                var dialogueID = $(trigger).attr("data-c-dialog-id");
-                var dialogue = $(clone("dialog") + "[data-c-dialog-id='" + dialogueID +"']");
+                var dialogID = $(trigger).attr("data-c-dialog-id");
+                var dialog = $(clone("dialog") + "[data-c-dialog-id='" + dialogID +"']");
                 var overlay = $(clone("dialog-overlay"));
                 var targetInput = $("[data-c-dialog-focus]");
                 $(targetInput).attr("tabindex", "0");
-                var focusableItems = $(dialogue).find(":focusable");
+                var focusableItems = $(dialog).find(":focusable");
 
-                if($(dialogue).attr("data-c-dialog") != "") {
+                if($(dialog).attr("data-c-dialog") != "") {
                     $("body").css("overflow", "visible");
                     $(overlay).attr("data-c-dialog-overlay", "");
-                    $(dialogue).attr("data-c-dialog", "");
-                    $(dialogue).attr("aria-hidden", "true");
+                    $(dialog).attr("data-c-dialog", "");
+                    $(dialog).attr("aria-hidden", "true");
                     $(focusableItems).each(function() {
                         $(this).attr("tabindex", "-1");
                     });
@@ -192,26 +230,26 @@
                         $(this).attr("tabindex", "0");
                     });
                     $(overlay).attr("data-c-dialog-overlay", "active");
-                    $(dialogue).attr("aria-hidden", "false");
-                    dialogueSizing(dialogue);
+                    $(dialog).attr("aria-hidden", "false");
+                    dialogSizing(dialog);
                     var firstInput = focusableItems.first();
                     var lastInput = focusableItems.last();
                     $(targetInput).focus();
-                    dialogueTabbing(firstInput, lastInput);
-                    dialogueEscape();
+                    dialogTabbing(firstInput, lastInput);
+                    dialogEscape();
                 }
             }
 
             // Dialog Sizing -----------------------------------------------
-            function dialogueSizing(dialogue) {
+            function dialogSizing(dialog) {
                 var viewportHeight = $(window).height();
-                if (dialogue != null) {
-                    var dialogueHeight = $(dialogue).find(">div").height();
-                    if (dialogueHeight > viewportHeight) {
-                        $(dialogue).attr("data-c-dialog", "active--overflowing");
+                if (dialog != null) {
+                    var dialogHeight = $(dialog).find(">div").height();
+                    if (dialogHeight > viewportHeight) {
+                        $(dialog).attr("data-c-dialog", "active--overflowing");
                     }
                     else {
-                        $(dialogue).attr("data-c-dialog", "active--contained");
+                        $(dialog).attr("data-c-dialog", "active--contained");
                     }
                 }
                 else {
@@ -220,8 +258,8 @@
                             return false;
                         }
                         else {
-                            var dialogueHeight = $(this).find(">div").height();
-                            if (dialogueHeight > viewportHeight) {
+                            var dialogHeight = $(this).find(">div").height();
+                            if (dialogHeight > viewportHeight) {
                                 $(this).attr("data-c-dialog", "active--overflowing");
                             }
                             else {
@@ -234,16 +272,16 @@
 
             $(document).on("click", "button[data-c-dialog-id]", function(e) {
                 e.preventDefault();
-                dialogueTrigger(this);
+                dialogTrigger(this);
             });
 
             $(window).resize(function(e) {
                 e.preventDefault();
-                dialogueSizing();
+                dialogSizing();
             });
 
             // Tab Handler -------------------------------------------------
-            function dialogueTabbing(first, last) {
+            function dialogTabbing(first, last) {
                 $(document).on("keydown", function(e){
                     var keyCode = e.keyCode || e.which;
                     if (keyCode == 9 && !e.shiftKey) {
@@ -262,7 +300,7 @@
             }
 
             // Escape Handler ----------------------------------------------
-            function dialogueEscape() {
+            function dialogEscape() {
                 $(document).on("keyup", function(e){
                     if ((e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){
                         $(clone("dialog-overlay")).attr(clone("dialog-overlay"), "");
@@ -280,12 +318,28 @@
         // Menu Handlers =======================================================
         function toggleMenu(trigger) {
             if ($(trigger).hasClass("active")) {
-                $(trigger).removeClass("active");
+                $("body").css("overflow", "visible");
+                $(trigger).removeClass("active").attr("aria-pressed", "false");
+                var focusableItems = $("[data-c-menu]").find(":focusable");
                 $("[data-c-menu]").removeClass("active");
+                $(focusableItems).each(function() {
+                    $(this).attr("tabindex", "-1");
+                });
             }
             else {
-                $(trigger).addClass("active");
+                $("body").css("overflow", "hidden");
+                $(trigger).addClass("active").attr("aria-pressed", "true");
                 $("[data-c-menu]").addClass("active");
+                var focusableItems = $("[data-c-menu]").find(":focusable");
+                var secondLast = focusableItems.last();
+                var newItems = $.merge(focusableItems, $(trigger));
+                $(newItems).each(function() {
+                    $(this).attr("tabindex", "0");
+                });
+                var firstInput = newItems.first();
+                var lastInput = newItems.last();
+                $(firstInput).focus();
+                menuTabbing(firstInput, secondLast, lastInput);
             }
         }
 
@@ -293,6 +347,38 @@
             e.preventDefault();
             toggleMenu(this);
         });
+
+        function menuTabbing(first, secondLast, last) {
+            $(document).on("keydown", function(e){
+                if ($("[data-c-menu]").hasClass("active")) {
+                    var keyCode = e.keyCode || e.which;
+                    if (keyCode == 9 && !e.shiftKey) {
+                        if ($(last).is(":focus")) {
+                            // console.log("LAST TO FIRST");
+                            e.preventDefault();
+                            $(first).focus();
+                        } 
+                        else if ($(secondLast).is(":focus")) {
+                            // console.log("2ND TO LAST");
+                            e.preventDefault();
+                            $(last).focus();
+                        }
+                    }
+                    else if (keyCode == 9 && e.shiftKey) {
+                        if ($(first).is(":focus")) {
+                            // console.log("FIRST TO LAST");
+                            e.preventDefault();
+                            $(last).focus();
+                        }
+                        else if ($(last).is(":focus")) {
+                            // console.log("LAST TO 2ND");
+                            e.preventDefault();
+                            $(secondLast).focus();
+                        }
+                    }
+                }
+            });
+        }
         
         function toggleSubmenu(trigger) {
             var parent = $(trigger).closest("li");
@@ -314,7 +400,6 @@
 
         function menuItemClick(trigger) {
             var destination = $(trigger).attr("href");
-            console.log(destination);
             if (destination.match("^#")) {
                 $("[data-c-menu-mobile-trigger]").removeClass("active");
                 $("[data-c-menu]").removeClass("active");

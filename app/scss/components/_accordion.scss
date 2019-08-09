@@ -5,11 +5,13 @@
 
 // =============================================================================
 
-[data-c-accordion*="group"] {
-    [data-c-accordion="accordion"] {
+[data-c-accordion*="group"],
+[data-c-accordion-group] {
+    [data-c-accordion="accordion"],
+    [data-c-accordion=""] {
         border-bottom: 1px solid $clone-accordion-border-colour;
-
-        [data-c-accordion="trigger"] {
+        [data-c-accordion="trigger"],
+        [data-c-accordion-trigger] {
             background: none;
             border: none;
             cursor: pointer;
@@ -17,6 +19,7 @@
             text-align: left;
             width: 100%;
 
+            // Old
             [data-c-accordion*="icon"] {
                 font-size: $clone-font-scale-h4;
                 position: absolute;
@@ -31,7 +34,24 @@
                 &[data-c-accordion*="--remove"] {
                     display: none;
                 }
-
+            }
+            
+            // New
+            [data-c-accordion-add] {
+                display: block;
+                font-size: $clone-font-scale-h4;
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translate(0, -50%);
+            }
+            [data-c-accordion-remove] {
+                display: none;
+                font-size: $clone-font-scale-h4;
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translate(0, -50%);
             }
 
             @each $key, $value in $clone-colour-map {
@@ -43,16 +63,14 @@
                     }
                 }
             };
-
         }
 
-        [data-c-accordion="content"] {
+        [data-c-accordion="content"],
+        [data-c-accordion-content] {
             display: none;
-
             form {
                 padding-bottom: 0;
             }
-
         }
 
         // States ------------------------------------------------------------------
@@ -62,24 +80,27 @@
             }
 
             &.active {
-
-                [data-c-accordion="trigger"] {
-
+                [data-c-accordion="trigger"],
+                [data-c-accordion-trigger] {
+                    // Old
                     [data-c-accordion*="icon"] {
-
                         &[data-c-accordion*="--add"] {
                             display: none;
                         }
-
                         &[data-c-accordion*="--remove"] {
                             display: block;
                         }
-
                     }
-
+                    // New
+                    [data-c-accordion-add] {
+                        display: none;
+                    }
+                    [data-c-accordion-remove] {
+                        display: block;
+                    }
                 }
-
-                [data-c-accordion="content"] {
+                [data-c-accordion="content"],
+                [data-c-accordion-content] {
                     display: block;
                 }
 
@@ -90,6 +111,14 @@
 
 [data-c-accordion="group(alt)"] {
     [data-c-accordion="accordion"] {
+        &:nth-child(odd) {
+            background: $clone-accordion-alternating-background-colour;
+        }
+    }
+}
+
+[data-c-accordion-group="alt"] {
+    [data-c-accordion] {
         &:nth-child(odd) {
             background: $clone-accordion-alternating-background-colour;
         }

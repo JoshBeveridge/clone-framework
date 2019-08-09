@@ -12,7 +12,7 @@ pre {
     overflow: auto;
     padding: 0;
     code {
-        padding: 0 !important;
+        padding: 0;
         * {
             font-family: $clone-font-monospace;
             font-size: $clone-default-font-size;
@@ -29,12 +29,12 @@ code {
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
     font-family: $clone-font-monospace;
     font-size: inherit;
-    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3) !important;
+    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3);
     @media #{$clone-tablet-portrait} {
-        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) !important;
+        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier});
     }
     @media #{$clone-desktop-large} {
-        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
+        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
     }
     * {
         font-family: $clone-font-monospace;

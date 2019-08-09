@@ -1,104 +1,36 @@
+<!-- This is the button that opens the menu on mobile devices. -->
 <button 
     type="button"
     data-c-button="solid(c5)"
-    data-c-menu-mobile-trigger>
+    data-c-menu-mobile-trigger
+    role="button"
+    aria-label="This button opens the main navigation menu."
+    aria-pressed="false">
     <span>Open</span><span>Close</span> Menu
 </button>
 
+<!-- This is the menu proper. Note the data-c-menu property. -->
 <nav data-c-menu>
     <ul>
+        <li><a href="" title="">Menu Item 01</a></li>
+        <li><a href="" title="">Menu Item 02</a></li>
+        <li><a href="" title="">Menu Item 03</a></li>
+        <li><a href="" title="">Menu Item 04</a></li>
+        <!-- This item provides an example of how a submenu works. Items with submenus require the button element. Submenus can be nested up to a hard cap of 5 layers. -->
         <li>
-            <a href="http://google.com" title="">Home</a>
-        </li>
-        <li>
-            <a href="#hello" title="">About</a>
-        </li>
-        <li>
-            <a href="" title="">Information</a>
-        </li>
-        <li>
-            <a href="" title="">Blog</a>
-        </li>
-        <li>
-            <a href="" title="">Resources</a>
+            <!-- The parent menu item. -->
+            <a href="" title="">Menu Item 05</a>
+            <!-- The submenu trigger. Note the data-c-add/remove properties. -->
             <button data-c-menu-submenu-trigger>
                 <i data-c-menu-add class="material-icons">add</i>
                 <i data-c-menu-remove class="material-icons">remove</i>
             </button>
+            <!-- The submenu. -->
             <ul>
-                <li>
-                    <a href="" title="">A paper type resource that has a really long name.</a>
-                </li>
-                <li>
-                    <a href="" title="">A Water Resource</a>
-                    <button data-c-menu-submenu-trigger>
-                        <i data-c-menu-add class="material-icons">add</i>
-                        <i data-c-menu-remove class="material-icons">remove</i>
-                    </button>
-                    <ul>
-                        <li>
-                            <a href="" title="">A paper type resource that has a really long name.</a>
-                        </li>
-                        <li>
-                            <a href="" title="">A Water Resource</a>
-                            <button data-c-menu-submenu-trigger>
-                                <i data-c-menu-add class="material-icons">add</i>
-                                <i data-c-menu-remove class="material-icons">remove</i>
-                            </button>
-                            <ul>
-                                <li>
-                                    <a href="" title="">A paper type resource that has a really long name.</a>
-                                </li>
-                                <li>
-                                    <a href="" title="">A Water Resource</a>
-                                    <button data-c-menu-submenu-trigger>
-                                        <i data-c-menu-add class="material-icons">add</i>
-                                        <i data-c-menu-remove class="material-icons">remove</i>
-                                    </button>
-                                    <ul>
-                                        <li>
-                                            <a href="" title="">A paper type resource that has a really long name.</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">A Water Resource</a>
-                                            <button data-c-menu-submenu-trigger>
-                                                <i data-c-menu-add class="material-icons">add</i>
-                                                <i data-c-menu-remove class="material-icons">remove</i>
-                                            </button>
-                                            <ul>
-                                                <li>
-                                                    <a href="" title="">A paper type resource that has a really long name.</a>
-                                                </li>
-                                                <li>
-                                                    <a href="" title="">A Water Resource</a>
-                                                </li>
-                                                <li>
-                                                    <a href="" title="">An Earth Resource</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">An Earth Resource</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="" title="">An Earth Resource</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" title="">An Earth Resource</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="" title="">An Earth Resource</a>
-                </li>
+                <li><a href="" title="">Submenu Item 01</a></li>
+                <li><a href="" title="">Submenu Item 02</a></li>
             </ul>
         </li>
-        <li>
-            <a href="" title="">Contact</a>
-        </li>
+        <li><a href="" title="">Menu Item 06</a></li>
     </ul>
 </nav>

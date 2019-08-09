@@ -12,6 +12,13 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.12
+- changes the markup of alerts to better support floated close buttons
+- fixes z-index layering of dialogs over the new menus
+- adds test folder for components that are regularly modified/tested
+- updates pieces of accordions, alerts, carousels so that their data attributes are specific instead of values
+- reviewed all code that exists outside of `data-clone` to ensure minimal consequences of importing the system into existing projects
+
 ## 2.3.11
 - fixes hover bugs on touch devices
 - fixes hover colour on tags

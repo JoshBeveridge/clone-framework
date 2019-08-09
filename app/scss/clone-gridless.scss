@@ -10,16 +10,16 @@
 @import "core/media";
 @import "core/functions";
 
-body {
+// Navigation ==================================================================
+@import "components/menus";
+
+body[data-clone] {
     margin: 0;
     max-width: 100%;
     min-height: 100vh;
     position: relative;
     width: 100%;
 }
-
-// Navigation ==================================================================
-@import "components/menus";
 
 [data-clone] {
 

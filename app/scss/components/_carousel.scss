@@ -95,14 +95,16 @@
         }
     }
 }
-[data-c-carousel="item"] {
+[data-c-carousel="item"],
+[data-c-carousel-item] {
     padding: 0 10vw;
 }
 [data-c-carousel="image"] {
     // overflow: hidden;
     // position: relative;
     margin: 0 0 5rem 0;
-    [data-c-carousel="item"] {
+    [data-c-carousel="item"],
+    [data-c-carousel-item] {
         background-position: center;
         background-size: cover;
         height: 0;
@@ -113,7 +115,8 @@
     // overflow: hidden;
     // position: relative;
     margin: 0 0 5rem 0;
-    [data-c-carousel="item"] {
+    [data-c-carousel="item"],
+    [data-c-carousel-item] {
         background-position: center;
         background-size: cover;
     }

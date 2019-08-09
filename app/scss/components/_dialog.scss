@@ -15,7 +15,7 @@
     transform: translate(-100vw, 0);
     transition: transform 0s linear .4s, opacity .2s ease .2s;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100000000;
 }
 
 [data-c-dialog-overlay*="active"] {
@@ -31,7 +31,7 @@
     transform: translate(-100vw, 0);
     transition: transform 0s linear .2s, opacity .2s ease;
     width: 100vw;
-    z-index: 2000;
+    z-index: 1000000000;
 
     >div {
         margin: 0 auto;
