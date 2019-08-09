@@ -401,8 +401,13 @@
         function menuItemClick(trigger) {
             var destination = $(trigger).attr("href");
             if (destination.match("^#")) {
-                $("[data-c-menu-mobile-trigger]").removeClass("active");
+                $("body").css("overflow", "visible");
+                $("[data-c-menu-mobile-trigger]").removeClass("active").attr("aria-pressed", "false");
+                var focusableItems = $("[data-c-menu]").find(":focusable");
                 $("[data-c-menu]").removeClass("active");
+                $(focusableItems).each(function() {
+                    $(this).attr("tabindex", "-1");
+                });
             }
             else {
 

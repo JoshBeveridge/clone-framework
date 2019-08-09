@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.14
+- fixes a bug where the menu locks the body overflow on mobile devices
+
 ## 2.3.13
 - includes jQuery and a minified build of jQuery UI to reduce dependency size
 
