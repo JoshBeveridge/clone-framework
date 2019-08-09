@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.13
+- includes jQuery and a minified build of jQuery UI to reduce dependency size
+
 ## 2.3.12
 - changes the markup of alerts to better support floated close buttons
 - fixes z-index layering of dialogs over the new menus

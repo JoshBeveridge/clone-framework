@@ -65,7 +65,12 @@ const rename = require('gulp-rename');
 
     // Move JavaScript
     function concatScripts() {
-        return src('app/js/*.js')
+        return src([
+            'app/js/jquery-3.4.1.min.js',
+            'app/js/jquery-ui-1.12.1.min.js',
+            'app/js/slick.min.js',
+            'app/js/*.js'
+        ])
         .pipe(concat('clone.js'))
         .pipe(dest('cache/js'));
     }
