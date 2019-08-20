@@ -28,8 +28,8 @@
     height: 100vh;
     opacity: 0;
     position: fixed;
-    transform: translate(-100vw, 0);
-    transition: transform 0s linear .2s, opacity .2s ease;
+    transform: translate(-100vw, 0%);
+    transition: all 0s ease;
     width: 100vw;
     z-index: 1000000000;
 
@@ -91,7 +91,7 @@
             overflow: auto;
             top: 0;
             left: 50%;
-            transform: translate(-50%, 0);
+            transform: translate(-50%, 0%);
             transition: transform 0s linear, opacity .2s ease .2s;
         }
 

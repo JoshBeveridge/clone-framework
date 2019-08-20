@@ -338,7 +338,7 @@
                 });
                 var firstInput = newItems.first();
                 var lastInput = newItems.last();
-                $(firstInput).focus();
+                // $(firstInput).focus();
                 menuTabbing(firstInput, secondLast, lastInput);
             }
         }

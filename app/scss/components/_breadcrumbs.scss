@@ -47,6 +47,12 @@
 
                 &:last-child {
 
+                    a {
+                        font-weight: 700;
+                        pointer-events: none;
+                        text-decoration: none;
+                    }
+
                     i {
                         display: none;
                     }

@@ -12,6 +12,11 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.15
+- removes code that focuses the first element on the menu when it opens on mobile devices in favour of keeping the open/close button focused
+- adds support for `auto` to `data-c-margin="tb"` and `data-c-margin="rl"`
+- fixes a bug with dialogs popping out of place when closed on certain screen widths
+
 ## 2.3.14
 - fixes a bug where the menu locks the body overflow on mobile devices
 
