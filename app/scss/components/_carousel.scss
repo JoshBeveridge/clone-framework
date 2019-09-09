@@ -5,7 +5,7 @@
 
 // =============================================================================
 
-[data-c-carousel] {
+[data-c-carousel-wrapper] {
     .slick-list {
         // border-radius: 5px;
         .slick-track {
@@ -22,7 +22,7 @@
         // margin-right: 10vw;
         // margin-left: 10vw;
     }
-    .slick-arrow {
+    [data-c-carousel-arrow] {
         background: rgba($clone-black, .5);
         border: none;
         cursor: pointer;
@@ -53,17 +53,17 @@
             }
 
             // Types -----------------------------------------------------------
-            &.slick-prev {
+            &[data-c-carousel-arrow="prev"] {
                 // border-radius: 5px 0 0 5px;
                 left: 0;
             }
 
-            &.slick-next {
+            &[data-c-carousel-arrow="next"] {
                 // border-radius: 0 5px 5px 0;
                 right: 0;
             }
     }
-    .slick-dots {
+    [data-c-carousel-dots] {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -71,22 +71,19 @@
         bottom: -1rem;
         left: 50%;
         transform: translate(-50%, 100%);
-        li {
+        button {
             background: $clone-carousel-dot-colour;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
             transition: all .2s ease;
-            button {
-                background: none;
-                border: 0;
-                color: $clone-white;
-                cursor: pointer;
-                height: 2rem;
-                width: 2rem;
-            }
+            border: 0;
+            color: $clone-white;
+            cursor: pointer;
+            height: 2rem;
+            width: 2rem;
             // States ----------------------------------------------------------
-            &.slick-active,
+            &.active,
             &:hover,
             &:focus {
                 background: $clone-carousel-dot-active-colour;
@@ -97,23 +94,28 @@
 }
 [data-c-carousel="item"],
 [data-c-carousel-item] {
-    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-right: 10vw;
+    padding-left: 10vw;
 }
 [data-c-carousel="image"] {
-    // overflow: hidden;
-    // position: relative;
+    overflow: hidden;
+    position: relative;
     margin: 0 0 5rem 0;
     [data-c-carousel="item"],
     [data-c-carousel-item] {
         background-position: center;
         background-size: cover;
-        height: 0;
-        padding-bottom: 7.0315%;
+        height: 0 !important;
+        padding-top: 16.25%;
     }
 }
 [data-c-carousel="content"] {
-    // overflow: hidden;
-    // position: relative;
+    overflow: hidden;
+    position: relative;
     margin: 0 0 5rem 0;
     [data-c-carousel="item"],
     [data-c-carousel-item] {

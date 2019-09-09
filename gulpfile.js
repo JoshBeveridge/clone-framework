@@ -53,22 +53,21 @@ const rename = require('gulp-rename');
     }
 
     // Slick
-    function moveSlickJS() {
-        return src('node_modules/slick-carousel/slick/slick.min.js')
-        .pipe(dest('app/js'));
-    }
+    // function moveSlickJS() {
+    //     return src('node_modules/slick-carousel/slick/slick.min.js')
+    //     .pipe(dest('app/js'));
+    // }
 
-    function moveSlickCSS() {
-        return src('node_modules/slick-carousel/slick/slick.scss')
-        .pipe(dest('app/scss'));
-    }
+    // function moveSlickCSS() {
+    //     return src('node_modules/slick-carousel/slick/slick.scss')
+    //     .pipe(dest('app/scss'));
+    // }
 
     // Move JavaScript
     function concatScripts() {
         return src([
-            'app/js/jquery-3.4.1.min.js',
-            'app/js/jquery-ui-1.12.1.min.js',
-            'app/js/slick.min.js',
+            'app/js/cash.min.js',
+            'app/js/glider.min.js',
             'app/js/*.js'
         ])
         .pipe(concat('clone.js'))
@@ -130,7 +129,7 @@ const rename = require('gulp-rename');
 
     // Compile
     const devCompile = series(template, concatScripts, compileCSS);
-    const distCompile = series(cleanCache, moveSlickJS, moveSlickCSS, template, concatScripts, compileCSS);
+    const distCompile = series(cleanCache, template, concatScripts, compileCSS);
 
     // Dist
     const dist = series(distCacheHTML, distCacheJS, distCacheCSS, compressCSS, compressJS);
@@ -144,5 +143,5 @@ const rename = require('gulp-rename');
 
     // Export
     exports.build = series(cleanDist, distCompile, dist);
-    exports.watch = series(cleanCache, moveSlickJS, moveSlickCSS, devCompile, parallel(browserSync, watchFiles));
-    exports.default = series(cleanCache, moveSlickJS, moveSlickCSS, devCompile, parallel(browserSync, watchFiles));
+    exports.watch = series(cleanCache, devCompile, parallel(browserSync, watchFiles));
+    exports.default = series(cleanCache, devCompile, parallel(browserSync, watchFiles));

@@ -12,6 +12,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 # Changelog
 
+## 2.3.16
+- fixes the spacing on breadcrumb elements
+
 ## 2.3.15
 - removes code that focuses the first element on the menu when it opens on mobile devices in favour of keeping the open/close button focused
 - adds support for `auto` to `data-c-margin="tb"` and `data-c-margin="rl"`
