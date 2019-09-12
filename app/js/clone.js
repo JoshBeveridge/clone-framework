@@ -19,12 +19,17 @@ $.fn.hasAttr = function (name) {
     return (typeof attr !== typeof undefined && attr !== false);
 };
 
-// User Agent Data Attributes ==============================================
+// Find Focusable Items
+function focusable(el) {
+    return (el.find('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'));
+}
+
+// User Agent Data Attributes ==================================================
 var ua = navigator.userAgent;
 ua = ua.toString();
 $('body').attr('id', ua);
 
-// Clone Shorthand =========================================================
+// Clone Shorthand =============================================================
 function clone(attr, option, selector) {
     if (option != null) {
         if (selector != null) {
@@ -39,10 +44,38 @@ function clone(attr, option, selector) {
     }
 }
 
-// Core ====================================================================
+// Core ========================================================================
 $(document).ready(function () {
 
-    // Accordion Handlers ==================================================
+    // Glider Initialization ===================================================
+    window.addEventListener('load', function(){
+        var carouselID = 0;
+        $("[data-c-carousel]").each(function() {
+            if (this.hasAttribute("data-c-custom-carousel")) {
+                // Do nothing.
+            }
+            else {
+                carouselID = carouselID + 1;
+                $(this).attr("id", "carousel" + carouselID);
+                $(this).parent().find("[data-c-carousel-arrow=\"prev\"]").attr("id", "carousel" + carouselID + "prev");
+                $(this).parent().find("[data-c-carousel-arrow=\"next\"]").attr("id", "carousel" + carouselID + "next");
+                $(this).parent().find("[data-c-carousel-dots]").attr("id", "carousel" + carouselID + "dots");
+                new Glider(document.querySelector('#carousel' + carouselID), {
+                    slidesToShow: 1,
+                    arrows: {
+                        "prev": '#carousel' + carouselID + "prev",
+                        "next": '#carousel' + carouselID + "next"
+                    },
+                    dots: '#carousel' + carouselID + "dots",
+                    draggable: true,
+                    scrollLock: true,
+                    rewind: true
+                })
+            }
+        });
+    });
+
+    // Accordion Handlers ======================================================
     
         // Old
         function accordionTriggerOld(trigger) {
@@ -57,8 +90,12 @@ $(document).ready(function () {
                 $(trigger).attr("aria-expanded", "true");
                 $(trigger).parent(object).addClass("active");
                 $(trigger).parent(object).find(content).attr("aria-hidden", "false");
-                var focusableItems = $(trigger).siblings(content).find(":focusable");
-                focusableItems.first().focus();
+                var siblingContent = $(trigger).siblings(content);
+                var focusableItems = focusable(siblingContent);
+                var firstFocusableItem = $(focusableItems).first();
+                if (focusableItems.length != 0) {
+                    firstFocusableItem[0].focus();
+                }
             }
         }
 
@@ -70,7 +107,7 @@ $(document).ready(function () {
         // New
         function accordionTrigger(trigger) {
             var accordion = "[data-c-accordion='']";
-            var content = "[data-c-accordion-content";
+            var content = "[data-c-accordion-content]";
             if ($(trigger).parent(accordion).hasClass("active")) {
                 $(trigger).attr("aria-expanded", "false");
                 $(trigger).parent(accordion).removeClass("active");
@@ -80,8 +117,12 @@ $(document).ready(function () {
                 $(trigger).attr("aria-expanded", "true");
                 $(trigger).parent(accordion).addClass("active");
                 $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
-                var focusableItems = $(trigger).siblings(content).find(":focusable");
-                focusableItems.first().focus();
+                var siblingContent = $(trigger).siblings(content);
+                var focusableItems = focusable(siblingContent);
+                var firstFocusableItem = $(focusableItems).first();
+                if (focusableItems.length != 0) {
+                    firstFocusableItem[0].focus();
+                }
             }
         }
 
@@ -90,7 +131,7 @@ $(document).ready(function () {
             accordionTrigger(this);
         });
 
-    // Alert Handlers ======================================================
+    // Alert Handlers ==========================================================
     
     // Old
     function alertTriggerOld(trigger) {
@@ -113,11 +154,11 @@ $(document).ready(function () {
         alertTrigger(this);
     });
 
-    // Form Handlers =======================================================
+    // Form Handlers ===========================================================
 
-        // HTML5 Validation ------------------------------------------------
+        // HTML5 Validation ----------------------------------------------------
 
-            // Required Fields ---------------------------------------------
+            // Required Fields -------------------------------------------------
             function requiredFields() {
                 $("input:required, textarea:required, select:required").each(function(e) {
                     $(this).parents(clone("input")).attr("data-c-required", "");
@@ -126,8 +167,7 @@ $(document).ready(function () {
 
             requiredFields();
 
-            // Validation --------------------------------------------------
-            console.log((clone("input") + " input," + clone("input") + " textarea," + clone("input") + " select"));
+            // Validation ------------------------------------------------------
             var inputs = $(clone("input") + " input," + clone("input") + " textarea," + clone("input") + " select");
             function handlerFunction() {
                 console.log("AT LEAST WE GET IN!");
@@ -179,12 +219,12 @@ $(document).ready(function () {
                 }
             };
 
-            const newInputs = $(inputs);
-            for (const i = 0, len = inputs.length; i < len; i++) {
-                newInputs[i].addEventListener('focusout', handlerFunction(), false);
+            var newInputs = $(inputs);
+            for (var i = 0, len = inputs.length; i < len; i++) {
+                newInputs[i].addEventListener('focusout', handlerFunction, false);
             }
 
-        // Password Toggle -------------------------------------------------
+        // Password Toggle -----------------------------------------------------
         $(clone("input", "password", "*") + " button").on("click", function (e) {
             e.preventDefault();
             var x = $(this).siblings("input");
@@ -198,18 +238,18 @@ $(document).ready(function () {
             }
         });
 
-    // Dialog Handlers ===============================================
+    // Dialog Handlers =========================================================
 
-        // Dialog Tabindex on Pageload ---------------------------------
+        // Dialog Tabindex on Pageload -----------------------------------------
         function dialogTabIndex() {
             $(clone("dialog")).each(function() {
-                $(this).find(":focusable").attr("tabindex", "-1");
+                // $(this).find(":focusable").attr("tabindex", "-1");
             });
         }
 
         dialogTabIndex();
 
-        // Dialog Trigger -----------------------------------------------
+        // Dialog Trigger ------------------------------------------------------
         function dialogTrigger(trigger) {
 
             var dialogID = $(trigger).attr("data-c-dialog-id");
@@ -217,7 +257,8 @@ $(document).ready(function () {
             var overlay = $(clone("dialog-overlay"));
             var targetInput = $("[data-c-dialog-focus]");
             $(targetInput).attr("tabindex", "0");
-            var focusableItems = $(dialog).find(":focusable");
+            // var focusableItems = $(dialog).find(":focusable");
+            var focusableItems = focusable($(dialog));
 
             if($(dialog).attr("data-c-dialog") != "") {
                 $("body").css("overflow", "visible");
@@ -227,7 +268,7 @@ $(document).ready(function () {
                 $(focusableItems).each(function() {
                     $(this).attr("tabindex", "-1");
                 });
-                $(clone("dialog-ancestor")).focus();
+                document.querySelector("[data-c-dialog-ancestor]").focus();
             }
             else {
                 $("*").removeAttr("data-c-dialog-ancestor");
@@ -241,17 +282,17 @@ $(document).ready(function () {
                 dialogSizing(dialog);
                 var firstInput = focusableItems.first();
                 var lastInput = focusableItems.last();
-                $(targetInput).focus();
+                targetInput[0].focus();
                 dialogTabbing(firstInput, lastInput);
                 dialogEscape();
             }
         }
 
-        // Dialog Sizing -----------------------------------------------
+        // Dialog Sizing -------------------------------------------------------
         function dialogSizing(dialog) {
             var viewportHeight = $(window).height();
             if (dialog != null) {
-                var dialogHeight = $(dialog).find(">div").height();
+                var dialogHeight = $(dialog).find(":scope > div").height();
                 if (dialogHeight > viewportHeight) {
                     $(dialog).attr("data-c-dialog", "active--overflowing");
                 }
@@ -287,26 +328,26 @@ $(document).ready(function () {
             dialogSizing();
         });
 
-        // Tab Handler -------------------------------------------------
+        // Tab Handler ---------------------------------------------------------
         function dialogTabbing(first, last) {
             $(document).on("keydown", function(e){
                 var keyCode = e.keyCode || e.which;
                 if (keyCode == 9 && !e.shiftKey) {
                     if ($(last).is(":focus")) {
                         e.preventDefault();
-                        $(first).focus();
+                        first[0].focus();
                     }
                 }
                 else if (keyCode == 9 && e.shiftKey) {
                     if ($(first).is(":focus")) {
                         e.preventDefault();
-                        $(last).focus();
+                        last[0].focus();
                     }
                 }
             });
         }
 
-        // Escape Handler ----------------------------------------------
+        // Escape Handler ------------------------------------------------------
         function dialogEscape() {
             $(document).on("keyup", function(e){
                 if ((e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){
@@ -322,12 +363,13 @@ $(document).ready(function () {
             });
         }
 
-    // Menu Handlers =======================================================
+    // Menu Handlers ===========================================================
     function toggleMenu(trigger) {
         if ($(trigger).hasClass("active")) {
             $("body").css("overflow", "visible");
             $(trigger).removeClass("active").attr("aria-pressed", "false");
-            var focusableItems = $("[data-c-menu]").find(":focusable");
+            // var focusableItems = $("[data-c-menu]").find(":focusable");
+            var focusableItems = focusable($("[data-c-menu]"));
             $("[data-c-menu]").removeClass("active");
             $(focusableItems).each(function() {
                 $(this).attr("tabindex", "-1");
@@ -337,9 +379,10 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden");
             $(trigger).addClass("active").attr("aria-pressed", "true");
             $("[data-c-menu]").addClass("active");
-            var focusableItems = $("[data-c-menu]").find(":focusable");
+            // var focusableItems = $("[data-c-menu]").find(":focusable");
+            var focusableItems = focusable($("[data-c-menu]"));
             var secondLast = focusableItems.last();
-            var newItems = $.merge(focusableItems, $(trigger));
+            var newItems = $(focusableItems).add($(trigger));
             $(newItems).each(function() {
                 $(this).attr("tabindex", "0");
             });
@@ -363,24 +406,24 @@ $(document).ready(function () {
                     if ($(last).is(":focus")) {
                         // console.log("LAST TO FIRST");
                         e.preventDefault();
-                        $(first).focus();
+                        first[0].focus();
                     } 
                     else if ($(secondLast).is(":focus")) {
                         // console.log("2ND TO LAST");
                         e.preventDefault();
-                        $(last).focus();
+                        last[0].focus();
                     }
                 }
                 else if (keyCode == 9 && e.shiftKey) {
                     if ($(first).is(":focus")) {
                         // console.log("FIRST TO LAST");
                         e.preventDefault();
-                        $(last).focus();
+                        last[0].focus();
                     }
                     else if ($(last).is(":focus")) {
                         // console.log("LAST TO 2ND");
                         e.preventDefault();
-                        $(secondLast).focus();
+                        secondLast[0].focus();
                     }
                 }
             }
@@ -410,7 +453,8 @@ $(document).ready(function () {
         if (destination.match("^#")) {
             $("body").css("overflow", "visible");
             $("[data-c-menu-mobile-trigger]").removeClass("active").attr("aria-pressed", "false");
-            var focusableItems = $("[data-c-menu]").find(":focusable");
+            // var focusableItems = $("[data-c-menu]").find(":focusable");
+            var focusableItems = focusable($("[data-c-menu]"));
             $("[data-c-menu]").removeClass("active");
             $(focusableItems).each(function() {
                 $(this).attr("tabindex", "-1");
@@ -424,30 +468,5 @@ $(document).ready(function () {
     $(document).on("click", "[data-c-menu] a", function(e) {
         menuItemClick(this);
     });
-
-    window.addEventListener('load', function(){
-        new Glider(document.querySelector('#glider'), {
-            slidesToShow: 1,
-            arrows: {
-                "prev": "#glider-prev",
-                "next": "#glider-next"
-            },
-            dots: "#dots",
-            draggable: true,
-            scrollLock: true,
-            rewind: true
-        })
-        new Glider(document.querySelector('#glider2'), {
-            slidesToShow: 1,
-            arrows: {
-                "prev": "#glider-prev2",
-                "next": "#glider-next2"
-            },
-            dots: "#dots2",
-            draggable: true,
-            scrollLock: true,
-            rewind: true
-        })
-    })
 
 });

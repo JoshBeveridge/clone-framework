@@ -1,0 +1,110 @@
+// Clone =======================================================================
+
+// Layout Variables
+$clone-large-layout: 80rem;
+$clone-medium-layout: 60rem;
+$clone-small-layout: 39rem;
+
+// Whitespace Variables
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone-margin: 1rem;
+$clone-padding: 1rem;
+$clone-whitespace-multiplier: 1.4;
+
+// Grid Variables
+$clone-grid-columns: 12;
+$clone-grid-gutter: $clone-padding;
+
+// Main Colour Variables
+
+    // Black & White
+    $clone-white: #FFFFFF;
+    $clone-black: rgba(10, 10, 20, 1);
+
+    // gray/Gray
+    $clone-gray: rgba(150, 150, 150, 1);
+
+    // Theme Colours
+    $clone-c1: #F14948;
+    $clone-c2: #F1604D;
+    $clone-c3: #F47953;
+    $clone-c4: #F79559;
+    $clone-c5: #F7AF5B;
+
+    // Go, Slow, Stop
+    $clone-go: green;
+    $clone-slow: orange;
+    $clone-stop: red;
+    $clone-error: $clone-stop;
+
+// Sitewide Colour Variables
+
+    // Text Selection
+    $clone-selection-background-colour: $clone-c5;
+
+    // Hover
+    $clone-hover-colour: $clone-c4;
+
+    // Focus
+    $clone-focus-colour: $clone-hover-colour;
+
+    // Visited Links
+    $clone-visited-colour: purple;
+
+// Component Options
+
+    // Cards
+    $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+
+// Component Colour Variables
+
+    // Accordions
+    $clone-accordion-border-colour: $clone-black;
+    $clone-accordion-alternating-background-colour: lighten($clone-gray, 35%);
+
+    // Alerts
+    $clone-alert-information: $clone-go;
+    $clone-alert-warning: $clone-slow;
+    $clone-alert-error: $clone-stop;
+
+    // Blockquotes
+    $clone-blockquote-colour: $clone-c1;
+
+    // Carousels
+    $clone-carousel-dot-colour: $clone-gray-light;
+    $clone-carousel-dot-active-colour: $clone-hover-colour;
+
+    // Code Blocks
+    $clone-code-background: $clone-black;
+
+    // Menus
+    $clone-menu-background-colour: $clone-black;
+    $clone-submenu-background-colour: $clone-c2;
+
+    $clone-menu-font-colour: $clone-white;
+    $clone-menu-divider-colour: rgba($clone-c4, .5);
+    $clone-menu-icon-colour: $clone-white;
+
+    // Pullquotes
+    $clone-pullquote-colour: $clone-c2;
+
+    // Tables
+    $clone-table-heading-colour: $clone-c1;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: "Open Sans", sans-serif;
+    $clone-font-serif: serif;
+    $clone-font-script: "Euphoria Script", cursive;
+    $clone-font-monospace: "Consolas", monospace;
+
+    $clone-font-default: $clone-font-sans;
+
+    // Default Line Height
+    $clone-line-height: 1.5;
+
+    // The Typography Scale
+    $clone-default-font-size: 1rem;
+    $clone-font-scale: 1.333;

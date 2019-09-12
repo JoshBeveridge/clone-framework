@@ -25,13 +25,13 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-black: rgba(10, 10, 20, 1) !default;
 
     // Grey/Gray
-    $clone-grey: rgba(150, 150, 150, 1) !default;
-    $clone-grey-light: lighten($clone-grey, 10%) !default;
-    $clone-grey-dark: darken($clone-grey, 10%) !default;
+    $clone-gray: rgba(150, 150, 150, 1) !default;
+    $clone-gray-light: lighten($clone-gray, 10%) !default;
+    $clone-gray-dark: darken($clone-gray, 10%) !default;
 
-    $clone-gray: $clone-grey !default;
-    $clone-gray-light: $clone-grey-light !default;
-    $clone-gray-dark: $clone-grey-dark !default;
+    $clone-grey: $clone-gray !default;
+    $clone-grey-light: $clone-gray-light !default;
+    $clone-grey-dark: $clone-gray-dark !default;
 
     // Theme Colours
     $clone-c1: #F14948 !default;

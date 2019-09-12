@@ -1,25 +1,40 @@
-<div
-    data-c-carousel="content"
-    data-slick='{"slidesToShow": 1, "dots": true}'>
-    <!-- Repeat items as necessary. -->
-    <div
-        data-c-carousel-content
-        style="background-image: url('URL');">
-        <!-- This div is the content wrapper. -->
-        <div
-            data-c-padding="normal"
-            data-c-background="black(100)"
-            data-c-margin="top(triple) bottom(triple)">
-            <h5
-                data-c-heading="h5"
-                data-c-margin="bottom(half)"
-                data-c-font-weight="bold"
-                data-c-colour="white">
-                <!-- Optional Slide Title Here -->
-            </h5>
-            <p data-c-colour="white">
-                <!-- Slide Content Here -->
-            </p>
+<!-- Content Carousel -->
+<div data-c-carousel-wrapper>
+    <div data-c-carousel="content">
+        <!-- Repeat items as necessary. -->
+        <div data-c-carousel-item style="background-image:url('');">
+            <!-- This div is the content wrapper. -->
+            <div
+                data-c-padding="normal"
+                data-c-background="black(100)"
+                data-c-margin="top(triple) bottom(triple)">
+                <h5
+                    data-c-heading="h5"
+                    data-c-margin="bottom(half)"
+                    data-c-font-weight="bold"
+                    data-c-colour="white">
+                    <!-- Optional Slide Title Here -->
+                </h5>
+                <p data-c-colour="white">
+                    <!-- Slide Content Here -->
+                </p>
+            </div>
         </div>
     </div>
+    <button role="button" aria-label="Previous" data-c-carousel-arrow="prev"><i class="material-icons">arrow_back_ios</i></button>
+    <button role="button" aria-label="Next" data-c-carousel-arrow="next"><i class="material-icons">arrow_forward_ios</i></button>
+    <div role="tablist" data-c-carousel-dots></div>
+</div>
+
+<!-- Image Carousel -->
+<div data-c-carousel-wrapper>
+    <div data-c-carousel="image">
+        <!-- Repeat items as necessary. -->
+        <div data-c-carousel-item style="background-image:url('');">
+            <!-- Use the background-image property to display an image. -->
+        </div>
+    </div>
+    <button role="button" aria-label="Previous" data-c-carousel-arrow="prev"><i class="material-icons">arrow_back_ios</i></button>
+    <button role="button" aria-label="Next" data-c-carousel-arrow="next"><i class="material-icons">arrow_forward_ios</i></button>
+    <div role="tablist" data-c-carousel-dots></div>
 </div>
