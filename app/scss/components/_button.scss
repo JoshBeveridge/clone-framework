@@ -35,8 +35,8 @@ a[data-c-button] {
         vertical-align: middle;
     }
 
-    span {
-        margin-right: .5rem;
+    span+i {
+        margin-left: .5rem;
     }
 
     i+span {
