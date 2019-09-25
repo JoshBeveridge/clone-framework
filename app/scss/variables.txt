@@ -59,7 +59,6 @@ $clone-grid-gutter: $clone-padding;
 // Component Colour Variables
 
     // Accordions
-    $clone-accordion-border-colour: $clone-black;
     $clone-accordion-alternating-background-colour: lighten($clone-gray, 35%);
 
     // Alerts

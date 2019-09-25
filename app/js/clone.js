@@ -170,7 +170,6 @@ $(document).ready(function () {
             // Validation ------------------------------------------------------
             var inputs = $(clone("input") + " input," + clone("input") + " textarea," + clone("input") + " select");
             function handlerFunction() {
-                console.log("AT LEAST WE GET IN!");
                 if ($(this).is("[required]")) {
                     if ($(this).val() == "") {
                         if ($(this).attr("type") == "password") {

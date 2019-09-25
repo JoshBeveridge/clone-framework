@@ -9,12 +9,13 @@
 [data-c-accordion-group] {
     [data-c-accordion="accordion"],
     [data-c-accordion=""] {
-        border-bottom: 1px solid $clone-accordion-border-colour;
+        // border-bottom: 1px solid $clone-accordion-border-colour;
         [data-c-accordion="trigger"],
         [data-c-accordion-trigger] {
             background: none;
             border: none;
             cursor: pointer;
+            padding-right: 5rem;
             position: relative;
             text-align: left;
             width: 100%;
@@ -76,7 +77,7 @@
         // States ------------------------------------------------------------------
 
             &:first-of-type {
-                border-top: 1px solid $clone-accordion-border-colour;
+                // border-top: 1px solid $clone-accordion-border-colour;
             }
 
             &.active {

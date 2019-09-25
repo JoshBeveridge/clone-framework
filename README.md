@@ -14,6 +14,17 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.1
+- fixes a missing `>` in the dialog code example
+- removes forced borders from accordions in favor of the border property
+  - this also means the border colour variable for accordions has been removed
+- updates breadcrumbs to support `span` and `p` as the `aria-current` element
+- updates buttons to require a span if using an icon
+  - this also allows icons on either side of the button's content
+- fixed line height of icons inside buttons
+- adds `data-c-button="reset"` to allow for buttons that don't need generic button styling
+  - this removes borders, backgrounds, and adds a `cursor: pointer;` value
+
 ### 2.4.0
 - removes jQuery and jQuery UI in favour of Cash
 - removes Slick Carousel in favour of Glider.js

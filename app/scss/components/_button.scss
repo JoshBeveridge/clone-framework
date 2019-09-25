@@ -12,7 +12,7 @@ a[data-c-button] {
     vertical-align: middle;
 }
 
-[data-c-button] {
+[data-c-button]:not([data-c-button="reset"]) {
     border: none;
     cursor: pointer;
     font-family: $clone-font-default;
@@ -30,9 +30,19 @@ a[data-c-button] {
 
     i {
         font-size: inherit;
-        margin: -.2rem .5rem 0 -.5rem;
+        line-height: 1;
+        margin-top: -.2rem;
         transition: all .2s ease;
         vertical-align: middle;
+    }
+
+    span {
+        margin-right: .5rem;
+    }
+
+    i+span {
+        margin-right: 0;
+        margin-left: .5rem;
     }
 
         // States --------------------------------------------------------------
@@ -62,7 +72,7 @@ a[data-c-button] {
 
 // IE 11 Hover Support
 &[id*="Trident/7.0"] {
-    [data-c-button] {
+    [data-c-button]:not([data-c-button="reset"]) {
         &:hover {
             background: rgba($clone-focus-colour, .2);
             border-color: $clone-focus-colour;
@@ -107,3 +117,23 @@ a[data-c-button] {
             }
         }
     };
+
+    [data-c-button="reset"] {
+        background: none;
+        border: none;
+        cursor: pointer;
+        @media (hover: hover) {
+            &:hover {
+                color: $clone-focus-colour;
+                transition: all .2s ease;
+                i {
+                    color: $clone-focus-colour;
+                    transition: all .2s ease;
+                }
+            }
+            &:disabled {
+                color: $clone-grey;
+                pointer-events: none;
+            }
+        }
+    }

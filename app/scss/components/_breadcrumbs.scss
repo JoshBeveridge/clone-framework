@@ -38,6 +38,14 @@
 
             }
 
+            p[aria-current="page"], 
+            span[aria-current="page"] {
+                font-weight: 700;
+                margin: .5rem;
+                pointer-events: none;
+                text-decoration: none;
+            }
+
             i {
                 margin-top: -.25rem;
                 vertical-align: middle;
