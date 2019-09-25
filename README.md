@@ -14,6 +14,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.3
+- fixes a bug with spans inside buttons
+
 ### 2.4.2
 - fixes a bug introduced by `data-c-button="reset"` where borders wouldn't show on regular buttons
 
