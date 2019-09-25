@@ -14,6 +14,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.2
+- fixes a bug introduced by `data-c-button="reset"` where borders wouldn't show on regular buttons
+
 ### 2.4.1
 - fixes a missing `>` in the dialog code example
 - removes forced borders from accordions in favor of the border property

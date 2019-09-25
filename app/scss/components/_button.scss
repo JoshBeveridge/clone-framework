@@ -13,7 +13,6 @@ a[data-c-button] {
 }
 
 [data-c-button]:not([data-c-button="reset"]) {
-    border: none;
     cursor: pointer;
     font-family: $clone-font-default;
     font-size: $clone-default-font-size;
