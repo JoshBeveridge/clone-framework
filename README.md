@@ -14,6 +14,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.4
+- adds code that checks for a `data-c-dialog-focus` element before trying to focus
+
 ### 2.4.3
 - fixes a bug with spans inside buttons
 

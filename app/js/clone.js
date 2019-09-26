@@ -250,7 +250,6 @@ $(document).ready(function () {
 
         // Dialog Trigger ------------------------------------------------------
         function dialogTrigger(trigger) {
-
             var dialogID = $(trigger).attr("data-c-dialog-id");
             var dialog = $(clone("dialog") + "[data-c-dialog-id='" + dialogID +"']");
             var overlay = $(clone("dialog-overlay"));
@@ -258,7 +257,6 @@ $(document).ready(function () {
             $(targetInput).attr("tabindex", "0");
             // var focusableItems = $(dialog).find(":focusable");
             var focusableItems = focusable($(dialog));
-
             if($(dialog).attr("data-c-dialog") != "") {
                 $("body").css("overflow", "visible");
                 $(overlay).attr("data-c-dialog-overlay", "");
@@ -281,7 +279,9 @@ $(document).ready(function () {
                 dialogSizing(dialog);
                 var firstInput = focusableItems.first();
                 var lastInput = focusableItems.last();
-                targetInput[0].focus();
+                if (targetInput[0] != null) {
+                    targetInput[0].focus();
+                }
                 dialogTabbing(firstInput, lastInput);
                 dialogEscape();
             }
