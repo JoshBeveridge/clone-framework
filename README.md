@@ -14,6 +14,11 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.5
+- fixes line height of buttons in menus
+- adds support for containers on menus (the `data-c-container` attribute can be used on data-c-menu elements and will style the nested `ul` accordingly)
+- assigns a minimum width of 25rem to submenus on topbar style menus
+
 ### 2.4.4
 - adds code that checks for a `data-c-dialog-focus` element before trying to focus
 

@@ -45,6 +45,9 @@
         * {
             vertical-align: middle;
         }
+        ul li button {
+            line-height: $clone-line-height;
+        }
         >ul {
             background: $clone-menu-background-colour;
             display: none;
@@ -288,6 +291,7 @@
                     }
                     >ul {
                         max-height: 70vh;
+                        min-width: 25rem;
                         overflow: auto;
                         position: absolute;
                         left: -4px;
@@ -323,6 +327,27 @@
             >ul >li >ul >li >ul >li >ul >li >ul >li >ul >li >p {
                 margin-left: 5rem;
             }
+            &[data-c-container] {
+                max-width: 100%;
+                padding: 0;
+                width: 100vw;
+                >ul {
+                    margin: 0 auto;
+                    width: 90%;
+                    >li:first-of-type {
+                        margin-left: -1rem;
+                    }
+                }
+            }
+            &[data-c-container="large"] >ul {
+                max-width: $clone-large-layout;
+            }
+            &[data-c-container="medium"] >ul {
+                max-width: $clone-medium-layout;
+            }
+            &[data-c-container="small"] >ul {
+                max-width: $clone-small-layout;
+            }
         }
     }
     &[data-c-menu-style*="sticky"] {
@@ -341,7 +366,15 @@
                 >ul {
                     text-align: center;
                 }
+                &[data-c-container] {
+                    >ul {
+                        >li:first-of-type {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
             }
+
         }
     }
     &[data-c-menu-style*="right"] {
@@ -352,6 +385,16 @@
                     >li {
                         >ul {
                             right: 0;
+                        }
+                    }
+                }
+                &[data-c-container] {
+                    >ul {
+                        >li:first-of-type {
+                            margin-left: 1rem;
+                        }
+                        >li:last-of-type {
+                            margin-right: -1rem;
                         }
                     }
                 }
