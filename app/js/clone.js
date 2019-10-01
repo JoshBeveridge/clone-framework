@@ -6,7 +6,7 @@
 
 // Add isValid()
 $.fn.isValid = function() {
-    console.log($(this[0]).nodeName);
+    // console.log($(this[0]).nodeName);
     return this[0].checkValidity();
 }
 
@@ -291,7 +291,7 @@ $(document).ready(function () {
         function dialogSizing(dialog) {
             var viewportHeight = $(window).height();
             if (dialog != null) {
-                var dialogHeight = $(dialog).find(":scope > div").height();
+                var dialogHeight = $(dialog).children("div").height();
                 if (dialogHeight > viewportHeight) {
                     $(dialog).attr("data-c-dialog", "active--overflowing");
                 }
@@ -305,7 +305,7 @@ $(document).ready(function () {
                         return false;
                     }
                     else {
-                        var dialogHeight = $(this).find(">div").height();
+                        var dialogHeight = $(this).children("div").height();
                         if (dialogHeight > viewportHeight) {
                             $(this).attr("data-c-dialog", "active--overflowing");
                         }

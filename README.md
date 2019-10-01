@@ -14,6 +14,9 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 ## 2.4.0
 
+### 2.4.6
+- fixes a bug with dialogs and the use of `:scope` in Internet Explorer 11
+
 ### 2.4.5
 - fixes line height of buttons in menus
 - adds support for containers on menus (the `data-c-container` attribute can be used on data-c-menu elements and will style the nested `ul` accordingly)
