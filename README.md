@@ -10,9 +10,14 @@ Produced at [Talent Cloud](https://talent.canada.ca/).
 
 [Visit Clone's Docs](https://designwithclone.ca/).
 
+[See Clone Updates](https://designwithclone.ca/updates/)
+
 # Changelog
 
 ## 2.4.0
+
+### 2.4.7
+- the changelog has been moved to [https://designwithclone.ca/updates/](https://designwithclone.ca/updates/)
 
 ### 2.4.6
 - fixes a bug with dialogs and the use of `:scope` in Internet Explorer 11

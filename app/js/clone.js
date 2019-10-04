@@ -365,7 +365,7 @@ $(document).ready(function () {
     // Menu Handlers ===========================================================
     function toggleMenu(trigger) {
         if ($(trigger).hasClass("active")) {
-            $("body").css("overflow", "visible");
+            $("body").removeClass("mobile-lock");
             $(trigger).removeClass("active").attr("aria-pressed", "false");
             // var focusableItems = $("[data-c-menu]").find(":focusable");
             var focusableItems = focusable($("[data-c-menu]"));
@@ -375,7 +375,7 @@ $(document).ready(function () {
             });
         }
         else {
-            $("body").css("overflow", "hidden");
+            $("body").addClass("mobile-lock");
             $(trigger).addClass("active").attr("aria-pressed", "true");
             $("[data-c-menu]").addClass("active");
             // var focusableItems = $("[data-c-menu]").find(":focusable");

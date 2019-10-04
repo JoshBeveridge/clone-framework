@@ -28,3 +28,10 @@ img,
 iframe {
     max-width: 100%;
 }
+
+.mobile-lock {
+    overflow: hidden;
+    @media #{$clone-tablet-landscape} {
+        overflow: visible;
+    }
+}
