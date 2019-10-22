@@ -1,6 +1,6 @@
 {
   "name": "clone-framework",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "description": "A data-attribute-based themeable design system.",
   "main": "app/index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshdrink/clone.git"
+    "url": "git+https://github.com/joshdrink/clone-framework.git"
   },
-  "author": "Clone Contributors (https://github.com/joshdrink/clone/graphs/contributors)",
+  "author": "Clone Contributors (https://github.com/joshdrink/clone-framework/graphs/contributors)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joshdrink/clone/issues"
+    "url": "https://github.com/joshdrink/clone-framework/issues"
   },
-  "homepage": "https://github.com/joshdrink/clone#readme",
+  "homepage": "https://github.com/joshdrink/clone-framework#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",

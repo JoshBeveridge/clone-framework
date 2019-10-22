@@ -176,6 +176,7 @@
             right: 1rem;
             pointer-events: none;
             transform: translate(0, -50%);
+            z-index: 1;
         }
         select {
             appearance: none;
