@@ -291,7 +291,7 @@ $(document).ready(function () {
         function dialogSizing(dialog) {
             var viewportHeight = $(window).height();
             if (dialog != null) {
-                var dialogHeight = $(dialog).children("div").height();
+                var dialogHeight = $(dialog).children("div").height() + 50;
                 if (dialogHeight > viewportHeight) {
                     $(dialog).attr("data-c-dialog", "active--overflowing");
                 }
@@ -305,7 +305,7 @@ $(document).ready(function () {
                         return false;
                     }
                     else {
-                        var dialogHeight = $(this).children("div").height();
+                        var dialogHeight = $(this).children("div").height() + 50;
                         if (dialogHeight > viewportHeight) {
                             $(this).attr("data-c-dialog", "active--overflowing");
                         }

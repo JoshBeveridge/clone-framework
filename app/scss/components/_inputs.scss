@@ -119,7 +119,37 @@
         }
     }
 }
-[data-c-input="checkbox"] {
+[data-c-input="checkbox(single)"]{
+    align-items: center;
+    display: flex;
+    >div {
+        margin-top: 1rem;
+        width: 100%;
+        label {
+            cursor: pointer;
+            display: block;
+            margin: 0 !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
+            input {
+                display: inline-block;
+                margin-top: .4rem;
+                width: auto;
+                vertical-align: top;
+            }
+            span {
+                color: $clone-black;
+                display: inline-block;
+                font-size: $clone-default-font-size;
+                margin: 0;
+                max-width: 90%;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
+[data-c-input="checkbox"],
+[data-c-input="checkbox(group)"] {
     >div {
         border: 1px solid $clone-gray;
         border-radius: 5px;

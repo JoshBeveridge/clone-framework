@@ -375,6 +375,27 @@
     [data-c-font-style="italic"] {font-style: italic;}
     [data-c-font-style="underline"] {text-decoration: underline;}
 
+// Horizontal Rules ============================================================
+[data-c-hr] {
+    background: $clone-hr-colour;
+    border: none;
+    height: 1px;
+    outline: none;
+}
+@each $width in $clone-border-width-list {
+    @each $key, $value in $clone-colour-map {
+        [data-c-hr*="#{$width}(#{$key})"] {
+            background: $value;
+            @if ($width == "thin") {
+                height: 1px;
+            }
+            @if ($width == "thick") {
+                height: .5rem;
+            }
+        }
+    };
+};
+
 // Whitespace ==================================================================
 
     $clone-orientation-map: (

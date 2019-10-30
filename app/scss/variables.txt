@@ -51,6 +51,9 @@ $clone-grid-gutter: $clone-padding;
     // Visited Links
     $clone-visited-colour: purple;
 
+    // Horizontal Rules
+    $clone-hr-colour: $clone-c2;
+
 // Component Options
 
     // Cards

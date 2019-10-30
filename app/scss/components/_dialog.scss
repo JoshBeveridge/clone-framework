@@ -34,7 +34,9 @@
     z-index: 1000000000;
 
     >div {
-        margin: 0 auto;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
         width: 90vw;
         @media #{$clone-tablet-landscape} {
             width: 75vw;
