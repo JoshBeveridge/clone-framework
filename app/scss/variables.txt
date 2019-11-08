@@ -13,7 +13,6 @@ $clone-whitespace-multiplier: 1.4;
 
 // Grid Variables
 $clone-grid-columns: 12;
-$clone-grid-gutter: $clone-padding;
 
 // Main Colour Variables
 

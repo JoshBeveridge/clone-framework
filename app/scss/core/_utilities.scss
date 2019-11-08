@@ -5,32 +5,9 @@
 
 // =============================================================================
 
-// Table of Contents ===========================================================
+// Maps ========================================================================
 
-    // Backgrounds
-    // Borders
-    // Cards
-    // Containers
-    // Fonts
-        // Colour
-        // Headings
-        // Styles
-    // Margins
-    // Padding
-
-// =============================================================================
-
-// Alignment ===================================================================
-
-    [data-c-alignment="center"],
-    [data-c-alignment="centre"],
-    [data-c-align="center"],
-    [data-c-align="centre"] {text-align: center;}
-    [data-c-alignment="right"],
-    [data-c-align="right"] {text-align: right;}
-    [data-c-alignment="left"],
-    [data-c-align="left"] {text-align: left;}
-
+    // Alignment
     $clone-alignment-map: (
         "left": left,
         "center": center,
@@ -38,88 +15,8 @@
         "right": right
     );
 
-    @each $key, $value in $clone-alignment-map {
-        [data-c-alignment*="base(#{$key})"],
-        [data-c-align*="base(#{$key})"] {
-            text-align: $value;
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-phone-portrait} {
-            [data-c-alignment*="pp(#{$key})"],
-            [data-c-align*="pp(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-phone-landscape} {
-            [data-c-alignment*="pl(#{$key})"],
-            [data-c-align*="pl(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-tablet-portrait} {
-            [data-c-alignment*="tp(#{$key})"],
-            [data-c-align*="tp(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-tablet-landscape} {
-            [data-c-alignment*="tl(#{$key})"],
-            [data-c-align*="tl(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-desktop-small} {
-            [data-c-alignment*="ds(#{$key})"],
-            [data-c-align*="ds(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-desktop-medium} {
-            [data-c-alignment*="dm(#{$key})"],
-            [data-c-align*="dm(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-    @each $key, $value in $clone-alignment-map {
-        @media #{$clone-desktop-large} {
-            [data-c-alignment*="dl(#{$key})"],
-            [data-c-align*="dl(#{$key})"] {
-                text-align: $value;
-            }
-        }
-    }
-
-// a11y ========================================================================
-
-    [data-c-visibility="invisible"] {
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: -100vw;
-        width: 1px;
-    }
-
-    [data-c-visibility="hidden"] {
-        display: none;
-        visibility: hidden;
-    }
-
-// Backgrounds =================================================================
-
-    $clone-colour-map: (
+    // Color
+    $clone-color-map: (
         "white": $clone-white,
         "grey": $clone-grey,
         "gray": $clone-grey,
@@ -134,215 +31,16 @@
         "c5": $clone-c5
     );
 
-    $clone-opacity-list: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+    // Orientation
+    $clone-orientation-map: (
+        "all": "",
+        "top": "-top",
+        "right": "-right",
+        "bottom": "-bottom",
+        "left": "-left"
+    );
 
-    @each $key, $value in $clone-colour-map {
-        @each $alpha in $clone-opacity-list {
-            $newValue: unquote($key)+"("+$alpha+")";
-            [data-c-background="#{$newValue}"] {
-                $decimal: $alpha / 100;
-                background: rgba($value, $decimal);
-                a:hover {
-                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
-                }
-            }
-        }
-    };
-
-// Borders =====================================================================
-
-    $clone-border-style-list: ("solid", "dashed");
-    $clone-border-width-list: ("thick", "thin");
-
-    @each $style in $clone-border-style-list {
-        @each $width in $clone-border-width-list {
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
-                    border-color: $value;
-                    border-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="tb(#{$width}, #{$style}, #{$key})"],
-                [data-c-border*="bt(#{$width}, #{$style}, #{$key})"] {
-                    border-top-color: $value;
-                    border-bottom-color: $value;
-                    border-top-style: unquote($style);
-                    border-bottom-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-top-width: 1px;
-                        border-bottom-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-top-width: .5rem;
-                        border-bottom-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="rl(#{$width}, #{$style}, #{$key})"],
-                [data-c-border*="lr(#{$width}, #{$style}, #{$key})"] {
-                    border-right-color: $value;
-                    border-left-color: $value;
-                    border-right-style: unquote($style);
-                    border-left-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-right-width: 1px;
-                        border-left-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-right-width: .5rem;
-                        border-left-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
-                    border-top-color: $value;
-                    border-top-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-top-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-top-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
-                    border-right-color: $value;
-                    border-right-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-right-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-right-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
-                    border-bottom-color: $value;
-                    border-bottom-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-bottom-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-bottom-width: .5rem;
-                    }
-                }
-            };
-            @each $key, $value in $clone-colour-map {
-                [data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
-                    border-left-color: $value;
-                    border-left-style: unquote($style);
-                    @if ($width == "thin") {
-                        border-left-width: 1px;
-                    }
-                    @if ($width == "thick") {
-                        border-left-width: .5rem;
-                    }
-                }
-            };
-        };
-    };
-
-    [data-c-radius="rounded"] {
-        border-radius: 5px;
-        overflow: hidden;
-    }
-
-    [data-c-radius="pill"] {
-        border-radius: 20rem;
-        overflow: hidden;
-    }
-
-// Cards =======================================================================
-
-    [data-c-card] {
-        box-shadow: $clone-card-shadow
-    }
-
-// Containers ==================================================================
-
-    [data-c-container="full"] {
-        margin: 0 auto;
-        width: 90%;
-    }
-    [data-c-container="layout"],
-    [data-c-container="large"] {
-        margin: 0 auto;
-        max-width: $clone-large-layout;
-        width: 90%;
-    }
-    [data-c-container="form"],
-    [data-c-container="medium"] {
-        margin: 0 auto;
-        max-width: $clone-medium-layout;
-        width: 90%;
-    }
-    [data-c-container="copy"],
-    [data-c-container="small"] {
-        margin: 0 auto;
-        max-width: $clone-small-layout;
-        width: 90%;
-    }
-
-// Fonts =======================================================================
-
-    [data-c-font="sans"] {
-        font-family: $clone-font-sans;
-        a, span {
-            font-family: $clone-font-sans;
-        }
-    }
-    [data-c-font="serif"] {
-        font-family: $clone-font-serif;
-        a, span {
-            font-family: $clone-font-serif;
-        }
-    }
-    [data-c-font="script"] {
-        font-family: $clone-font-script;
-        a, span {
-            font-family: $clone-font-script;
-        }
-    }
-    [data-c-font="mono"],
-    [data-c-font="monospace"] {
-        font-family: $clone-font-monospace;
-        a, span {
-            font-family: $clone-font-monospace;
-        }
-    }
-
-    // Font Colour -------------------------------------------------------------
-    @each $key, $value in $clone-colour-map {
-        [data-c-colour="#{$key}"],
-        [data-c-color="#{$key}"] {color: $value;}
-        [data-c-colour="#{$key}-light"],
-        [data-c-color="#{$key}-light"] {color: lighten($value, 10%);}
-        [data-c-colour="#{$key}-dark"],
-        [data-c-color="#{$key}-dark"] {color: darken($value, 10%);}
-    };
-
-    // Hover Colour ------------------------------------------------------------
-    @each $key, $value in $clone-colour-map {
-        [data-c-hover-colour="#{$key}"]:hover,
-        [data-c-hover-color="#{$key}"]:hover {color: $value;}
-        [data-c-hover-colour="#{$key}-light"]:hover,
-        [data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-colour="#{$key}-dark"]:hover,
-        [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
-    };
-    
-    // Font Weights ------------------------------------------------------------
+    // Weight
     $clone-weight-map: (
         "100": 100,
         "200": 200,
@@ -357,6 +55,312 @@
         "900": 900
     );
 
+    // Whitespace
+    $clone-whitespace-map: (
+        "1": "",
+        ".25": "/ 4",
+        ".5": "/ 2",
+        "2": "* 2",
+        "3": "* 3",
+        "4": "* 4"
+    );
+    $clone-whitespace-map-old: (
+        "normal": "",
+        "quarter": "/ 4",
+        "half": "/ 2",
+        "double": "* 2",
+        "triple": "* 3"
+    );
+
+// Alignment ===================================================================
+[data-c-alignment="center"],
+[data-c-alignment="centre"],
+[data-c-align="center"],
+[data-c-align="centre"] {text-align: center;}
+[data-c-alignment="right"],
+[data-c-align="right"] {text-align: right;}
+[data-c-alignment="left"],
+[data-c-align="left"] {text-align: left;}
+
+@each $key, $value in $clone-alignment-map {
+    [data-c-alignment*="base(#{$key})"],
+    [data-c-align*="base(#{$key})"] {
+        text-align: $value;
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-phone-portrait} {
+        [data-c-alignment*="pp(#{$key})"],
+        [data-c-align*="pp(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-phone-landscape} {
+        [data-c-alignment*="pl(#{$key})"],
+        [data-c-align*="pl(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-tablet-portrait} {
+        [data-c-alignment*="tp(#{$key})"],
+        [data-c-align*="tp(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-tablet-landscape} {
+        [data-c-alignment*="tl(#{$key})"],
+        [data-c-align*="tl(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-desktop-small} {
+        [data-c-alignment*="ds(#{$key})"],
+        [data-c-align*="ds(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-desktop-medium} {
+        [data-c-alignment*="dm(#{$key})"],
+        [data-c-align*="dm(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+@each $key, $value in $clone-alignment-map {
+    @media #{$clone-desktop-large} {
+        [data-c-alignment*="dl(#{$key})"],
+        [data-c-align*="dl(#{$key})"] {
+            text-align: $value;
+        }
+    }
+}
+
+// a11y ========================================================================
+[data-c-visibility="invisible"] {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 1px;
+}
+[data-c-visibility="hidden"] {
+    display: none;
+    visibility: hidden;
+}
+
+// Backgrounds =================================================================
+$clone-opacity-list: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+@each $key, $value in $clone-color-map {
+    @each $alpha in $clone-opacity-list {
+        $newValue: unquote($key)+"("+$alpha+")";
+        [data-c-background="#{$newValue}"] {
+            $decimal: $alpha / 100;
+            background: rgba($value, $decimal);
+            a:hover {
+                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+            }
+        }
+    }
+};
+
+// Borders =====================================================================
+$clone-border-style-list: ("solid", "dashed");
+$clone-border-width-list: ("thick", "thin");
+@each $style in $clone-border-style-list {
+    @each $width in $clone-border-width-list {
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="all(#{$width}, #{$style}, #{$key})"] {
+                border-color: $value;
+                border-style: unquote($style);
+                @if ($width == "thin") {
+                    border-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="tb(#{$width}, #{$style}, #{$key})"],
+            [data-c-border*="bt(#{$width}, #{$style}, #{$key})"] {
+                border-top-color: $value;
+                border-bottom-color: $value;
+                border-top-style: unquote($style);
+                border-bottom-style: unquote($style);
+                @if ($width == "thin") {
+                    border-top-width: 1px;
+                    border-bottom-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-top-width: .5rem;
+                    border-bottom-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="rl(#{$width}, #{$style}, #{$key})"],
+            [data-c-border*="lr(#{$width}, #{$style}, #{$key})"] {
+                border-right-color: $value;
+                border-left-color: $value;
+                border-right-style: unquote($style);
+                border-left-style: unquote($style);
+                @if ($width == "thin") {
+                    border-right-width: 1px;
+                    border-left-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-right-width: .5rem;
+                    border-left-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="top(#{$width}, #{$style}, #{$key})"] {
+                border-top-color: $value;
+                border-top-style: unquote($style);
+                @if ($width == "thin") {
+                    border-top-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-top-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="right(#{$width}, #{$style}, #{$key})"] {
+                border-right-color: $value;
+                border-right-style: unquote($style);
+                @if ($width == "thin") {
+                    border-right-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-right-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="bottom(#{$width}, #{$style}, #{$key})"] {
+                border-bottom-color: $value;
+                border-bottom-style: unquote($style);
+                @if ($width == "thin") {
+                    border-bottom-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-bottom-width: .5rem;
+                }
+            }
+        };
+        @each $key, $value in $clone-color-map {
+            [data-c-border*="left(#{$width}, #{$style}, #{$key})"] {
+                border-left-color: $value;
+                border-left-style: unquote($style);
+                @if ($width == "thin") {
+                    border-left-width: 1px;
+                }
+                @if ($width == "thick") {
+                    border-left-width: .5rem;
+                }
+            }
+        };
+    };
+};
+[data-c-radius="rounded"] {
+    border-radius: 5px;
+    overflow: hidden;
+}
+[data-c-radius="pill"] {
+    border-radius: 20rem;
+    overflow: hidden;
+}
+
+// Cards =======================================================================
+[data-c-card] {
+    box-shadow: $clone-card-shadow
+}
+
+// Containers ==================================================================
+[data-c-container="full"] {
+    margin: 0 auto;
+    width: 90%;
+}
+[data-c-container="layout"],
+[data-c-container="large"] {
+    margin: 0 auto;
+    max-width: $clone-large-layout;
+    width: 90%;
+}
+[data-c-container="form"],
+[data-c-container="medium"] {
+    margin: 0 auto;
+    max-width: $clone-medium-layout;
+    width: 90%;
+}
+[data-c-container="copy"],
+[data-c-container="small"] {
+    margin: 0 auto;
+    max-width: $clone-small-layout;
+    width: 90%;
+}
+
+// Fonts =======================================================================
+[data-c-font="sans"] {
+    font-family: $clone-font-sans;
+    a, span {
+        font-family: $clone-font-sans;
+    }
+}
+[data-c-font="serif"] {
+    font-family: $clone-font-serif;
+    a, span {
+        font-family: $clone-font-serif;
+    }
+}
+[data-c-font="script"] {
+    font-family: $clone-font-script;
+    a, span {
+        font-family: $clone-font-script;
+    }
+}
+[data-c-font="mono"],
+[data-c-font="monospace"] {
+    font-family: $clone-font-monospace;
+    a, span {
+        font-family: $clone-font-monospace;
+    }
+}
+
+    // Font Colour -------------------------------------------------------------
+    @each $key, $value in $clone-color-map {
+        [data-c-colour="#{$key}"],
+        [data-c-color="#{$key}"] {color: $value;}
+        [data-c-colour="#{$key}-light"],
+        [data-c-color="#{$key}-light"] {color: lighten($value, 10%);}
+        [data-c-colour="#{$key}-dark"],
+        [data-c-color="#{$key}-dark"] {color: darken($value, 10%);}
+    };
+
+    // Hover Colour ------------------------------------------------------------
+    @each $key, $value in $clone-color-map {
+        [data-c-hover-colour="#{$key}"]:hover,
+        [data-c-hover-color="#{$key}"]:hover {color: $value;}
+        [data-c-hover-colour="#{$key}-light"]:hover,
+        [data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%);}
+        [data-c-hover-colour="#{$key}-dark"]:hover,
+        [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
+    };
+    
+    // Font Weights ------------------------------------------------------------
     @each $key, $value in $clone-weight-map {
         [data-c-font-weight="#{$key}"] {font-weight: $value;}
     };
@@ -383,7 +387,7 @@
     outline: none;
 }
 @each $width in $clone-border-width-list {
-    @each $key, $value in $clone-colour-map {
+    @each $key, $value in $clone-color-map {
         [data-c-hr*="#{$width}(#{$key})"] {
             background: $value;
             @if ($width == "thin") {
@@ -398,98 +402,271 @@
 
 // Whitespace ==================================================================
 
-    $clone-orientation-map: (
-        "all": "",
-        "top": "-top",
-        "right": "-right",
-        "bottom": "-bottom",
-        "left": "-left"
-    );
-    $clone-whitespace-map: (
-        "normal": "",
-        "quarter": "/ 4",
-        "half": "/ 2",
-        "double": "* 2",
-        "triple": "* 3"
-    );
+    $clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
+    $clone-ws-tl: #{$clone-ws-tp} * 1.2; // 1.68rem
+    $clone-ws-ds: #{$clone-ws-tl} * 1.2; // 2.016rem
+    $clone-ws-dm: #{$clone-ws-ds} * 1.2; // 2.4192rem
+    $clone-ws-dl: #{$clone-ws-dm} * 1.2; // 2.90304rem
 
     // Margins -----------------------------------------------------------------
 
-        // Shorthand ([data-c-margin=normal]) ----------------------------------
-        // Adds a whitespace shorthand that defaults to all sides of the element.
-        @each $wKey, $wValue in $clone-whitespace-map {
-            [data-c-margin="#{$wKey}"] {
-                margin: calc(#{$clone-margin} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    margin: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
+        // New Syntax ----------------------------------------------------------
 
-        // Shorthand ([data-c-margin=top]) -------------------------------------
-        // Adds an orientation shorthand that defaults to the normal whitespace value.
-        @each $oKey, $oValue in $clone-orientation-map {
-            [data-c-margin="#{$oKey}"] {
-                margin#{$oValue}: calc(#{$clone-margin});
-                @media #{$clone-tablet-portrait} {
-                    margin#{$oValue}: calc(#{$clone-margin} * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    margin#{$oValue}: calc((#{$clone-margin} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
-
-        // Shorthand ([data-c-margin="tb(normal)" ------------------------------
-        // Adds a top/bottom and left/right shorthand.
-        @each $wKey, $wValue in $clone-whitespace-map {
-            // Top/Bottom
-            [data-c-margin*="tb(#{$wKey})"],
-            [data-c-margin*="bt(#{$wKey})"] {
-                margin-top: calc(#{$clone-margin} #{$wValue});
-                margin-bottom: calc(#{$clone-margin} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
-                    margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    margin-top: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                    margin-bottom: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-            // Right/Left
-            [data-c-margin*="rl(#{$wKey})"],
-            [data-c-margin*="lr(#{$wKey})"] {
-                margin-right: calc(#{$clone-margin} #{$wValue});
-                margin-left: calc(#{$clone-margin} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
-                    margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    margin-right: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                    margin-left: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
-
-        // Margin Syntax -------------------------------------------------------
-        @each $oKey, $oValue in $clone-orientation-map {
+            // Shorthand ([data-c-margin=normal]) ------------------------------
+            // Adds a whitespace shorthand that defaults to all sides of the element.
             @each $wKey, $wValue in $clone-whitespace-map {
-                [data-c-margin*="#{$oKey}(#{$wKey})"] {
-                    margin#{$oValue}: calc(#{$clone-margin} #{$wValue});
+                [data-c-margin="#{$wKey}"] {
+                    margin: calc(#{$clone-margin} #{$wValue});
                     @media #{$clone-tablet-portrait} {
-                        margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier});
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
                     }
                     @media #{$clone-desktop-large} {
-                        margin#{$oValue}: calc(((#{$clone-margin} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
                     }
                 }
             }
-        }
+
+            // Shorthand ([data-c-margin=top]) ---------------------------------
+            // Adds an orientation shorthand that defaults to the normal whitespace value.
+            @each $oKey, $oValue in $clone-orientation-map {
+                [data-c-margin="#{$oKey}"] {
+                    margin#{$oValue}: #{$clone-margin};
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-margin="tb(normal)" --------------------------
+            // Adds a top/bottom and left/right shorthand.
+            @each $wKey, $wValue in $clone-whitespace-map {
+                // Top/Bottom
+                [data-c-margin*="tb(#{$wKey})"],
+                [data-c-margin*="bt(#{$wKey})"] {
+                    margin-top: calc(#{$clone-margin} #{$wValue});
+                    margin-bottom: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+                // Right/Left
+                [data-c-margin*="rl(#{$wKey})"],
+                [data-c-margin*="lr(#{$wKey})"] {
+                    margin-right: calc(#{$clone-margin} #{$wValue});
+                    margin-left: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Margin Syntax ---------------------------------------------------
+            @each $oKey, $oValue in $clone-orientation-map {
+                @each $wKey, $wValue in $clone-whitespace-map {
+                    [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                        margin#{$oValue}: calc(#{$clone-margin} #{$wValue});
+                        @media #{$clone-tablet-portrait} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        }
+                        @media #{$clone-tablet-landscape} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        }
+                        @media #{$clone-desktop-small} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        }
+                        @media #{$clone-desktop-medium} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        }
+                        @media #{$clone-desktop-large} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        }
+                    }
+                }
+            }
+        
+        // Old Syntax ----------------------------------------------------------
+
+            // Shorthand ([data-c-margin=normal]) ------------------------------
+            // Adds a whitespace shorthand that defaults to all sides of the element.
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                [data-c-margin="#{$wKey}"] {
+                    margin: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-margin=top]) ---------------------------------
+            // Adds an orientation shorthand that defaults to the normal whitespace value.
+            @each $oKey, $oValue in $clone-orientation-map {
+                [data-c-margin="#{$oKey}"] {
+                    margin#{$oValue}: #{$clone-margin};
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc(#{$clone-margin} * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-margin="tb(normal)" --------------------------
+            // Adds a top/bottom and left/right shorthand.
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                // Top/Bottom
+                [data-c-margin*="tb(#{$wKey})"],
+                [data-c-margin*="bt(#{$wKey})"] {
+                    margin-top: calc(#{$clone-margin} #{$wValue});
+                    margin-bottom: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin-top: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        margin-bottom: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+                // Right/Left
+                [data-c-margin*="rl(#{$wKey})"],
+                [data-c-margin*="lr(#{$wKey})"] {
+                    margin-right: calc(#{$clone-margin} #{$wValue});
+                    margin-left: calc(#{$clone-margin} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin-right: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        margin-left: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Margin Syntax ---------------------------------------------------
+            @each $oKey, $oValue in $clone-orientation-map {
+                @each $wKey, $wValue in $clone-whitespace-map-old {
+                    [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                        margin#{$oValue}: calc(#{$clone-margin} #{$wValue});
+                        @media #{$clone-tablet-portrait} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tp});
+                        }
+                        @media #{$clone-tablet-landscape} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-tl});
+                        }
+                        @media #{$clone-desktop-small} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-ds});
+                        }
+                        @media #{$clone-desktop-medium} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dm});
+                        }
+                        @media #{$clone-desktop-large} {
+                            margin#{$oValue}: calc((#{$clone-margin} #{$wValue}) * #{$clone-ws-dl});
+                        }
+                    }
+                }
+            }
 
         // Auto Margins --------------------------------------------------------
         [data-c-margin*="right(auto)"] {
@@ -509,149 +686,329 @@
 
     // Padding -----------------------------------------------------------------
 
-        // Shorthand ([data-c-padding=normal]) ---------------------------------
-        // Adds a whitespace shorthand that defaults to all sides of the element.
-        @each $wKey, $wValue in $clone-whitespace-map {
-            [data-c-padding="#{$wKey}"] {
-                padding: calc(#{$clone-padding} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    padding: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
+        // New Syntax ----------------------------------------------------------
 
-        // Shorthand ([data-c-padding=top]) ------------------------------------
-        // Adds an orientation shorthand that defaults to the normal whitespace value.
-        @each $oKey, $oValue in $clone-orientation-map {
-            [data-c-padding="#{$oKey}"] {
-                padding#{$oValue}: calc(#{$clone-padding});
-                @media #{$clone-tablet-portrait} {
-                    padding#{$oValue}: calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    padding#{$oValue}: calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
-
-        // Shorthand ([data-c-padding="tb(normal)" -----------------------------
-        // Adds a top/bottom and left/right shorthand.
-        @each $wKey, $wValue in $clone-whitespace-map {
-            // Top/Bottom
-            [data-c-padding*="tb(#{$wKey})"],
-            [data-c-padding*="bt(#{$wKey})"] {
-                padding-top: calc(#{$clone-padding} #{$wValue});
-                padding-bottom: calc(#{$clone-padding} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
-                    padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    padding-top: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                    padding-bottom: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-            // Right/Left
-            [data-c-padding*="rl(#{$wKey})"],
-            [data-c-padding*="lr(#{$wKey})"] {
-                padding-right: calc(#{$clone-padding} #{$wValue});
-                padding-left: calc(#{$clone-padding} #{$wValue});
-                @media #{$clone-tablet-portrait} {
-                    padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
-                    padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
-                }
-                @media #{$clone-desktop-large} {
-                    padding-right: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                    padding-left: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-                }
-            }
-        }
-
-        // Padding Syntax ------------------------------------------------------
-        @each $oKey, $oValue in $clone-orientation-map {
+            // Shorthand ([data-c-padding=normal]) ---------------------------------
+            // Adds a whitespace shorthand that defaults to all sides of the element.
             @each $wKey, $wValue in $clone-whitespace-map {
-                [data-c-padding*="#{$oKey}(#{$wKey})"] {
-                    padding#{$oValue}: calc(#{$clone-padding} #{$wValue});
+                [data-c-padding="#{$wKey}"] {
+                    padding: calc(#{$clone-padding} #{$wValue});
                     @media #{$clone-tablet-portrait} {
-                        padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier});
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
                     }
                     @media #{$clone-desktop-large} {
-                        padding#{$oValue}: calc(((#{$clone-padding} #{$wValue}) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
                     }
                 }
             }
-        }
+
+            // Shorthand ([data-c-padding=top]) ------------------------------------
+            // Adds an orientation shorthand that defaults to the normal whitespace value.
+            @each $oKey, $oValue in $clone-orientation-map {
+                [data-c-padding="#{$oKey}"] {
+                    padding#{$oValue}: #{$clone-padding};
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-padding="tb(normal)" -----------------------------
+            // Adds a top/bottom and left/right shorthand.
+            @each $wKey, $wValue in $clone-whitespace-map {
+                // Top/Bottom
+                [data-c-padding*="tb(#{$wKey})"],
+                [data-c-padding*="bt(#{$wKey})"] {
+                    padding-top: calc(#{$clone-padding} #{$wValue});
+                    padding-bottom: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+                // Right/Left
+                [data-c-padding*="rl(#{$wKey})"],
+                [data-c-padding*="lr(#{$wKey})"] {
+                    padding-right: calc(#{$clone-padding} #{$wValue});
+                    padding-left: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Padding Syntax ------------------------------------------------------
+            @each $oKey, $oValue in $clone-orientation-map {
+                @each $wKey, $wValue in $clone-whitespace-map {
+                    [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                        padding#{$oValue}: calc(#{$clone-padding} #{$wValue});
+                        @media #{$clone-tablet-portrait} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        }
+                        @media #{$clone-tablet-landscape} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        }
+                        @media #{$clone-desktop-small} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        }
+                        @media #{$clone-desktop-medium} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        }
+                        @media #{$clone-desktop-large} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        }
+                    }
+                }
+            }
+
+        // Old Syntax ----------------------------------------------------------
+
+            // Shorthand ([data-c-padding=normal]) -----------------------------
+            // Adds a whitespace shorthand that defaults to all sides of the element.
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                [data-c-padding="#{$wKey}"] {
+                    padding: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-padding=top]) --------------------------------
+            // Adds an orientation shorthand that defaults to the normal whitespace value.
+            @each $oKey, $oValue in $clone-orientation-map {
+                [data-c-padding="#{$oKey}"] {
+                    padding#{$oValue}: #{$clone-padding};
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc(#{$clone-padding} * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Shorthand ([data-c-padding="tb(normal)" -------------------------
+            // Adds a top/bottom and left/right shorthand.
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                // Top/Bottom
+                [data-c-padding*="tb(#{$wKey})"],
+                [data-c-padding*="bt(#{$wKey})"] {
+                    padding-top: calc(#{$clone-padding} #{$wValue});
+                    padding-bottom: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding-top: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        padding-bottom: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+                // Right/Left
+                [data-c-padding*="rl(#{$wKey})"],
+                [data-c-padding*="lr(#{$wKey})"] {
+                    padding-right: calc(#{$clone-padding} #{$wValue});
+                    padding-left: calc(#{$clone-padding} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding-right: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        padding-left: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+
+            // Padding Syntax --------------------------------------------------
+            @each $oKey, $oValue in $clone-orientation-map {
+                @each $wKey, $wValue in $clone-whitespace-map-old {
+                    [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                        padding#{$oValue}: calc(#{$clone-padding} #{$wValue});
+                        @media #{$clone-tablet-portrait} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tp});
+                        }
+                        @media #{$clone-tablet-landscape} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-tl});
+                        }
+                        @media #{$clone-desktop-small} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-ds});
+                        }
+                        @media #{$clone-desktop-medium} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dm});
+                        }
+                        @media #{$clone-desktop-large} {
+                            padding#{$oValue}: calc((#{$clone-padding} #{$wValue}) * #{$clone-ws-dl});
+                        }
+                    }
+                }
+            }
 
 // Overlays ====================================================================
-
-    @each $key, $value in $clone-colour-map {
-        @each $alpha in $clone-opacity-list {
-            $newValue: unquote($key)+"("+$alpha+")";
-            [data-c-overlay="#{$newValue}"] {
-                background-position: center center;
-                background-size: cover;
+@each $key, $value in $clone-color-map {
+    @each $alpha in $clone-opacity-list {
+        $newValue: unquote($key)+"("+$alpha+")";
+        [data-c-overlay="#{$newValue}"] {
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            &::before {
+                $decimal: $alpha / 100;
+                background: rgba($value, $decimal);
+                content: " ";
+                display: block;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            * {
                 position: relative;
-                &::before {
-                    $decimal: $alpha / 100;
-                    background: rgba($value, $decimal);
-                    content: " ";
-                    display: block;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                }
-                * {
-                    position: relative;
-                }
             }
         }
-    };
+    }
+};
 
 // Tags ========================================================================
-
-    @each $key, $value in $clone-colour-map {
+@each $key, $value in $clone-color-map {
+    [data-c-tag="#{$key}"] {
+        background: $value;
+        color: contrasting-color($value, $clone-white, $clone-black);
+        display: inline-block;
+        line-height: $clone-line-height;
+        padding: calc(#{$clone-padding} / 4) calc(#{$clone-padding} / 2);
+        vertical-align: middle;
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+        @media (hover: hover) {
+            a:hover {
+                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+            }
+        }
+    }
+    a[data-c-tag="#{$key}"] {
+        @media (hover: hover) {
+            &:hover {
+                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+            }
+        }
+    }
+    // IE 11 Hover Support
+    &[id*="Trident/7.0"] {
         [data-c-tag="#{$key}"] {
-            background: $value;
-            color: contrasting-color($value, $clone-white, $clone-black);
-            display: inline-block;
-            line-height: $clone-line-height;
-            padding: calc(#{$clone-padding} / 4) calc(#{$clone-padding} / 2);
-            vertical-align: middle;
-            @media #{$clone-tablet-portrait} {
-                padding: calc((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
-            }
-            @media #{$clone-desktop-large} {
-                padding: calc(((#{$clone-padding} / 4) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-            }
-            @media (hover: hover) {
-                a:hover {
-                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
-                }
+            a:hover {
+                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
         }
         a[data-c-tag="#{$key}"] {
-            @media (hover: hover) {
-                &:hover {
-                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
-                }
+            &:hover {
+                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
             }
         }
-        // IE 11 Hover Support
-        &[id*="Trident/7.0"] {
-            [data-c-tag="#{$key}"] {
-                a:hover {
-                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
-                }
-            }
-            a[data-c-tag="#{$key}"] {
-                &:hover {
-                    color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
-                }
-            }
-        }
-    };
+    }
+};

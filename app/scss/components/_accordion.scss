@@ -55,7 +55,7 @@
                 transform: translate(0, -50%);
             }
 
-            @each $key, $value in $clone-colour-map {
+            @each $key, $value in $clone-color-map {
                 @each $alpha in $clone-opacity-list {
                     $newValue: unquote($key)+"("+$alpha+")";
                     &[data-c-background="#{$newValue}"] {

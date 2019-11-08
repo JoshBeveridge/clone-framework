@@ -90,7 +90,7 @@ a[data-c-button] {
     $clone-button-style-list: ("solid", "outline");
 
     @each $style in $clone-button-style-list {
-        @each $key, $value in $clone-colour-map {
+        @each $key, $value in $clone-color-map {
             @if $style == "solid" {
                 [data-c-button="#{$style}(#{$key})"] {
                     background: $value;
