@@ -56,6 +56,19 @@ a[data-c-button] {
                     transition: all .2s ease;
                 }
             }
+            @each $key, $value in $clone-color-map {
+                &[data-c-hover-colour="#{$key}"]:hover,
+                &[data-c-hover-color="#{$key}"]:hover {
+                    background: rgba($value, .2) !important;
+                    border-color: $value !important;
+                    color: $value !important;
+                    transition: all .2s ease;
+                    i {
+                        color: $value !important;
+                        transition: all .2s ease;
+                    }
+                }
+            };
         }
         &:focus {
             box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
@@ -66,7 +79,7 @@ a[data-c-button] {
             color: $clone-grey;
             pointer-events: none;
         }
-
+        
 }
 
 // IE 11 Hover Support
@@ -82,6 +95,19 @@ a[data-c-button] {
                 transition: all .2s ease;
             }
         }
+        @each $key, $value in $clone-color-map {
+            &[data-c-hover-colour="#{$key}"]:hover,
+            &[data-c-hover-color="#{$key}"]:hover {
+                background: rgba($value, .2) !important;
+                border-color: $value !important;
+                color: $value !important;
+                transition: all .2s ease;
+                i {
+                    color: $value !important;
+                    transition: all .2s ease;
+                }
+            }
+        };
     }
 }
 
@@ -130,6 +156,17 @@ a[data-c-button] {
                     transition: all .2s ease;
                 }
             }
+            @each $key, $value in $clone-color-map {
+                &[data-c-hover-colour="#{$key}"]:hover,
+                &[data-c-hover-color="#{$key}"]:hover {
+                    color: $value !important;
+                    transition: all .2s ease;
+                    i {
+                        color: $value !important;
+                        transition: all .2s ease;
+                    }
+                }
+            };
             &:disabled {
                 color: $clone-grey;
                 pointer-events: none;

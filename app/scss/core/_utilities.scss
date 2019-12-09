@@ -359,6 +359,15 @@ $clone-border-width-list: ("thick", "thin");
         [data-c-hover-colour="#{$key}-dark"]:hover,
         [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
     };
+
+    @each $key, $value in $clone-color-map {
+        a[data-c-hover-colour="#{$key}"]:hover,
+        a[data-c-hover-color="#{$key}"]:hover {color: $value !important;}
+        a[data-c-hover-colour="#{$key}-light"]:hover,
+        a[data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%) !important;}
+        a[data-c-hover-colour="#{$key}-dark"]:hover,
+        a[data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%) !important;}
+    };
     
     // Font Weights ------------------------------------------------------------
     @each $key, $value in $clone-weight-map {
