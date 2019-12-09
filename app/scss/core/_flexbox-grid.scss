@@ -214,7 +214,9 @@ $clone-grid-orientation-list: ("vertical", "horizontal");
 
 [data-c-grid-item*="equal-col"] {
     >div,
-    >pre {
+    >pre,
+    >a {
+        display: block;
         height: 100%;
     }
     >[data-c-grid] {

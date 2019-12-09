@@ -36,24 +36,27 @@
 
         {# {% include "tests/menu.twig" %} #}
 
-        {# {% include "tests/carousel.twig" %} #}
-
-        <div data-c-container="medium" data-c-margin="tb(triple)">
-            {# {% include "tests/accordion.twig" %} #}
-            {# {% include "tests/dialog.twig" %} #}
-            {# {% include "components/input/text.twig" %}
-            {% include "components/input/password.twig" %} #}
-            {# {% include "components/breadcrumb.twig" %} #}
-            {# {% include "components/input/telephone.twig" %} #}
-            {% include "tests/grid.twig" %}
-        </div>
-
         <div
             data-c-container="copy"
-            data-c-padding="top(triple) bottom(triple)"
+            data-c-padding="top(4) bottom(4)"
             data-c-alignment="centre"
             data-c-colour="black">
             <p>Looking for documentation? Check out <a href="https://designwithclone.ca">Clone's Docs</a> for more information.</p>
+        </div>
+
+        <div data-c-border="top(thin, solid, gray)" data-c-padding="tb(4)">
+            <div data-c-container="medium">
+                {# {% include "tests/accordion.twig" %} #}
+                {# {% include "tests/dialog.twig" %} #}
+                {# {% include "components/input/text.twig" %} #}
+                {# {% include "components/input/password.twig" %} #}
+                {# {% include "components/breadcrumb.twig" %} #}
+                {# {% include "components/input/telephone.twig" %} #}
+                {# {% include "tests/grid.twig" %} #}
+                {# {% include "tests/forms.twig" %} #}
+                {# {% include "tests/carousel.twig" %} #}
+                {# {% include "tests/headings.twig" %} #}
+            </div>
         </div>
 
         <script src="js/clone.js"></script>

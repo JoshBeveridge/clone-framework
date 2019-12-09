@@ -17,7 +17,7 @@
         display: block;
         font-size: $clone-font-scale-small;
         margin-bottom: .5rem;
-        padding-right: 4rem;
+        padding-right: 8rem;
     }
     >span {
         &:first-of-type {
@@ -333,21 +333,107 @@
     [data-c-input] {
         >span {
             &:first-of-type {
+                top: calc(#{$clone-padding} / 2);
                 right: calc(#{$clone-padding} / 2);
                 @media #{$clone-tablet-portrait} {
-                    right: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                    top: calc((#{$clone-padding} / 2) * #{$clone-ws-tp});
+                    right: calc((#{$clone-padding} / 2) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    top: calc((#{$clone-padding} / 2) * #{$clone-ws-tl});
+                    right: calc((#{$clone-padding} / 2) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    top: calc((#{$clone-padding} / 2) * #{$clone-ws-ds});
+                    right: calc((#{$clone-padding} / 2) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    top: calc((#{$clone-padding} / 2) * #{$clone-ws-dm});
+                    right: calc((#{$clone-padding} / 2) * #{$clone-ws-dm});
                 }
                 @media #{$clone-desktop-large} {
-                    right: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    top: calc((#{$clone-padding} / 2) * #{$clone-ws-dl});
+                    right: calc((#{$clone-padding} / 2) * #{$clone-ws-dl});
                 }
             }
             &:last-of-type {
                 left: calc(#{$clone-padding} / 2);
+                bottom: calc(#{$clone-padding} / 2);
                 @media #{$clone-tablet-portrait} {
-                    left: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                    left: calc((#{$clone-padding} / 2) * #{$clone-ws-tp});
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    left: calc((#{$clone-padding} / 2) * #{$clone-ws-tl});
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    left: calc((#{$clone-padding} / 2) * #{$clone-ws-ds});
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    left: calc((#{$clone-padding} / 2) * #{$clone-ws-dm});
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-ws-dm});
                 }
                 @media #{$clone-desktop-large} {
-                    left: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    left: calc((#{$clone-padding} / 2) * #{$clone-ws-dl});
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-ws-dl});
+                }
+            }
+        }
+    }
+}
+@each $wKey, $wValue in $clone-whitespace-map {
+    [data-c-grid*="#{$wKey})"] {
+        [data-c-input] {
+            >span {
+                &:first-of-type {
+                    top: calc((#{$clone-padding} #{$wValue}) / 2);
+                    right: calc((#{$clone-padding} #{$wValue}) / 2);
+                    @media #{$clone-tablet-portrait} {
+                        top: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tp});
+                        right: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        top: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tl});
+                        right: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        top: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-ds});
+                        right: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        top: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dm});
+                        right: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        top: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dl});
+                        right: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dl});
+                    }
+                }
+                &:last-of-type {
+                    bottom: calc((#{$clone-padding} #{$wValue}) / 2);
+                    left: calc((#{$clone-padding} #{$wValue}) / 2);
+                    @media #{$clone-tablet-portrait} {
+                        bottom: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tp});
+                        left: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        bottom: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tl});
+                        left: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        bottom: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-ds});
+                        left: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        bottom: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dm});
+                        left: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        bottom: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dl});
+                        left: calc(((#{$clone-padding} #{$wValue}) / 2) * #{$clone-ws-dl});
+                    }
                 }
             }
         }

@@ -9,7 +9,7 @@ $clone-small-layout: 39rem;
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
 $clone-margin: 1rem;
 $clone-padding: 1rem;
-$clone-whitespace-multiplier: 1.4;
+$clone-whitespace-multiplier: 1.2;
 
 // Grid Variables
 $clone-grid-columns: 12;
@@ -18,10 +18,8 @@ $clone-grid-columns: 12;
 
     // Black & White
     $clone-white: #FFFFFF;
-    $clone-black: rgba(10, 10, 20, 1);
-
-    // gray/Gray
     $clone-gray: rgba(150, 150, 150, 1);
+    $clone-black: rgba(10, 10, 20, 1);
 
     // Theme Colours
     $clone-c1: #F14948;
@@ -34,7 +32,6 @@ $clone-grid-columns: 12;
     $clone-go: green;
     $clone-slow: orange;
     $clone-stop: red;
-    $clone-error: $clone-stop;
 
 // Sitewide Colour Variables
 
@@ -52,6 +49,71 @@ $clone-grid-columns: 12;
 
     // Horizontal Rules
     $clone-hr-colour: $clone-c2;
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: "Open Sans", sans-serif;
+    $clone-font-serif: serif;
+    $clone-font-script: "Euphoria Script", cursive;
+    $clone-font-monospace: "Consolas", monospace;
+
+    $clone-font-default: $clone-font-sans;
+
+    // Default Line Height
+    $clone-line-height: 1.5;
+
+    // The Typography Scale
+    $clone-default-font-size: 1rem;
+    $clone-font-scale: 1.333;
+
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale}));
+    $clone-font-scale-h5: $clone-default-font-size;
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale}));
+    $clone-font-scale-h3: calc(#{$clone-font-scale-h4}*(#{$clone-font-scale}));
+    $clone-font-scale-h2: calc(#{$clone-font-scale-h3}*(#{$clone-font-scale}));
+    $clone-font-scale-h1: calc(#{$clone-font-scale-h2}*(#{$clone-font-scale}));
+
+    // Headings
+    $clone-heading-1-border-color: $clone-c1;
+    $clone-heading-1-border-style: none none solid none;
+    $clone-heading-1-border-width: 0px; 
+    $clone-heading-1-color: $clone-black;
+    $clone-heading-1-font: $clone-font-sans;
+    $clone-heading-1-font-size: $clone-font-scale-h1;
+    $clone-heading-1-font-weight: 900;
+
+    $clone-heading-2-border-color: $clone-c1;
+    $clone-heading-2-border-style: none none solid none;
+    $clone-heading-2-border-width: 0px; 
+    $clone-heading-2-color: $clone-c1;
+    $clone-heading-2-font: $clone-font-sans;
+    $clone-heading-2-font-size: $clone-font-scale-h2;
+    $clone-heading-2-font-weight: 600;
+
+    $clone-heading-3-border-color: $clone-gray;
+    $clone-heading-3-border-style: none none solid none;
+    $clone-heading-3-border-width: 1px; 
+    $clone-heading-3-color: $clone-black;
+    $clone-heading-3-font: $clone-font-sans;
+    $clone-heading-3-font-size: $clone-font-scale-h3;
+    $clone-heading-3-font-weight: normal;
+
+    $clone-heading-4-border-color: $clone-c3;
+    $clone-heading-4-border-style: none none solid none;
+    $clone-heading-4-border-width: 0px; 
+    $clone-heading-4-color: $clone-c3;
+    $clone-heading-4-font: $clone-font-sans;
+    $clone-heading-4-font-size: $clone-font-scale-h4;
+    $clone-heading-4-font-weight: 600;
+
+    $clone-heading-5-border-color: $clone-gray;
+    $clone-heading-5-border-style: none none solid none;
+    $clone-heading-5-border-width: 1px;
+    $clone-heading-5-color: $clone-black;
+    $clone-heading-5-font: $clone-font-sans;
+    $clone-heading-5-font-size: $clone-font-scale-h5;
+    $clone-heading-5-font-weight: bold;
 
 // Component Options
 
@@ -80,7 +142,7 @@ $clone-grid-columns: 12;
 
     // Menus
     $clone-menu-background-colour: $clone-black;
-    $clone-submenu-background-colour: $clone-c2;
+    $clone-submenu-background-colour: rgba(40, 40, 50, 1);
 
     $clone-menu-font-colour: $clone-white;
     $clone-menu-divider-colour: rgba($clone-c4, .5);
@@ -91,21 +153,4 @@ $clone-grid-columns: 12;
 
     // Tables
     $clone-table-heading-colour: $clone-c1;
-    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
-
-// Font Variables
-
-    // Fonts
-    $clone-font-sans: "Open Sans", sans-serif;
-    $clone-font-serif: serif;
-    $clone-font-script: "Euphoria Script", cursive;
-    $clone-font-monospace: "Consolas", monospace;
-
-    $clone-font-default: $clone-font-sans;
-
-    // Default Line Height
-    $clone-line-height: 1.5;
-
-    // The Typography Scale
-    $clone-default-font-size: 1rem;
-    $clone-font-scale: 1.333;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column.

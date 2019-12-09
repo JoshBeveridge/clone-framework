@@ -78,6 +78,7 @@
         }
         >ul {
             display: block;
+            padding-bottom: 6rem;
             width: 100%;
             li {
                 position: relative;
@@ -429,6 +430,7 @@
                     }
                     >button {
                         padding: 1rem;
+                        top: 1px;
                         right: 3vw;
                     }
                 }
