@@ -330,7 +330,8 @@
 
 // Inside of a Flex Grid =======================================================
 [data-c-grid*="gutter"] {
-    [data-c-input] {
+    >[data-c-input],
+    >[data-c-grid-item] >[data-c-input] {
         >span {
             &:first-of-type {
                 top: calc(#{$clone-padding} / 2);
@@ -385,7 +386,8 @@
 }
 @each $wKey, $wValue in $clone-whitespace-map {
     [data-c-grid*="#{$wKey})"] {
-        [data-c-input] {
+        >[data-c-input],
+        >[data-c-grid-item] >[data-c-input] {
             >span {
                 &:first-of-type {
                     top: calc((#{$clone-padding} #{$wValue}) / 2);
