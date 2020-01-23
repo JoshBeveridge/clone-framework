@@ -80,6 +80,9 @@
             display: block;
             padding-bottom: 6rem;
             width: 100%;
+            @media #{$clone-tablet-landscape} {
+                padding-bottom: 0;
+            }
             li {
                 position: relative;
                 a,
