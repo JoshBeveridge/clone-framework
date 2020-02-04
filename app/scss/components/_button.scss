@@ -35,11 +35,27 @@ a[data-c-button] {
         vertical-align: middle;
     }
 
-    span+i {
+    img {
+        display: inline-block;
+        transform: translate(0, .1rem);
+        width: 1rem;
+    }
+
+    svg {
+        display: inline-block;
+        transform: translate(0, .1rem);
+        width: 1rem;
+    }
+
+    span+i,
+    span+img,
+    span+svg {
         margin-left: .5rem;
     }
 
-    i+span {
+    i+span,
+    img+span,
+    svg+span {
         margin-right: 0;
         margin-left: .5rem;
     }

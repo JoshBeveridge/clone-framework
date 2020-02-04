@@ -313,6 +313,29 @@ $clone-border-width-list: ("thick", "thin");
     width: 90%;
 }
 
+// Display =====================================================================
+[data-c-display="block"] {
+    display: block;
+}
+[data-c-display="inline"] {
+    display: inline;
+}
+[data-c-display="inline-block"] {
+    display: inline-block;
+}
+[data-c-display="table"] {
+    display: table;
+}
+[data-c-display="grid"] {
+    display: grid;
+}
+[data-c-display="flex"] {
+    display: flex;
+}
+[data-c-display="none"] {
+    display: none;
+}
+
 // Fonts =======================================================================
 [data-c-font="sans"] {
     font-family: $clone-font-sans;
