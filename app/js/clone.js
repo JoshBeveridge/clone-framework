@@ -1,6 +1,6 @@
 // =============================================================================
 
-    // Utilities JavaScript (jQuery)
+    // Utilities JavaScript
 
 // =============================================================================
 
@@ -104,7 +104,7 @@ $(document).ready(function () {
             accordionTriggerOld(this);
         });
 
-        // New
+        // New (Empty Attribute)
         function accordionTrigger(trigger) {
             var accordion = "[data-c-accordion='']";
             var content = "[data-c-accordion-content]";
@@ -129,6 +129,33 @@ $(document).ready(function () {
         $(document).on("click", "[data-c-accordion-trigger]", function (e) {
             e.preventDefault();
             accordionTrigger(this);
+        });
+
+        // New (React Fix)
+        function accordionTriggerReact(trigger) {
+            var accordion = "[data-c-accordion='true']";
+            var content = "[data-c-accordion-content]";
+            if ($(trigger).parent(accordion).hasClass("active")) {
+                $(trigger).attr("aria-expanded", "false");
+                $(trigger).parent(accordion).removeClass("active");
+                $(trigger).parent(accordion).find(content).attr("aria-hidden", "true");
+            }
+            else {
+                $(trigger).attr("aria-expanded", "true");
+                $(trigger).parent(accordion).addClass("active");
+                $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
+                var siblingContent = $(trigger).siblings(content);
+                var focusableItems = focusable(siblingContent);
+                var firstFocusableItem = $(focusableItems).first();
+                if (focusableItems.length != 0) {
+                    firstFocusableItem[0].focus();
+                }
+            }
+        }
+
+        $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+            e.preventDefault();
+            accordionTriggerReact(this);
         });
 
     // Alert Handlers ==========================================================
@@ -265,6 +292,7 @@ $(document).ready(function () {
                 $(focusableItems).each(function() {
                     $(this).attr("tabindex", "-1");
                 });
+                $(dialog).off('keyup');
                 document.querySelector("[data-c-dialog-ancestor]").focus();
             }
             else {
@@ -283,7 +311,6 @@ $(document).ready(function () {
                     targetInput[0].focus();
                 }
                 dialogTabbing(firstInput, lastInput);
-                dialogEscape();
             }
         }
 
@@ -347,20 +374,29 @@ $(document).ready(function () {
         }
 
         // Escape Handler ------------------------------------------------------
-        function dialogEscape() {
-            $(document).on("keyup", function(e){
-                if ((e.key==='Escape'||e.key==='Esc'||e.keyCode===27)){
-                    $(clone("dialog-overlay")).attr(clone("dialog-overlay"), "");
-                    $(clone("dialog")).attr(clone("dialog"), "");
-                    $("body").css("overflow", "visible");
-
-                    if (e.stopPropagation) {
-                        e.stopPropagation();
-                        e.preventDefault();
+        function dialogEscape(trigger) {
+            var dialogID = $(trigger).attr("data-c-dialog-id");
+            var dialog = $(clone("dialog") + "[data-c-dialog-id='" + dialogID +"']");
+            if ($(dialog).hasAttr("data-c-dialog-escapable")) {
+                $(dialog).on("keyup", function(e){
+                    var keyCode = e.keyCode || e.which;
+                    if (keyCode == 27) {
+                        $("[data-c-dialog-overlay]").attr("data-c-dialog-overlay", "");
+                        $("[data-c-dialog]").each(function() {
+                            $(this).attr("data-c-dialog", "");
+                        });
+                        $("body").css("overflow", "visible");
+                        document.querySelector("[data-c-dialog-ancestor]").focus();
+                        $(dialog).off('keyup');
                     }
-                }
-            });
+                });
+            }
         }
+
+        $(document).on("click", "button[data-c-dialog-id]", function(e) {
+            e.preventDefault();
+            dialogEscape(this);
+        });
 
     // Menu Handlers ===========================================================
     function toggleMenu(trigger) {

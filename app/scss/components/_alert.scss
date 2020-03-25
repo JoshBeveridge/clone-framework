@@ -27,18 +27,27 @@
                 margin-left: .15rem;
             }
         }
+        p:first-of-type img,
+        span:first-of-type img {
+            max-width: 1.5rem;
+            vertical-align: middle;
+        }
     }
     i {
-        margin-top: -.2rem;
-        margin-right: .3rem;
         vertical-align: middle;
     }
 }
 
-[data-c-alert="close-trigger"] {
+[data-c-alert-close-trigger] {
     background: none;
     border: none;
     cursor: pointer;
+    span {
+        line-height: 1;
+    }
+    img {
+        max-width: 1.5rem;
+    }
 }
 
 [data-c-alert*="information"] {

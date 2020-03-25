@@ -1,80 +1,42 @@
-<!-- This is an example Dialog trigger. -->
-<div data-c-alignment="center">
-    <button
-        data-c-button="solid(c1)"
-        data-c-radius="rounded"
-        data-c-dialog-id="example-dialog-01"
-        data-c-dialog-action="open"
-        type="button">
-        Open a Dialog
-    </button>
-</div>
+<!-- Dialog Trigger -->
+<!-- Note the dialog id, as it should match the dialog id of the dialog proper. -->
+<button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="example-dialog-01" type="button">
+    Open a Dialog
+</button>
 
-<!-- This overlay is required somewhere on the site, but not necessarily next to the dialog.-->
+<!-- Dialog Overlay -->
+<!-- This overlay is required only once on your page, but not necessarily next to the dialog.-->
 <div data-c-dialog-overlay></div>
 
-<!-- Actual Dialog -->
-<div
-    aria-hidden="true"
-    aria-describedby="example-dialog-01-description"
-    aria-labelledby="example-dialog-01-title"
-    data-c-dialog
-    data-c-dialog-id="example-dialog-01"
-    data-c-padding="top(double) bottom(double)"
-    role="dialog">
-    <div
-        data-c-background="white(100)"
-        data-c-radius="rounded"
-        data-c-margin="bottom(double)">
-        <div
-            data-c-padding="tb(normal) right(triple) left(normal)"
-            data-c-border="bottom(thin, solid, black)">
-            <h5
-                data-c-font-size="h4"
-                id="example-dialog-01-title"
-                data-c-dialog-focus>
-                <!-- Dialog Title Here -->
-            </h5>
-            <!-- This subtitle p can be removed if a subtitle isn't needed. -->
-            <p
-                data-c-font-size="h5"
-                data-c-margin="top(half)">
-                <!-- Dialog Subtitle Here -->
-            </p>
-            <button
-                data-c-dialog-action="close"
-                data-c-dialog-id="example-dialog-01"
-                type="button">
-                <i class="material-icons">close</i>
+<!-- Dialog -->
+<div aria-hidden="true" aria-describedby="example-dialog-01-description" aria-labelledby="example-dialog-01-title" data-c-dialog data-c-dialog-escapable data-c-dialog-id="example-dialog-01" data-c-padding="tb(2)" role="dialog">
+    <div data-c-background="white(100)" data-c-radius="rounded" data-c-margin="bottom(2)">
+        <div data-c-padding="tb(1) right(3) left(1)" data-c-border="bottom(thin, solid, black)">
+            <!-- Title -->
+            <h5 data-c-font-size="h4" id="example-dialog-01-title" data-c-dialog-focus>Dialog Title</h5>
+            <!-- Optional Subtitle -->
+            <p data-c-font-size="h5" data-c-margin="top(.5)">Dialog Subtitle</p>
+            <button data-c-dialog-action="close" data-c-dialog-id="example-dialog-01" type="button">
+                <!-- This span can be replaced with an <i> icon font element, or an image. -->
+                <span data-c-font-weight="bold" data-c-font-size="h3">x</span>
             </button>
         </div>
-        <div
-            data-c-border="bottom(thin, solid, black)"
-            data-c-padding="normal">
+        <div data-c-border="bottom(thin, solid, black)" data-c-padding="all(1)">
             <div id="example-dialog-01-description">
-                <!-- Dialog Content Here-->
+                <!-- Dialog Content -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
             </div>
         </div>
-        <!-- The following dialog actions can be customized depending on the dialog. -->
-        <div data-c-padding="normal">
-            <div data-c-grid="gutter middle">
+        <!-- Dialog Actions -->
+        <div data-c-padding="all(1)">
+            <div data-c-grid="gutter(all, 1) middle">
                 <div data-c-grid-item="base(1of2)">
-                    <button
-                        data-c-button="outline(slow)"
-                        data-c-radius="rounded"
-                        data-c-dialog-action="close"
-                        data-c-dialog-id="example-dialog-01">
+                    <button data-c-button="outline(slow)" data-c-radius="rounded" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
                         Cancel
                     </button>
                 </div>
-                <div
-                    data-c-grid-item="base(1of2)"
-                    data-c-alignment="base(right)">
-                    <button
-                        data-c-button="solid(go)"
-                        data-c-radius="rounded"
-                        data-c-dialog-action="close"
-                        data-c-dialog-id="example-dialog-01">
+                <div data-c-grid-item="base(1of2)" data-c-alignment="base(right)">
+                    <button data-c-button="solid(go)" data-c-radius="rounded" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
                         Okay
                     </button>
                 </div>

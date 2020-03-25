@@ -12,7 +12,7 @@ $clone-copy-layout: $clone-small-layout;
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
 $clone-margin: 1rem !default;
 $clone-padding: 1rem !default;
-$clone-whitespace-multiplier: 1.2 !default;
+$clone-whitespace-multiplier: 1 !default;
 
 // Grid Variables
 $clone-grid-columns: 12 !default;

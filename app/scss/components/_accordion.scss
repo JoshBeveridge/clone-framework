@@ -8,7 +8,8 @@
 [data-c-accordion*="group"],
 [data-c-accordion-group] {
     [data-c-accordion="accordion"],
-    [data-c-accordion=""] {
+    [data-c-accordion=""],
+    [data-c-accordion="true"] {
         // border-bottom: 1px solid $clone-accordion-border-colour;
         [data-c-accordion="trigger"],
         [data-c-accordion-trigger] {
@@ -40,7 +41,7 @@
             // New
             [data-c-accordion-add] {
                 display: block;
-                font-size: $clone-font-scale-h4;
+                // font-size: $clone-font-scale-h4;
                 position: absolute;
                 top: 50%;
                 right: 2rem;
@@ -48,7 +49,7 @@
             }
             [data-c-accordion-remove] {
                 display: none;
-                font-size: $clone-font-scale-h4;
+                // font-size: $clone-font-scale-h4;
                 position: absolute;
                 top: 50%;
                 right: 2rem;

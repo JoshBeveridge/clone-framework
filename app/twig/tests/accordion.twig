@@ -1,141 +1,68 @@
-<div data-c-accordion="group(alt)" data-c-margin="bottom(double)">
-    <div
-        data-c-accordion="accordion"
-        data-c-background="white(100)"
-        data-c-border="bottom(thin, solid, black)">
-        <button
-            aria-expanded="false"
-            data-c-accordion="trigger"
-            tabindex="0"
-            type="button">
-            <div data-c-padding="top(normal) bottom(normal) left(normal)">
-                <p data-c-heading="h4" data-c-font-weight="bold">
-                    Accordion Title that is really long because sometimes it's important to use long titles to indicate whether or not high volumes of content will fit into a confined space the way you expect them to even when the element is on a large, very wide screen.
-                </p>
-                <!-- This subtitle p can be removed if a subtitle is not necessary. -->
-                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
-                    Accordion Subtitle
-                </p>
+<!-- Accordion Group -->
+<!-- Multiple accordion elements can be placed within the group element. -->
+<div data-c-accordion-group>
+    <!-- Accordion -->
+    <div data-c-accordion>
+        <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+            <div data-c-padding="all(1)">
+                <!-- Title -->
+                <p data-c-font-weight="bold">Accordion Title</p>
+                <!-- Optional Subtitle -->
+                <p data-c-margin="top(.25)" data-c-colour="c1">Accordion Subtitle</p>
             </div>
-            <span data-c-visibility="invisible">
-                Click to view...
-            </span>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion="icon--add"
-                data-c-colour="black">
-                add_circle
-            </i>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion="icon--remove"
-                data-c-colour="black">
-                remove_circle
-            </i>
+            <span data-c-visibility="invisible">Click to view...</span>
+            <i aria-hidden="true" data-c-accordion-add data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+            <i aria-hidden="true" data-c-accordion-remove data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
         </button>
-        <div
-            aria-hidden="true"
-            data-c-accordion="content"
-            data-c-padding="right(normal) left(normal)">
-            <div data-c-padding="bottom(normal)">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget magna lorem. Fusce elit purus, accumsan ut est id, vehicula imperdiet massa. Quisque tristique nibh sed justo auctor pulvinar. In hac habitasse platea <a href="google">dictumst</a>. Curabitur ullamcorper, nulla vitae pretium porta, sem massa ultricies dui, nec pharetra lectus sem et velit. Aliquam nec viverra ante, ultricies consectetur turpis. Nullam efficitur est nec gravida accumsan. Cras eget viverra nisl. Aenean fermentum augue ut augue efficitur congue. Mauris mi ipsum, cursus eu egestas ac, feugiat nec magna.</p>
-                <button>This is a button</button>
-            </div>
-        </div>
-    </div>
-    <div
-        data-c-accordion="accordion"
-        data-c-background="white(100)"
-        data-c-border="bottom(thin, solid, black)">
-        <button
-            aria-expanded="false"
-            data-c-accordion="trigger"
-            data-c-padding="right"
-            tabindex="0"
-            type="button">
-            <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-                <p data-c-heading="h4" data-c-font-weight="bold">
-                    Accordion Title
-                </p>
-                <!-- This subtitle p can be removed if a subtitle is not necessary. -->
-                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
-                    Accordion Subtitle
-                </p>
-            </div>
-            <span data-c-visibility="invisible">
-                Click to view...
-            </span>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion="icon--add"
-                data-c-colour="black">
-                add_circle
-            </i>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion="icon--remove"
-                data-c-colour="black">
-                remove_circle
-            </i>
-        </button>
-        <div
-            aria-hidden="true"
-            data-c-accordion="content"
-            data-c-padding="right(normal) left(normal)">
-            <div data-c-padding="bottom(normal)">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget magna lorem. Fusce elit purus, accumsan ut est id, vehicula imperdiet massa. Quisque tristique nibh sed justo auctor pulvinar. In hac habitasse platea dictumst. Curabitur ullamcorper, nulla vitae pretium porta, sem massa ultricies dui, nec pharetra lectus sem et velit. Aliquam nec viverra ante, ultricies consectetur turpis. Nullam efficitur est nec gravida accumsan. Cras eget viverra nisl. Aenean fermentum augue ut augue efficitur congue. Mauris mi ipsum, cursus eu egestas ac, feugiat nec magna.</p>
+        <div aria-hidden="true" data-c-accordion-content data-c-padding="rl(1)">
+            <div data-c-padding="bottom(1)">
+                <!-- Accordion Content -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
             </div>
         </div>
     </div>
 </div>
 
-<div data-c-accordion-group>
-    <div
-        data-c-accordion
-        data-c-background="white(100)">
-        <button
-            aria-expanded="false"
-            data-c-accordion-trigger
-            data-c-padding="right"
-            tabindex="0"
-            type="button">
-            <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-                <p data-c-heading="h4" data-c-font-weight="bold">
-                    Accordion Title
-                </p>
-                <!-- This subtitle p can be removed if a subtitle is not necessary. -->
-                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
-                    Accordion Subtitle
-                </p>
+<!-- Accordion Group -->
+<!-- Multiple accordion elements can be placed within the group element. -->
+<div data-c-accordion-group="alt">
+    <!-- Accordion -->
+    <div data-c-accordion>
+        <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+            <div data-c-padding="all(1)">
+                <!-- Title -->
+                <p data-c-font-weight="bold">Accordion Title</p>
+                <!-- Optional Subtitle -->
+                <p data-c-margin="top(.25)" data-c-colour="c1">Accordion Subtitle</p>
             </div>
-            <span data-c-visibility="invisible">
-                Click to view...
-            </span>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion-add
-                data-c-colour="black">
-                add_circle
-            </i>
-            <i
-                aria-hidden="true"
-                class="material-icons"
-                data-c-accordion-remove
-                data-c-colour="black">
-                remove_circle
-            </i>
+            <span data-c-visibility="invisible">Click to view...</span>
+            <i aria-hidden="true" data-c-accordion-add data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+            <i aria-hidden="true" data-c-accordion-remove data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
         </button>
-        <div
-            aria-hidden="true"
-            data-c-accordion-content
-            data-c-padding="right(normal) left(normal)">
-            <div data-c-padding="bottom(normal)">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget magna lorem. Fusce elit purus, accumsan ut est id, vehicula imperdiet massa. Quisque tristique nibh sed justo auctor pulvinar. In hac habitasse platea dictumst. Curabitur ullamcorper, nulla vitae pretium porta, sem massa ultricies dui, nec pharetra lectus sem et velit. Aliquam nec viverra ante, ultricies consectetur turpis. Nullam efficitur est nec gravida accumsan. Cras eget viverra nisl. Aenean fermentum augue ut augue efficitur congue. Mauris mi ipsum, cursus eu egestas ac, feugiat nec magna.</p>
+        <div aria-hidden="true" data-c-accordion-content data-c-padding="rl(1)">
+            <div data-c-padding="bottom(1)">
+                <!-- Accordion Content -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion -->
+    <div data-c-accordion>
+        <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+            <div data-c-padding="all(1)">
+                <!-- Title -->
+                <p data-c-font-weight="bold">Accordion Title</p>
+                <!-- Optional Subtitle -->
+                <p data-c-margin="top(.25)" data-c-colour="c1">Accordion Subtitle</p>
+            </div>
+            <span data-c-visibility="invisible">Click to view...</span>
+            <i aria-hidden="true" data-c-accordion-add data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+            <i aria-hidden="true" data-c-accordion-remove data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
+        </button>
+        <div aria-hidden="true" data-c-accordion-content data-c-padding="rl(1)">
+            <div data-c-padding="bottom(1)">
+                <!-- Accordion Content -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
             </div>
         </div>
     </div>
