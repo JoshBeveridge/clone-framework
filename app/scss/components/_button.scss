@@ -63,17 +63,17 @@ a[data-c-button] {
         // States --------------------------------------------------------------
         @media (hover: hover) {
             &:hover {
-                background: rgba($clone-focus-colour, .2);
-                border-color: $clone-focus-colour;
-                color: $clone-focus-colour;
+                background: rgba($clone-focus-color, .2);
+                border-color: $clone-focus-color;
+                color: $clone-focus-color;
                 transition: all .2s ease;
                 i {
-                    color: $clone-focus-colour;
+                    color: $clone-focus-color;
                     transition: all .2s ease;
                 }
             }
             @each $key, $value in $clone-color-map {
-                &[data-c-hover-colour="#{$key}"]:hover,
+                &[data-c-hover-color="#{$key}"]:hover,
                 &[data-c-hover-color="#{$key}"]:hover {
                     background: rgba($value, .2) !important;
                     border-color: $value !important;
@@ -87,7 +87,7 @@ a[data-c-button] {
             };
         }
         &:focus {
-            box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+            box-shadow: -3px -3px 0 $clone-focus-color, 3px -3px 0 $clone-focus-color, 3px 3px 0 $clone-focus-color, -3px 3px 0 $clone-focus-color;
         }
         &:disabled {
             background: lighten($clone-grey, 30%);
@@ -102,17 +102,17 @@ a[data-c-button] {
 &[id*="Trident/7.0"] {
     [data-c-button]:not([data-c-button="reset"]) {
         &:hover {
-            background: rgba($clone-focus-colour, .2);
-            border-color: $clone-focus-colour;
-            color: $clone-focus-colour;
+            background: rgba($clone-focus-color, .2);
+            border-color: $clone-focus-color;
+            color: $clone-focus-color;
             transition: all .2s ease;
             i {
-                color: $clone-focus-colour;
+                color: $clone-focus-color;
                 transition: all .2s ease;
             }
         }
         @each $key, $value in $clone-color-map {
-            &[data-c-hover-colour="#{$key}"]:hover,
+            &[data-c-hover-color="#{$key}"]:hover,
             &[data-c-hover-color="#{$key}"]:hover {
                 background: rgba($value, .2) !important;
                 border-color: $value !important;
@@ -165,15 +165,15 @@ a[data-c-button] {
         cursor: pointer;
         @media (hover: hover) {
             &:hover {
-                color: $clone-focus-colour;
+                color: $clone-focus-color;
                 transition: all .2s ease;
                 i {
-                    color: $clone-focus-colour;
+                    color: $clone-focus-color;
                     transition: all .2s ease;
                 }
             }
             @each $key, $value in $clone-color-map {
-                &[data-c-hover-colour="#{$key}"]:hover,
+                &[data-c-hover-color="#{$key}"]:hover,
                 &[data-c-hover-color="#{$key}"]:hover {
                     color: $value !important;
                     transition: all .2s ease;

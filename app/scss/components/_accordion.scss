@@ -10,7 +10,7 @@
     [data-c-accordion="accordion"],
     [data-c-accordion=""],
     [data-c-accordion="true"] {
-        // border-bottom: 1px solid $clone-accordion-border-colour;
+        // border-bottom: 1px solid $clone-accordion-border-color;
         [data-c-accordion="trigger"],
         [data-c-accordion-trigger] {
             background: none;
@@ -78,7 +78,7 @@
         // States ------------------------------------------------------------------
 
             &:first-of-type {
-                // border-top: 1px solid $clone-accordion-border-colour;
+                // border-top: 1px solid $clone-accordion-border-color;
             }
 
             &.active {
@@ -108,13 +108,18 @@
 
             }
 
+            [data-c-accordion="trigger"]:focus,
+            [data-c-accordion-trigger]:focus {
+                outline: $clone-focus-color solid 3px;
+            }
+
     }
 }
 
 [data-c-accordion="group(alt)"] {
     [data-c-accordion="accordion"] {
         &:nth-child(odd) {
-            background: $clone-accordion-alternating-background-colour;
+            background: $clone-accordion-alternating-background-color;
         }
     }
 }
@@ -122,7 +127,7 @@
 [data-c-accordion-group="alt"] {
     [data-c-accordion] {
         &:nth-child(odd) {
-            background: $clone-accordion-alternating-background-colour;
+            background: $clone-accordion-alternating-background-color;
         }
     }
 }

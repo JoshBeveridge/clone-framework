@@ -1,184 +1,199 @@
-// Clone =======================================================================
+// =============================================================================
 
+    // Clone: Default Variables
+
+// =============================================================================
+// Media Queries
+    // Phone (Portrait): 320px
+    $clone-phone-portrait: "screen and (min-width: 20em)" !default;
+    // Phone (Landscape): 480px
+    $clone-phone-landscape: "screen and (min-width: 30em)" !default;
+    // Tablet (Portrait): 768px
+    $clone-tablet-portrait: "screen and (min-width: 48em)" !default;
+    // Tablet (Landscape): 1024px
+    $clone-tablet-landscape: "screen and (min-width: 64em)" !default;
+    // Desktop (Small): 1025px
+    $clone-desktop-small: "screen and (min-width: 64.01em)" !default;
+    // Desktop (Medium): 1600px
+    $clone-desktop-medium: "screen and (min-width: 100em)" !default;
+    // Desktop (Large): 1760px
+    $clone-desktop-large: "screen and (min-width: 110em)" !default;
 // Layout Variables
 $clone-large-layout: 80rem !default;
 $clone-medium-layout: 60rem !default;
 $clone-small-layout: 39rem !default;
-$clone-wide-layout: $clone-large-layout;
-$clone-form-layout: $clone-medium-layout;
-$clone-copy-layout: $clone-small-layout;
-
+    // Alternatives
+    $clone-wide-layout: $clone-large-layout;
+    $clone-form-layout: $clone-medium-layout;
+    $clone-copy-layout: $clone-small-layout;
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
 $clone-margin: 1rem !default;
 $clone-padding: 1rem !default;
-$clone-whitespace-multiplier: 1 !default;
-
+    // Calculation Variables
+    $clone-whitespace-multiplier: 1.1 !default;
+    $clone-ws-tp: #{$clone-whitespace-multiplier} !default; // 1.4rem
+    $clone-ws-tl: #{$clone-ws-tp} * #{$clone-whitespace-multiplier} !default; // 1.68rem
+    $clone-ws-ds: #{$clone-ws-tl} * #{$clone-whitespace-multiplier} !default; // 2.016rem
+    $clone-ws-dm: #{$clone-ws-ds} * #{$clone-whitespace-multiplier} !default; // 2.4192rem
+    $clone-ws-dl: #{$clone-ws-dm} * #{$clone-whitespace-multiplier} !default; // 2.90304rem
 // Grid Variables
 $clone-grid-columns: 12 !default;
-
-// Main Colour Variables
-
+// Main Color Variables
     // Black & White
     $clone-white: #FFFFFF !default;
     $clone-black: rgba(10, 10, 20, 1) !default;
-
     // Grey/Gray
     $clone-gray: rgba(150, 150, 150, 1) !default;
-    $clone-gray-light: lighten($clone-gray, 10%) !default;
-    $clone-gray-dark: darken($clone-gray, 10%) !default;
-
-    $clone-grey: $clone-gray !default;
-    $clone-grey-light: $clone-gray-light !default;
-    $clone-grey-dark: $clone-gray-dark !default;
-
-    // Theme Colours
+        // Alternatives
+        $clone-grey: $clone-gray;
+    // Theme Colors
     $clone-c1: #F14948 !default;
-    $clone-c1-light: lighten($clone-c1, 10%) !default;
-    $clone-c1-dark: darken($clone-c1, 10%) !default;
-
     $clone-c2: #F1604D !default;
-    $clone-c2-light: lighten($clone-c2, 10%) !default;
-    $clone-c2-dark: darken($clone-c2, 10%) !default;
-
     $clone-c3: #F47953 !default;
-    $clone-c3-light: lighten($clone-c3, 10%) !default;
-    $clone-c3-dark: darken($clone-c3, 10%) !default;
-
     $clone-c4: #F79559 !default;
-    $clone-c4-light: lighten($clone-c4, 10%) !default;
-    $clone-c4-dark: darken($clone-c4, 10%) !default;
-
     $clone-c5: #F7AF5B !default;
-    $clone-c5-light: lighten($clone-c5, 10%) !default;
-    $clone-c5-dark: darken($clone-c5, 10%) !default;
-
     // Go, Slow, Stop
     $clone-go: green !default;
     $clone-slow: orange !default;
     $clone-stop: red !default;
-    $clone-error: $clone-stop !default;
-
-// Sitewide Colour Variables
-
+        // Alternatives
+        $clone-error: $clone-stop;
+// Sitewide Color Variables
     // Text Selection
-    $clone-selection-background-colour: $clone-c5 !default;
-
+    $clone-selection-background-color: $clone-c5 !default;
+        // Alternatives
+        $clone-selection-background-colour: $clone-selection-background-color;
     // Hover
-    $clone-hover-colour: $clone-c4 !default;
-    $clone-hover-colour-light: lighten($clone-c4, 10%);
-    $clone-hover-colour-dark: darken($clone-c4, 10%);
-
+    $clone-hover-color: $clone-c4 !default;
+        // Alternatives
+        $clone-hover-colour: $clone-hover-color;
     // Focus
-    $clone-focus-colour: $clone-hover-colour !default;
-
-    // Visited Links
-    $clone-visited-colour: purple !default;
-
+    $clone-focus-color: $clone-hover-color !default;
+        // Alternatives
+        $clone-focus-colour: $clone-focus-color;
     // Horizontal Rules
-    $clone-hr-colour: $clone-c2 !default;
-
+    $clone-hr-color: $clone-c2 !default;
+        // Alternatives
+        $clone-hr-colour: $clone-hr-color;
 // Font Variables
-
     // Fonts
     $clone-font-sans: "Open Sans", sans-serif !default;
     $clone-font-serif: serif !default;
     $clone-font-script: "Euphoria Script", cursive !default;
     $clone-font-monospace: "Consolas", monospace !default;
-
     $clone-font-default: $clone-font-sans !default;
-
     // Default Line Height
     $clone-line-height: 1.5 !default;
-
     // The Typography Scale
     $clone-default-font-size: 1rem !default;
     $clone-font-scale: 1.333 !default;
-
     $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;
     $clone-font-scale-h5: $clone-default-font-size !default;
     $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
     $clone-font-scale-h3: calc(#{$clone-font-scale-h4}*(#{$clone-font-scale})) !default;
     $clone-font-scale-h2: calc(#{$clone-font-scale-h3}*(#{$clone-font-scale})) !default;
     $clone-font-scale-h1: calc(#{$clone-font-scale-h2}*(#{$clone-font-scale})) !default;
-
     // Headings
-    $clone-heading-1-border-color: $clone-c1 !default;
-    $clone-heading-1-border-style: none none solid none !default;
-    $clone-heading-1-border-width: 0px !default; 
-    $clone-heading-1-color: $clone-white !default;
-    $clone-heading-1-font: $clone-font-sans !default;
-    $clone-heading-1-font-size: $clone-font-scale-h1 !default;
-    $clone-heading-1-font-weight: 900 !default;
-
-    $clone-heading-2-border-color: $clone-c1 !default;
-    $clone-heading-2-border-style: none none solid none !default;
-    $clone-heading-2-border-width: 0px !default; 
-    $clone-heading-2-color: $clone-c1 !default;
-    $clone-heading-2-font: $clone-font-sans !default;
-    $clone-heading-2-font-size: $clone-font-scale-h2 !default;
-    $clone-heading-2-font-weight: 600 !default;
-
-    $clone-heading-3-border-color: $clone-gray !default;
-    $clone-heading-3-border-style: none none solid none !default;
-    $clone-heading-3-border-width: 1px !default; 
-    $clone-heading-3-color: $clone-black !default;
-    $clone-heading-3-font: $clone-font-sans !default;
-    $clone-heading-3-font-size: $clone-font-scale-h3 !default;
-    $clone-heading-3-font-weight: normal !default;
-
-    $clone-heading-4-border-color: $clone-c3 !default;
-    $clone-heading-4-border-style: none none solid none !default;
-    $clone-heading-4-border-width: 0px !default; 
-    $clone-heading-4-color: $clone-c3 !default;
-    $clone-heading-4-font: $clone-font-sans !default;
-    $clone-heading-4-font-size: $clone-font-scale-h4 !default;
-    $clone-heading-4-font-weight: 600 !default;
-
-    $clone-heading-5-border-color: $clone-gray !default;
-    $clone-heading-5-border-style: none none solid none !default;
-    $clone-heading-5-border-width: 1px !default;
-    $clone-heading-5-color: $clone-black !default;
-    $clone-heading-5-font: $clone-font-sans !default;
-    $clone-heading-5-font-size: $clone-font-scale-h5 !default;
-    $clone-heading-5-font-weight: bold !default;
-
+        // h1
+        $clone-heading-1-border-color: $clone-c1 !default;
+        $clone-heading-1-border-style: none none solid none !default;
+        $clone-heading-1-border-width: 0px !default; 
+        $clone-heading-1-color: $clone-white !default;
+        $clone-heading-1-font: $clone-font-sans !default;
+        $clone-heading-1-font-size: $clone-font-scale-h1 !default;
+        $clone-heading-1-font-weight: 900 !default;
+            // Alternatives
+            $clone-heading-1-border-colour: $clone-heading-1-border-color;
+            $clone-heading-1-colour: $clone-heading-1-color;
+        // h2
+        $clone-heading-2-border-color: $clone-c1 !default;
+        $clone-heading-2-border-style: none none solid none !default;
+        $clone-heading-2-border-width: 0px !default; 
+        $clone-heading-2-color: $clone-c1 !default;
+        $clone-heading-2-font: $clone-font-sans !default;
+        $clone-heading-2-font-size: $clone-font-scale-h2 !default;
+        $clone-heading-2-font-weight: 600 !default;
+            // Alternatives
+            $clone-heading-2-border-colour: $clone-heading-1-border-color;
+            $clone-heading-2-colour: $clone-heading-1-color;
+        // h3
+        $clone-heading-3-border-color: $clone-gray !default;
+        $clone-heading-3-border-style: none none solid none !default;
+        $clone-heading-3-border-width: 1px !default; 
+        $clone-heading-3-color: $clone-black !default;
+        $clone-heading-3-font: $clone-font-sans !default;
+        $clone-heading-3-font-size: $clone-font-scale-h3 !default;
+        $clone-heading-3-font-weight: normal !default;
+            // Alternatives
+            $clone-heading-3-border-colour: $clone-heading-1-border-color;
+            $clone-heading-3-colour: $clone-heading-1-color;
+        // h4
+        $clone-heading-4-border-color: $clone-c3 !default;
+        $clone-heading-4-border-style: none none solid none !default;
+        $clone-heading-4-border-width: 0px !default; 
+        $clone-heading-4-color: $clone-c3 !default;
+        $clone-heading-4-font: $clone-font-sans !default;
+        $clone-heading-4-font-size: $clone-font-scale-h4 !default;
+        $clone-heading-4-font-weight: 600 !default;
+            // Alternatives
+            $clone-heading-4-border-colour: $clone-heading-1-border-color;
+            $clone-heading-4-colour: $clone-heading-1-color;
+        // h5
+        $clone-heading-5-border-color: $clone-gray !default;
+        $clone-heading-5-border-style: none none solid none !default;
+        $clone-heading-5-border-width: 1px !default;
+        $clone-heading-5-color: $clone-black !default;
+        $clone-heading-5-font: $clone-font-sans !default;
+        $clone-heading-5-font-size: $clone-font-scale-h5 !default;
+        $clone-heading-5-font-weight: bold !default;
+            // Alternatives
+            $clone-heading-5-border-colour: $clone-heading-1-border-color;
+            $clone-heading-5-colour: $clone-heading-1-color;
 // Component Options
-
     // Cards
     $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;
-
-// Component Colour Variables
-
+// Component Color Variables
     // Accordions
-    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%) !default;
-
+    $clone-accordion-alternating-background-color: lighten($clone-grey, 35%) !default;
+        // Alternatives
+        $clone-accordion-alternating-background-colour: $clone-accordion-alternating-background-color;
     // Alerts
     $clone-alert-information: $clone-go !default;
     $clone-alert-warning: $clone-slow !default;
     $clone-alert-error: $clone-stop !default;
-
     // Blockquotes
-    $clone-blockquote-colour: $clone-c1 !default;
-
+    $clone-blockquote-color: $clone-c1 !default;
+        // Alternatives
+        $clone-blockquote-colour: $clone-blockquote-color;
     // Carousels
-    $clone-carousel-dot-colour: $clone-grey-light !default;
-    $clone-carousel-dot-active-colour: $clone-hover-colour !default;
-
+    $clone-carousel-dot-color: lighten($clone-grey, 35%) !default;
+    $clone-carousel-dot-active-color: $clone-hover-color !default;
+        // Alternatives
+        $clone-carousel-dot-colour: $clone-carousel-dot-color;
+        $clone-carousel-dot-active-colour: $clone-carousel-dot-active-color;
     // Code Blocks
     $clone-code-background: $clone-black !default;
-
     // Menus
-    $clone-menu-background-colour: $clone-black !default;
-    $clone-submenu-background-colour: rgba(40, 40, 50, 1) !default;
-
-    $clone-menu-font-colour: $clone-white !default;
-    $clone-menu-divider-colour: rgba($clone-c4, .5) !default;
-    $clone-menu-icon-colour: $clone-white !default;
-
+    $clone-menu-background-color: $clone-black !default;
+    $clone-submenu-background-color: rgba(40, 40, 50, 1) !default;
+    $clone-menu-font-color: $clone-white !default;
+    $clone-menu-divider-color: rgba($clone-c4, .5) !default;
+    $clone-menu-icon-color: $clone-white !default;
+        // Alternatives
+        $clone-menu-background-colour: $clone-menu-background-color;
+        $clone-submenu-background-colour: $clone-submenu-background-color;
+        $clone-menu-font-colour: $clone-menu-font-color;
+        $clone-menu-divider-colour: $clone-menu-divider-color;
+        $clone-menu-icon-colour: $clone-menu-icon-color;
     // Pullquotes
-    $clone-pullquote-colour: $clone-c2 !default;
-
+    $clone-pullquote-color: $clone-c2 !default;
+        // Alternatives
+        $clone-pullquote-colour: $clone-pullquote-color;
     // Tables
-    $clone-table-heading-colour: $clone-c1 !default;
-    $clone-table-alternating-colour: rgba(0, 0, 0, .1) !default; // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column.
+    // Note that $clone-table-alternating-color's transparency allows for a checker pattern on the grid when there is a vertical heading column.
+    $clone-table-heading-color: $clone-c1 !default;
+    $clone-table-alternating-color: rgba(0, 0, 0, .1) !default;
+        // Alternatives
+        $clone-table-heading-colour: $clone-table-heading-color;
+        $clone-table-alternating-colour: $clone-table-alternating-color;

@@ -19,8 +19,8 @@
             border-bottom: 1px solid $clone-black;
             tr {
                 th {
-                    background: $clone-table-heading-colour;
-                    color: contrasting-color($clone-table-heading-colour, $clone-white, $clone-black);
+                    background: $clone-table-heading-color;
+                    color: contrasting-color($clone-table-heading-color, $clone-white, $clone-black);
                     padding: #{$clone-padding};
                 }
                 td {
@@ -31,10 +31,10 @@
         tbody {
             tr {
                 &:nth-child(even) {
-                    background: $clone-table-alternating-colour;
+                    background: $clone-table-alternating-color;
                 }
                 th {
-                    background: $clone-table-alternating-colour;
+                    background: $clone-table-alternating-color;
                     padding: #{$clone-padding};
                 }
                 td {

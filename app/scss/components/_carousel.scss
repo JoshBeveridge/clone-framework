@@ -72,7 +72,7 @@
         left: 50%;
         transform: translate(-50%, 100%);
         button {
-            background: $clone-carousel-dot-colour;
+            background: $clone-carousel-dot-color;
             border-radius: 100%;
             display: inline-block;
             margin: 0 .5rem;
@@ -86,7 +86,7 @@
             &.active,
             &:hover,
             &:focus {
-                background: $clone-carousel-dot-active-colour;
+                background: $clone-carousel-dot-active-color;
                 transition: all .2s ease;
             }
         }

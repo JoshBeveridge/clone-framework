@@ -17,8 +17,8 @@
     }
 
     ::selection {
-        background: $clone-selection-background-colour !important;
-        color: contrasting-color($clone-selection-background-colour, $clone-white, $clone-black) !important;
+        background: $clone-selection-background-color !important;
+        color: contrasting-color($clone-selection-background-color, $clone-white, $clone-black) !important;
     }
 
     h1, h2, h3, h4, h5 {
@@ -86,23 +86,17 @@
         font-weight: inherit;
         text-decoration: underline;
         transition: color .2s ease;
-
         @media (hover: hover) {
             &:hover {
-                color: $clone-hover-colour !important;
+                color: $clone-hover-color !important;
                 transition: color .2s ease;
             }
         }
-
-        &:visited {
-            color: $clone-visited-colour;
-        }
-
     }
     // IE 11 Hover Support
     &[id*="Trident/7.0"] {
         a:hover {
-            color: $clone-hover-colour !important;
+            color: $clone-hover-color !important;
             transition: color .2s ease;
         }
     }

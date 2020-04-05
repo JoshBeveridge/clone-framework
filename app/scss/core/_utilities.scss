@@ -14,6 +14,12 @@
         "centre": center,
         "right": right
     );
+    $clone-alignment-value-map: (
+        "left": auto auto auto 0,
+        "center": 0 auto,
+        "centre": 0 auto,
+        "right": auto 0 auto auto
+    );
 
     // Color
     $clone-color-map: (
@@ -29,6 +35,17 @@
         "c3": $clone-c3,
         "c4": $clone-c4,
         "c5": $clone-c5
+    );
+
+    // Containers
+    $clone-container-size-map: (
+        "small": $clone-small-layout,
+        "medium": $clone-medium-layout,
+        "large": $clone-large-layout,
+        "copy": $clone-small-layout,
+        "form": $clone-medium-layout,
+        "layout": $clone-large-layout,
+        "full": none
     );
 
     // Orientation
@@ -168,7 +185,7 @@ $clone-opacity-list: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
             $decimal: $alpha / 100;
             background: rgba($value, $decimal);
             a:hover {
-                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
             }
         }
     }
@@ -348,6 +365,107 @@ $clone-border-width-list: ("thick", "thin");
     max-width: $clone-small-layout;
     width: 90%;
 }
+// Media Query Syntax
+[data-c-container*="pp"],
+[data-c-container*="pl"],
+[data-c-container*="tl"],
+[data-c-container*="tp"],
+[data-c-container*="ds"],
+[data-c-container*="dm"],
+[data-c-container*="dl"] {
+    margin: 0 auto;
+    width: 90%;
+}
+// Base
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        [data-c-container*="base(#{$sizeKey}, #{$alignmentKey})"] {
+            margin: $alignmentValue;
+            max-width: $sizeValue;
+            width: 90%;
+        }
+    }
+}
+// Phone
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-phone-portrait} {
+            [data-c-container*="pp(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-phone-landscape} {
+            [data-c-container*="pl(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+// Tablet
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-tablet-portrait} {
+            [data-c-container*="tp(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-tablet-landscape} {
+            [data-c-container*="tl(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+// Desktop
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-desktop-small} {
+            [data-c-container*="ds(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-desktop-medium} {
+            [data-c-container*="dm(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
+@each $sizeKey, $sizeValue in $clone-container-size-map {
+    @each $alignmentKey, $alignmentValue in $clone-alignment-value-map {
+        @media #{$clone-desktop-large} {
+            [data-c-container*="dl(#{$sizeKey}, #{$alignmentKey})"] {
+                margin: $alignmentValue;
+                max-width: $sizeValue;
+                width: 90%;
+            }
+        }
+    }
+}
 
 // Display =====================================================================
 [data-c-display="block"] {
@@ -399,32 +517,32 @@ $clone-border-width-list: ("thick", "thin");
     }
 }
 
-    // Font Colour -------------------------------------------------------------
+    // Font color -------------------------------------------------------------
     @each $key, $value in $clone-color-map {
-        [data-c-colour="#{$key}"],
+        [data-c-color="#{$key}"],
         [data-c-color="#{$key}"] {color: $value;}
-        [data-c-colour="#{$key}-light"],
+        [data-c-color="#{$key}-light"],
         [data-c-color="#{$key}-light"] {color: lighten($value, 10%);}
-        [data-c-colour="#{$key}-dark"],
+        [data-c-color="#{$key}-dark"],
         [data-c-color="#{$key}-dark"] {color: darken($value, 10%);}
     };
 
-    // Hover Colour ------------------------------------------------------------
+    // Hover color ------------------------------------------------------------
     @each $key, $value in $clone-color-map {
-        [data-c-hover-colour="#{$key}"]:hover,
+        [data-c-hover-color="#{$key}"]:hover,
         [data-c-hover-color="#{$key}"]:hover {color: $value;}
-        [data-c-hover-colour="#{$key}-light"]:hover,
+        [data-c-hover-color="#{$key}-light"]:hover,
         [data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-colour="#{$key}-dark"]:hover,
+        [data-c-hover-color="#{$key}-dark"]:hover,
         [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
     };
 
     @each $key, $value in $clone-color-map {
-        a[data-c-hover-colour="#{$key}"]:hover,
+        a[data-c-hover-color="#{$key}"]:hover,
         a[data-c-hover-color="#{$key}"]:hover {color: $value !important;}
-        a[data-c-hover-colour="#{$key}-light"]:hover,
+        a[data-c-hover-color="#{$key}-light"]:hover,
         a[data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%) !important;}
-        a[data-c-hover-colour="#{$key}-dark"]:hover,
+        a[data-c-hover-color="#{$key}-dark"]:hover,
         a[data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%) !important;}
     };
     
@@ -444,12 +562,16 @@ $clone-border-width-list: ("thick", "thin");
     [data-c-font-size="small"] {font-size: $clone-font-scale-small;}
 
     // Font Styles -------------------------------------------------------------
+    [data-c-font-style="reset"] {
+        font-style: normal;
+        text-decoration: none currentcolor solid;
+    }
     [data-c-font-style="italic"] {font-style: italic;}
     [data-c-font-style="underline"] {text-decoration: underline;}
 
 // Horizontal Rules ============================================================
 [data-c-hr] {
-    background: $clone-hr-colour;
+    background: $clone-hr-color;
     border: none;
     height: 1px;
     outline: none;
@@ -469,12 +591,6 @@ $clone-border-width-list: ("thick", "thin");
 };
 
 // Whitespace ==================================================================
-
-    $clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
-    $clone-ws-tl: #{$clone-ws-tp} * 1.2; // 1.68rem
-    $clone-ws-ds: #{$clone-ws-tl} * 1.2; // 2.016rem
-    $clone-ws-dm: #{$clone-ws-ds} * 1.2; // 2.4192rem
-    $clone-ws-dl: #{$clone-ws-dm} * 1.2; // 2.90304rem
 
     // Margins -----------------------------------------------------------------
 
@@ -1055,14 +1171,14 @@ $clone-border-width-list: ("thick", "thin");
         }
         @media (hover: hover) {
             a:hover {
-                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
             }
         }
     }
     a[data-c-tag="#{$key}"] {
         @media (hover: hover) {
             &:hover {
-                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
             }
         }
     }
@@ -1070,12 +1186,12 @@ $clone-border-width-list: ("thick", "thin");
     &[id*="Trident/7.0"] {
         [data-c-tag="#{$key}"] {
             a:hover {
-                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
             }
         }
         a[data-c-tag="#{$key}"] {
             &:hover {
-                color: contrasting-color($value, $clone-hover-colour-light, $clone-hover-colour-dark) !important;
+                color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
             }
         }
     }
