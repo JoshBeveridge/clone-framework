@@ -24,8 +24,8 @@
     // Color
     $clone-color-map: (
         "white": $clone-white,
-        "grey": $clone-grey,
-        "gray": $clone-grey,
+        "grey": $clone-gray,
+        "gray": $clone-gray,
         "black": $clone-black,
         "go": $clone-go,
         "slow": $clone-slow,
@@ -517,33 +517,21 @@ $clone-border-width-list: ("thick", "thin");
     }
 }
 
-    // Font color -------------------------------------------------------------
+    // Font Color -------------------------------------------------------------
     @each $key, $value in $clone-color-map {
         [data-c-color="#{$key}"],
-        [data-c-color="#{$key}"] {color: $value;}
-        [data-c-color="#{$key}-light"],
-        [data-c-color="#{$key}-light"] {color: lighten($value, 10%);}
-        [data-c-color="#{$key}-dark"],
-        [data-c-color="#{$key}-dark"] {color: darken($value, 10%);}
+        [data-c-colour="#{$key}"] {color: $value;}
     };
 
-    // Hover color ------------------------------------------------------------
+    // Hover Color ------------------------------------------------------------
     @each $key, $value in $clone-color-map {
         [data-c-hover-color="#{$key}"]:hover,
-        [data-c-hover-color="#{$key}"]:hover {color: $value;}
-        [data-c-hover-color="#{$key}-light"]:hover,
-        [data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%);}
-        [data-c-hover-color="#{$key}-dark"]:hover,
-        [data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%);}
+        [data-c-hover-colour="#{$key}"]:hover {color: $value;}
     };
 
     @each $key, $value in $clone-color-map {
         a[data-c-hover-color="#{$key}"]:hover,
-        a[data-c-hover-color="#{$key}"]:hover {color: $value !important;}
-        a[data-c-hover-color="#{$key}-light"]:hover,
-        a[data-c-hover-color="#{$key}-light"]:hover {color: lighten($value, 10%) !important;}
-        a[data-c-hover-color="#{$key}-dark"]:hover,
-        a[data-c-hover-color="#{$key}-dark"]:hover {color: darken($value, 10%) !important;}
+        a[data-c-hover-colour="#{$key}"]:hover {color: $value !important;}
     };
     
     // Font Weights ------------------------------------------------------------
