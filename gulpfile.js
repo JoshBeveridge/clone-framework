@@ -74,6 +74,20 @@ const rename = require('gulp-rename');
         .pipe(dest('cache/js'));
     }
 
+    function moveCoreScripts() {
+        return src([
+            'app/core/*.js'
+        ])
+        .pipe(dest('cache/js/core'));
+    }
+
+    function moveComponentScripts() {
+        return src([
+            'app/components/**/*.js'
+        ])
+        .pipe(dest('cache/js/components'));
+    }
+
     // Sass
     function compileCSS() {
         return src('app/scss/**/*.scss')
@@ -128,7 +142,7 @@ const rename = require('gulp-rename');
     }
 
     // Compile
-    const devCompile = series(template, concatScripts, compileCSS);
+    const devCompile = series(template, concatScripts, moveCoreScripts, moveComponentScripts, compileCSS);
     const distCompile = series(cleanCache, template, concatScripts, compileCSS);
 
     // Dist

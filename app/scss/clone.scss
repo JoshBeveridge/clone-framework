@@ -1,16 +1,16 @@
-// =============================================================================
+// Clone
 
-    // Clone
-    // Core
-
-// =============================================================================
-
-// User Variables ==============================================================
+// Variables
 @import "core/defaults";
-@import "core/glider";
+
+// Plugins
+    // Glider
+    @import "core/glider";
+
+// Sass Functions
 @import "core/functions";
 
-// Navigation ==================================================================
+// Menus
 @import "components/menus";
 
 html,
@@ -24,71 +24,54 @@ body[data-clone] {
 
 [data-clone] {
 
-    // Core System Files =======================================================
+    // Core System Files
     @import "core/system";
+    @import "core/maps";
+
+    // System Typography
     @import "core/typography";
-    @import "core/utilities";
 
-    // Grids ===================================================================
+    // Properties
+    @import "properties/alignment";
+    @import "properties/background-colors";
+    @import "properties/borders";
+    @import "properties/cards";
+    @import "properties/containers";
+    @import "properties/display";
+    @import "properties/horizontal-rules";
+    @import "properties/margins";
+    @import "properties/padding";
+    @import "properties/overlays";
+    @import "properties/radius";
+    @import "properties/typography";
+    @import "properties/visibility";
 
-        // Available media queries (MQ) include:
-            // pp (Phone: Portrait)
-            // pl (Phone: Landscape)
-            // tp (Tablet: Portrait)
-            // tl (Tablet: Landscape)
-            // ds (Desktop: Small)
-            // dm (Desktop: Medium)
-            // dl (Desktop: Large)
-        
-        @import "core/flexbox-grid";
+    // Grid
+    // Available media queries (MQ) include:
+        // pp (Phone: Portrait)
+        // pl (Phone: Landscape)
+        // tp (Tablet: Portrait)
+        // tl (Tablet: Landscape)
+        // ds (Desktop: Small)
+        // dm (Desktop: Medium)
+        // dl (Desktop: Large)
+    @import "core/flexbox-grid";
 
-    // Components ==============================================================
-
-        // Accordions
-        @import "components/accordion";
-
-        // Alerts
-        @import "components/alert";
-
-        // Back-to-top Links
-        @import "components/back-to-top-link";
-
-        // Blockquote
-        @import "components/blockquote";
-
-        // Breadcrumbs
-        @import "components/breadcrumbs";
-
-        // Buttons
-        @import "components/button";
-
-        // Cards
-
-        // Carousels
-        @import "components/carousel";
-
-        // Code
-        @import "components/code";
-
-        // Dialogs
-        @import "components/dialog";
-
-        // Iframes
-        @import "components/iframe";
-
-        // Inputs
-        @import "components/inputs";
-
-        // Pullquotes
-        @import "components/pullquote";
-
-        // Skip-to-content
-        @import "components/skip-to-content-link";
-
-        // Tables
-        @import "components/table";
-
-        // Tags
-        @import "components/tag";
+    // Components
+    @import "components/accordion";
+    @import "components/alert";
+    @import "components/back-to-top-link";
+    @import "components/blockquote";
+    @import "components/breadcrumbs";
+    @import "components/button";
+    @import "components/carousel";
+    @import "components/code";
+    @import "components/dialog";
+    @import "components/iframe";
+    @import "components/inputs";
+    @import "components/pullquote";
+    @import "components/skip-to-content-link";
+    @import "components/table";
+    @import "components/tag";
 
 }

@@ -1,9 +1,4 @@
-// =============================================================================
-
-    // Clone
-    // Menus
-
-// =============================================================================
+// Clone: Menu Component
 [data-clone] {
     [data-c-menu-mobile-trigger] {
         position: fixed;
@@ -30,7 +25,6 @@
         }
     }
 }
-
 [data-clone][data-c-menu-style] {
     [data-c-menu] {
         background: $clone-menu-background-color;
@@ -63,7 +57,7 @@
             color: $clone-menu-icon-color;
         }
     
-        // Mobile ==================================================================
+        // Mobile
         overflow: auto;
         position: fixed;
         top: 0;
@@ -138,7 +132,7 @@
             }
         }
     
-        // colors =================================================================
+        // Colors
     
             // Main Menu
             >ul >li:not(:first-child) >a,
@@ -151,6 +145,7 @@
             >ul >li >button {
                 background: contrasting-color($clone-menu-background-color, rgba($clone-white, .1), rgba($clone-black, .1));
             }
+
             // Layer 1
             >ul >li >ul {
                 background: $clone-submenu-background-color;
@@ -173,6 +168,7 @@
             >ul >li >ul >li >button >i {
                 color: contrasting-color($clone-submenu-background-color, $clone-white, $clone-black);
             }
+
             // Layer 2
             >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-color, 5%);
@@ -195,6 +191,7 @@
             >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-color, 5%), $clone-white, $clone-black);
             }
+
             // Layer 3
             >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-color, 10%);
@@ -217,6 +214,7 @@
             >ul >li >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-color, 10%), $clone-white, $clone-black);
             }
+
             // Layer 4
             >ul >li >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-color, 15%);
@@ -239,6 +237,7 @@
             >ul >li >ul >li >ul >li >ul >li >ul >li >button >i {
                 color: contrasting-color(darken($clone-submenu-background-color, 15%), $clone-white, $clone-black);
             }
+
             // Layer 5
             >ul >li >ul >li >ul >li >ul >li >ul >li >ul {
                 background: darken($clone-submenu-background-color, 20%);
@@ -264,7 +263,6 @@
     
     }
 }
-
 [data-clone][data-c-menu-style*="topbar"] {
     [data-c-menu] {
         @media #{$clone-tablet-landscape} {
@@ -406,7 +404,6 @@
         }
     }
 }
-
 [data-clone][data-c-menu-style*="sidebar"] {
     @media #{$clone-tablet-landscape} {
         margin-left: calc((1/4) * 100%);

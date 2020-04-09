@@ -24,11 +24,6 @@ $clone-margin: 1rem;
 $clone-padding: 1rem;
     // Calculation Variables
     $clone-whitespace-multiplier: 1.1;
-    $clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
-    $clone-ws-tl: #{$clone-ws-tp} * #{$clone-whitespace-multiplier}; // 1.68rem
-    $clone-ws-ds: #{$clone-ws-tl} * #{$clone-whitespace-multiplier}; // 2.016rem
-    $clone-ws-dm: #{$clone-ws-ds} * #{$clone-whitespace-multiplier}; // 2.4192rem
-    $clone-ws-dl: #{$clone-ws-dm} * #{$clone-whitespace-multiplier}; // 2.90304rem
 // Grid Variables
 $clone-grid-columns: 12;
 // Main Color Variables
@@ -115,6 +110,11 @@ $clone-grid-columns: 12;
         $clone-heading-5-font: $clone-font-sans;
         $clone-heading-5-font-size: $clone-font-scale-h5;
         $clone-heading-5-font-weight: bold;
+// Border Options
+$clone-border-thickness-thin: 1px;
+$clone-border-thickness-thick: .5rem;
+$clone-border-radius-rounded: 5px;
+$clone-border-radius-pill: 20rem;
 // Component Options
     // Cards
     $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5);

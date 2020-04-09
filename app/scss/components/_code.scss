@@ -1,9 +1,4 @@
-// =============================================================================
-
-    // Clone
-    // Code
-
-// =============================================================================
+// Clone: Code Component
 pre {
     background: $clone-code-background;
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
@@ -29,13 +24,7 @@ code {
     color: contrasting-color($clone-code-background, $clone-white, $clone-black);
     font-family: $clone-font-monospace;
     font-size: inherit;
-    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3);
-    @media #{$clone-tablet-portrait} {
-        padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier});
-    }
-    @media #{$clone-desktop-large} {
-        padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
-    }
+    padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3);;
     * {
         font-family: $clone-font-monospace;
         font-size: $clone-default-font-size;

@@ -1,0 +1,139 @@
+// Clone: Sass Maps
+
+// Alignment
+$clone-alignment-map: (
+    "left": left,
+    "center": center,
+    "centre": center,
+    "right": right
+);
+$clone-alignment-value-map: (
+    "left": auto auto auto 0,
+    "center": 0 auto,
+    "centre": 0 auto,
+    "right": auto 0 auto auto
+);
+
+// Borders
+$clone-border-style-list: ("solid", "dashed");
+$clone-border-width-list: ("thick", "thin");
+
+// Color
+$clone-color-map: (
+    "white": $clone-white,
+    "grey": $clone-gray,
+    "gray": $clone-gray,
+    "black": $clone-black,
+    "go": $clone-go,
+    "slow": $clone-slow,
+    "stop": $clone-stop,
+    "c1": $clone-c1,
+    "c2": $clone-c2,
+    "c3": $clone-c3,
+    "c4": $clone-c4,
+    "c5": $clone-c5
+);
+
+// Containers
+$clone-container-size-map: (
+    "small": $clone-small-layout,
+    "medium": $clone-medium-layout,
+    "large": $clone-large-layout,
+    "copy": $clone-small-layout,
+    "form": $clone-medium-layout,
+    "layout": $clone-large-layout,
+    "full": none
+);
+
+// Display
+$clone-display-list: ("block", "inline", "inline-block", "table", "grid", "flex", "none");
+
+// Font Family
+$clone-font-family-map: (
+    "sans": $clone-font-sans,
+    "serif": $clone-font-serif,
+    "script": $clone-font-script,
+    "mono": $clone-font-monospace,
+    "monospace": $clone-font-monospace,
+);
+
+// Font Size
+$clone-font-size-map: (
+    "h1": $clone-font-scale-h1,
+    "h2": $clone-font-scale-h2,
+    "h3": $clone-font-scale-h3,
+    "h4": $clone-font-scale-h4,
+    "h5": $clone-font-scale-h5,
+    "regular": $clone-default-font-size,
+    "normal": $clone-default-font-size,
+    "small": $clone-font-scale-small,
+);
+
+// Media
+$clone-media-query-map: (
+    "base": "screen",
+    "pp": $clone-phone-portrait,
+    "pl": $clone-phone-landscape,
+    "tp": $clone-tablet-portrait,
+    "tl": $clone-tablet-landscape,
+    "ds": $clone-desktop-small,
+    "dm": $clone-desktop-medium,
+    "dl": $clone-desktop-large,
+);
+
+// Opacity
+$clone-opacity-list: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+
+// Orientation
+$clone-orientation-map: (
+    "all": "",
+    "top": "-top",
+    "right": "-right",
+    "bottom": "-bottom",
+    "left": "-left"
+);
+
+// Sides
+$clone-side-map: (
+    "all": "",
+    "top": "-top",
+    "right": "-right",
+    "bottom": "-bottom",
+    "left": "-left",
+    "tb": "",
+    "rl": ""
+);
+
+// Weight
+$clone-weight-map: (
+    "100": 100,
+    "200": 200,
+    "300": 300,
+    "400": 400,
+    "normal": 400,
+    "500": 500,
+    "600": 600,
+    "700": 700,
+    "bold": 700,
+    "800": 800,
+    "900": 900
+);
+
+// Whitespace
+$clone-whitespace-map: (
+    "1": "",
+    ".25": "/ 4",
+    ".5": "/ 2",
+    "2": "* 2",
+    "2.5": "* 2.5",
+    "3": "* 3",
+    "4": "* 4",
+    "5": "* 5"
+);
+$clone-whitespace-map-old: (
+    "normal": "",
+    "quarter": "/ 4",
+    "half": "/ 2",
+    "double": "* 2",
+    "triple": "* 3"
+);

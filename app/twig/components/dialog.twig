@@ -1,6 +1,6 @@
 <!-- Dialog Trigger -->
 <!-- Note the dialog id, as it should match the dialog id of the dialog proper. -->
-<button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="example-dialog-01" type="button">
+<button data-c-button="solid(c1)" data-c-radius="base(rounded)" data-c-dialog-id="example-dialog-01" type="button">
     Open a Dialog
 </button>
 
@@ -9,34 +9,34 @@
 <div data-c-dialog-overlay></div>
 
 <!-- Dialog -->
-<div aria-hidden="true" aria-describedby="example-dialog-01-description" aria-labelledby="example-dialog-01-title" data-c-dialog data-c-dialog-escapable data-c-dialog-id="example-dialog-01" data-c-padding="tb(2)" role="dialog">
-    <div data-c-background="white(100)" data-c-radius="rounded" data-c-margin="bottom(2)">
-        <div data-c-padding="tb(1) right(3) left(1)" data-c-border="bottom(thin, solid, black)">
+<div aria-hidden="true" aria-describedby="example-dialog-01-description" aria-labelledby="example-dialog-01-title" data-c-dialog data-c-dialog-escapable data-c-dialog-id="example-dialog-01" data-c-padding="base(tb, 2)" role="dialog">
+    <div data-c-background-color="base(white, 100)" data-c-radius="base(rounded)" data-c-margin="base(bottom, 2)">
+        <div data-c-padding="base(tb, 1) base(right, 3) base(left, 1)" data-c-border="base(bottom, thin, solid, black)">
             <!-- Title -->
-            <h5 data-c-font-size="h4" id="example-dialog-01-title" data-c-dialog-focus>Dialog Title</h5>
+            <h5 data-c-font-size="base(h4)" id="example-dialog-01-title" data-c-dialog-focus>Dialog Title</h5>
             <!-- Optional Subtitle -->
-            <p data-c-font-size="h5" data-c-margin="top(.5)">Dialog Subtitle</p>
+            <p data-c-font-size="base(h5)" data-c-margin="base(top, .5)">Dialog Subtitle</p>
             <button data-c-dialog-action="close" data-c-dialog-id="example-dialog-01" type="button">
                 <!-- This span can be replaced with an <i> icon font element, or an image. -->
-                <span data-c-font-weight="bold" data-c-font-size="h3">x</span>
+                <span data-c-font-weight="base(bold)" data-c-font-size="base(h3)">x</span>
             </button>
         </div>
-        <div data-c-border="bottom(thin, solid, black)" data-c-padding="all(1)">
+        <div data-c-border="base(bottom, thin, solid, black)" data-c-padding="base(all, 1)">
             <div id="example-dialog-01-description">
                 <!-- Dialog Content -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
             </div>
         </div>
         <!-- Dialog Actions -->
-        <div data-c-padding="all(1)">
+        <div data-c-padding="base(all, 1)">
             <div data-c-grid="gutter(all, 1) middle">
                 <div data-c-grid-item="base(1of2)">
-                    <button data-c-button="outline(slow)" data-c-radius="rounded" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
+                    <button data-c-button="outline(slow)" data-c-radius="base(rounded)" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
                         Cancel
                     </button>
                 </div>
                 <div data-c-grid-item="base(1of2)" data-c-alignment="base(right)">
-                    <button data-c-button="solid(go)" data-c-radius="rounded" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
+                    <button data-c-button="solid(go)" data-c-radius="base(rounded)" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
                         Okay
                     </button>
                 </div>

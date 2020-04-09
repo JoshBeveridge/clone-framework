@@ -1,13 +1,15 @@
 <!-- Alert -->
 <!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. error(toast) -->
-<div data-c-alert="information" data-c-radius="rounded" role="alert">
-    <div data-c-padding="all(.5)">
+<div data-c-alert="information" data-c-radius="base(rounded)" role="alert">
+    <div data-c-padding="base(all, .5)">
         <!-- This optional close trigger will remove the element from the DOM. You'll need to manually add events if you need it to persist or perform further action. -->
-        <button data-c-alert-close-trigger data-c-padding="tb(.25) rl(.5)">
-            <span data-c-font-size="h4" data-c-font-weight="bold">x</span>
+        <button data-c-alert-close-trigger data-c-padding="base(all, .5)">
+            <!-- This span can be replaced with an <i> icon font element, or an image. -->
+            <span data-c-font-size="base(h4)" data-c-font-weight="base(bold)">x</span>
         </button>
         <!-- This title/icon is optional. -->
-        <p data-c-margin="bottom(.5)" data-c-font-weight="bold"><span data-c-font-size="h4" data-c-font-weight="bold" data-c-margin="right(.25)">(!)</span>Sample Title
+        <!-- This span can be replaced with an <i> icon font element, or an image. -->
+        <p data-c-margin="base(bottom, .5)" data-c-font-weight="base(bold)"><span data-c-font-size="base(h4)" data-c-margin="base(right, .25)">(!)</span>Sample Title
         </p>
         <!-- Alert Content -->
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quia maiores in voluptate voluptatibus incidunt ut voluptas inventore earum facere unde veniam perspiciatis illo soluta, doloribus cum illum totam officia.</p>
@@ -16,14 +18,15 @@
 
 <!-- Alert -->
 <!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. error(toast) -->
-<div data-c-alert="warning" data-c-radius="rounded" role="alert">
-    <div data-c-padding="all(.5)">
+<div data-c-alert="warning" data-c-radius="base(rounded)" role="alert">
+    <div data-c-padding="base(all, .5)">
         <!-- This optional close trigger will remove the element from the DOM. You'll need to manually add events if you need it to persist or perform further action. -->
-        <button data-c-alert-close-trigger data-c-padding="tb(.25) rl(.5)">
+        <button data-c-alert-close-trigger data-c-padding="base(all, .5)">
             <i class="material-icons">close</i>
         </button>
         <!-- This title/icon is optional. -->
-        <p data-c-margin="bottom(.5)" data-c-font-weight="bold"><i aria-hidden="true" class="material-icons" data-c-margin="right(.25)">report_problem</i>Sample Title
+        <!-- This span can be replaced with an <i> icon font element, or an image. -->
+        <p data-c-margin="base(bottom, .5)" data-c-font-weight="base(bold)"><i aria-hidden="true" class="material-icons" data-c-margin="base(right, .25)">report_problem</i>Sample Title
         </p>
         <!-- Alert Content -->
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quia maiores in voluptate voluptatibus incidunt ut voluptas inventore earum facere unde veniam perspiciatis illo soluta, doloribus cum illum totam officia.</p>
@@ -32,14 +35,15 @@
 
 <!-- Alert -->
 <!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. error(toast) -->
-<div data-c-alert="error" data-c-radius="rounded" role="alert">
-    <div data-c-padding="all(.5)">
+<div data-c-alert="error" data-c-radius="base(rounded)" role="alert">
+    <div data-c-padding="base(all, .5)">
         <!-- This optional close trigger will remove the element from the DOM. You'll need to manually add events if you need it to persist or perform further action. -->
-        <button data-c-alert-close-trigger data-c-padding="all(.5)">
+        <button data-c-alert-close-trigger data-c-padding="base(all, .5)">
             <img src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Close-icon.png">
         </button>
         <!-- This title/icon is optional. -->
-        <p data-c-margin="bottom(.5)" data-c-font-weight="bold"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Close-icon.png" data-c-margin="right(.25)">Sample Title
+        <!-- This span can be replaced with an <i> icon font element, or an image. -->
+        <p data-c-margin="base(bottom, .5)" data-c-font-weight="base(bold)"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Close-icon.png" data-c-margin="base(right, .25)">Sample Title
         </p>
         <!-- Alert Content -->
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quia maiores in voluptate voluptatibus incidunt ut voluptas inventore earum facere unde veniam perspiciatis illo soluta, doloribus cum illum totam officia.</p>

@@ -28,15 +28,12 @@ $clone-small-layout: 39rem !default;
     $clone-copy-layout: $clone-small-layout;
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
-$clone-margin: 1rem !default;
-$clone-padding: 1rem !default;
+$clone-margin: 1.25vw !default;
+$clone-margin-old: 1rem !default;
+$clone-padding: 1.25vw !default;
+$clone-padding-old: 1rem !default;
     // Calculation Variables
     $clone-whitespace-multiplier: 1.1 !default;
-    $clone-ws-tp: #{$clone-whitespace-multiplier} !default; // 1.4rem
-    $clone-ws-tl: #{$clone-ws-tp} * #{$clone-whitespace-multiplier} !default; // 1.68rem
-    $clone-ws-ds: #{$clone-ws-tl} * #{$clone-whitespace-multiplier} !default; // 2.016rem
-    $clone-ws-dm: #{$clone-ws-ds} * #{$clone-whitespace-multiplier} !default; // 2.4192rem
-    $clone-ws-dl: #{$clone-ws-dm} * #{$clone-whitespace-multiplier} !default; // 2.90304rem
 // Grid Variables
 $clone-grid-columns: 12 !default;
 // Main Color Variables
@@ -150,6 +147,11 @@ $clone-grid-columns: 12 !default;
             // Alternatives
             $clone-heading-5-border-colour: $clone-heading-1-border-color;
             $clone-heading-5-colour: $clone-heading-1-color;
+// Border Options
+$clone-border-thickness-thin: 1px !default;
+$clone-border-thickness-thick: .5rem !default;
+$clone-border-radius-rounded: 5px !default;
+$clone-border-radius-pill: 20rem !default;
 // Component Options
     // Cards
     $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;

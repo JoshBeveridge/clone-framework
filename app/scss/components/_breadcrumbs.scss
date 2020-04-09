@@ -1,43 +1,29 @@
-// =============================================================================
-
-    // Clone
-    // Breadcrumbs
-
-// =============================================================================
-
+// Clone: Breadcrumb Component
 [data-c-breadcrumbs] {
-
     ol,
     ul {
         margin: -.5rem;
         list-style: none;
         padding: 0;
-
         li {
             display: inline-block;
             line-height: calc(#{$clone-line-height} * 1.5);
             margin: 0;
-
             a {
                 margin: .5rem;
                 transition: color .2s ease;
-
-                // States ------------------------------------------------------
-
-                    &[aria-current="page"] {
-                        font-weight: 700;
-                        pointer-events: none;
-                        text-decoration: none;
-                    }
-
-                    &:hover,
-                    &:focus {
-                        color: $clone-focus-color;
-                        transition: color .2s ease;
-                    }
-
+                // States
+                &[aria-current="page"] {
+                    font-weight: 700;
+                    pointer-events: none;
+                    text-decoration: none;
+                }
+                &:hover,
+                &:focus {
+                    color: $clone-focus-color;
+                    transition: color .2s ease;
+                }
             }
-
             p[aria-current="page"], 
             span[aria-current="page"] {
                 font-weight: 700;
@@ -45,29 +31,20 @@
                 pointer-events: none;
                 text-decoration: none;
             }
-
             i {
                 vertical-align: middle;
             }
-
-            // States ----------------------------------------------------------
-
-                &:last-child {
-
-                    a {
-                        font-weight: 700;
-                        pointer-events: none;
-                        text-decoration: none;
-                    }
-
-                    i {
-                        display: none;
-                    }
-
+            // States
+            &:last-child {
+                a {
+                    font-weight: 700;
+                    pointer-events: none;
+                    text-decoration: none;
                 }
-
+                i {
+                    display: none;
+                }
+            }
         }
-
     }
-
 }

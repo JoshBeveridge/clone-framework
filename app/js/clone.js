@@ -75,89 +75,6 @@ $(document).ready(function () {
         });
     });
 
-    // Accordion Handlers ======================================================
-    
-        // Old
-        function accordionTriggerOld(trigger) {
-            var object = clone("accordion", "accordion");
-            var content = clone("accordion", "content");
-            if ($(trigger).parent(object).hasClass("active")) {
-                $(trigger).attr("aria-expanded", "false");
-                $(trigger).parent(object).removeClass("active");
-                $(trigger).parent(object).find(content).attr("aria-hidden", "true");
-            }
-            else {
-                $(trigger).attr("aria-expanded", "true");
-                $(trigger).parent(object).addClass("active");
-                $(trigger).parent(object).find(content).attr("aria-hidden", "false");
-                var siblingContent = $(trigger).siblings(content);
-                var focusableItems = focusable(siblingContent);
-                var firstFocusableItem = $(focusableItems).first();
-                if (focusableItems.length != 0) {
-                    firstFocusableItem[0].focus();
-                }
-            }
-        }
-
-        $(document).on("click", clone("accordion", "trigger"), function (e) {
-            e.preventDefault();
-            accordionTriggerOld(this);
-        });
-
-        // New (Empty Attribute)
-        function accordionTrigger(trigger) {
-            var accordion = "[data-c-accordion='']";
-            var content = "[data-c-accordion-content]";
-            if ($(trigger).parent(accordion).hasClass("active")) {
-                $(trigger).attr("aria-expanded", "false");
-                $(trigger).parent(accordion).removeClass("active");
-                $(trigger).parent(accordion).find(content).attr("aria-hidden", "true");
-            }
-            else {
-                $(trigger).attr("aria-expanded", "true");
-                $(trigger).parent(accordion).addClass("active");
-                $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
-                var siblingContent = $(trigger).siblings(content);
-                var focusableItems = focusable(siblingContent);
-                var firstFocusableItem = $(focusableItems).first();
-                if (focusableItems.length != 0) {
-                    firstFocusableItem[0].focus();
-                }
-            }
-        }
-
-        $(document).on("click", "[data-c-accordion-trigger]", function (e) {
-            e.preventDefault();
-            accordionTrigger(this);
-        });
-
-        // New (React Fix)
-        function accordionTriggerReact(trigger) {
-            var accordion = "[data-c-accordion='true']";
-            var content = "[data-c-accordion-content]";
-            if ($(trigger).parent(accordion).hasClass("active")) {
-                $(trigger).attr("aria-expanded", "false");
-                $(trigger).parent(accordion).removeClass("active");
-                $(trigger).parent(accordion).find(content).attr("aria-hidden", "true");
-            }
-            else {
-                $(trigger).attr("aria-expanded", "true");
-                $(trigger).parent(accordion).addClass("active");
-                $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
-                var siblingContent = $(trigger).siblings(content);
-                var focusableItems = focusable(siblingContent);
-                var firstFocusableItem = $(focusableItems).first();
-                if (focusableItems.length != 0) {
-                    firstFocusableItem[0].focus();
-                }
-            }
-        }
-
-        $(document).on("click", "[data-c-accordion-trigger]", function (e) {
-            e.preventDefault();
-            accordionTriggerReact(this);
-        });
-
     // Alert Handlers ==========================================================
     
     // Old
@@ -505,3 +422,28 @@ $(document).ready(function () {
     });
 
 });
+
+// Accordions
+import {accordionTriggerOld, accordionTrigger, accordionTriggerReact} from './components/accordions/accordions.js';
+
+    // Old Syntax
+    $(document).ready(function () {
+        $(document).on("click", "[data-c-accordion='trigger']", function (e) {
+            e.preventDefault();
+            accordionTriggerOld(this);
+        });
+    });
+
+    // New/React Syntax
+    $(document).ready(function () {
+        $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+            e.preventDefault();
+            accordionTrigger(this);
+        });
+    });
+    $(document).ready(function () {
+        $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+            e.preventDefault();
+            accordionTriggerReact(this);
+        });
+    });

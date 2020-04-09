@@ -1,0 +1,337 @@
+// Clone: Margin Property
+
+// Deprecated Syntax
+
+    // Vars
+    $clone-ws-base: #{$clone-whitespace-multiplier} !default;
+    $clone-ws-pp: #{$clone-whitespace-multiplier} !default;
+    $clone-ws-pl: #{$clone-whitespace-multiplier} !default;
+    $clone-ws-tp: #{$clone-whitespace-multiplier} !default;
+    $clone-ws-tl: #{$clone-ws-tp} * #{$clone-whitespace-multiplier} !default;
+    $clone-ws-ds: #{$clone-ws-tl} * #{$clone-whitespace-multiplier} !default;
+    $clone-ws-dm: #{$clone-ws-ds} * #{$clone-whitespace-multiplier} !default;
+    $clone-ws-dl: #{$clone-ws-dm} * #{$clone-whitespace-multiplier} !default;
+        
+    // Old Syntax ----------------------------------------------------------
+
+        // Shorthand ([data-c-margin=normal]) ------------------------------
+        // Adds a whitespace shorthand that defaults to all sides of the element.
+        @each $wKey, $wValue in $clone-whitespace-map-old {
+            [data-c-margin="#{$wKey}"] {
+                margin: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-margin=top]) ---------------------------------
+        // Adds an orientation shorthand that defaults to the normal whitespace value.
+        @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-margin="#{$oKey}"] {
+                margin#{$oValue}: #{$clone-margin-old};
+                @media #{$clone-tablet-portrait} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-margin="tb(normal)" --------------------------
+        // Adds a top/bottom and left/right shorthand.
+        @each $wKey, $wValue in $clone-whitespace-map-old {
+            // Top/Bottom
+            [data-c-margin*="tb(#{$wKey})"],
+            [data-c-margin*="bt(#{$wKey})"] {
+                margin-top: calc(#{$clone-margin-old} #{$wValue});
+                margin-bottom: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+            // Right/Left
+            [data-c-margin*="rl(#{$wKey})"],
+            [data-c-margin*="lr(#{$wKey})"] {
+                margin-right: calc(#{$clone-margin-old} #{$wValue});
+                margin-left: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Margin Syntax ---------------------------------------------------
+        @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                    margin#{$oValue}: calc(#{$clone-margin-old} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+        }
+
+    // New Syntax ----------------------------------------------------------
+
+        // Shorthand ([data-c-margin=normal]) ------------------------------
+        // Adds a whitespace shorthand that defaults to all sides of the element.
+        @each $wKey, $wValue in $clone-whitespace-map {
+            [data-c-margin="#{$wKey}"] {
+                margin: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-margin=top]) ---------------------------------
+        // Adds an orientation shorthand that defaults to the normal whitespace value.
+        @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-margin="#{$oKey}"] {
+                margin#{$oValue}: #{$clone-margin-old};
+                @media #{$clone-tablet-portrait} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin#{$oValue}: calc(#{$clone-margin-old} * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-margin="tb(normal)" --------------------------
+        // Adds a top/bottom and left/right shorthand.
+        @each $wKey, $wValue in $clone-whitespace-map {
+            // Top/Bottom
+            [data-c-margin*="tb(#{$wKey})"],
+            [data-c-margin*="bt(#{$wKey})"] {
+                margin-top: calc(#{$clone-margin-old} #{$wValue});
+                margin-bottom: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-top: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    margin-bottom: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+            // Right/Left
+            [data-c-margin*="rl(#{$wKey})"],
+            [data-c-margin*="lr(#{$wKey})"] {
+                margin-right: calc(#{$clone-margin-old} #{$wValue});
+                margin-left: calc(#{$clone-margin-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-right: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    margin-left: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Margin Syntax ---------------------------------------------------
+        @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map {
+                [data-c-margin*="#{$oKey}(#{$wKey})"] {
+                    margin#{$oValue}: calc(#{$clone-margin-old} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin#{$oValue}: calc((#{$clone-margin-old} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+        }
+
+    // Auto Margins --------------------------------------------------------
+    [data-c-margin*="right(auto)"] {
+        margin-right: auto;
+    }
+
+    [data-c-margin*="left(auto)"] {
+        margin-left: auto;
+    }
+
+    // Right/Left Auto
+    [data-c-margin*="rl(auto)"],
+    [data-c-margin*="lr(auto)"] {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+// 3.0 Syntax
+@each $mediaKey, $mediaValue in $clone-media-query-map {
+    @media #{$mediaValue} {
+        @each $sideKey, $sideValue in $clone-side-map {
+            @each $whitespaceKey, $whitespaceValue in $clone-whitespace-map {
+                [data-c-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
+                    @if $sideKey == "all" {
+                        margin: calc(#{$clone-margin} #{$whitespaceValue});
+                    }
+                    @else if $sideKey == "tb" {
+                        margin-top: calc(#{$clone-margin} #{$whitespaceValue});
+                        margin-bottom: calc(#{$clone-margin} #{$whitespaceValue});
+                    }
+                    @else if $sideKey == "rl" {
+                        margin-right: calc(#{$clone-margin} #{$whitespaceValue});
+                        margin-left: calc(#{$clone-margin} #{$whitespaceValue});
+                    }
+                    @else {
+                        margin#{$sideValue}: calc(#{$clone-margin} #{$whitespaceValue});
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Auto Margins
+@each $mediaKey, $mediaValue in $clone-media-query-map {
+    @media #{$mediaValue} {
+        @each $sideKey, $sideValue in $clone-side-map {
+            [data-c-margin*="#{$mediaKey}(#{$sideKey}, auto)"] {
+                @if $sideKey == "all" {
+                    margin: auto;
+                }
+                @else if $sideKey == "tb" {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                @else if $sideKey == "rl" {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                @else {
+                    margin#{$sideValue}: auto;
+                }
+            }
+        }
+    }
+}

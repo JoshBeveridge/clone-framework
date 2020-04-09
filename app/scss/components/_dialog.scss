@@ -1,10 +1,4 @@
-// =============================================================================
-
-    // Clone
-    // Dialogs
-
-// =============================================================================
-
+// Clone: Dialog Component
 [data-c-dialog-overlay] {
     background: rgba(0, 0, 0, .9);
     height: 100vh;
@@ -17,13 +11,11 @@
     width: 100vw;
     z-index: 100000000;
 }
-
 [data-c-dialog-overlay*="active"] {
     opacity: 1;
     transform: translate(0, 0);
     transition: transform 0s linear, opacity .2s ease;
 }
-
 [data-c-dialog] {
     height: 100vh;
     opacity: 0;
@@ -32,7 +24,6 @@
     transition: all 0s ease;
     width: 100vw;
     z-index: 1000000000;
-
     >div {
         margin-top: 0;
         margin-right: auto;
@@ -81,36 +72,38 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
-                    // States ------------------------------------------------------
-                    &:hover {
-                        color: $clone-stop;
-                        transition: color .3s ease;
-                    }
-                    &:focus {
-                        border: solid 3px $clone-focus-color;
-                        transition: border .2s ease;
-                    }
+
+                // States
+                &:hover {
+                    color: $clone-stop;
+                    transition: color .3s ease;
+                }
+                &:focus {
+                    border: solid 3px $clone-focus-color;
+                    transition: border .2s ease;
+                }
+
             }
         }
     }
 
-        // States ------------------------------------------------------------------
-        &[data-c-dialog="active--contained"] {
-            height: auto;
-            opacity: 1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: transform 0s linear, opacity .2s ease .2s;
-        }
-        &[data-c-dialog="active--overflowing"] {
-            height: 100vh;
-            opacity: 1;
-            overflow: auto;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            transition: transform 0s linear, opacity .2s ease .2s;
-        }
+    // States
+    &[data-c-dialog="active--contained"] {
+        height: auto;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0s linear, opacity .2s ease .2s;
+    }
+    &[data-c-dialog="active--overflowing"] {
+        height: 100vh;
+        opacity: 1;
+        overflow: auto;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: transform 0s linear, opacity .2s ease .2s;
+    }
 
 }

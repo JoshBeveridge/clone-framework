@@ -1,0 +1,25 @@
+// Clone: Radius Property
+
+// Deprecated Syntax
+[data-c-radius="rounded"] {
+    border-radius: 5px;
+    overflow: hidden;
+}
+[data-c-radius="pill"] {
+    border-radius: 20rem;
+    overflow: hidden;
+}
+
+// 3.0 Syntax
+@each $mediaKey, $mediaValue in $clone-media-query-map {
+    @media #{$mediaValue} {
+        [data-c-radius="#{$mediaKey}(rounded)"] {
+            border-radius: $clone-border-radius-rounded;
+            overflow: hidden;
+        }
+        [data-c-radius="#{$mediaKey}(pill)"] {
+            border-radius: $clone-border-radius-pill;
+            overflow: hidden;
+        }
+    }
+}

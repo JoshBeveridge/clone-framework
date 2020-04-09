@@ -12,13 +12,16 @@
     </head>
     <body data-clone data-c-menu-style="topbar left">
         {# {% include "tests/menu.twig" %} #}
-        <div data-c-container="copy(center)" data-c-padding="top(4) bottom(4)" data-c-alignment="base(center)" data-c-colour="black">
-            <p>Looking for documentation? Check out <a href="https://designwithclone.ca">Clone's Docs</a> for more information.</p>
+        <div data-c-padding="base(tb, 1) tl(tb, 4)" data-c-alignment="base(center)" data-c-color="base(black)">
+            <div data-c-container="base(full, center)">
+                <p>Looking for documentation? Check out <a href="https://designwithclone.ca">Clone's Docs</a> for more information.</p>
+            </div>
         </div>
-        <div data-c-border="top(thin, solid, gray)" data-c-padding="tb(4)">
-            <div data-c-container="medium(center)">
+        <div data-c-border="base(top, thin, solid, gray)" data-c-padding="base(tb, 4)">
+            <div data-c-container="base(medium, center)">
                 {# {% include "tests/alert.twig" %} #}
-                {# {% include "tests/accordion.twig" %} #}
+                {% include "tests/accordion.twig" %}
+                {# {% include "components/accordion.twig" %} #}
                 {# {% include "tests/dialog.twig" %} #}
 
                 {# {% include "components/input/text.twig" %} #}
@@ -33,6 +36,6 @@
             </div>
             {# {% include "tests/container.twig" %} #}
         </div>
-        <script src="js/clone.js"></script>
+        <script src="js/clone.js" type="module"></script>
     </body>
 </html>

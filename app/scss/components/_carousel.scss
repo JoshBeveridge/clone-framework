@@ -1,13 +1,6 @@
-// =============================================================================
-
-    // Clone
-    // Carousels
-
-// =============================================================================
-
+// Clone: Carousel Component (Glider.js)
 [data-c-carousel-wrapper] {
     .slick-list {
-        // border-radius: 5px;
         .slick-track {
             display: flex;
             .slick-slide {
@@ -17,10 +10,6 @@
                 height: auto;
             }
         }
-    }
-    .slick-slide .slick-list .slick-track >div {
-        // margin-right: 10vw;
-        // margin-left: 10vw;
     }
     [data-c-carousel-arrow] {
         background: rgba($clone-black, .5);
@@ -45,23 +34,22 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-            // States ----------------------------------------------------------
-            &:hover,
-            &:focus {
-                background: rgba($clone-black, .8);
-                transition: all .2s ease;
-            }
 
-            // Types -----------------------------------------------------------
-            &[data-c-carousel-arrow="prev"] {
-                // border-radius: 5px 0 0 5px;
-                left: 0;
-            }
+        // States
+        &:hover,
+        &:focus {
+            background: rgba($clone-black, .8);
+            transition: all .2s ease;
+        }
 
-            &[data-c-carousel-arrow="next"] {
-                // border-radius: 0 5px 5px 0;
-                right: 0;
-            }
+        // Types
+        &[data-c-carousel-arrow="prev"] {
+            left: 0;
+        }
+        &[data-c-carousel-arrow="next"] {
+            right: 0;
+        }
+
     }
     [data-c-carousel-dots] {
         list-style: none;
@@ -82,13 +70,15 @@
             cursor: pointer;
             height: 1.5rem;
             width: 1.5rem;
-            // States ----------------------------------------------------------
+
+            // States 
             &.active,
             &:hover,
             &:focus {
                 background: $clone-carousel-dot-active-color;
                 transition: all .2s ease;
             }
+            
         }
     }
 }

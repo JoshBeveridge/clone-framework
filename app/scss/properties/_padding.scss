@@ -1,0 +1,285 @@
+// Clone: Padding Property
+
+    // Old Syntax ----------------------------------------------------------
+
+        // Shorthand ([data-c-padding=normal]) -----------------------------
+        // Adds a whitespace shorthand that defaults to all sides of the element.
+        @each $wKey, $wValue in $clone-whitespace-map-old {
+            [data-c-padding="#{$wKey}"] {
+                padding: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-padding=top]) --------------------------------
+        // Adds an orientation shorthand that defaults to the normal whitespace value.
+        @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-padding="#{$oKey}"] {
+                padding#{$oValue}: #{$clone-padding-old};
+                @media #{$clone-tablet-portrait} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-padding="tb(normal)" -------------------------
+        // Adds a top/bottom and left/right shorthand.
+        @each $wKey, $wValue in $clone-whitespace-map-old {
+            // Top/Bottom
+            [data-c-padding*="tb(#{$wKey})"],
+            [data-c-padding*="bt(#{$wKey})"] {
+                padding-top: calc(#{$clone-padding-old} #{$wValue});
+                padding-bottom: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+            // Right/Left
+            [data-c-padding*="rl(#{$wKey})"],
+            [data-c-padding*="lr(#{$wKey})"] {
+                padding-right: calc(#{$clone-padding-old} #{$wValue});
+                padding-left: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Padding Syntax --------------------------------------------------
+        @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map-old {
+                [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                    padding#{$oValue}: calc(#{$clone-padding-old} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+        }
+
+    // New Syntax ----------------------------------------------------------
+
+        // Shorthand ([data-c-padding=normal]) ---------------------------------
+        // Adds a whitespace shorthand that defaults to all sides of the element.
+        @each $wKey, $wValue in $clone-whitespace-map {
+            [data-c-padding="#{$wKey}"] {
+                padding: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-padding=top]) ------------------------------------
+        // Adds an orientation shorthand that defaults to the normal whitespace value.
+        @each $oKey, $oValue in $clone-orientation-map {
+            [data-c-padding="#{$oKey}"] {
+                padding#{$oValue}: #{$clone-padding-old};
+                @media #{$clone-tablet-portrait} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding#{$oValue}: calc(#{$clone-padding-old} * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Shorthand ([data-c-padding="tb(normal)" -----------------------------
+        // Adds a top/bottom and left/right shorthand.
+        @each $wKey, $wValue in $clone-whitespace-map {
+            // Top/Bottom
+            [data-c-padding*="tb(#{$wKey})"],
+            [data-c-padding*="bt(#{$wKey})"] {
+                padding-top: calc(#{$clone-padding-old} #{$wValue});
+                padding-bottom: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-top: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    padding-bottom: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+            // Right/Left
+            [data-c-padding*="rl(#{$wKey})"],
+            [data-c-padding*="lr(#{$wKey})"] {
+                padding-right: calc(#{$clone-padding-old} #{$wValue});
+                padding-left: calc(#{$clone-padding-old} #{$wValue});
+                @media #{$clone-tablet-portrait} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                }
+                @media #{$clone-tablet-landscape} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                }
+                @media #{$clone-desktop-small} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                }
+                @media #{$clone-desktop-medium} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                }
+                @media #{$clone-desktop-large} {
+                    padding-right: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    padding-left: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                }
+            }
+        }
+
+        // Padding Syntax ------------------------------------------------------
+        @each $oKey, $oValue in $clone-orientation-map {
+            @each $wKey, $wValue in $clone-whitespace-map {
+                [data-c-padding*="#{$oKey}(#{$wKey})"] {
+                    padding#{$oValue}: calc(#{$clone-padding-old} #{$wValue});
+                    @media #{$clone-tablet-portrait} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tp});
+                    }
+                    @media #{$clone-tablet-landscape} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-tl});
+                    }
+                    @media #{$clone-desktop-small} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-ds});
+                    }
+                    @media #{$clone-desktop-medium} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dm});
+                    }
+                    @media #{$clone-desktop-large} {
+                        padding#{$oValue}: calc((#{$clone-padding-old} #{$wValue}) * #{$clone-ws-dl});
+                    }
+                }
+            }
+        }
+
+// 3.0 Syntax
+@each $mediaKey, $mediaValue in $clone-media-query-map {
+    @media #{$mediaValue} {
+        @each $sideKey, $sideValue in $clone-side-map {
+            @each $whitespaceKey, $whitespaceValue in $clone-whitespace-map {
+                [data-c-padding*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
+                    @if $sideKey == "all" {
+                        padding: calc(#{$clone-padding} #{$whitespaceValue});
+                    }
+                    @else if $sideKey == "tb" {
+                        padding-top: calc(#{$clone-padding} #{$whitespaceValue});
+                        padding-bottom: calc(#{$clone-padding} #{$whitespaceValue});
+                    }
+                    @else if $sideKey == "rl" {
+                        padding-right: calc(#{$clone-padding} #{$whitespaceValue});
+                        padding-left: calc(#{$clone-padding} #{$whitespaceValue});
+                    }
+                    @else {
+                        padding#{$sideValue}: calc(#{$clone-padding} #{$whitespaceValue});
+                    }
+                }
+            }
+        }
+    }
+}
