@@ -1,17 +1,8 @@
-// =============================================================================
-
-  // Clone
-  // Authored by Josh Beveridge
-
-  // "gulp"
-  // "gulp build"
-
-// =============================================================================
+// Clone / Gulpfile
 
 "use strict";
 
-// Requirements ================================================================
-const gulp = require('gulp');
+// Requirements
 const { series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 const browsersync = require('browser-sync').create();
@@ -25,7 +16,7 @@ const twig = require('gulp-twig');
 const gzip = require('gulp-gzip');
 const rename = require('gulp-rename');
 
-// Tasks =======================================================================
+// Development Scripts
 
     // Browser Sync
     function browserSync(done) {
@@ -36,8 +27,6 @@ const rename = require('gulp-rename');
         });
         done();
     }
-
-    // BrowserSync Reload
     function browserSyncReload(done) {
         return src('cache/*.html')
         .pipe(browsersync.reload({
@@ -45,63 +34,78 @@ const rename = require('gulp-rename');
         }));
     }
 
-    // Twig
-    function template() {
-        return src('app/twig/*.twig')
+    // Compile Twig
+    function compileTwig() {
+        return src('app/index.twig')
         .pipe(twig())
         .pipe(dest('cache'));
     }
 
-    // Slick
-    // function moveSlickJS() {
-    //     return src('node_modules/slick-carousel/slick/slick.min.js')
-    //     .pipe(dest('app/js'));
-    // }
-
-    // function moveSlickCSS() {
-    //     return src('node_modules/slick-carousel/slick/slick.scss')
-    //     .pipe(dest('app/scss'));
-    // }
-
-    // Move JavaScript
-    function concatScripts() {
+    // Concatenate JavaScript
+    function concatenateJavaScript() {
         return src([
-            'app/js/cash.min.js',
-            'app/js/glider.min.js',
-            'app/js/*.js'
+            'app/core/cash.min.js',
+            'app/components/carousels/glider.min.js',
+            'app/core/**/*.js',
+            'app/components/**/*.js',
+            'app/properties/**/*.js',
+            'app/patterns/**/*.js'
         ])
         .pipe(concat('clone.js'))
         .pipe(dest('cache/js'));
     }
 
-    function moveCoreScripts() {
+    // Compile SCSS
+    function compileSCSS() {
         return src([
-            'app/core/*.js'
+            'app/clone.scss',
+            'app/clone-gridless.scss'
         ])
-        .pipe(dest('cache/js/core'));
-    }
-
-    function moveComponentScripts() {
-        return src([
-            'app/components/**/*.js'
-        ])
-        .pipe(dest('cache/js/components'));
-    }
-
-    // Sass
-    function compileCSS() {
-        return src('app/scss/**/*.scss')
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))
         .pipe(dest('cache/css'));
     }
 
-    // Minification
-    function distCacheHTML() {
+    // Refresh Cache
+    function refreshCache() {
+        return del('cache/**/*')
+    }
+
+    // Development Series
+    const compile = series(compileTwig, concatenateJavaScript, compileSCSS);
+
+    // Watch
+    function watchFiles() {
+        watch('app/**/*', series(compile, browserSyncReload));
+    }
+
+    // Exports
+
+        // gulp
+        exports.default = series(refreshCache, compile, parallel(browserSync, watchFiles));
+
+        // gulp watch
+        exports.watch = series(refreshCache, compile, parallel(browserSync, watchFiles));
+
+// Production Scripts
+
+    // Move HTML
+    function moveHTML() {
         return src('cache/**/*.html')
         .pipe(dest('dist'));
     }
-    function distCacheJS() {
+
+    // Move Import and Variables
+    function moveVariables() {
+        return src([
+            'app/core/import.scss',
+            'app/core/variables.scss'
+        ])
+        .pipe(dest('dist'));
+    }
+
+    // Compress JavaScript
+    function compressJavaScript() {
         return src('cache/js/*.js')
         .pipe(uglify())
         .pipe(rename(function(path) {
@@ -109,7 +113,16 @@ const rename = require('gulp-rename');
         }))
         .pipe(dest('dist/js'));
     }
-    function distCacheCSS() {
+
+    // GZIP JavaScript
+    function gzipJavaScript() {
+        return src('dist/js/*.js')
+        .pipe(gzip())
+        .pipe(dest('dist/js/gzip'))
+    }
+
+    // Compress CSS
+    function compressCSS() {
         return src('cache/css/*.css')
         .pipe(postcss([cssnano()]))
         .pipe(rename(function(path) {
@@ -118,44 +131,22 @@ const rename = require('gulp-rename');
         .pipe(dest('dist/css'));
     }
 
-    // Compression
-    function compressCSS() {
+    // GZIP CSS
+    function gzipCSS() {
         return src('dist/css/*.css')
         .pipe(gzip())
         .pipe(dest('dist/css/gzip'))
     }
 
-    function compressJS() {
-        return src('dist/js/*.js')
-        .pipe(gzip())
-        .pipe(dest('dist/js/gzip'))
-    }
-
-    // Cache Removal
-    function cleanCache() {
-        return del('cache/**/*')
-    }
-
-    // Dist Removal
-    function cleanDist() {
+    // Refresh Production
+    function refreshProduction() {
         return del('dist');
     }
 
-    // Compile
-    const devCompile = series(template, concatScripts, moveCoreScripts, moveComponentScripts, compileCSS);
-    const distCompile = series(cleanCache, template, concatScripts, compileCSS);
+    // Production Series
+    const prepareDist = series(refreshCache, compileTwig, concatenateJavaScript, compileSCSS, moveHTML, moveVariables, compressJavaScript, compressCSS, gzipJavaScript, gzipCSS);
 
-    // Dist
-    const dist = series(distCacheHTML, distCacheJS, distCacheCSS, compressCSS, compressJS);
+    // Exports
 
-    // Watch
-    function watchFiles() {
-        watch('app/scss/**/*.scss', series(devCompile, browserSyncReload));
-        watch('app/twig/**/*.twig', series(devCompile, browserSyncReload));
-        watch('app/js/*.js', series(devCompile, browserSyncReload));
-    }
-
-    // Export
-    exports.build = series(cleanDist, distCompile, dist);
-    exports.watch = series(cleanCache, devCompile, parallel(browserSync, watchFiles));
-    exports.default = series(cleanCache, devCompile, parallel(browserSync, watchFiles));
+        // gulp build
+        exports.build = series(refreshProduction, prepareDist);

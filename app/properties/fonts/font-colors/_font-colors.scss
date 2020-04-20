@@ -1,0 +1,23 @@
+// Clone / Properties / Fonts / Font Colors
+
+[data-clone] {
+
+    // Deprecated Syntax
+    @each $key, $value in $clone-color-map {
+        [data-c-color="#{$key}"],
+        [data-c-colour="#{$key}"] {color: $value;}
+    };
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $colorKey, $colorValue in $clone-color-map {
+                [data-c-color*="#{$mediaKey}(#{$colorKey})"],
+                [data-c-colour*="#{$mediaKey}(#{$colorKey})"] {
+                    color: $colorValue;
+                }
+            }
+        }
+    }
+
+}

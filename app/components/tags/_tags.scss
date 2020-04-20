@@ -1,0 +1,41 @@
+// Clone / Components / Tags
+
+[data-clone] {
+
+    @each $key, $value in $clone-color-map {
+        [data-c-tag="#{$key}"] {
+            background: $value;
+            color: contrasting-color($value, $clone-white, $clone-black);
+            display: inline-block;
+            line-height: $clone-line-height;
+            padding: calc(#{$clone-padding} / 4) calc(#{$clone-padding} / 2);
+            vertical-align: middle;
+            @media (hover: hover) {
+                a:hover {
+                    color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
+                }
+            }
+        }
+        a[data-c-tag="#{$key}"] {
+            @media (hover: hover) {
+                &:hover {
+                    color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
+                }
+            }
+        }
+        // IE 11 Hover Support
+        &[id*="Trident/7.0"] {
+            [data-c-tag="#{$key}"] {
+                a:hover {
+                    color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
+                }
+            }
+            a[data-c-tag="#{$key}"] {
+                &:hover {
+                    color: contrasting-color($value, lighten($clone-hover-color, 10%), darken($clone-hover-color, 10%)) !important;
+                }
+            }
+        }
+    };
+
+}

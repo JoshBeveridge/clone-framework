@@ -1,37 +1,38 @@
-// Clone / Components / Accordions / JavaScript
-
-import {focusable} from '../../core/clone.js';
+// Clone / Components / Accordions
 
 // Old
-function cloneAccordionTriggerOld(trigger) {
-    let object = "[data-c-accordion='trigger']";
-    let content = "[data-c-accordion='content']";
-    if ($(trigger).parent(object).hasClass("active")) {
+function accordionTriggerOld(trigger) {
+    var accordion = "[data-c-accordion='trigger']";
+    var content = "[data-c-accordion='content']";
+    if ($(trigger).parent(accordion).hasClass("active")) {
         $(trigger).attr("aria-expanded", "false");
-        $(trigger).parent(object).removeClass("active");
-        $(trigger).parent(object).find(content).attr("aria-hidden", "true");
+        $(trigger).parent(accordion).removeClass("active");
+        $(trigger).parent(accordion).find(content).attr("aria-hidden", "true");
     }
     else {
         $(trigger).attr("aria-expanded", "true");
-        $(trigger).parent(object).addClass("active");
-        $(trigger).parent(object).find(content).attr("aria-hidden", "false");
-        let siblingContent = $(trigger).siblings(content);
-        let focusableItems = focusable(siblingContent);
-        let firstFocusableItem = $(focusableItems).first();
+        $(trigger).parent(accordion).addClass("active");
+        $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
+        var siblingContent = $(trigger).siblings(content);
+        var focusableItems = focusable(siblingContent);
+        var firstFocusableItem = $(focusableItems).first();
         if (focusableItems.length != 0) {
             firstFocusableItem[0].focus();
         }
     }
 }
 
-export function accordionTriggerOld(trigger) {
-    cloneAccordionTriggerOld(trigger);
-};
+$(document).ready(function () {
+    $(document).on("click", "[data-c-accordion='trigger']", function (e) {
+        e.preventDefault();
+        accordionTriggerOld(this);
+    });
+});
 
 // New (Empty Attribute)
-function cloneAccordionTrigger(trigger) {
-    let accordion = "[data-c-accordion='']";
-    let content = "[data-c-accordion-content]";
+function accordionTrigger(trigger) {
+    var accordion = "[data-c-accordion='']";
+    var content = "[data-c-accordion-content]";
     if ($(trigger).parent(accordion).hasClass("active")) {
         $(trigger).attr("aria-expanded", "false");
         $(trigger).parent(accordion).removeClass("active");
@@ -41,23 +42,26 @@ function cloneAccordionTrigger(trigger) {
         $(trigger).attr("aria-expanded", "true");
         $(trigger).parent(accordion).addClass("active");
         $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
-        let siblingContent = $(trigger).siblings(content);
-        let focusableItems = focusable(siblingContent);
-        let firstFocusableItem = $(focusableItems).first();
+        var siblingContent = $(trigger).siblings(content);
+        var focusableItems = focusable(siblingContent);
+        var firstFocusableItem = $(focusableItems).first();
         if (focusableItems.length != 0) {
             firstFocusableItem[0].focus();
         }
     }
 }
 
-export function accordionTrigger(trigger) {
-    cloneAccordionTrigger(trigger);
-};
+$(document).ready(function () {
+    $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+        e.preventDefault();
+        accordionTrigger(this);
+    });
+});
 
 // New (React Fix)
-function cloneAccordionTriggerReact(trigger) {
-    let accordion = "[data-c-accordion='true']";
-    let content = "[data-c-accordion-content]";
+function accordionTriggerReact(trigger) {
+    var accordion = "[data-c-accordion='true']";
+    var content = "[data-c-accordion-content]";
     if ($(trigger).parent(accordion).hasClass("active")) {
         $(trigger).attr("aria-expanded", "false");
         $(trigger).parent(accordion).removeClass("active");
@@ -67,15 +71,18 @@ function cloneAccordionTriggerReact(trigger) {
         $(trigger).attr("aria-expanded", "true");
         $(trigger).parent(accordion).addClass("active");
         $(trigger).parent(accordion).find(content).attr("aria-hidden", "false");
-        let siblingContent = $(trigger).siblings(content);
-        let focusableItems = focusable(siblingContent);
-        let firstFocusableItem = $(focusableItems).first();
+        var siblingContent = $(trigger).siblings(content);
+        var focusableItems = focusable(siblingContent);
+        var firstFocusableItem = $(focusableItems).first();
         if (focusableItems.length != 0) {
             firstFocusableItem[0].focus();
         }
     }
 }
 
-export function accordionTriggerReact(trigger) {
-    cloneAccordionTriggerReact(trigger);
-};
+$(document).ready(function () {
+    $(document).on("click", "[data-c-accordion-trigger]", function (e) {
+        e.preventDefault();
+        accordionTriggerReact(this);
+    });
+});

@@ -1,0 +1,36 @@
+// Clone / Components / Code Blocks
+
+[data-clone] {
+
+    pre {
+        background: $clone-code-background;
+        color: contrasting-color($clone-code-background, $clone-white, $clone-black);
+        font-family: $clone-font-monospace;
+        font-size: $clone-default-font-size;
+        overflow: auto;
+        padding: 0;
+        code {
+            padding: 0;
+            * {
+                font-family: $clone-font-monospace;
+                font-size: $clone-default-font-size;
+            }
+        }
+        * {
+            font-family: $clone-font-monospace;
+            font-size: $clone-default-font-size;
+        }
+    }
+    code {
+        background: $clone-code-background;
+        color: contrasting-color($clone-code-background, $clone-white, $clone-black);
+        font-family: $clone-font-monospace;
+        font-size: inherit;
+        padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3);;
+        * {
+            font-family: $clone-font-monospace;
+            font-size: $clone-default-font-size;
+        }
+    }
+
+}

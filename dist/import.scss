@@ -1,0 +1,19 @@
+// My Custom Clone Theme
+// Please note that the order of the instructions/includes below is important to maintain.
+
+// Include Clone's Variables
+// Doing this gives you access to the default variables in the event you'd like to use one of them as a value in your custom theme variables.
+@import "node_modules/clone-framework/app/core/_defaults";
+
+// Your Clone Theme Variables
+// Put any of the variables you'd like to customize here. A list of all the available variables can be found at: https://designwithclone.ca/themes/how/
+$clone-grid-columns: 8;
+$clone-c1: #5B1647;
+
+// Include Clone
+@import "node_modules/clone-framework/app/clone";
+// @import "node_modules/clone-framework/app/clone-gridless";
+
+[data-clone] {
+    // Custom CSS for your app goes here.
+}

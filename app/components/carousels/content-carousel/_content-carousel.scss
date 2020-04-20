@@ -1,0 +1,16 @@
+// Clone / Components / Carousels (Glider.js) / Content Carousel
+
+[data-clone] {
+
+    [data-c-carousel="content"] {
+        overflow: hidden;
+        position: relative;
+        margin: 0 0 5rem 0;
+        [data-c-carousel="item"],
+        [data-c-carousel-item] {
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+}

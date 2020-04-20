@@ -1,0 +1,25 @@
+// Clone / Core
+
+// Default Variables
+@import "defaults";
+
+// SCSS Functions
+@import "functions";
+
+html,
+body[data-clone] {
+    margin: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+// System SCSS
+@import "system";
+
+// SCSS Data Maps
+@import "maps";
+
+// System-wide Typography
+@import "typography";

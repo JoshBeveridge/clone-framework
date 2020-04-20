@@ -1,9 +1,0 @@
-// Clone: Blockquote Component
-.clone-blockquote {
-    background: rgba($clone-blockquote-color, .2);
-    border-left: .25rem solid darken($clone-blockquote-color, 10%);
-    .clone-blockquote-author {
-        color: darken($clone-blockquote-color, 10%);
-        text-align: right;
-    }
-}

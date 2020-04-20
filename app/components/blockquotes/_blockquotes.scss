@@ -1,0 +1,17 @@
+// Clone / Components / Blockquotes
+
+[data-clone] {
+
+    // Clone: Blockquote Component
+    .clone-blockquote,
+    [data-c-blockquote] {
+        background: rgba($clone-blockquote-color, .2);
+        border-left: .25rem solid darken($clone-blockquote-color, 10%);
+        .clone-blockquote-author,
+        [data-c-blockquote-source] {
+            color: darken($clone-blockquote-color, 10%);
+            text-align: right;
+        }
+    }
+
+}

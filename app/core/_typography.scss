@@ -1,0 +1,93 @@
+// Clone / Core / System-wide Typography
+
+[data-clone] {
+
+    // System
+    * {
+        line-height: $clone-line-height;
+    }
+    ::selection {
+        background: $clone-selection-background-color !important;
+        color: contrasting-color($clone-selection-background-color, $clone-white, $clone-black) !important;
+    }
+    h1, h2, h3, h4, h5 {
+        font-weight: 400;
+        line-height: calc(#{$clone-line-height} * .85);
+    }
+    h1, h2, h3, h4, h5, h6, div, p, a, span, blockquote, aside, button, label, input, textarea, table, ul, li {
+        font-family: $clone-font-default;
+    }
+
+    // Misc. Copy Elements
+
+        // Anchors
+        a {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: underline;
+            transition: color .2s ease;
+            @media (hover: hover) {
+                &:hover {
+                    color: $clone-hover-color !important;
+                    transition: color .2s ease;
+                }
+            }
+        }
+
+            // IE 11 Hover Support
+            &[id*="Trident/7.0"] {
+                a:hover {
+                    color: $clone-hover-color !important;
+                    transition: color .2s ease;
+                }
+            }
+
+        // Lists
+        ul,
+        ol {
+            padding-left: calc(#{$clone-padding} * 2);
+            @media #{$clone-tablet-portrait} {
+                padding-left: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding-left: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            li {
+                color: inherit;
+                font-size: inherit;
+                margin-bottom: calc(#{$clone-margin} / 2);
+                @media #{$clone-tablet-portrait} {
+                    margin-bottom: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    margin-bottom: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                >ul {
+                    margin-top: calc(#{$clone-margin} / 2);
+                    @media #{$clone-tablet-portrait} {
+                        margin-top: calc((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier});
+                    }
+                    @media #{$clone-desktop-large} {
+                        margin-top: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                    }
+                }
+            }
+        }
+
+        // Styled Elements
+        em {
+            color: inherit;
+            font-size: inherit;
+            font-style: italic;
+        }
+        strong {
+            color: inherit;
+            font-size: inherit;
+            font-weight: 600;
+        }
+
+}

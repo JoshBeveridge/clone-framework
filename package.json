@@ -1,11 +1,12 @@
 {
   "name": "clone-framework",
-  "version": "2.4.18",
+  "version": "2.4.19",
   "description": "A data-attribute-based themeable design system.",
   "main": "app/index.js",
   "scripts": {
     "clone": "npx gulp",
-    "clone build": "npx gulp build"
+    "clone build": "npx gulp build",
+    "clone publish": "npx gulp build && npm publish"
   },
   "repository": {
     "type": "git",

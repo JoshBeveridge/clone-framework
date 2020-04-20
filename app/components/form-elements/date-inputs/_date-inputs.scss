@@ -1,0 +1,17 @@
+// Clone / Components / Form Elements / Date Inputs
+
+[data-clone] {
+
+    [data-c-input="date"] {
+        >div >input {
+            padding: calc((#{$clone-padding} / 2) - 1px) calc(#{$clone-padding} - 1px);
+            @media #{$clone-tablet-portrait} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) - 1px) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) - 1px);
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc((((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px) calc(((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) - 1px);
+            }
+        }
+    }
+
+}

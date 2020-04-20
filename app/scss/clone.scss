@@ -1,77 +1,41 @@
-// Clone
+// Clone / System SCSS
 
-// Variables
-@import "core/defaults";
+// Core
+@import "../core/clone";
 
-// Plugins
-    // Glider
-    @import "core/glider";
+// Properties
+@import "../properties/alignment/alignment";
+@import "../properties/background-colors/background-colors";
+@import "../properties/borders/borders";
+@import "../properties/display/display";
+@import "../properties/fonts/fonts";
+@import "../properties/hover-colors/hover-colors";
+@import "../properties/margins/margins";
+@import "../properties/padding/padding";
+@import "../properties/radius/radius";
+@import "../properties/visibility/visibility";
 
-// Sass Functions
-@import "core/functions";
+// Components
+@import "../components/accordions/accordions";
+@import "../components/alerts/alerts";
+@import "../components/blockquotes/blockquotes";
+@import "../components/buttons/buttons";
+@import "../components/cards/cards";
+@import "../components/carousels/carousels";
+@import "../components/code-blocks/code-blocks";
+@import "../components/containers/containers";
+@import "../components/dialogs/dialogs";
+@import "../components/flexbox-grid/flexbox-grid";
+@import "../components/form-elements/form-elements";
+@import "../components/horizontal-rules/horizontal-rules";
+@import "../components/iframes/iframes";
+@import "../components/overlays/overlays";
+@import "../components/pullquotes/pullquotes";
+@import "../components/skip-to-content-links/skip-to-content-links";
+@import "../components/tables/tables";
+@import "../components/tags/tags";
 
-// Menus
-@import "components/menus";
-
-html,
-body[data-clone] {
-    margin: 0;
-    max-width: 100%;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-}
-
-[data-clone] {
-
-    // Core System Files
-    @import "core/system";
-    @import "core/maps";
-
-    // System Typography
-    @import "core/typography";
-
-    // Properties
-    @import "properties/alignment";
-    @import "properties/background-colors";
-    @import "properties/borders";
-    @import "properties/cards";
-    @import "properties/containers";
-    @import "properties/display";
-    @import "properties/horizontal-rules";
-    @import "properties/margins";
-    @import "properties/padding";
-    @import "properties/overlays";
-    @import "properties/radius";
-    @import "properties/typography";
-    @import "properties/visibility";
-
-    // Grid
-    // Available media queries (MQ) include:
-        // pp (Phone: Portrait)
-        // pl (Phone: Landscape)
-        // tp (Tablet: Portrait)
-        // tl (Tablet: Landscape)
-        // ds (Desktop: Small)
-        // dm (Desktop: Medium)
-        // dl (Desktop: Large)
-    @import "core/flexbox-grid";
-
-    // Components
-    @import "components/accordion";
-    @import "components/alert";
-    @import "components/back-to-top-link";
-    @import "components/blockquote";
-    @import "components/breadcrumbs";
-    @import "components/button";
-    @import "components/carousel";
-    @import "components/code";
-    @import "components/dialog";
-    @import "components/iframe";
-    @import "components/inputs";
-    @import "components/pullquote";
-    @import "components/skip-to-content-link";
-    @import "components/table";
-    @import "components/tag";
-
-}
+// Patterns
+@import "../patterns/breadcrumbs/breadcrumbs";
+@import "../patterns/menus/menus";
+@import "../patterns/sidebars/sidebars";

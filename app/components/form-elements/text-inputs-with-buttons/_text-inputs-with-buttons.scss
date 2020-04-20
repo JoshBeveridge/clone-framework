@@ -1,0 +1,28 @@
+// Clone / Components / Form Elements / Text Inputs with Buttons
+
+[data-clone] {
+
+    [data-c-input="button"] {
+        >div {
+            input {
+                border-radius: 5px 0 0 5px;
+                border-right: none;
+                margin-bottom: 0;
+            }
+            button {
+                border-radius: 0 5px 5px 0;
+                display: block;
+                font-size: $clone-default-font-size;
+                outline: none;
+                padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+// Clone / Properties / Fonts / Font Families
+
+[data-clone] {
+
+    // Deprecated Syntax
+    [data-c-font="sans"] {
+        font-family: $clone-font-sans;
+        a, span {
+            font-family: $clone-font-sans;
+        }
+    }
+    [data-c-font="serif"] {
+        font-family: $clone-font-serif;
+        a, span {
+            font-family: $clone-font-serif;
+        }
+    }
+    [data-c-font="script"] {
+        font-family: $clone-font-script;
+        a, span {
+            font-family: $clone-font-script;
+        }
+    }
+    [data-c-font="mono"],
+    [data-c-font="monospace"] {
+        font-family: $clone-font-monospace;
+        a, span {
+            font-family: $clone-font-monospace;
+        }
+    }
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $fontFamilyKey, $fontFamilyValue in $clone-font-family-map {
+                [data-c-font="#{$mediaKey}(#{$fontFamilyKey})"] {
+                    font-family: $fontFamilyValue;
+                    a, span {
+                        font-family: $fontFamilyValue;
+                    }
+                }
+            }
+        }
+    }
+
+}

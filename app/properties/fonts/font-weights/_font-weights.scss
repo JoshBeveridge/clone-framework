@@ -1,0 +1,21 @@
+// Clone / Properties / Fonts / Font Weights
+
+[data-clone] {
+
+    // Deprecated Syntax
+    @each $key, $value in $clone-weight-map {
+        [data-c-font-weight="#{$key}"] {font-weight: $value;}
+    };
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $weightKey, $weightValue in $clone-weight-map {
+                [data-c-font-weight*="#{$mediaKey}(#{$weightKey})"] {
+                    font-weight: $weightValue;
+                }
+            }
+        }
+    }
+
+}
