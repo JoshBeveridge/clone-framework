@@ -1,95 +1,41 @@
-// =============================================================================
+// Clone / System SCSS
 
-    // Clone
-    // Core
+// Core
+@import "../core/clone";
 
-// =============================================================================
+// Properties
+@import "../properties/alignment/alignment";
+@import "../properties/background-colors/background-colors";
+@import "../properties/borders/borders";
+@import "../properties/display/display";
+@import "../properties/fonts/fonts";
+@import "../properties/hover-colors/hover-colors";
+@import "../properties/margins/margins";
+@import "../properties/padding/padding";
+@import "../properties/radius/radius";
+@import "../properties/visibility/visibility";
 
-// User Variables ==============================================================
-@import "core/defaults";
-@import "core/glider";
-@import "core/functions";
+// Components
+@import "../components/accordions/accordions";
+@import "../components/alerts/alerts";
+@import "../components/blockquotes/blockquotes";
+@import "../components/buttons/buttons";
+@import "../components/cards/cards";
+@import "../components/carousels/carousels";
+@import "../components/code-blocks/code-blocks";
+@import "../components/containers/containers";
+@import "../components/dialogs/dialogs";
+// @import "../components/flexbox-grid/flexbox-grid";
+@import "../components/form-elements/form-elements";
+@import "../components/horizontal-rules/horizontal-rules";
+@import "../components/iframes/iframes";
+@import "../components/overlays/overlays";
+@import "../components/pullquotes/pullquotes";
+@import "../components/skip-to-content-links/skip-to-content-links";
+@import "../components/tables/tables";
+@import "../components/tags/tags";
 
-// Navigation ==================================================================
-@import "components/menus";
-
-html,
-body[data-clone] {
-    margin: 0;
-    max-width: 100%;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-}
-
-[data-clone] {
-
-    // Slick Carousel by Ken Wheeler ===========================================
-    // @import "../../node_modules/slick-carousel/slick/slick.scss";
-
-    // Core System Files =======================================================
-    @import "core/system";
-    @import "core/typography";
-    @import "core/utilities";
-
-    // Grids ===================================================================
-
-        // Available media queries (MQ) include:
-            // pp (Phone: Portrait)
-            // pl (Phone: Landscape)
-            // tp (Tablet: Portrait)
-            // tl (Tablet: Landscape)
-            // ds (Desktop: Small)
-            // dm (Desktop: Medium)
-            // dl (Desktop: Large)
-
-    // Components ==============================================================
-
-        // Accordions
-        @import "components/accordion";
-
-        // Alerts
-        @import "components/alert";
-
-        // Back-to-top Links
-        @import "components/back-to-top-link";
-
-        // Blockquote
-        @import "components/blockquote";
-
-        // Breadcrumbs
-        @import "components/breadcrumbs";
-
-        // Buttons
-        @import "components/button";
-
-        // Cards
-
-        // Carousels
-        @import "components/carousel";
-
-        // Code
-        @import "components/code";
-
-        // Dialogs
-        @import "components/dialog";
-
-        // Iframes
-        @import "components/iframe";
-
-        // Inputs
-        @import "components/inputs";
-
-        // Pullquotes
-        @import "components/pullquote";
-
-        // Skip-to-content
-        @import "components/skip-to-content-link";
-
-        // Tables
-        @import "components/table";
-
-        // Tags
-        @import "components/tag";
-
-}
+// Patterns
+@import "../patterns/breadcrumbs/breadcrumbs";
+@import "../patterns/menus/menus";
+@import "../patterns/sidebars/sidebars";

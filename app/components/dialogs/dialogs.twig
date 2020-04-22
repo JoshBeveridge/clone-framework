@@ -1,0 +1,45 @@
+<!-- Dialog Trigger -->
+<button data-c-button="solid(c1)" data-c-radius="base(rounded)" data-c-dialog-id="example-dialog-01" type="button">
+    Open a Dialog
+</button>
+
+<!-- Dialog Overlay -->
+<div data-c-dialog-overlay></div>
+
+<!-- Dialog -->
+<div aria-hidden="true" aria-describedby="example-dialog-01-description" aria-labelledby="example-dialog-01-title" data-c-dialog data-c-dialog-escapable data-c-dialog-id="example-dialog-01" data-c-padding="base(tb, 2)" role="dialog">
+    <div data-c-background-color="base(white, 100)" data-c-radius="base(rounded)" data-c-margin="base(bottom, 2)">
+        <div data-c-padding="base(tb, 1) base(right, 3) base(left, 1)" data-c-border="base(bottom, thin, solid, black)">
+            <!-- Title -->
+            <h5 data-c-font-size="base(h4)" id="example-dialog-01-title" data-c-dialog-focus>Dialog Title</h5>
+            <!-- Subtitle -->
+            <p data-c-font-size="base(h5)" data-c-margin="base(top, .5)">Dialog Subtitle</p>
+            <!-- Optional Dialog Close Trigger -->
+            <button data-c-dialog-action="close" data-c-dialog-id="example-dialog-01" type="button">
+                <!-- Icon Font, Span, or Image -->
+                <span data-c-font-weight="base(bold)" data-c-font-size="base(h3)">x</span>
+            </button>
+        </div>
+        <div data-c-border="base(bottom, thin, solid, black)" data-c-padding="base(all, 1)">
+            <div id="example-dialog-01-description">
+                <!-- Dialog Content -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem atque ad quos placeat quidem earum corrupti? Ad, distinctio, maxime quasi illum ex consectetur necessitatibus et soluta quo sit ratione maiores.</p>
+            </div>
+        </div>
+        <!-- Dialog Actions -->
+        <div data-c-padding="base(all, 1)">
+            <div data-c-grid="gutter(all, 1) middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button data-c-button="outline(slow)" data-c-radius="base(rounded)" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
+                        Cancel
+                    </button>
+                </div>
+                <div data-c-grid-item="base(1of2)" data-c-alignment="base(right)">
+                    <button data-c-button="solid(go)" data-c-radius="base(rounded)" data-c-dialog-action="close" data-c-dialog-id="example-dialog-01">
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

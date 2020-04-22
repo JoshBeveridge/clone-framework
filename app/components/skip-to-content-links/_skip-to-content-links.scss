@@ -1,0 +1,23 @@
+// Clone / Components / Skip-to-content Links
+
+[data-clone] {
+
+    [data-c-skip-content] {
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: -100vh;
+        left: -100vw;
+        text-align: center;
+        width: 1px;
+        // States
+        &:focus {
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }    
+
+}

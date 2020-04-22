@@ -1,0 +1,42 @@
+// Clone / Components / Form Elements / Radio Inputs
+
+[data-clone] {
+
+    [data-c-input="radio"] {
+        >div {
+            border: 1px solid $clone-gray;
+            border-radius: 5px;
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+            padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+            @media #{$clone-tablet-portrait} {
+                padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+            }
+            @media #{$clone-desktop-large} {
+                padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                margin: 0 !important;
+                padding-top: .25rem !important;
+                padding-bottom: .25rem !important;
+                input {
+                    display: inline-block;
+                    margin-top: .4rem;
+                    width: auto;
+                    vertical-align: top;
+                }
+                span {
+                    color: $clone-black;
+                    display: inline-block;
+                    font-size: $clone-default-font-size;
+                    margin: 0;
+                    max-width: 90%;
+                    padding-left: .5rem;
+                }
+            }
+        }
+    }
+
+}

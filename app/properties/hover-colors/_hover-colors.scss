@@ -1,0 +1,33 @@
+// Clone / Properties / Hover Colors
+
+[data-clone] {
+
+    // Deprecated Syntax
+    @each $key, $value in $clone-color-map {
+        [data-c-hover-color="#{$key}"]:hover,
+        [data-c-hover-colour="#{$key}"]:hover {color: $value;}
+    };
+    @each $key, $value in $clone-color-map {
+        a[data-c-hover-color="#{$key}"]:hover,
+        a[data-c-hover-colour="#{$key}"]:hover {color: $value !important;}
+    };
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $colorKey, $colorValue in $clone-color-map {
+                [data-c-hover-color*="#{$mediaKey}(#{$colorKey})"]:hover,
+                [data-c-hover-colour*="#{$mediaKey}(#{$colorKey})"]:hover {
+                    color: $colorValue;
+                }
+            };
+            @each $colorKey, $colorValue in $clone-color-map {
+                a[data-c-hover-color*="#{$mediaKey}(#{$colorKey})"]:hover,
+                a[data-c-hover-colour*="#{$mediaKey}(#{$colorKey})"]:hover {
+                    color: $colorValue !important;
+                }
+            };
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+// Clone / Components / Pullquotes
+
+[data-clone] {
+
+    .clone-pullquote,
+    [data-c-pullquote] {
+        .clone-pullquote-copy,
+        [data-c-pullquote-copy] {
+            color: $clone-pullquote-color;
+        }
+    }
+
+}

@@ -1,0 +1,43 @@
+// Clone / Components / Form Elements / Select Inputs
+
+[data-clone] {
+
+    [data-c-input="dropdown"],
+    [data-c-input="select"] {
+        >div {
+            position: relative;
+            i {
+                color: $clone-black;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                pointer-events: none;
+                transform: translate(0, -50%);
+                z-index: 1;
+            }
+            select {
+                appearance: none;
+                border: 1px solid $clone-gray;
+                border-radius: 5px;
+                color: $clone-black;
+                cursor: pointer;
+                display: block;
+                font-size: $clone-default-font-size;
+                outline: none;
+                margin-bottom: 1.4rem;
+                width: 100%;
+                padding: calc(#{$clone-padding} / 2) 3rem calc(#{$clone-padding} / 2) #{$clone-padding};
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 3rem calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 3rem calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+                &:focus {
+                    border: 1px solid $clone-c1;
+                }
+            }
+        }
+    }
+
+}

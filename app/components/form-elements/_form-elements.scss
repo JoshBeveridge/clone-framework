@@ -1,0 +1,134 @@
+// Clone / Components / Form Elements
+
+[data-clone] {
+
+    [data-c-input] {
+        padding: calc(#{$clone-padding} / 2) 0;
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) 0;
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) 0;
+        }
+        position: relative;
+        >label {
+            display: block;
+            font-size: $clone-font-scale-small;
+            margin-bottom: .5rem;
+            padding-right: 8rem;
+        }
+        >span {
+            &:first-of-type {
+                color: $clone-alert-error;
+                display: none;
+                font-size: $clone-font-scale-small;
+                position: absolute;
+                top: calc(#{$clone-padding} / 2);
+                right: 0;
+                @media #{$clone-tablet-portrait} {
+                    top: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    top: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+            &:last-of-type {
+                color: $clone-alert-error;
+                display: none;
+                font-size: $clone-font-scale-small;
+                position: absolute;
+                bottom: calc(#{$clone-padding} / 2);
+                left: 0;
+                @media #{$clone-tablet-portrait} {
+                    bottom: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    bottom: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+            }
+        }
+        >div {
+            margin-bottom: 1.5rem;
+            >input {
+                border: 1px solid $clone-gray;
+                border-radius: 5px;
+                color: $clone-black;
+                display: block;
+                font-size: $clone-default-font-size;
+                outline: none;
+                transition: all .2s ease;
+                width: 100%;
+                padding: calc(#{$clone-padding} / 2);
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+                &:focus {
+                    box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                    transition: all .2s ease;
+                }
+            }
+            >textarea {
+                border: 1px solid $clone-gray;
+                border-radius: 5px;
+                color: $clone-black;
+                display: block;
+                font-size: $clone-default-font-size;
+                outline: none;
+                max-width: 100%;
+                min-height: 10rem;
+                min-width: 100%;
+                transition: all .2s ease;
+                width: 100%;
+                padding: calc(#{$clone-padding} / 2) #{$clone-padding};
+                @media #{$clone-tablet-portrait} {
+                    padding: calc((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) calc(#{$clone-padding} * #{$clone-whitespace-multiplier});
+                }
+                @media #{$clone-desktop-large} {
+                    padding: calc(((#{$clone-padding} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+                }
+                &:focus {
+                    box-shadow: -3px -3px 0 $clone-focus-colour, 3px -3px 0 $clone-focus-colour, 3px 3px 0 $clone-focus-colour, -3px 3px 0 $clone-focus-colour;
+                    transition: all .2s ease;
+                }
+            }
+        }
+        &[data-c-required] {
+            >span:first-of-type {
+                display: block !important;
+            }
+        }
+        &[data-c-invalid] {
+            >label {
+                color: $clone-alert-error !important;
+            }
+            >div {
+                border-color: $clone-alert-error;
+                >input,
+                >textarea,
+                >select {
+                    border-color: $clone-alert-error;
+                }
+            }
+            >span:last-of-type {
+                display: block !important;
+            }
+        }
+    }
+
+}
+
+@import "checkboxes/checkboxes";
+@import "date-inputs/date-inputs";
+@import "email-inputs/email-inputs";
+@import "number-inputs/number-inputs";
+@import "password-inputs/password-inputs";
+@import "radio-inputs/radio-inputs";
+@import "select-inputs/select-inputs";
+@import "telephone-inputs/telephone-inputs";
+@import "text-inputs/text-inputs";
+@import "text-inputs-with-buttons/text-inputs-with-buttons";
+@import "textareas/textareas";
+@import "url-inputs/url-inputs";

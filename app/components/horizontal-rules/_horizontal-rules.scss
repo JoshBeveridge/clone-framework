@@ -1,0 +1,46 @@
+// Clone / Components / Horizontal Rules
+
+[data-clone] {
+
+    [data-c-hr] {
+        background: $clone-hr-color;
+        border: none;
+        height: $clone-border-thickness-thin;
+        outline: none;
+    }
+
+    // Deprecated Syntax
+    @each $width in $clone-border-width-list {
+        @each $colorKey, $colorValue in $clone-color-map {
+            [data-c-hr*="#{$width}(#{$colorKey})"] {
+                background: $colorValue;
+                @if ($width == "thin") {
+                    height: $clone-border-thickness-thin;
+                }
+                @if ($width == "thick") {
+                    height: $clone-border-thickness-thick;
+                }
+            }
+        };
+    };
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $width in $clone-border-width-list {
+                @each $colorKey, $colorValue in $clone-color-map {
+                    [data-c-hr*="#{$mediaKey}(#{$width}, #{$colorKey})"] {
+                        background: $colorValue;
+                        @if ($width == "thin") {
+                            height: $clone-border-thickness-thin;
+                        }
+                        @if ($width == "thick") {
+                            height: $clone-border-thickness-thick;
+                        }
+                    }
+                };
+            };
+        }
+    }
+
+}

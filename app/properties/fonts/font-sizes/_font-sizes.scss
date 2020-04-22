@@ -1,0 +1,23 @@
+// Clone / Properties / Fonts / Font Sizes
+
+[data-clone] {
+
+    // Deprecated Syntax
+    @each $fontSizeKey, $fontSizeValue in $clone-font-size-map {
+        [data-c-font-size="#{$fontSizeKey}"] {
+            font-size: $fontSizeValue;
+        }
+    }
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            @each $fontSizeKey, $fontSizeValue in $clone-font-size-map {
+                [data-c-font-size*="#{$mediaKey}(#{$fontSizeKey})"] {
+                    font-size: $fontSizeValue;
+                }
+            }
+        }
+    }
+
+}

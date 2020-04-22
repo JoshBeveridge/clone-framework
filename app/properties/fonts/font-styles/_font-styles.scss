@@ -1,0 +1,33 @@
+// Clone / Properties / Fonts / Font Styles
+
+[data-clone] {
+
+    // Deprecated Syntax
+    [data-c-font-style="reset"] {
+        font-style: normal;
+        text-decoration: none currentcolor solid;
+    }
+    [data-c-font-style="italic"] {
+        font-style: italic;
+    }
+    [data-c-font-style="underline"] {
+        text-decoration: underline;
+    }
+
+    // 3.0 Syntax
+    @each $mediaKey, $mediaValue in $clone-media-query-map {
+        @media #{$mediaValue} {
+            [data-c-font-style*="#{$mediaKey}(reset)"] {
+                font-style: normal;
+                text-decoration: none currentcolor solid;
+            }
+            [data-c-font-style*="#{$mediaKey}(italic)"] {
+                font-style: italic;
+            }
+            [data-c-font-style*="#{$mediaKey}(underline)"] {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

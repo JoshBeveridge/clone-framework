@@ -1,0 +1,35 @@
+// Clone / Core / SCSS Functions
+@function cloneSquareRoot ($clone-r) {
+    $clone-x0: 1;
+    $clone-x1: $clone-x0;
+
+    @for $clone-i from 1 through 10 {
+        $clone-x1: $clone-x0 - ($clone-x0 * $clone-x0 - abs($clone-r)) / (2 * $clone-x0);
+        $clone-x0: $clone-x1;
+    }
+
+    @return $clone-x1;
+}
+$clone-red-magic-number: 241;
+$clone-green-magic-number: 691;
+$clone-blue-magic-number: 68;
+$clone-brightness-divisor: $clone-red-magic-number + $clone-green-magic-number + $clone-blue-magic-number;
+@function brightness($clone-color) {
+    // Extract color components
+    $clone-red-component: red($clone-color);
+    $clone-green-component: green($clone-color);
+    $clone-blue-component: blue($clone-color);
+
+    // Calculate a brightness value in 3d color space between 0 and 255
+    $clone-number: cloneSquareRoot((($clone-red-component * $clone-red-component * $clone-red-magic-number) + ($clone-green-component * $clone-green-component * $clone-green-magic-number) + ($clone-blue-component * $clone-blue-component * $clone-blue-magic-number)) / $clone-brightness-divisor);
+
+    // Convert to percentage and return
+    @return 100% * $clone-number / 255;
+}
+@function contrasting-color($clone-color, $clone-light, $clone-dark) {
+    @if brightness($clone-color) < 65% {
+        @return $clone-light;
+    } @else {
+        @return $clone-dark;
+    }
+}
